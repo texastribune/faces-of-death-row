@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <link href="styles/bootstrap.min.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="styles/jquery-ui-1.10.2.custom.min.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="styles/stream.css" media="screen" rel="stylesheet" type="text/css">
+    <script src="../node_modules/jquery/dist/jquery.js" type="text/javascript"></script>
+    <script src="scripts/libs/jquery-ui-1.10.2.custom.min.js" type="text/javascript"></script>
+    <script src="scripts/libs/filter.js" type="text/javascript"></script>
+    <script src="scripts/inmateData.js" type="text/javascript"></script>
+    <script src="scripts/index.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Filter.js</h1>
+
+      <div class="sorting content col-span-9">
+      </div>
+      <div class="movies content col-span-9" id="movies">
+      </div>
+      <script id="movie-template" type="text/html">
+        <div class="col-span-4 movie">
+
+            <h4><%= first_name %> <%= last_name %></h4>
+
+      </div>
+      </script>
+      <script id="genre_template" type="text/html">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="<%= genre %>"> <%= genre %>
+          </label>
+        </div>
+      </script>
+    </body>
+  </html>

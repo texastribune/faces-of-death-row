@@ -6,29 +6,35 @@
 
 {% block content %}
 <h3 class="intro">The average inmate is a <span class="race">{{ META.dominant_race }}</span>, <span class="age">{{ META.average_age }}-year-old</span> <span class="sex">{{ META.dominant_sex }}</span> who was prosecuted in <span class="county">{{ META.dominant_county }}</span> county and has served <span class="time_served">{{ META.average_time_served }}</span> on death row.</h3>
-<br>
-<br>
-<table>
-<thead>
-<th>Name</th>
-<th>Race</th>
-<th>Sex</th>
-<th>Age</th>
-<th>Years Served</th>
-<th>County of Offense</th>
-</thead>
-<tbody>
-{% for inmate in INMATES %}
-  <tr>
-    <td>{{ inmate.first_name }} {{ inmate.middle_name }} {{ inmate.last_name }}</td>
-    <td>{{ inmate.race }}</td>
-    <td>{{ inmate.sex }}</td>
-    <td>{{ inmate.age }}</td>
-    <td>{{ inmate.time_served }}</td>
-    <td>{{ inmate.county }}</td>
-  </tr>
-{% endfor %}
-</table>
+<div class="container">
+      <div class="sidebar col-span-3">
+        <div class="row">
+          <h4 class="col-span-6"> Inmates (<span id="total_inmates"></span>)</h4>
+        </div>
+        <div>
+          <input type="text" id="searchbox" placeholder="Search...">
+        </div>
+
+      </div>
+    </div>
+      <div class="sorting content col-span-9">
+      </div>
+      <div class="inmates content col-span-9" id="inmates">
+      </div>
+      <script id="inmate-template" type="text/html">
+        <div class="col-span-4 inmate">
+          <div class="thumbnail">
+            <span class="label label-success rating"></span>
+            <div class="caption">
+              <h4><%= first_name %> <%= last_name %></h4>
+              <div class="outline">
+                <%= summary %>
+              </div>
+            </div>
+          </div>
+      </div>
+      </script>
+</div>
 {% endblock %}
 
 {% block script %}

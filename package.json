@@ -3,6 +3,7 @@
   "config": {
     "s3_bucket": "moose.texastribune.org",
     "slug": "death-row"
+  },
   "devDependencies": {
     "browser-sync": "^2.1.6",
     "browserify": "^9.0.3",

@@ -24,7 +24,7 @@ gulp.task('jshint', function() {
 });
 
 gulp.task('scripts', ['jshint'], function() {
-  return gulp.src('app/scripts/**/*.js')
+  return gulp.src(['node_modules/jquery/dist/jquery.js', 'app/scripts/**/*.js'])
     .pipe($.uglify())
     .pipe(gulp.dest('dist/scripts'))
     .pipe($.size({title: 'scripts'}));

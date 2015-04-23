@@ -129,6 +129,7 @@ function buildDataJSON(data) {
   });
 
   fs.writeFileSync('data.json', JSON.stringify(payload, null, 2));
+  fs.writeFileSync('app/assets/inmates.json', JSON.stringify(payload.INMATES, null, 2));
 }
 
 primeToken(oauth2Client, function() {

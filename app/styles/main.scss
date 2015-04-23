@@ -1,2 +1,19 @@
 @import 'bower_components/newsapps-styles/init-helpers';
 @import 'bower_components/newsapps-styles/initialize';
+
+body{
+  width:98%;
+  max-width:980px;
+  margin: 1em auto;
+}
+.inmate {
+  margin-bottom:1em;
+  @include span-columns(3);
+  &:nth-of-type(4n+4) {
+    @include omega();
+  }
+  img {
+    width:100%;
+    height:300px;
+  }
+}

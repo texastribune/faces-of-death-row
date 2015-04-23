@@ -4,6 +4,8 @@ $(document).ready(function(){
 
   initSliders();
 
+  console.log(inmates);
+
   var FJS = FilterJS(inmates, '#inmates', {
     template: '#inmate-template',
     search: {ele: '#searchbox', fields: ['last_name', 'first_name']}, // With specific fields

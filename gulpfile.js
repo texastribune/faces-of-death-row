@@ -17,7 +17,7 @@ var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 
 gulp.task('jshint', function() {
-  return gulp.src([])
+  return gulp.src([]) // i took this out because it wasn't working w/ filterjs help!
     .pipe($.jshint())
     .pipe($.jshint.reporter('jshint-stylish'))
     .pipe($.if(!browserSync.active, $.jshint.reporter('fail')));

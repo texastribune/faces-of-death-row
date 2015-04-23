@@ -6,10 +6,11 @@
 
 {% block content %}
 <h3 class="intro">The average inmate is a <span class="race">{{ META.dominant_race }}</span>, <span class="age">{{ META.average_age }}-year-old</span> <span class="sex">{{ META.dominant_sex }}</span> who was prosecuted in <span class="county">{{ META.dominant_county }}</span> county and has served <span class="time_served">{{ META.average_time_served }}</span> on death row.</h3>
-<div class="container">
+
+<div class="interactive">
   <div class="filters">
     <div class="row">
-      <h4 class="col-span-6"> Inmates (<span id="total_inmates"></span>)</h4>
+      <h4 class="col-span-6"> Inmates (<span id="total_inmates">266</span>)</h4>
     </div>
     <div class="criteria" id="race_criteria">
       <h4>Race</h4>

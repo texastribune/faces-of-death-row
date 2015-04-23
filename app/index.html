@@ -7,33 +7,85 @@
 {% block content %}
 <h3 class="intro">The average inmate is a <span class="race">{{ META.dominant_race }}</span>, <span class="age">{{ META.average_age }}-year-old</span> <span class="sex">{{ META.dominant_sex }}</span> who was prosecuted in <span class="county">{{ META.dominant_county }}</span> county and has served <span class="time_served">{{ META.average_time_served }}</span> on death row.</h3>
 <div class="container">
-      <div>
-        <div class="row">
-          <h4 class="col-span-6"> Inmates (<span id="total_inmates"></span>)</h4>
-        </div>
-        <div>
-          <input type="text" id="searchbox" placeholder="Search by race...">
-        </div>
+  <div class="filters">
+    <div class="row">
+      <h4 class="col-span-6"> Inmates (<span id="total_inmates"></span>)</h4>
+    </div>
+    <div class="criteria" id="race_criteria">
+      <h4>Race</h4>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" value="White"> White
+        </label>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" value="Black"> Black
+        </label>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" value="Hispanic"> Hispanic
+        </label>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" value="Asian"> Asian
+        </label>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" value="Other"> Other
+        </label>
       </div>
     </div>
-      <div class="sorting content col-span-9">
+    <div class="criteria" id="sex_criteria">
+      <h4>Sex</h4>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" value="male"> Male
+        </label>
       </div>
-      <div class="inmates container col-span-9" id="inmates">
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" value="female"> Female
+        </label>
       </div>
-      <script id="inmate-template" type="text/html">
-        <div class="col-span-4 inmate">
-          <div class="thumbnail">
-            <span class="label label-success rating"></span>
-            <div class="caption">
-              <h4><%= first_name %> <%= last_name %></h4>
-              <h4>Race: <%= race %></h4>
-              <div class="outline">
-                <%= summary %>
-              </div>
-            </div>
+    </div>
+    <div class="criteria" id="age_criteria">
+      <h4>Age</h4>
+      <span id="age_range_label" class="slider-label">18 - 100</span>
+      <div id="age_slider" class="slider"></div>
+      <input type="hidden" id="age_filter" value="18-100"/>
+    </div>
+    <div class="criteria" id="timeserved_criteria">
+      <h4>Years on Death Row</h4>
+      <span id="timeserved_range_label" class="slider-label">0 - 40</span>
+      <div id="timeserved_slider" class="slider"></div>
+      <input type="hidden" id="timeserved_filter" value="0-40"/>
+    </div>
+  </div>
+</div>
+  <div class="sorting content col-span-9">
+  </div>
+  <div class="inmates container col-span-9" id="inmates">
+  </div>
+  <script id="inmate-template" type="text/html">
+    <div class="col-span-4 inmate">
+      <div class="thumbnail">
+        <span class="label label-success rating"></span>
+        <div class="caption">
+          <h4 class="name"><%= first_name %> <%= last_name %></h4>
+          <h4 class="race">Race: <%= race %></h4>
+          <h4 class="age">Age: <%= age %></h4>
+          <h4 class="timeserved">Time on Death Row: <%= time_served %></h4>
+          <div class="outline">
+            <%= summary %>
           </div>
+        </div>
       </div>
-      </script>
+  </div>
+  </script>
 </div>
 {% endblock %}
 

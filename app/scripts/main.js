@@ -6,7 +6,7 @@ $(document).ready(function(){
 
   var FJS = FilterJS(inmates, '#inmates', {
     template: '#inmate-template',
-    search: {ele: '#searchbox', fields: ['last_name', 'first_name']}, // With specific fields
+    search: {ele: '#searchbox', fields: ['race']}, // With specific fields
     criterias:[
       {field: 'race', ele: '#race_criteria input:checkbox'},
       {field: 'sex', ele: '#sex_criteria input:checkbox'},
@@ -39,26 +39,26 @@ $(document).ready(function(){
 });
 
 function initSliders(){
-  $("#rating_slider").slider({
+  $('#rating_slider').slider({
     min: 8,
     max: 10,
     values:[8, 10],
     step: 0.1,
     range:true,
     slide: function( event, ui ) {
-      $("#rating_range_label" ).html(ui.values[ 0 ] + ' - ' + ui.values[ 1 ]);
+      $('#rating_range_label' ).html(ui.values[ 0 ] + ' - ' + ui.values[ 1 ]);
       $('#rating_filter').val(ui.values[0] + '-' + ui.values[1]).trigger('change');
     }
   });
 
-  $("#runtime_slider").slider({
+  $('#runtime_slider').slider({
     min: 50,
     max: 250,
     values:[0, 250],
     step: 10,
     range:true,
     slide: function( event, ui ) {
-      $("#runtime_range_label" ).html(ui.values[ 0 ] + ' mins. - ' + ui.values[ 1 ] + ' mins.');
+      $('#runtime_range_label' ).html(ui.values[ 0 ] + ' mins. - ' + ui.values[ 1 ] + ' mins.');
       $('#runtime_filter').val(ui.values[0] + '-' + ui.values[1]).trigger('change');
     }
   });

@@ -1,14 +1,16 @@
+/* global inmates, FilterJS */
+
 'use strict';
 
-$(document).ready(function(){
+$(document).ready(function() {
 
   initSliders();
 
-  var FJS = FilterJS(inmates, '#inmates', {
+  var FJS = new FilterJS(inmates, '#inmates', {
     template: '#inmate-template',
     search: {},
     callbacks: {
-      afterFilter: function(result){
+      afterFilter: function(result) {
         $('#total_inmates').text(result.length);
       }
     }
@@ -23,15 +25,15 @@ $(document).ready(function(){
   window.FJS = FJS;
 });
 
-function initSliders(){
+function initSliders() {
   $('#age_slider').slider({
     min: 18,
     max: 100,
     values:[18, 100],
     step: 5,
     range:true,
-    slide: function( event, ui ) {
-      $('#age_range_label' ).html(ui.values[ 0 ] + ' - ' + ui.values[ 1 ]);
+    slide: function(event, ui) {
+      $('#age_range_label' ).html(ui.values[0] + ' - ' + ui.values[1]);
       $('#age_filter').val(ui.values[0] + '-' + ui.values[1]).trigger('change');
     }
   });
@@ -42,8 +44,8 @@ function initSliders(){
     values:[0, 40],
     step: 5,
     range:true,
-    slide: function( event, ui ) {
-      $('#timeserved_range_label' ).html(ui.values[ 0 ] + ' - ' + ui.values[ 1 ]);
+    slide: function(event, ui) {
+      $('#timeserved_range_label').html(ui.values[0] + ' - ' + ui.values[1]);
       $('#timeserved_filter').val(ui.values[0] + '-' + ui.values[1]).trigger('change');
     }
   });

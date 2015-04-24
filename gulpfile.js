@@ -6,8 +6,7 @@ var fs = require('fs');
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')({
   rename: {
-    'gulp-ruby-sass': 'sass',
-    'gulp-nunjucks-render': 'nunjucks'
+    'gulp-ruby-sass': 'sass'
   }
 });
 var runSequence = require('run-sequence');
@@ -59,10 +58,14 @@ gulp.task('templates', function() {
   data.SITE = packageData.config;
 
   // disable watching or it'll hang forever
-  nunjucks.configure('app', {watch: false});
+  var env = nunjucks.configure('app', {watch: false});
+
+  env.addFilter('json', function(obj) {
+    return JSON.stringify(obj);
+  });
 
   var nunjuckified = map(function(code, filename) {
-    return nunjucks.renderString(code.toString(), data);
+    return env.renderString(code.toString(), data);
   });
 
   return gulp.src(['app/**/{*,!_*}.html', '!app/**/_*.html'])

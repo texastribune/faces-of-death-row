@@ -35,5 +35,8 @@
     "vinyl-map": "^1.0.1",
     "vinyl-transform": "^1.0.0",
     "xlsx": "^0.7.12"
+  },
+  "dependencies": {
+    "jquery": "^1.11.2"
   }
 }

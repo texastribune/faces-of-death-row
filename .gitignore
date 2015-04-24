@@ -4,3 +4,4 @@ app/assets
 bower_components
 dist
 node_modules
+*.log

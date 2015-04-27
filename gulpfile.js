@@ -23,8 +23,16 @@ gulp.task('jshint', function() {
 });
 
 gulp.task('scripts', ['jshint'], function() {
-  return gulp.src(['node_modules/jquery/dist/jquery.js', 'app/scripts/**/*.js'])
+  return gulp.src([
+      'node_modules/jquery/dist/jquery.js',
+      'scripts/libs/jquery-ui-1.10.2.custom.min.js',
+      'scripts/libs/filter.js',
+      'app/scripts/**/*.js'
+    ])
+    .pipe($.concat('bundle.js', {newLine: ';'}))
+    .pipe(gulp.dest('.tmp/scripts'))
     .pipe($.uglify())
+    .pipe($.gzip({append: false}))
     .pipe(gulp.dest('dist/scripts'))
     .pipe($.size({title: 'scripts'}));
 });

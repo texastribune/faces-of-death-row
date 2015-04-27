@@ -72,20 +72,16 @@
   <div class="inmates container col-span-9" id="inmates">
   </div>
   <script id="inmate-template" type="text/html">
-    <div class="col-span-4 inmate">
-      <div class="thumbnail">
-        <span class="label label-success rating"></span>
-        <div class="caption">
-          <h4 class="name"><%= first_name %> <%= last_name %></h4>
-          <h4 class="race">Race: <%= race %></h4>
-          <h4 class="age">Age: <%= age %></h4>
-          <h4 class="timeserved">Time on Death Row: <%= time_served %></h4>
-          <div class="outline">
-            <%= summary %>
-          </div>
-        </div>
+    <div class="col-span-4 inmate" style="background-image: url( assets/mugs/<%= mug %> );">
+      <div class="outline">
+        <h4 class="name"><%= first_name %> <%= last_name %></h4>
+        <p class="race">Race: <%= race %></p>
+        <p class="age">Age: <%= age %></p>
+        <p class="sex">Sex: <%= sex %></p>
+        <p class="timeserved">Time on Death Row: <%= time_served %></p>
+        <%= summary %>
       </div>
-  </div>
+    </div>
   </script>
 </div>
 {% endblock %}

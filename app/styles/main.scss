@@ -8,53 +8,72 @@ body{
   margin: 1em auto;
   background-color: #f5f5f5;
 }
-
-
-.inmate {
-  margin-bottom:1em;
-  @include span-columns(3);
-  &:nth-of-type(4n+4) {
-    @include omega();
-  }
-  img {
-    width:100%;
-    height:300px;
-  }
-}
 .criteria{
   background-color: #D3D3D3;
   min-height: 110px;
   margin: 20px 0px;
   padding-bottom: 5px;
+  @include span-columns(6);
+  &:nth-child(odd) {
+    @include omega();
+  }
 }
-.thumbnail{
-  background-color: #D3D3D3;
-  min-height: 265px;
-  border-radius: 0;
-}
-.outline {
-  display: block;
-  position: absolute;
-  left: 15px;
-  height: auto;
-  background: rgba(255, 255, 255, .5);
-  opacity: 0;
-  -webkit-transition: opacity .25s ease-in;
-  -ms-transition: opacity .25s ease-in;
-  -moz-transition: opacity .25s ease-in;
-  -o-transition: opacity .25s ease-in;
-  transition: opacity .25s ease-in;
-  margin-top: 5px;
-  margin-right: 5px;
-  padding: 5px 15px;
-  text-align: center;
-  margin-bottom: 0px;
-  font-weight: 200;
-}
-.caption:hover .outline{
-  opacity: 1;
-}
-
-.caption:hover .detail{
-  opacity: 0;
+.inmate {
+  margin-bottom:1em;
+  height:300px;
+  background-size:100%;
+  line-height:1em;
+  cursor:pointer;
+  position:relative;
+  @include span-columns(3);
+  &:nth-of-type(4n+4) {
+    @include omega();
+  }
+  .info {
+    display:none;
+  }
+  .outline {
+    display: block;
+    position: absolute;
+    left: 0;
+    height: 100%;
+    background: rgba(255, 255, 255, .5);
+    opacity: 0;
+    -webkit-transition: opacity .25s ease-in;
+    -ms-transition: opacity .25s ease-in;
+    -moz-transition: opacity .25s ease-in;
+    -o-transition: opacity .25s ease-in;
+    transition: opacity .25s ease-in;
+    padding:0.5em;
+    font-weight: 300;
+    h4{
+      margin-bottom:0.5em;
+    }
+    p {
+      margin-bottom:0.5em;
+    }
+  }
+  &:hover {
+    .info {
+      display:block;
+      padding:1em;
+    }
+    .outline {
+      opacity: 1;
+    }
+    .detail {
+      opacity: 0;
+    }
+    &:after {
+      content: "";
+      background: #999;
+      opacity:0.75;
+      top:0;
+      left:0;
+      bottom:0;
+      right:0;
+      position:absolute;
+      z-index:-1;
+    }
+  }
 }

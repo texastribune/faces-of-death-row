@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <title>{{ META.project_title}} | The Texas Tribune</title>
   {% block styles %}
-  <link href="styles/jquery-ui-1.10.2.custom.min.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="styles/jquery-ui-1.10.2.custom.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles/main.css">
   {% endblock %}
 </head>
@@ -18,13 +18,10 @@
 </div>
 
 {% block script %}
-<script src="node_modules/jquery/dist/jquery.js" type="text/javascript"></script>
-<script src="scripts/libs/jquery-ui-1.10.2.custom.min.js" type="text/javascript"></script>
 <script>
   var inmates = {{ INMATES|json }};
 </script>
-<script src="scripts/libs/filter.js" type="text/javascript"></script>
-<script src="scripts/main.js" type="text/javascript"></script>
+<script src="scripts/bundle.js"></script>
 {% endblock %}
 </body>
 </html>

@@ -4,7 +4,10 @@
 
 $(document).ready(function() {
 
-  initSliders();
+  var ageMin, ageMax, yearMin, yearMax;
+  findRange(inmates);
+
+  initSliders(ageMin,ageMax,yearMin,yearMax);
 
   var FJS = new FilterJS(inmates, '#inmates', {
     template: '#inmate-template',
@@ -16,6 +19,37 @@ $(document).ready(function() {
     }
   });
 
+  function findRange(inmates) {
+    var ageRange = [];
+    var yearRange = [];
+    for(var i=0; i<inmates.length; i++) {
+      ageRange.push(inmates[i].age);
+      yearRange.push(inmates[i].timeserved);
+    }
+    Array.prototype.max = function() {
+      return Math.max.apply(null, this);
+    };
+    Array.prototype.min = function() {
+      return Math.min.apply(null, this);
+    };
+    ageMax = roundUp(ageRange.max());
+    ageMin = roundDown(ageRange.min());
+    yearMax = roundUp(yearRange.max());
+    yearMin = roundDown(yearRange.min());
+    $("#age_range_label").text(ageMin + " - " + ageMax);
+    $("#age_filter").val(ageMin + "-" + ageMax);
+    $("#timeserved_range_label").text(yearMin + " - " + yearMax);
+    $("#timeserved_filter").val(yearMin + "-" + yearMax);
+  }
+
+  function roundDown(x) {
+    return Math.floor(x/5)*5;
+  }
+
+  function roundUp(x) {
+    return Math.ceil(x/5)*5;
+  }
+
   FJS.addCriteria({field: 'race', ele: '#race_criteria input:checkbox'});
   FJS.addCriteria({field: 'age', ele: '#age_filter', type: 'range'});
   FJS.addCriteria({field: 'timeserved', ele: '#timeserved_filter', type: 'range'});
@@ -25,11 +59,11 @@ $(document).ready(function() {
   window.FJS = FJS;
 });
 
-function initSliders() {
+function initSliders(ageMin,ageMax,yearMin,yearMax) {
   $('#age_slider').slider({
-    min: 18,
-    max: 100,
-    values:[18, 100],
+    min: ageMin,
+    max: ageMax,
+    values:[ageMin, ageMax],
     step: 5,
     range:true,
     slide: function(event, ui) {
@@ -39,9 +73,9 @@ function initSliders() {
   });
 
   $('#timeserved_slider').slider({
-    min: 0,
-    max: 40,
-    values:[0, 40],
+    min: yearMin,
+    max: yearMax,
+    values:[yearMin, yearMax],
     step: 5,
     range:true,
     slide: function(event, ui) {

@@ -24,7 +24,7 @@
     height: 100%;
 }.ui-widget-content {
   border: 1px solid #ddd;
-  background: #eee url("../../assets/slider/ui-bg_highlight-soft_100_eeeeee_1x100.png") 50% top repeat-x;
+  background: #eee url("../assets/images/ui-bg_highlight-soft_100_eeeeee_1x100.png") 50% top repeat-x;
   color: #333;
 }.ui-widget-content a{
   color: #333;
@@ -35,12 +35,12 @@
   font-weight: bold;
 }.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
   border: 1px solid #ccc;
-  background: #f6f6f6 url("../../assets/slider/ui-bg_glass_100_f6f6f6_1x400.png") 50% 50% repeat-x;
+  background: #f6f6f6 url("../assets/images/ui-bg_glass_100_f6f6f6_1x400.png") 50% 50% repeat-x;
   font-weight: bold;
   color: #1c94c4;
 }.ui-state-hover, .ui-widget-content.ui-state-hover, .ui-widget-header.ui-state-hover {
   border: 1px solid #fbcb09;
-  background: #fdf5ce url("../../assets/slider/ui-bg_glass_100_fdf5ce_1x400.png") 50% 50% repeat-x;
+  background: #fdf5ce url("../assets/images/ui-bg_glass_100_fdf5ce_1x400.png") 50% 50% repeat-x;
   font-weight: bold;
   color: #c77405;
 }

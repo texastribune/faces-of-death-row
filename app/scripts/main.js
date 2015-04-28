@@ -36,10 +36,6 @@ $(document).ready(function() {
     ageMin = roundDown(ageRange.min());
     yearMax = roundUp(yearRange.max());
     yearMin = roundDown(yearRange.min());
-    $("#age_range_label").text(ageMin + " - " + ageMax);
-    $("#age_filter").val(ageMin + "-" + ageMax);
-    $("#timeserved_range_label").text(yearMin + " - " + yearMax);
-    $("#timeserved_filter").val(yearMin + "-" + yearMax);
   }
 
   function roundDown(x) {

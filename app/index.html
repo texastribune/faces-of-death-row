@@ -10,7 +10,7 @@
 <div class="interactive">
   <div class="filters">
     <div class="row">
-      <h4 class="col-span-6"> Inmates (<span id="total_inmates"></span>)</h4>
+      <h4 class="col-span-6"> Inmates (<span id="total_inmates">{{ META.total_inmates }}</span>)</h4>
     </div>
     <div class="criteria" id="race_criteria">
       <h4>Race</h4>
@@ -55,15 +55,15 @@
     </div>
     <div class="criteria" id="age_criteria">
       <h4>Age</h4>
-      <span id="age_range_label" class="slider-label"></span>
+      <span id="age_range_label" class="slider-label">{{ META.min_age }} - {{ META.max_age }}</span>
       <div id="age_slider" class="slider"></div>
-      <input type="hidden" id="age_filter" value=""/>
+      <input type="hidden" id="age_filter" value="{{ META.min_age }}-{{ META.max_age }}"/>
     </div>
     <div class="criteria" id="timeserved_criteria">
       <h4>Years on Death Row</h4>
-      <span id="timeserved_range_label" class="slider-label"></span>
+      <span id="timeserved_range_label" class="slider-label">{{ META.min_years }} - {{ META.max_years }}</span>
       <div id="timeserved_slider" class="slider"></div>
-      <input type="hidden" id="timeserved_filter" value=""/>
+      <input type="hidden" id="timeserved_filter" value="{{ META.min_years }}-{{ META.max_years }}"/>
     </div>
   </div>
 </div>

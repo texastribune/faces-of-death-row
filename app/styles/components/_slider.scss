@@ -1,0 +1,46 @@
+.ui-slider {
+    position: relative;
+    text-align: left;
+}.ui-slider .ui-slider-handle {
+    position: absolute;
+    z-index: 2;
+    width: 1.2em;
+    height: 1.2em;
+    cursor: default;
+}.ui-slider .ui-slider-range {
+    position: absolute;
+    z-index: 1;
+    font-size: .7em;
+    display: block;
+    border: 0;
+    background-position: 0 0;
+}.ui-slider-horizontal {
+    height: 0.8em;
+}.ui-slider-horizontal .ui-slider-handle {
+    top: -0.3em;
+    margin-left: -0.6em;
+}.ui-slider-horizontal .ui-slider-range {
+    top: 0;
+    height: 100%;
+}.ui-widget-content {
+  border: 1px solid #ddd;
+  background: #eee url("../../assets/slider/ui-bg_highlight-soft_100_eeeeee_1x100.png") 50% top repeat-x;
+  color: #333;
+}.ui-widget-content a{
+  color: #333;
+}.ui-widget-header {
+  border: 1px solid #e78f08;
+  background: $teal;
+  color: #fff;
+  font-weight: bold;
+}.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+  border: 1px solid #ccc;
+  background: #f6f6f6 url("../../assets/slider/ui-bg_glass_100_f6f6f6_1x400.png") 50% 50% repeat-x;
+  font-weight: bold;
+  color: #1c94c4;
+}.ui-state-hover, .ui-widget-content.ui-state-hover, .ui-widget-header.ui-state-hover {
+  border: 1px solid #fbcb09;
+  background: #fdf5ce url("../../assets/slider/ui-bg_glass_100_fdf5ce_1x400.png") 50% 50% repeat-x;
+  font-weight: bold;
+  color: #c77405;
+}

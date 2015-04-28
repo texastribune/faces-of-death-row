@@ -32,7 +32,6 @@ gulp.task('scripts', ['jshint'], function() {
     .pipe($.concat('bundle.js', {newLine: ';'}))
     .pipe(gulp.dest('.tmp/scripts'))
     .pipe($.uglify())
-    .pipe($.gzip({append: false}))
     .pipe(gulp.dest('dist/scripts'))
     .pipe($.size({title: 'scripts'}));
 });

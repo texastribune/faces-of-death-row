@@ -93,6 +93,22 @@ gulp.task('images', function() {
   .pipe($.size({title: 'images'}));
 });
 
+gulp.task('rev', function(){
+  return gulp.src(['dist/**/*.css', 'dist/**/*.js'])
+    .pipe($.rev())
+    .pipe(gulp.dest('dist'))
+    .pipe($.rev.manifest())
+    .pipe(gulp.dest('dist'));
+});
+
+gulp.task('revreplace', ['rev'], function(){
+  var manifest = gulp.src('./dist/rev-manifest.json');
+
+  return gulp.src('dist/index.html')
+    .pipe($.revReplace({manifest: manifest}))
+    .pipe(gulp.dest('dist'));
+});
+
 gulp.task('assets', function() {
   return gulp.src(['app/assets/*', '!app/assets/images/'])
   .pipe(gulp.dest('dist/assets'))
@@ -137,7 +153,7 @@ gulp.task('serve:build', ['default'], function() {
 });
 
 gulp.task('default', ['clean'], function(cb) {
-  runSequence(['styles', 'scripts', 'templates', 'images', 'assets'], cb);
+  runSequence(['styles', 'scripts', 'templates', 'images', 'assets'], ['revreplace'], cb);
 });
 
 gulp.task('build', ['default']);

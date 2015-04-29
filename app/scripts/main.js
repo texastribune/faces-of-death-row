@@ -4,8 +4,19 @@
 
 $(document).ready(function() {
 
+  //get age and year ranges based on max and min of those values from data
   var ageMin, ageMax, yearMin, yearMax;
   findRange(inmates);
+
+  //replace checkboxes with strikethroughs
+  $('.criteria input:checkbox').on('change', function () {
+      var input = $(this).next('span');
+      if (this.checked) {
+          $(input).css('textDecoration', 'none');
+      } else {
+          $(input).css('textDecoration', 'line-through');
+      }
+  });
 
   initSliders(ageMin,ageMax,yearMin,yearMax);
 
@@ -13,7 +24,7 @@ $(document).ready(function() {
     template: '#inmate-template',
     search: {},
     callbacks: {
-      afterFilter: function(result) {
+      afterFilter: function(result, inmates) {
         $('#total_inmates').text(result.length);
       }
     }

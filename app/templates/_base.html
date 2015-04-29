@@ -8,13 +8,19 @@
   {% endblock %}
 </head>
 <body>
+  <section class="masthead">
+      <a href="http://www.texastribune.org">
+        <img class="trib-logo" alt="The Texas Tribune" src="http://s3.amazonaws.com/apps.texastribune.org/branding/TxTrib-logo-white500x55.png">
+      </a>
+  </section>
+  <section class="container">
+    <h1>{{ META.project_title }}</h1>
+    <p>{{ META.description }}</p>
 
-<h1>{{ META.project_title }}</h1>
-<p>{{ META.description }}</p>
-
-<div id="main-content">
-  {% block content %}{% endblock %}
-</div>
+    <div id="main-content">
+      {% block content %}{% endblock %}
+    </div>
+  </section>
 
 {% block script %}
 <script>

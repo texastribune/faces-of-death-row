@@ -10,33 +10,33 @@
 <div class="interactive">
   <div class="filters">
     <div class="row">
-      <h4 class="col-span-6"> Inmates (<span id="total_inmates">{{ META.total_inmates }}</span>)</h4>
+      <h4 class="col-span-6 num-match"><span id="total_inmates">{{ META.total_inmates }}</span> inmates</h4>
     </div>
     <div class="criteria" id="race_criteria">
       <h4>Race</h4>
       <div class="checkbox">
         <label>
-          <input type="checkbox" value="White"> White
+          <input type="checkbox" value="White"> <span>White</span>
         </label>
       </div>
       <div class="checkbox">
         <label>
-          <input type="checkbox" value="Black"> Black
+          <input type="checkbox" value="Black"> <span>Black</span>
         </label>
       </div>
       <div class="checkbox">
         <label>
-          <input type="checkbox" value="Hispanic"> Hispanic
+          <input type="checkbox" value="Hispanic"> <span>Hispanic</span>
         </label>
       </div>
       <div class="checkbox">
         <label>
-          <input type="checkbox" value="Asian"> Asian
+          <input type="checkbox" value="Asian"> <span>Asian</span>
         </label>
       </div>
       <div class="checkbox">
         <label>
-          <input type="checkbox" value="Other"> Other
+          <input type="checkbox" value="Other"> <span>Other</span>
         </label>
       </div>
     </div>
@@ -44,12 +44,12 @@
       <h4>Sex</h4>
       <div class="checkbox">
         <label>
-          <input type="checkbox" value="male"> Male
+          <input type="checkbox" value="male"> <span>Male</span>
         </label>
       </div>
       <div class="checkbox">
         <label>
-          <input type="checkbox" value="female"> Female
+          <input type="checkbox" value="female"> <span>Female</span>
         </label>
       </div>
     </div>
@@ -72,14 +72,14 @@
   <div class="inmates container col-span-9" id="inmates">
   </div>
   <script id="inmate-template" type="text/html">
-    <div class="col-span-4 inmate" style="background-image: url( assets/images/<%= mug %> );">
+    <div class="inmate" style="background-image: url( assets/images/<%= mug %> );">
       <div class="outline">
         <h4 class="name"><%= first_name %> <%= last_name %></h4>
-        <p class="race">Race: <%= race %></p>
-        <p class="age">Age: <%= age %></p>
-        <p class="sex">Sex: <%= sex %></p>
-        <p class="timeserved">Time on Death Row: <%= time_served %></p>
-        <%= summary %>
+        <p class="race"><label>Race:</label> <%= race %></p>
+        <p class="age"><label>Age:</label> <%= age %></p>
+        <p class="sex"><label>Sex:</label> <%= sex %></p>
+        <p class="timeserved"><label>Time on Death Row:</label> <%= time_served %></p>
+        <p class="more"><a href="#inmate<%= tdcj_id %>">More on this inmate</a></p>
       </div>
     </div>
   </script>

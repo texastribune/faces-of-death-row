@@ -8,6 +8,15 @@ $(document).ready(function() {
   var ageMin, ageMax, yearMin, yearMax;
   findRange(inmates);
 
+  //remove grayscale on hover
+  $('.inmate').hover(function(){
+    console.log('hover');
+    if($(this).hasClass('grayscale'))
+      $(this).removeClass('grayscale');
+    else
+      $(this).addClass('grayscale');
+  });
+
   //replace checkboxes with strikethroughs
   $('.criteria input:checkbox').on('change', function () {
       var input = $(this).next('span');

@@ -7,8 +7,8 @@
 {% block content %}
 <h3 class="intro">The average inmate is a <span class="race">{{ META.dominant_race }}</span>, <span class="age">{{ META.average_age }}-year-old</span> <span class="sex">{{ META.dominant_sex }}</span> who was prosecuted in <span class="county">{{ META.dominant_county }}</span> county and has served <span class="time_served">{{ META.average_time_served }}</span> on death row.</h3>
 
-<div class="interactive">
-  <div class="filters">
+<div class="interactive container">
+  <div class="filters sidebar">
     <div class="row">
       <h4 class="col-span-6 num-match"><span id="total_inmates">{{ META.total_inmates }}</span> inmates</h4>
     </div>
@@ -66,13 +66,12 @@
       <input type="hidden" id="timeserved_filter" value="{{ META.min_years }}-{{ META.max_years }}"/>
     </div>
   </div>
-</div>
   <div class="sorting content col-span-9">
   </div>
-  <div class="inmates container col-span-9" id="inmates">
+  <div class="inmates col-span-9" id="inmates">
   </div>
   <script id="inmate-template" type="text/html">
-    <div class="inmate" style="background-image: url( assets/images/<%= mug %> );">
+    <div class="inmate grayscale" style="background-image: url( assets/images/<%= mug %> );">
       <div class="outline">
         <h4 class="name"><%= first_name %> <%= last_name %></h4>
         <p class="race"><label>Race:</label> <%= race %></p>

@@ -8,24 +8,20 @@ $(document).ready(function() {
   var ageMin, ageMax, yearMin, yearMax;
   findRange(inmates);
 
-  //remove grayscale on hover
-  $('.inmate').hover(function(){
-    console.log('hover');
-    if($(this).hasClass('grayscale'))
-      $(this).removeClass('grayscale');
-    else
-      $(this).addClass('grayscale');
+  //lightbox scripts
+  $('.open-lightbox').click(function() {
+      var inmate = $(this).attr('id');
+      $('#light-'+inmate).removeClass('hidden');
+      $('#fade-'+inmate).removeClass('hidden');
   });
-
-  //replace checkboxes with strikethroughs
-  $('.criteria input:checkbox').on('change', function () {
-      var input = $(this).next('span');
-      if (this.checked) {
-          $(input).css('textDecoration', 'none');
-      } else {
-          $(input).css('textDecoration', 'line-through');
-      }
-  });
+  $('.black_overlay').click(function() {
+    $('.black_overlay').addClass('hidden');
+    $('.white_content').addClass('hidden');
+  })
+  $('.close-lightbox').click(function() {
+    $('.black_overlay').addClass('hidden');
+    $('.white_content').addClass('hidden');
+  })
 
   initSliders(ageMin,ageMax,yearMin,yearMax);
 

@@ -71,17 +71,38 @@
   <div class="inmates col-span-9" id="inmates">
   </div>
   <script id="inmate-template" type="text/html">
-    <div class="inmate grayscale" style="background-image: url( assets/images/<%= mug %> );">
-      <div class="outline">
-        <h4 class="name"><%= first_name %> <%= last_name %></h4>
-        <p class="race"><label>Race:</label> <%= race %></p>
-        <p class="age"><label>Age:</label> <%= age %></p>
-        <p class="sex"><label>Sex:</label> <%= sex %></p>
-        <p class="timeserved"><label>Time on Death Row:</label> <%= time_served %></p>
-        <p class="more"><a href="#inmate<%= tdcj_id %>">More on this inmate</a></p>
+    <div class="inmate">
+      <div class="open-lightbox" id="inmate<%= tdcj_id %>">
+        <img class="grayscale" src="assets/images/<%= mug %>" />
+        <div class="outline">
+          <h4 class="name"><%= first_name %> <%= last_name %></h4>
+        </div>
       </div>
     </div>
   </script>
+  {% for inmate in INMATES %}
+  <div id="light-inmate{{ inmate.tdcj_id }}" class="white_content hidden">
+    <div class="bio">
+      <img src="assets/images/{{ inmate.mug }}" />
+      <div class="details">
+        <h2>{{ inmate.first_name }} {{inmate.last_name }}</h2>
+        <p><label>Age:</label> {{ inmate.age }}</p>
+        <p><label>Sex:</label> {{ inmate.sex }}</p>
+        <p><label>Race:</label> {{ inmate.race }}</p>
+        <p><label>Time on Death Row:</label> {{ inmate.time_served }}</p>
+        <hr>
+        <p><label>County:</label> {{ inmate.county }}</p>
+        <p><label>Crime:</label> {{ inmate.offense_date }}</p>
+        <p><label>Conviction:</label> {{ inmate.received_date }}</p>
+        <hr>
+        <p><label>Summary of Crime</label></p>
+        {{ inmate.summary }}
+      </div>
+    </div>
+    <div class="close-lightbox">Close</div>
+  </div>
+  <div id="fade-inmate{{ inmate.tdcj_id }}" class="black_overlay hidden"></div>
+  {% endfor %}
 </div>
 {% endblock %}
 

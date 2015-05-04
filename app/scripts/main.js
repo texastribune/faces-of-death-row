@@ -8,21 +8,6 @@ $(document).ready(function() {
   var ageMin, ageMax, yearMin, yearMax;
   findRange(inmates);
 
-  //lightbox scripts
-  $('.open-lightbox').click(function() {
-      var inmate = $(this).attr('id');
-      $('#light-'+inmate).removeClass('hidden');
-      $('#fade-'+inmate).removeClass('hidden');
-  });
-  $('.black_overlay').click(function() {
-    $('.black_overlay').addClass('hidden');
-    $('.white_content').addClass('hidden');
-  })
-  $('.close-lightbox').click(function() {
-    $('.black_overlay').addClass('hidden');
-    $('.white_content').addClass('hidden');
-  })
-
   initSliders(ageMin,ageMax,yearMin,yearMax);
 
   var FJS = new FilterJS(inmates, '#inmates', {
@@ -67,8 +52,47 @@ $(document).ready(function() {
   FJS.addCriteria({field: 'timeserved', ele: '#timeserved_filter', type: 'range'});
   FJS.addCriteria({field: 'sex', ele: '#sex_criteria input:checkbox'});
 
-
   window.FJS = FJS;
+
+  //lightbox scripts
+  $('.open-lightbox').click(function() {
+    var inmate = $(this).attr('id');
+    $('#light-'+inmate).removeClass('hidden');
+    $('#fade-'+inmate).removeClass('hidden');
+  });
+  $('.black_overlay').click(function() {
+    $('.black_overlay').addClass('hidden');
+    $('.white_content').addClass('hidden');
+  });
+  $('.close-lightbox').click(function() {
+    $('.black_overlay').addClass('hidden');
+    $('.white_content').addClass('hidden');
+  });
+
+  //jump sidebar down when you hit it
+  var length = jQuery('#interactive').height() - jQuery('.sidebar').height() + jQuery('#interactive').offset().top;
+  jQuery(window).scroll(function () {
+    var scroll = jQuery(this).scrollTop();
+    var height = jQuery('.sidebar').height() + 'px';
+    if (scroll < jQuery('#interactive').offset().top) {
+      jQuery('.sidebar').css({
+        'position': 'absolute',
+        'top': '0'
+      });
+    } else if (scroll > length) {
+      jQuery('.sidebar').css({
+        'position': 'absolute',
+        'top': 'auto'
+      });
+    } else {
+      jQuery('.sidebar').css({
+        'position': 'fixed',
+        'top': '0',
+        'margin-top': '1em'
+      });
+    }
+  });
+
 });
 
 function initSliders(ageMin,ageMax,yearMin,yearMax) {

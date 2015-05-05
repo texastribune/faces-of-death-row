@@ -3,21 +3,26 @@
 @import 'components/slider';
 @import 'components/masthead';
 
-$dr-orange: rgb(255,153,52);
-$dr-seafoam: rgb(120,156,144);
+@import url(http://fonts.googleapis.com/css?family=Stardos+Stencil:400,700);
+$dr-orange: rgb(255,133,33);
+$dr-seafoam: rgb(168,192,183);
+$dr-darkgreen: rgb(47,79,79);
+$dr-dark-gray: $bodytext-black;
 
 .container {
   width:98%;
   max-width:980px;
   margin:0 auto;
+  color: $dr-dark-gray;
 }
 #header {
   margin:1em auto;
   h1 {
+    font: 400 4em 'Stardos Stencil', georgia, serif;
+    line-height:1em;
     text-transform: uppercase;
-    font-size:3em;
-    padding-left:1em;
-    border-left:3px solid $dr-orange;
+    padding-left:0.5em;
+    border-left:2px solid $dr-orange;
     @include span-columns(6);
   }
   .description {
@@ -49,26 +54,81 @@ $dr-seafoam: rgb(120,156,144);
   }
   @include clearfix;
 }
-#interactive {
-  position:relative;
-  .filters {
-    h3 {
-      font-family:$base-serif;
-      padding-bottom:0.5em;
-      margin-bottom: 1em;
-      border-bottom: 1px dashed $dr-seafoam;
-    }
-    .num-match {
-      text-align: center;
-      margin-bottom:1em;
-    }
+.filters {
+  background-color: $dr-seafoam;
+  padding:1em 0;
+  margin: 1em 0;
+  h3 {
+    letter-spacing: 0.03em;
+    margin-bottom:1em;
+  }
+  .all-criteria {
     .criteria{
-      background-color: #D3D3D3;
-      min-height: 110px;
-      margin-bottom: 1em;
-      padding: 1em;
+      h4{
+        background-color: $dr-darkgreen;
+        color: $white;
+        font-weight:400;
+        letter-spacing: 0.06em;
+        padding: 0.5em;
+        text-transform: uppercase;
+        margin-bottom:0.5em;
+        span {
+          text-transform:none;
+          font-weight: 300;
+        }
+      }
+      input[type='checkbox'] {
+        display: none;
+      }
+      input[type='checkbox'] + label {
+        font-size:0.9em;
+        text-transform: uppercase;
+        letter-spacing: 0.01em;
+        margin-right:0.25em;
+        &:before {
+          content:"";
+          display:inline-block;
+          vertical-align:-2px;
+          width:15px;
+          height:15px;
+          border: 2px solid $white;
+          margin-right:3px;
+        }
+      }
+      input[type='checkbox']:checked + label:before {
+        background-color:$dr-orange;
+      }
+      &#race_criteria {
+        @include span-columns(5);
+      }
+      &#sex_criteria {
+        @include span-columns(2.15);
+      }
+      &#age_criteria {
+        @include span-columns(2.25);
+      }
+      &#timeserved_criteria {
+        @include span-columns(2.6);
+        @include omega();
+      }
+    }
+    @include clearfix;
+  }
+  .num-match{
+    text-align:center;
+    margin:2em 0 1em;
+    font-weight:700;
+    text-transform: uppercase;
+    letter-spacing:0.1em;
+    #total_inmates {
+      padding: 0.1em 0.25em;
+      margin: 0 0.25em;
+      background-color: $white;
+      font: 700 2.5em 'Stardos Stencil', georgia, serif;
     }
   }
+}
+#interactive {
   .hidden {
     display:none;
   }
@@ -79,7 +139,7 @@ $dr-seafoam: rgb(120,156,144);
     left: 0%;
     width: 100%;
     height: 100%;
-    background-color: $dr-orange;
+    background-color: $dr-darkgreen;
     z-index:1001;
     -moz-opacity: 0.9;
     opacity:0.9;

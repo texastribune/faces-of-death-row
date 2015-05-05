@@ -5,70 +5,49 @@
 {% endblock %}
 
 {% block content %}
-<div id="interactive">
-  <div class="filters">
+<section class="filters">
+  <div class="container">
     <h3>Filter Inmates</h3>
-    <div class="criteria" id="race_criteria">
-      <h4>Race</h4>
-      <div class="checkbox">
-        <label>
-          <input type="checkbox" value="White"> <span>White</span>
-        </label>
+    <div class="all-criteria">
+      <div class="criteria" id="race_criteria">
+        <h4>Race</h4>
+          <input id="white" type="checkbox" value="White">
+          <label for="white">White</label>
+          <input id="black" type="checkbox" value="Black">
+          <label for="black">Black</label>
+          <input id="hispanic" type="checkbox" value="Hispanic">
+          <label for="hispanic">Hispanic</label>
+          <input id="asian" type="checkbox" value="Asian">
+          <label for="asian">Asian</label>
+          <input id="other"type="checkbox" value="Other">
+          <label for="other">Other</label>
       </div>
-      <div class="checkbox">
-        <label>
-          <input type="checkbox" value="Black"> <span>Black</span>
-        </label>
+      <div class="criteria" id="sex_criteria">
+        <h4>Sex</h4>
+          <input id="male" type="checkbox" value="male">
+          <label for="male">Male</label>
+          <input id="female" type="checkbox" value="female">
+          <label for="female">Female</label>
       </div>
-      <div class="checkbox">
-        <label>
-          <input type="checkbox" value="Hispanic"> <span>Hispanic</span>
-        </label>
+      <div class="criteria" id="age_criteria">
+        <h4>Age</h4>
+        <span id="age_range_label" class="slider-label">{{ META.min_age }} - {{ META.max_age }}</span>
+        <div id="age_slider" class="slider"></div>
+        <input type="hidden" id="age_filter" value="{{ META.min_age }}-{{ META.max_age }}"/>
       </div>
-      <div class="checkbox">
-        <label>
-          <input type="checkbox" value="Asian"> <span>Asian</span>
-        </label>
-      </div>
-      <div class="checkbox">
-        <label>
-          <input type="checkbox" value="Other"> <span>Other</span>
-        </label>
-      </div>
-    </div>
-    <div class="criteria" id="sex_criteria">
-      <h4>Sex</h4>
-      <div class="checkbox">
-        <label>
-          <input type="checkbox" value="male"> <span>Male</span>
-        </label>
-      </div>
-      <div class="checkbox">
-        <label>
-          <input type="checkbox" value="female"> <span>Female</span>
-        </label>
+      <div class="criteria" id="timeserved_criteria">
+        <h4>Years <span>(on death row)</span></h4>
+        <span id="timeserved_range_label" class="slider-label">{{ META.min_years }} - {{ META.max_years }}</span>
+        <div id="timeserved_slider" class="slider"></div>
+        <input type="hidden" id="timeserved_filter" value="{{ META.min_years }}-{{ META.max_years }}"/>
       </div>
     </div>
-    <div class="criteria" id="age_criteria">
-      <h4>Age</h4>
-      <span id="age_range_label" class="slider-label">{{ META.min_age }} - {{ META.max_age }}</span>
-      <div id="age_slider" class="slider"></div>
-      <input type="hidden" id="age_filter" value="{{ META.min_age }}-{{ META.max_age }}"/>
-    </div>
-    <div class="criteria" id="timeserved_criteria">
-      <h4>Years on Death Row</h4>
-      <span id="timeserved_range_label" class="slider-label">{{ META.min_years }} - {{ META.max_years }}</span>
-      <div id="timeserved_slider" class="slider"></div>
-      <input type="hidden" id="timeserved_filter" value="{{ META.min_years }}-{{ META.max_years }}"/>
-    </div>
+    <div class="num-match">Viewing <span id="total_inmates">{{ META.total_inmates }}</span> inmates</div>
   </div>
-  <div class="row">
-    <h4 class="col-span-6 num-match"><span id="total_inmates">{{ META.total_inmates }}</span> inmates</h4>
-  </div>
-  <div class="sorting content col-span-9">
-  </div>
-  <div class="inmates col-span-9" id="inmates">
-  </div>
+</section>
+<section id="interactive" class="container">
+  <div class="sorting"></div>
+  <div class="inmates" id="inmates"></div>
   <script id="inmate-template" type="text/html">
     <div class="inmate">
       <div class="open-lightbox" id="inmate<%= tdcj_id %>">
@@ -102,7 +81,7 @@
   </div>
   <div id="fade-inmate{{ inmate.tdcj_id }}" class="black_overlay hidden"></div>
   {% endfor %}
-</div>
+</section>
 {% endblock %}
 
 {% block script %}

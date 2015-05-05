@@ -52,6 +52,9 @@ $(document).ready(function() {
   FJS.addCriteria({field: 'timeserved', ele: '#timeserved_filter', type: 'range'});
   FJS.addCriteria({field: 'sex', ele: '#sex_criteria input:checkbox'});
 
+  $('#race_criteria :checkbox').prop('checked', true);
+  $('#sex_criteria :checkbox').prop('checked', true);
+
   window.FJS = FJS;
 
   //lightbox scripts
@@ -69,6 +72,14 @@ $(document).ready(function() {
     $('.white_content').addClass('hidden');
   });
 
+  //set slider width
+  var ageWidth = $('#age_criteria').width();
+  var ageSliderWidth = ageWidth - 59; //half of slider plus labels and their margin
+  $('#age_slider').width(ageSliderWidth);
+  var yearWidth = $('#timeserved_criteria').width();
+  var yearSliderWidth = yearWidth - 59;
+  $('#timeserved_slider').width(yearSliderWidth);
+
 });
 
 function initSliders(ageMin,ageMax,yearMin,yearMax) {
@@ -79,7 +90,8 @@ function initSliders(ageMin,ageMax,yearMin,yearMax) {
     step: 5,
     range:true,
     slide: function(event, ui) {
-      $('#age_range_label' ).html(ui.values[0] + ' - ' + ui.values[1]);
+      $('#age_range_label_start' ).html(ui.values[0]);
+      $('#age_range_label_end').html(ui.values[1]);
       $('#age_filter').val(ui.values[0] + '-' + ui.values[1]).trigger('change');
     }
   });
@@ -91,11 +103,9 @@ function initSliders(ageMin,ageMax,yearMin,yearMax) {
     step: 5,
     range:true,
     slide: function(event, ui) {
-      $('#timeserved_range_label').html(ui.values[0] + ' - ' + ui.values[1]);
+      $('#timeserved_range_label_start').html(ui.values[0]);
+      $('#timeserved_range_label_end').html(ui.values[1]);
       $('#timeserved_filter').val(ui.values[0] + '-' + ui.values[1]).trigger('change');
     }
   });
-
-  $('#race_criteria :checkbox').prop('checked', true);
-  $('#sex_criteria :checkbox').prop('checked', true);
 }

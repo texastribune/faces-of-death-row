@@ -1,11 +1,18 @@
+$dr-orange: rgb(255,133,33);
+$dr-darkgreen: rgb(47,79,79);
+
+.critieria_slider {
+  width:100%;
+}
 .ui-slider {
     position: relative;
     text-align: left;
+    display: inline-block;
 }.ui-slider .ui-slider-handle {
     position: absolute;
     z-index: 2;
-    width: 1.2em;
-    height: 1.2em;
+    width: 1em;
+    height: 1em;
     cursor: default;
 }.ui-slider .ui-slider-range {
     position: absolute;
@@ -14,33 +21,32 @@
     display: block;
     border: 0;
     background-position: 0 0;
+}.slider-label {
+    font-weight:700;
+    display:inline-block;
+    width:20px;
+    &.start {
+      margin-right:5px;
+    }
+    &.end {
+      margin-left:5px;
+    }
 }.ui-slider-horizontal {
-    height: 0.8em;
+    height: 0.4em;
+    background: $white;
+    top:-0.2em;
+    width: 50%;
 }.ui-slider-horizontal .ui-slider-handle {
     top: -0.3em;
-    margin-left: -0.6em;
+    margin-left: -8px;
 }.ui-slider-horizontal .ui-slider-range {
     top: 0;
     height: 100%;
-}.ui-widget-content {
-  border: 1px solid #ddd;
-  background: #eee url("../assets/images/ui-bg_highlight-soft_100_eeeeee_1x100.png") 50% top repeat-x;
-  color: #333;
-}.ui-widget-content a{
-  color: #333;
 }.ui-widget-header {
   border: 1px solid #e78f08;
-  background: $teal;
+  background: $dr-orange;
   color: #fff;
   font-weight: bold;
-}.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
-  border: 1px solid #ccc;
-  background: #f6f6f6 url("../assets/images/ui-bg_glass_100_f6f6f6_1x400.png") 50% 50% repeat-x;
-  font-weight: bold;
-  color: #1c94c4;
-}.ui-state-hover, .ui-widget-content.ui-state-hover, .ui-widget-header.ui-state-hover {
-  border: 1px solid #fbcb09;
-  background: #fdf5ce url("../assets/images/ui-bg_glass_100_fdf5ce_1x400.png") 50% 50% repeat-x;
-  font-weight: bold;
-  color: #c77405;
+}.ui-state-default {
+  background: $dr-darkgreen;
 }

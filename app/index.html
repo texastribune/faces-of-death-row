@@ -5,13 +5,9 @@
 {% endblock %}
 
 {% block content %}
-<h3 class="intro">The average inmate is a <span class="race">{{ META.dominant_race }}</span>, <span class="age">{{ META.average_age }}-year-old</span> <span class="sex">{{ META.dominant_sex }}</span> who was prosecuted in <span class="county">{{ META.dominant_county }}</span> county and has served <span class="time_served">{{ META.average_time_served }}</span> on death row.</h3>
-
-<div id="interactive" class="container">
-  <div class="filters sidebar">
-    <div class="row">
-      <h4 class="col-span-6 num-match"><span id="total_inmates">{{ META.total_inmates }}</span> inmates</h4>
-    </div>
+<div id="interactive">
+  <div class="filters">
+    <h3>Filter Inmates</h3>
     <div class="criteria" id="race_criteria">
       <h4>Race</h4>
       <div class="checkbox">
@@ -65,6 +61,9 @@
       <div id="timeserved_slider" class="slider"></div>
       <input type="hidden" id="timeserved_filter" value="{{ META.min_years }}-{{ META.max_years }}"/>
     </div>
+  </div>
+  <div class="row">
+    <h4 class="col-span-6 num-match"><span id="total_inmates">{{ META.total_inmates }}</span> inmates</h4>
   </div>
   <div class="sorting content col-span-9">
   </div>

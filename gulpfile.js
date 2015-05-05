@@ -119,7 +119,7 @@ gulp.task('clean', function() {
   del(['.tmp', 'dist/*', '!dist/.git'], {dot: true});
 });
 
-gulp.task('serve', ['styles', 'jshint', 'templates'], function() {
+gulp.task('serve', ['styles', 'jshint', 'scripts', 'templates'], function() {
   browserSync({
     notify: false,
     logConnections: true,
@@ -137,7 +137,7 @@ gulp.task('serve', ['styles', 'jshint', 'templates'], function() {
   gulp.watch(['app/**/*.html'], ['templates', reload]);
   gulp.watch(['data.json'], ['templates', reload]);
   gulp.watch(['app/styles/**/*.scss'], ['styles']);
-  gulp.watch(['app/scripts/**/*.js'], ['jshint']);
+  gulp.watch(['app/scripts/**/*.js'], ['jshint', 'scripts']);
   gulp.watch(['app/images/**/*'], reload);
   gulp.watch(['app/fonts/**/*'], reload);
 });

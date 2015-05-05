@@ -6,6 +6,7 @@
   {% block styles %}
   <link rel="stylesheet" href="styles/main.css">
   {% endblock %}
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css" rel="stylesheet">
 </head>
 <body>
   <section class="masthead">
@@ -15,7 +16,26 @@
   </section>
   <section id="header" class="container">
     <h1>{{ META.project_title }}</h1>
-    <p>{{ META.description }}</p>
+    <div class="description prose">
+      {{ META.description }}
+      <ul class="share">
+        <li>
+          <a href="https://twitter.com/intent/tweet?text={{ META.project_title | urlencode }}%20http%3A%2F%2Fmoose.texastribune.org%2Fdeath-row%2F&amp;via=texastribune" title="share on Twitter" class="social-share" target="_blank">
+            <i class="fa fa-twitter"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/dialog/share?app_id=154122474650943&amp;display=popup&amp;href=http%3A%2F%2Fmoose.texastribune.org%2Fdeath-row%2F&amp;redirect_uri=http%3A%2F%2Fmoose.texastribune.org%2Fdeath-row%2F" title="share on Facebook" class="social-share" target="_blank">
+            <i class="fa fa-facebook"></i>
+          </a>
+        </li>
+        <li>
+          <a href="mailto:?subject=The%20Texas%20Tribune:{{ META.project_title | urlencode }}&amp;body={{ META.email_line | urlencode }}%20http%3A%2F%2Fmoose.texastribune.org%2Fdeath-row%2F" title="" class="email">
+            <i class="fa fa-envelope"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
   </section>
 
   <section class="container">

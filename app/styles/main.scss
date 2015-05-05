@@ -3,7 +3,8 @@
 @import 'components/slider';
 @import 'components/masthead';
 
-$dr-orange: rgb(255,116,26);
+$dr-orange: rgb(255,153,52);
+$dr-seafoam: rgb(120,156,144);
 
 .container {
   width:98%;
@@ -11,21 +12,52 @@ $dr-orange: rgb(255,116,26);
   margin:0 auto;
 }
 #header {
-  text-align:center;
+  margin:1em auto;
   h1 {
     text-transform: uppercase;
-    margin:1em;
+    font-size:3em;
+    padding-left:1em;
+    border-left:3px solid $dr-orange;
+    @include span-columns(6);
   }
-}
-.intro {
-  margin:1em 0;
+  .description {
+    line-height:1.75em;
+    strong {
+      text-transform: uppercase;
+      padding: 0.1em 0.25em;
+      background-color:$background-gray;
+      font-family: $base-sans-serif;
+      letter-spacing:0.05em;
+      font-size:1.1em;
+    }
+    @include span-columns(6);
+    @include omega();
+    .share {
+      list-style:none;
+      display:inline;
+      margin: 0;
+      padding: 0;
+      li {
+        display: inline;
+        padding-right: 1em;
+        .fa {
+          color:$dr-seafoam;
+          font-size:24px;
+        }
+      }
+    }
+  }
+  @include clearfix;
 }
 #interactive {
   position:relative;
-  .sidebar {
-    float:left;
-    width:200px;
-    height:100%;
+  .filters {
+    h3 {
+      font-family:$base-serif;
+      padding-bottom:0.5em;
+      margin-bottom: 1em;
+      border-bottom: 1px dashed $dr-seafoam;
+    }
     .num-match {
       text-align: center;
       margin-bottom:1em;
@@ -97,7 +129,6 @@ $dr-orange: rgb(255,116,26);
     }
   }
   .inmates {
-    margin-left:220px;
     .inmate {
       margin-bottom:1em;
       height:220px;

@@ -74,10 +74,10 @@ $(document).ready(function() {
 
   //set slider width
   var ageWidth = $('#age_criteria').width();
-  var ageSliderWidth = ageWidth - 59; //half of slider plus labels and their margin
+  var ageSliderWidth = ageWidth - 69; //half of slider plus labels and their margin
   $('#age_slider').width(ageSliderWidth);
   var yearWidth = $('#timeserved_criteria').width();
-  var yearSliderWidth = yearWidth - 59;
+  var yearSliderWidth = yearWidth - 69;
   $('#timeserved_slider').width(yearSliderWidth);
 
 });

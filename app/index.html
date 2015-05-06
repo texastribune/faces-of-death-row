@@ -57,8 +57,13 @@
       <div class="open-lightbox" id="inmate<%= tdcj_id %>">
         <img class="grayscale" src="assets/images/<%= mug %>" />
         <div class="outline">
-          <h4 class="name"><%= first_name %> <%= last_name %></h4>
+          <h2><%= first_name %> <%= last_name %></h2>
+          <div class="details">
+            <p class="label">Time on death row:</p>
+            <p><%= time_served %></p>
+          </div>
         </div>
+        <div class="info-button fa fa-info-circle"></div>
       </div>
     </div>
   </script>
@@ -68,20 +73,20 @@
       <img src="assets/images/{{ inmate.mug }}" />
       <div class="details">
         <h2>{{ inmate.first_name }} {{inmate.last_name }}</h2>
+        <p><label>Race:</label> {{ inmate.race }}</p>
         <p><label>Age:</label> {{ inmate.age }}</p>
         <p><label>Sex:</label> {{ inmate.sex }}</p>
-        <p><label>Race:</label> {{ inmate.race }}</p>
         <p><label>Time on Death Row:</label> {{ inmate.time_served }}</p>
         <hr>
-        <p><label>County:</label> {{ inmate.county }}</p>
         <p><label>Crime:</label> {{ inmate.offense_date }}</p>
         <p><label>Conviction:</label> {{ inmate.received_date }}</p>
+        <p><label>County:</label> {{ inmate.county }}</p>
         <hr>
-        <p><label>Summary of Crime</label></p>
-        {{ inmate.summary }}
+        <p><label>Summary of the Crime:</label></p>
+        <p>{{ inmate.summary }}</p>
       </div>
     </div>
-    <div class="close-lightbox">Close</div>
+    <div class="close-lightbox fa fa-times-circle"></div>
   </div>
   <div id="fade-inmate{{ inmate.tdcj_id }}" class="black_overlay hidden"></div>
   {% endfor %}

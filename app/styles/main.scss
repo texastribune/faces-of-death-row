@@ -23,19 +23,20 @@ $dr-dark-gray: $bodytext-black;
     text-transform: uppercase;
     padding-left:0.5em;
     border-left:2px solid $dr-orange;
-    @include span-columns(6);
+    @include span-columns(5.5);
   }
   .description {
-    line-height:1.75em;
+    line-height:1.4em;
+    padding: 0;
     strong {
       text-transform: uppercase;
       padding: 0.1em 0.25em;
-      background-color:$background-gray;
+      background-color:rgba(168,192,183,0.5);
       font-family: $base-sans-serif;
       letter-spacing:0.05em;
-      font-size:1.1em;
+      font-size:0.875em;
     }
-    @include span-columns(6);
+    @include span-columns(6.5);
     @include omega();
     .share {
       list-style:none;
@@ -56,6 +57,7 @@ $dr-dark-gray: $bodytext-black;
 }
 .filters {
   background-color: $dr-seafoam;
+  display: none;
   padding:1em 0;
   margin: 1em 0;
   h3 {
@@ -135,6 +137,7 @@ $dr-dark-gray: $bodytext-black;
   .black_overlay{
     position: fixed;
     overflow-y:hidden;
+    cursor:pointer;
     top: 0%;
     left: 0%;
     width: 100%;
@@ -180,13 +183,13 @@ $dr-dark-gray: $bodytext-black;
         }
         hr {
           margin:0.75em 0;
-          background-color: $dr-seafoam;
+          background-color: $dr-orange;
         }
       }
     }
     .close-lightbox{
       cursor:pointer;
-      color:$dr-seafoam;
+      color:$dr-orange;
       position:absolute;
       top:0.1em;
       right:0.1em;
@@ -250,11 +253,13 @@ $dr-dark-gray: $bodytext-black;
         position:absolute;
         left:0.25em;
         bottom:0.1em;
-        height:1em;
-        width: 1em;
-        color: $dr-orange;
-        opacity: 0.7;
-        font-size: 1.5em;
+        .fa {
+          height:1em;
+          width: 1em;
+          color: $dr-orange;
+          opacity: 0.7;
+          font-size: 1.5em;
+        }
       }
       &:hover {
         .info {
@@ -265,8 +270,10 @@ $dr-dark-gray: $bodytext-black;
           opacity: 1;
         }
         .info-button {
-          color: $white;
-          opacity: 1;
+          .fa {
+            color: $white;
+            opacity: 1;
+          }
           -webkit-transition: opacity .25s ease-in;
           -ms-transition: opacity .25s ease-in;
           -moz-transition: opacity .25s ease-in;

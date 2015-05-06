@@ -4,6 +4,9 @@
 
 $(document).ready(function() {
 
+  //displays filters when things are done loading
+  $('.filters').show();
+
   //get age and year ranges based on max and min of those values from data
   var ageMin, ageMax, yearMin, yearMax;
   findRange(inmates);
@@ -52,9 +55,6 @@ $(document).ready(function() {
   FJS.addCriteria({field: 'timeserved', ele: '#timeserved_filter', type: 'range'});
   FJS.addCriteria({field: 'sex', ele: '#sex_criteria input:checkbox'});
 
-  $('#race_criteria :checkbox').prop('checked', true);
-  $('#sex_criteria :checkbox').prop('checked', true);
-
   window.FJS = FJS;
 
   //lightbox scripts
@@ -74,10 +74,10 @@ $(document).ready(function() {
 
   //set slider width
   var ageWidth = $('#age_criteria').width();
-  var ageSliderWidth = ageWidth - 69; //half of slider plus labels and their margin
+  var ageSliderWidth = ageWidth - 67; //half of slider plus labels and their margin
   $('#age_slider').width(ageSliderWidth);
   var yearWidth = $('#timeserved_criteria').width();
-  var yearSliderWidth = yearWidth - 69;
+  var yearSliderWidth = yearWidth - 67;
   $('#timeserved_slider').width(yearSliderWidth);
 
 });

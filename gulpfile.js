@@ -25,8 +25,8 @@ gulp.task('jshint', function() {
 gulp.task('scripts', ['jshint'], function() {
   return gulp.src([
       'node_modules/jquery/dist/jquery.js',
-      'scripts/libs/jquery-ui-1.10.2.custom.min.js',
-      'scripts/libs/filter.js',
+      'app/scripts/libs/jquery-ui.js',
+      'app/scripts/libs/filter.js',
       'app/scripts/**/*.js'
     ])
     .pipe($.concat('bundle.js', {newLine: ';'}))

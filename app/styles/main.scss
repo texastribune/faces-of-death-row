@@ -10,45 +10,45 @@ $dr-darkgreen: rgb(47,79,79);
 $dr-dark-gray: $bodytext-black;
 
 .container {
-  width:98%;
-  max-width:980px;
-  margin:0 auto;
+  width: 98%;
+  max-width: 980px;
+  margin: 0 auto;
   color: $dr-dark-gray;
 }
 #header {
-  margin:1em auto;
+  margin: 3em auto 2em;
   h1 {
     font: 400 4em 'Stardos Stencil', georgia, serif;
-    line-height:1em;
+    line-height: 1em;
     text-transform: uppercase;
-    padding-left:0.5em;
-    border-left:2px solid $dr-orange;
+    padding-left: 0.5em;
+    border-left: 2px solid $dr-orange;
     @include span-columns(5.5);
   }
   .description {
-    line-height:1.4em;
+    line-height: 1.4em;
     padding: 0;
     strong {
       text-transform: uppercase;
       padding: 0.1em 0.25em;
-      background-color:rgba(168,192,183,0.5);
+      background-color: rgba(168,192,183,0.5);
       font-family: $base-sans-serif;
-      letter-spacing:0.05em;
-      font-size:0.875em;
+      letter-spacing: 0.05em;
+      font-size: 0.875em;
     }
     @include span-columns(6.5);
     @include omega();
     .share {
-      list-style:none;
-      display:inline;
+      list-style: none;
+      display: inline;
       margin: 0;
       padding: 0;
       li {
         display: inline;
         padding-right: 1em;
         .fa {
-          color:$dr-seafoam;
-          font-size:24px;
+          color: $dr-seafoam;
+          font-size: 24px;
         }
       }
     }
@@ -57,24 +57,24 @@ $dr-dark-gray: $bodytext-black;
 }
 .filters {
   background-color: $dr-seafoam;
-  padding:1em 0;
+  padding: 1em 0;
   margin: 1em 0;
   h3 {
     letter-spacing: 0.03em;
-    margin-bottom:1em;
+    margin-bottom: 1em;
   }
   .all-criteria {
     .criteria{
       h4{
         background-color: $dr-darkgreen;
         color: $white;
-        font-weight:400;
+        font-weight: 400;
         letter-spacing: 0.06em;
         padding: 0.5em;
         text-transform: uppercase;
-        margin-bottom:0.5em;
+        margin-bottom: 0.5em;
         span {
-          text-transform:none;
+          text-transform: none;
           font-weight: 300;
         }
       }
@@ -82,22 +82,23 @@ $dr-dark-gray: $bodytext-black;
         display: none;
       }
       input[type='checkbox'] + label {
-        font-size:0.9em;
+        font-size: 0.9em;
         text-transform: uppercase;
+        cursor: pointer;
         letter-spacing: 0.01em;
-        margin-right:0.25em;
+        margin-right: 0.25em;
         &:before {
-          content:"";
-          display:inline-block;
-          vertical-align:-2px;
-          width:15px;
-          height:15px;
+          content: "";
+          display: inline-block;
+          vertical-align: -2px;
+          width: 15px;
+          height: 15px;
           border: 2px solid $white;
-          margin-right:3px;
+          margin-right: 3px;
         }
       }
       input[type='checkbox']:checked + label:before {
-        background-color:$dr-orange;
+        background-color: $dr-orange;
       }
       &#race_criteria {
         @include span-columns(5);
@@ -116,11 +117,11 @@ $dr-dark-gray: $bodytext-black;
     @include clearfix;
   }
   .num-match{
-    text-align:center;
-    margin:2em 0 1em;
-    font-weight:700;
+    text-align: center;
+    margin: 2em 0 1em;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing:0.1em;
+    letter-spacing: 0.1em;
     #total_inmates {
       padding: 0.1em 0.25em;
       margin: 0 0.25em;
@@ -135,16 +136,15 @@ $dr-dark-gray: $bodytext-black;
   }
   .black_overlay{
     position: fixed;
-    overflow-y:hidden;
-    cursor:pointer;
+    overflow-y: hidden;
+    cursor: pointer;
     top: 0%;
     left: 0%;
     width: 100%;
     height: 100%;
     background-color: $dr-darkgreen;
-    z-index:1001;
-    -moz-opacity: 0.9;
-    opacity:0.9;
+    z-index: 1001;
+    opacity: 0.9;
     filter: alpha(opacity=90);
     }
   .white_content {
@@ -154,7 +154,7 @@ $dr-dark-gray: $bodytext-black;
     width: 50%;
     max-height: 65%;
     padding: 1em;
-    z-index:1002;
+    z-index: 1002;
     background: $white;
     overflow: scroll;
     .bio {
@@ -166,94 +166,87 @@ $dr-dark-gray: $bodytext-black;
         @include span-columns(6.5);
         @include omega();
         h2 {
-          margin-bottom:0.5em;
-          font-size:1.75em;
-          letter-spacing:0.03em;
+          margin-bottom: 0.5em;
+          font-size: 1.75em;
+          letter-spacing: 0.03em;
         }
         p {
-          line-height:1.1em;
-          margin-bottom:0.75em;
+          line-height: 1.1em;
+          margin-bottom: 0.75em;
           label {
             text-transform: uppercase;
-            font-size:0.875em;
+            font-size: 0.875em;
             font-weight: 700;
-            letter-spacing:0.03em;
+            letter-spacing: 0.03em;
           }
         }
         hr {
-          margin:0.75em 0;
+          margin: 0.75em 0;
           background-color: $dr-orange;
         }
       }
     }
     .close-lightbox{
-      cursor:pointer;
-      color:$dr-orange;
-      position:absolute;
-      top:0.1em;
-      right:0.1em;
-      font-size:2em;
+      cursor: pointer;
+      color: $dr-orange;
+      position: absolute;
+      top: 0.1em;
+      right: 0.1em;
+      font-size: 2em;
     }
   }
   .inmates {
     .inmate {
-      margin-bottom:1em;
-      height:220px;
-      line-height:1em;
-      cursor:pointer;
-      position:relative;
+      margin-bottom:10px;
+      height: 250px;
+      line-height: 1em;
+      cursor: pointer;
+      position: relative;
       overflow: hidden;
-      @include span-columns(2.3);
+      width: 20%;
+      border-right: 5px solid $white;
+      border-left: 5px solid $white;
+      border-bottom: 8px solid $white;
+      float: left;
       img {
-        width:100%;
+        width: 100%;
         &.grayscale {
-          -moz-filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
-          -o-filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
-          -webkit-filter: grayscale(100%);
-          filter: gray;
-          filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+          filter: grayscale(100%);
         }
-      }
-      .info {
-        display:none;
       }
       .outline {
         display: block;
         position: absolute;
         left: 0;
-        bottom:0;
+        bottom: 0;
         height: 100%;
-        width:100%;
+        width: 100%;
         background: rgba(255,133,33,0.7);
-        color:white;
+        color: white;
         opacity: 0;
-        -webkit-transition: opacity .25s ease-in;
-        -ms-transition: opacity .25s ease-in;
-        -moz-transition: opacity .25s ease-in;
-        -o-transition: opacity .25s ease-in;
         transition: opacity .25s ease-in;
-        padding:0.5em;
+        padding: 0.5em;
         h2 {
           letter-spacing: 0.03em;
-          line-height:1.1em;
+          line-height: 1.1em;
         }
         .details {
-          position:absolute;
+          position: absolute;
           bottom: 2em;
           .label {
-            font-size:0.8em;
+            font-size: 0.8em;
             text-transform: uppercase;
             letter-spacing: 0.03em;
           }
         }
       }
       .info-button {
-        display:block;
-        position:absolute;
-        left:0.25em;
-        bottom:0.1em;
+        display: block;
+        position: absolute;
+        left: 10px;
+        bottom: 4px;
         .fa {
-          height:1em;
+          height: 1em;
           width: 1em;
           color: $dr-orange;
           opacity: 0.7;
@@ -262,8 +255,8 @@ $dr-dark-gray: $bodytext-black;
       }
       &:hover {
         .info {
-          display:block;
-          padding:1em;
+          display: block;
+          padding: 1em;
         }
         .outline {
           opacity: 1;
@@ -273,10 +266,6 @@ $dr-dark-gray: $bodytext-black;
             color: $white;
             opacity: 1;
           }
-          -webkit-transition: opacity .25s ease-in;
-          -ms-transition: opacity .25s ease-in;
-          -moz-transition: opacity .25s ease-in;
-          -o-transition: opacity .25s ease-in;
           transition: opacity .25s ease-in;
         }
         .detail {
@@ -284,13 +273,13 @@ $dr-dark-gray: $bodytext-black;
         }
         &:after {
           content: "";
-          opacity:0.75;
-          top:0;
-          left:0;
-          bottom:0;
-          right:0;
-          position:absolute;
-          z-index:-1;
+          opacity: 0.75;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          position: absolute;
+          z-index: -1;
         }
       }
     }

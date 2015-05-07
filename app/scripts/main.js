@@ -1,111 +1,130 @@
-/* global inmates, FilterJS */
+(function() {
+  'use strict';
 
-'use strict';
+  var $inmatesContainer = $('#inmates');
+  var $inmates = $inmatesContainer.find('.inmate');
 
-$(document).ready(function() {
+  var $raceCriteria = $('#race_criteria').find('input[type=checkbox]');
 
-  //displays filters when things are done loading
-  $('.filters').show();
+  $raceCriteria.change(function() {
+    filter();
+  });
 
-  //get age and year ranges based on max and min of those values from data
-  var ageMin, ageMax, yearMin, yearMax;
-  findRange(inmates);
+  var $sexCriteria = $('#sex_criteria').find('input[type=checkbox]');
 
-  initSliders(ageMin,ageMax,yearMin,yearMax);
+  $sexCriteria.change(function() {
+    filter();
+  });
 
-  var FJS = new FilterJS(inmates, '#inmates', {
-    template: '#inmate-template',
-    search: {},
-    callbacks: {
-      afterFilter: function(result, inmates) {
-        $('#total_inmates').text(result.length);
+  var $ageRangeLabelStart = $('#age_range_label_start');
+  var $ageRangeLabelEnd = $('#age_range_label_end');
+
+  $('#age_slider').slider({
+    min: 20,
+    max: 80,
+    values:[20, 80],
+    step: 5,
+    range:true,
+    slide: function(event, ui) {
+      $ageRangeLabelStart.text(ui.values[0]);
+      $ageRangeLabelEnd.text(ui.values[1]);
+
+      filter();
+    }
+  });
+
+  var $timeServedRangeLabelStart = $('#timeserved_range_label_start');
+  var $timeServedRangeLabelEnd = $('#timeserved_range_label_end');
+
+  $('#timeserved_slider').slider({
+    min: 0,
+    max: 40,
+    values:[0, 40],
+    step: 5,
+    range:true,
+    slide: function(event, ui) {
+      $timeServedRangeLabelStart.text(ui.values[0]);
+      $timeServedRangeLabelEnd.text(ui.values[1]);
+
+      filter();
+    }
+  });
+
+  function getState() {
+    var raceSelection = $raceCriteria.filter(':checked').map(function() { return this.value; }).get();
+    var sexSelection = $sexCriteria.filter(':checked').map(function() { return this.value; }).get();
+    var ageRange = [+$ageRangeLabelStart.text(), +$ageRangeLabelEnd.text()];
+    var timeRange = [+$timeServedRangeLabelStart.text(), +$timeServedRangeLabelEnd.text()];
+
+    return {
+      raceSelection: raceSelection,
+      sexSelection: sexSelection,
+      ageRange: ageRange,
+      timeRange: timeRange
+    };
+  }
+
+  var $totalInmates = $('#total_inmates');
+  var activeInmates = [];
+
+  function filter() {
+    var state = getState();
+
+    activeInmates = $inmates.filter(function() {
+      var $this = $(this);
+
+      if ($.inArray($this.data('race'), state.raceSelection) < 0 && state.raceSelection.length) {
+        $this.addClass('hidden');
+        return false;
       }
-    }
+
+      if ($.inArray($this.data('sex'), state.sexSelection) < 0 && state.sexSelection.length) {
+        $this.addClass('hidden');
+        return false;
+      }
+
+      var age = +$this.data('age');
+
+      if (state.ageRange[0] > age || age > state.ageRange[1]) {
+        $this.addClass('hidden');
+        return false;
+      }
+
+      var time = +$this.data('time');
+
+      if (state.timeRange[0] > time || time > state.timeRange[1]) {
+        $this.addClass('hidden');
+        return false;
+      }
+
+      $this.removeClass('hidden');
+      return true;
+    });
+
+    $totalInmates.text(activeInmates.length);
+  }
+
+  $inmatesContainer.find('.open-lightbox').click(function() {
+    var inmate = this.id;
+    var $parentEls = $(this).parent();
+
+    var nextViewable = $parentEls.nextAll().not('.hidden').first();
+    var prevViewable = $parentEls.prevAll().not('.hidden').first();
+
+    console.log(nextViewable);  // the next available to view
+    console.log(prevViewable);  // the previous available to view
+
+    $('#light-' + inmate).removeClass('hidden');
+    $('#fade-' + inmate).removeClass('hidden');
   });
 
-  function findRange(inmates) {
-    var ageRange = [];
-    var yearRange = [];
-    for(var i=0; i<inmates.length; i++) {
-      ageRange.push(inmates[i].age);
-      yearRange.push(inmates[i].timeserved);
-    }
-    Array.prototype.max = function() {
-      return Math.max.apply(null, this);
-    };
-    Array.prototype.min = function() {
-      return Math.min.apply(null, this);
-    };
-    ageMax = roundUp(ageRange.max());
-    ageMin = roundDown(ageRange.min());
-    yearMax = roundUp(yearRange.max());
-    yearMin = roundDown(yearRange.min());
-  }
-
-  function roundDown(x) {
-    return Math.floor(x/5)*5;
-  }
-
-  function roundUp(x) {
-    return Math.ceil(x/5)*5;
-  }
-
-  FJS.addCriteria({field: 'race', ele: '#race_criteria input:checkbox'});
-  FJS.addCriteria({field: 'age', ele: '#age_filter', type: 'range'});
-  FJS.addCriteria({field: 'timeserved', ele: '#timeserved_filter', type: 'range'});
-  FJS.addCriteria({field: 'sex', ele: '#sex_criteria input:checkbox'});
-
-  window.FJS = FJS;
-
-  //lightbox scripts
-  $('.open-lightbox').click(function() {
-    var inmate = $(this).attr('id');
-    $('#light-'+inmate).removeClass('hidden');
-    $('#fade-'+inmate).removeClass('hidden');
-  });
   $('.black_overlay').click(function() {
     $('.black_overlay').addClass('hidden');
     $('.white_content').addClass('hidden');
   });
+
   $('.close-lightbox').click(function() {
     $('.black_overlay').addClass('hidden');
     $('.white_content').addClass('hidden');
   });
-
-  //set slider width
-  var ageWidth = $('#age_criteria').width();
-  var ageSliderWidth = ageWidth - 67; //half of slider plus labels and their margin
-  $('#age_slider').width(ageSliderWidth);
-  var yearWidth = $('#timeserved_criteria').width();
-  var yearSliderWidth = yearWidth - 67;
-  $('#timeserved_slider').width(yearSliderWidth);
-
-});
-
-function initSliders(ageMin,ageMax,yearMin,yearMax) {
-  $('#age_slider').slider({
-    min: ageMin,
-    max: ageMax,
-    values:[ageMin, ageMax],
-    step: 5,
-    range:true,
-    slide: function(event, ui) {
-      $('#age_range_label_start' ).html(ui.values[0]);
-      $('#age_range_label_end').html(ui.values[1]);
-      $('#age_filter').val(ui.values[0] + '-' + ui.values[1]).trigger('change');
-    }
-  });
-
-  $('#timeserved_slider').slider({
-    min: yearMin,
-    max: yearMax,
-    values:[yearMin, yearMax],
-    step: 5,
-    range:true,
-    slide: function(event, ui) {
-      $('#timeserved_range_label_start').html(ui.values[0]);
-      $('#timeserved_range_label_end').html(ui.values[1]);
-      $('#timeserved_filter').val(ui.values[0] + '-' + ui.values[1]).trigger('change');
-    }
-  });
-}
+})();

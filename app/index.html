@@ -69,24 +69,26 @@
 </section>
 <section id="interactive" class="container">
   <div class="sorting"></div>
-  <div class="inmates" id="inmates"></div>
-  <script id="inmate-template" type="text/html">
-    <div class="inmate">
-      <div class="open-lightbox" id="inmate<%= tdcj_id %>">
-        <img class="grayscale" src="assets/images/<%= mug %>" />
+  <div class="inmates" id="inmates">
+    {% for inmate in INMATES %}
+    <div class="inmate" data-race="{{ inmate.race }}" data-sex="{{ inmate.sex }}" data-age="{{ inmate.age }}" data-time="{{ inmate.timeserved }}">
+      <div class="open-lightbox" id="inmate-{{ inmate.tdcj_id }}">
+        <img class="grayscale" src="assets/images/{{ inmate.mug }}" />
         <div class="outline">
-          <h2><%= first_name %> <%= last_name %></h2>
+          <h2>{{ inmate.first_name }} {{ inmate.last_name }}</h2>
           <div class="details">
             <p class="label">Time on death row:</p>
-            <p><%= time_served %></p>
+            <p>{{ inmate.time_served }}</p>
           </div>
         </div>
         <div class="info-button"><i class="fa fa-info-circle"></i></div>
       </div>
     </div>
-  </script>
+    {% endfor %}
+  </div>
+
   {% for inmate in INMATES %}
-  <div id="light-inmate{{ inmate.tdcj_id }}" class="white_content hidden">
+  <div id="light-inmate-{{ inmate.tdcj_id }}" class="white_content hidden">
     <div class="bio">
       <img src="assets/images/{{ inmate.mug }}" />
       <div class="details">
@@ -106,11 +108,11 @@
     </div>
     <div class="close-lightbox fa fa-times-circle"></div>
   </div>
-  <div id="fade-inmate{{ inmate.tdcj_id }}" class="black_overlay hidden"></div>
+  <div id="fade-inmate-{{ inmate.tdcj_id }}" class="black_overlay hidden"></div>
   {% endfor %}
 </section>
 {% endblock %}
 
 {% block script %}
-{{ super()}}
+{{ super() }}
 {% endblock %}

@@ -63,6 +63,7 @@ $dr-dark-gray: $bodytext-black;
   h3 {
     letter-spacing: 0.03em;
     margin-bottom: 1em;
+    font-size:1.3em;
   }
   .all-criteria {
     .criteria{
@@ -73,33 +74,39 @@ $dr-dark-gray: $bodytext-black;
         letter-spacing: 0.06em;
         padding: 0.5em;
         text-transform: uppercase;
-        margin-bottom: 0.5em;
+        margin-bottom: 0.85em;
         span {
           text-transform: none;
           font-weight: 300;
         }
       }
-      input[type='checkbox'] {
-        display: none;
-      }
-      input[type='checkbox'] + label {
-        font-size: 0.9em;
-        text-transform: uppercase;
-        cursor: pointer;
-        letter-spacing: 0.01em;
-        margin-right: 0.25em;
-        &:before {
-          content: "";
+      ul {
+        margin: 0;
+        li{
           display: inline-block;
-          vertical-align: -2px;
-          width: 15px;
-          height: 15px;
-          border: 2px solid $white;
-          margin-right: 3px;
+          input[type='checkbox'] {
+            display: none;
+          }
+          input[type='checkbox'] + label {
+            font-size: 0.9em;
+            text-transform: uppercase;
+            cursor: pointer;
+            letter-spacing: 0.01em;
+            margin-right: 0.25em;
+            &:before {
+              content: "";
+              display: inline-block;
+              vertical-align: -2px;
+              width: 15px;
+              height: 15px;
+              border: 2px solid $white;
+              margin-right: 3px;
+            }
+          }
+          input[type='checkbox']:checked + label:before {
+            background-color: $dr-orange;
+          }
         }
-      }
-      input[type='checkbox']:checked + label:before {
-        background-color: $dr-orange;
       }
       &#race_criteria {
         @include span-columns(5);
@@ -119,12 +126,13 @@ $dr-dark-gray: $bodytext-black;
   }
   .num-match{
     text-align: center;
-    margin: 2em 0 1em;
+    margin: 2.75em 0 1em;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     #total_inmates {
-      padding: 0.1em 0.25em;
+      vertical-align: -0.25em;
+      padding: 0.25em 0.25em 0.1em;
       margin: 0 0.25em;
       background-color: $white;
       font: 700 2.5em 'Stardos Stencil', georgia, serif;
@@ -183,13 +191,13 @@ $dr-dark-gray: $bodytext-black;
         }
         hr {
           margin: 0.75em 0;
-          background-color: $dr-orange;
+          background-color: $dr-seafoam;
         }
       }
     }
     .close-lightbox{
       cursor: pointer;
-      color: $dr-orange;
+      color: $dr-seafoam;
       position: absolute;
       top: 0.1em;
       right: 0.1em;
@@ -226,18 +234,19 @@ $dr-dark-gray: $bodytext-black;
         color: white;
         opacity: 0;
         transition: opacity .25s ease-in;
-        padding: 0.5em;
+        padding: 0.5em 0.75em;
         h2 {
           letter-spacing: 0.03em;
           line-height: 1.1em;
         }
         .details {
           position: absolute;
-          bottom: 2em;
+          bottom: 2.5em;
           .label {
             font-size: 0.8em;
             text-transform: uppercase;
-            letter-spacing: 0.03em;
+            letter-spacing: 0.05em;
+            font-weight:700;
           }
         }
       }

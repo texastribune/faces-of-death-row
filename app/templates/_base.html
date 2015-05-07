@@ -6,6 +6,10 @@
   {% block styles %}
   <link rel="stylesheet" href="styles/main.css">
   {% endblock %}
+  <!--[if lte IE 8]>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Stardos+Stencil:400" />
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Stardos+Stencil:700" />
+  <![endif]-->
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css" rel="stylesheet">
 </head>
 <body>
@@ -40,11 +44,56 @@
 
   {% block content %}{% endblock %}
 
+  <footer class="footer">
+    <div class="footer-container">
+      <div>
+        <a href="https://twitter.com/newsapps"><img class="logo" src="//s3.amazonaws.com/apps.texastribune.org/branding/TxTrib-NewsApps-yellow.svg" alt="Texas Tribune News Apps logo, links to News Apps' Twitter account"></a>
+      </div>
+      <div>
+        <ul>
+          <li><a href="http://www.facebook.com/texastribune"><i class="icon fa-facebook-square"></i>Facebook</a></li>
+          <li><a href="http://twitter.com/TexasTribune"><i class="icon fa-twitter-square"></i>Twitter</a></li>
+          <li><a href="http://www.youtube.com/user/thetexastribune"><i class="icon fa-youtube-play"></i>YouTube</a></li>
+          <li><a href="http://instagram.com/texas_tribune"><i class="icon fa-instagram"></i>Instagram</a></li>
+          <li><a href="http://www.linkedin.com/company/texas-tribune"><i class="icon fa-linkedin-square"></i>LinkedIn</a></li>
+        </ul>
+      </div>
+      <div class="internal-links">
+        <ul>
+        <li><a href="http://www.texastribune.org/about/">About Us</a></li>
+        <li><a href="http://www.texastribune.org/support-us/donors-and-members/">Who Funds Us?</a></li>
+        <li><a href="http://www.texastribune.org/terms-of-service/">Terms of Service</a></li>
+        <li><a href="http://www.texastribune.org/ethics/">Code of Ethics</a></li>
+        <li><a href="http://www.texastribune.org/privacy/">Privacy Policy</a></li>
+        <li><a href="http://www.texastribune.org/corrections/">Corrections</a></li>
+        <li><a href="https://www.texastribune.org/join/" class="donate-link">Donate</a></li>
+      </ul>
+      </div>
+      <div class="donate">
+        <ul>
+          <li>Nonpartisan.</li>
+          <li>Nonprofit.</li>
+          <li>Statewide.</li>
+          <a href="https://www.texastribune.org/join/"><li>Join Us</li></a>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
 {% block script %}
 <script>
   var inmates = {{ INMATES|json }};
 </script>
 <script src="scripts/bundle.js"></script>
+<script>
+  (function(c,o,r,g,i,s){c.GoogleAnalyticsObject=g;c[g]||(c[g]=
+  function(){(c[g].q=c[g].q||[]).push(arguments)});c[g].g=+new Date;
+  i=o.createElement(r);s=o.getElementsByTagName(r)[0];
+  i.src='//www.google-analytics.com/analytics.js';
+  s.parentNode.insertBefore(i,s)}(window,document,'script','ga'));
+  ga('create','UA-9827490-1');ga('send','pageview');
+</script>
 {% endblock %}
+
 </body>
 </html>

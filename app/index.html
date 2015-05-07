@@ -70,7 +70,7 @@
   </div>
 
   {% for inmate in INMATES %}
-  <div id="light-inmate{{ inmate.tdcj_id }}" class="white_content hidden">
+  <div id="light-inmate-{{ inmate.tdcj_id }}" class="white_content hidden">
     <div class="bio">
       <img src="assets/images/{{ inmate.mug }}" />
       <div class="details">
@@ -90,7 +90,7 @@
     </div>
     <div class="close-lightbox fa fa-times-circle"></div>
   </div>
-  <div id="fade-inmate{{ inmate.tdcj_id }}" class="black_overlay hidden"></div>
+  <div id="fade-inmate-{{ inmate.tdcj_id }}" class="black_overlay hidden"></div>
   {% endfor %}
 </section>
 {% endblock %}

@@ -1,15 +1,16 @@
 (function() {
   'use strict';
 
-  var $inmates = $('.inmate');
+  var $inmatesContainer = $('#inmates');
+  var $inmates = $inmatesContainer.find('.inmate');
 
-  var $raceCriteria = $('#race_criteria input[type=checkbox]');
+  var $raceCriteria = $('#race_criteria').find('input[type=checkbox]');
 
   $raceCriteria.change(function() {
     filter();
   });
 
-  var $sexCriteria = $('#sex_criteria input[type=checkbox]');
+  var $sexCriteria = $('#sex_criteria').find('input[type=checkbox]');
 
   $sexCriteria.change(function() {
     filter();
@@ -64,42 +65,66 @@
   }
 
   var $totalInmates = $('#total_inmates');
+  var activeInmates = [];
 
   function filter() {
     var state = getState();
-    var count = 0;
 
-    $inmates.each(function() {
+    activeInmates = $inmates.filter(function() {
       var $this = $(this);
 
       if ($.inArray($this.data('race'), state.raceSelection) < 0 && state.raceSelection.length) {
         $this.addClass('hidden');
-        return;
+        return false;
       }
 
       if ($.inArray($this.data('sex'), state.sexSelection) < 0 && state.sexSelection.length) {
         $this.addClass('hidden');
-        return;
+        return false;
       }
 
       var age = +$this.data('age');
 
       if (state.ageRange[0] > age || age > state.ageRange[1]) {
         $this.addClass('hidden');
-        return;
+        return false;
       }
 
       var time = +$this.data('time');
 
       if (state.timeRange[0] > time || time > state.timeRange[1]) {
         $this.addClass('hidden');
-        return;
+        return false;
       }
 
-      count++;
       $this.removeClass('hidden');
+      return true;
     });
 
-    $totalInmates.text(count);
+    $totalInmates.text(activeInmates.length);
   }
+
+  $inmatesContainer.find('.open-lightbox').click(function() {
+    var inmate = this.id;
+    var $parentEls = $(this).parent();
+
+    var nextViewable = $parentEls.nextAll().not('.hidden').first();
+    var prevViewable = $parentEls.prevAll().not('.hidden').first();
+
+    console.log(nextViewable);  // the next available to view
+    console.log(prevViewable);  // the previous available to view
+
+    $('#light-' + inmate).removeClass('hidden');
+    $('#fade-' + inmate).removeClass('hidden');
+  });
+
+  $('.black_overlay').click(function() {
+    $('.black_overlay').addClass('hidden');
+    $('.white_content').addClass('hidden');
+  });
+
+  $('.close-lightbox').click(function() {
+    $('.black_overlay').addClass('hidden');
+    $('.white_content').addClass('hidden');
+  });
 })();

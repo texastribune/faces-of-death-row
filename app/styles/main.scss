@@ -84,6 +84,7 @@ $dr-dark-gray: $bodytext-black;
         margin: 0;
         li{
           display: inline-block;
+          margin: 0 0.15em 0 0;
           input[type='checkbox'] {
             display: none;
           }

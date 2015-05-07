@@ -1,5 +1,7 @@
 @import 'bower_components/newsapps-styles/init-helpers';
 @import 'bower_components/newsapps-styles/initialize';
+@import 'bower_components/newsapps-styles/helpers/grid';
+
 @import 'components/slider';
 @import 'components/masthead';
 
@@ -9,21 +11,29 @@ $dr-seafoam: rgb(168,192,183);
 $dr-darkgreen: rgb(47,79,79);
 $dr-dark-gray: $bodytext-black;
 
+
 .container {
-  width: 98%;
-  max-width: 980px;
+  width: 95%;
   margin: 0 auto;
   color: $dr-dark-gray;
+  @include media($large){
+    max-width: 980px;
+  }
 }
 #header {
   margin: 3em auto 2em;
   h1 {
-    font: 400 4em 'Stardos Stencil', georgia, serif;
+    font-size: 3.5em;
+    font-weight: 400;
+    font-family: 'Stardos Stencil', georgia, serif;
     line-height: 1em;
     text-transform: uppercase;
     padding-left: 0.5em;
     border-left: 2px solid $dr-orange;
     @include span-columns(5.5);
+    @include media($large) {
+      font-size: 4em;
+    }
   }
   .description {
     line-height: 1.4em;
@@ -59,87 +69,118 @@ $dr-dark-gray: $bodytext-black;
   background-color: $dr-seafoam;
   padding: 1em 0;
   margin: 1em 0;
-  h3 {
-    letter-spacing: 0.03em;
-    margin-bottom: 1em;
-    font-size:1.3em;
-  }
-  .all-criteria {
-    .criteria{
-      h4{
-        background-color: $dr-darkgreen;
-        color: $white;
-        font-weight: 400;
-        letter-spacing: 0.06em;
-        padding: 0.5em;
-        text-transform: uppercase;
-        margin-bottom: 0.85em;
-        span {
-          text-transform: none;
-          font-weight: 300;
-        }
-      }
-      ul {
-        margin: 0;
-        li{
-          display: inline-block;
-          margin: 0 0.15em 0 0;
-          input[type='checkbox'] {
-            display: none;
+  .container {
+    @include media($medium) {
+      max-width: 767px;
+      margin: 0 auto;
+    }
+    h3 {
+      letter-spacing: 0.03em;
+      margin-bottom: 1em;
+      font-size:1.3em;
+    }
+    .all-criteria {
+      .criteria{
+        h4{
+          background-color: $dr-darkgreen;
+          color: $white;
+          font-weight: 400;
+          letter-spacing: 0.06em;
+          padding: 0.5em;
+          text-transform: uppercase;
+          margin-bottom: 0.85em;
+          span {
+            text-transform: none;
+            font-weight: 300;
           }
-          input[type='checkbox'] + label {
-            font-size: 0.9em;
-            text-transform: uppercase;
-            cursor: pointer;
-            letter-spacing: 0.01em;
-            margin-right: 0.25em;
-            &:before {
-              content: "";
-              display: inline-block;
-              vertical-align: -2px;
-              width: 15px;
-              height: 15px;
-              border: 2px solid $white;
-              margin-right: 3px;
+        }
+        ul {
+          margin: 0;
+          li{
+            display: inline-block;
+            margin: 0 0.15em 0 0;
+            input[type='checkbox'] {
+              display: none;
+            }
+            input[type='checkbox'] + label {
+              font-size: 0.9em;
+              text-transform: uppercase;
+              cursor: pointer;
+              letter-spacing: 0.01em;
+              margin-right: 0.25em;
+              &:before {
+                content: "";
+                display: inline-block;
+                vertical-align: -2px;
+                width: 15px;
+                height: 15px;
+                border: 2px solid $white;
+                margin-right: 3px;
+              }
+            }
+            input[type='checkbox']:checked + label:before {
+              background-color: $dr-orange;
             }
           }
-          input[type='checkbox']:checked + label:before {
-            background-color: $dr-orange;
+        }
+        &#race_criteria {
+          @include media($large) {
+            @include span-columns(5);
+          }
+          @include media($medium) {
+            @include span-columns(7);
+          }
+        }
+        &#sex_criteria {
+          @include media($large) {
+            @include span-columns(2.15);
+          }
+          @include media($medium) {
+            margin-top:2em;
+            @include span-columns(7);
+          }
+        }
+        &#age_criteria {
+          @include media($large) {
+            @include span-columns(2.25);
+          }
+          @include media($medium) {
+            @include span-columns(5);
+            @include omega();
+          }
+        }
+        &#timeserved_criteria {
+          @include media($large) {
+            @include span-columns(2.6);
+          }
+          @include media($medium) {
+            margin-top:2em;
+            @include span-columns(5);
+            @include omega();
           }
         }
       }
-      &#race_criteria {
-        @include span-columns(5);
-      }
-      &#sex_criteria {
-        @include span-columns(2.15);
-      }
-      &#age_criteria {
-        @include span-columns(2.25);
-      }
-      &#timeserved_criteria {
-        @include span-columns(2.6);
-        @include omega();
-      }
+      @include clearfix;
     }
-    @include clearfix;
-  }
-  .num-match{
-    text-align: center;
-    margin: 2.75em 0 1em;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    #total_inmates {
-      vertical-align: -0.25em;
-      padding: 0.25em 0.25em 0.1em;
-      margin: 0 0.25em;
-      background-color: $white;
-      font: 700 2.5em 'Stardos Stencil', georgia, serif;
+    .num-match{
+      text-align: center;
+      margin: 2.75em 0 1em;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      #total_inmates {
+        vertical-align: -0.25em;
+        padding: 0.25em 0.25em 0.1em;
+        margin: 0 0.25em;
+        background-color: $white;
+        font: 700 2.5em 'Stardos Stencil', georgia, serif;
+      }
     }
   }
 }
 #interactive {
+  width:100%;
+  min-height:500px;
   .hidden {
     display:none !important;
   }

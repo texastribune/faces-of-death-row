@@ -11,326 +11,424 @@ $dr-seafoam: rgb(168,192,183);
 $dr-darkgreen: rgb(47,79,79);
 $dr-dark-gray: $bodytext-black;
 
-
-.container {
-  width: 95%;
-  margin: 0 auto;
-  color: $dr-dark-gray;
-  @include media($large){
-    max-width: 980px;
+section {
+  font-size:16px;
+  @include media($mobile) {
+    font-size: 0.9em;
   }
-}
-#header {
-  margin: 3em auto 2em;
-  h1 {
-    font-size: 3.5em;
-    font-weight: 400;
-    font-family: 'Stardos Stencil', georgia, serif;
-    line-height: 1em;
-    text-transform: uppercase;
-    padding-left: 0.5em;
-    border-left: 2px solid $dr-orange;
-    @include span-columns(5.5);
-    @include media($large) {
-      font-size: 4em;
+  &.container {
+    width: 95%;
+    @include media($mobile) {
+      width: 90%;
+    }
+    margin: 0 auto;
+    color: $dr-dark-gray;
+    @include media($xlarge){
+      max-width: 980px;
     }
   }
-  .description {
-    line-height: 1.4em;
-    padding: 0;
-    strong {
+  &#header {
+    margin: 2em auto;
+    @include media($mobile) {
+      margin: 1.5em auto 1em;
+    }
+    h1 {
+      font-weight: 400;
+      font-family: 'Stardos Stencil', georgia, serif;
+      line-height: 1em;
       text-transform: uppercase;
-      padding: 0.1em 0.25em;
-      background-color: rgba(168,192,183,0.5);
-      font-family: $base-sans-serif;
-      letter-spacing: 0.05em;
-      font-size: 0.875em;
-    }
-    @include span-columns(6.5);
-    @include omega();
-    .share {
-      list-style: none;
-      display: inline;
-      margin: 0;
-      padding: 0;
-      li {
-        display: inline;
-        padding-right: 1em;
-        .fa {
-          color: $dr-seafoam;
-          font-size: 24px;
-        }
-      }
-    }
-  }
-  @include clearfix;
-}
-.filters {
-  background-color: $dr-seafoam;
-  padding: 1em 0;
-  margin: 1em 0;
-  .container {
-    @include media($medium) {
-      max-width: 767px;
-      margin: 0 auto;
-    }
-    h3 {
-      letter-spacing: 0.03em;
-      margin-bottom: 1em;
-      font-size:1.3em;
-    }
-    .all-criteria {
-      .criteria{
-        h4{
-          background-color: $dr-darkgreen;
-          color: $white;
-          font-weight: 400;
-          letter-spacing: 0.06em;
-          padding: 0.5em;
-          text-transform: uppercase;
-          margin-bottom: 0.85em;
-          span {
-            text-transform: none;
-            font-weight: 300;
-          }
-        }
-        ul {
-          margin: 0;
-          li{
-            display: inline-block;
-            margin: 0 0.15em 0 0;
-            input[type='checkbox'] {
-              display: none;
-            }
-            input[type='checkbox'] + label {
-              font-size: 0.9em;
-              text-transform: uppercase;
-              cursor: pointer;
-              letter-spacing: 0.01em;
-              margin-right: 0.25em;
-              &:before {
-                content: "";
-                display: inline-block;
-                vertical-align: -2px;
-                width: 15px;
-                height: 15px;
-                border: 2px solid $white;
-                margin-right: 3px;
-              }
-            }
-            input[type='checkbox']:checked + label:before {
-              background-color: $dr-orange;
-            }
-          }
-        }
-        &#race_criteria {
-          @include media($large) {
-            @include span-columns(5);
-          }
-          @include media($medium) {
-            @include span-columns(7);
-          }
-        }
-        &#sex_criteria {
-          @include media($large) {
-            @include span-columns(2.15);
-          }
-          @include media($medium) {
-            margin-top:2em;
-            @include span-columns(7);
-          }
-        }
-        &#age_criteria {
-          @include media($large) {
-            @include span-columns(2.25);
-          }
-          @include media($medium) {
-            @include span-columns(5);
-            @include omega();
-          }
-        }
-        &#timeserved_criteria {
-          @include media($large) {
-            @include span-columns(2.6);
-          }
-          @include media($medium) {
-            margin-top:2em;
-            @include span-columns(5);
-            @include omega();
-          }
-        }
-      }
-      @include clearfix;
-    }
-    .num-match{
-      text-align: center;
-      margin: 2.75em 0 1em;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      #total_inmates {
-        vertical-align: -0.25em;
-        padding: 0.25em 0.25em 0.1em;
-        margin: 0 0.25em;
-        background-color: $white;
-        font: 700 2.5em 'Stardos Stencil', georgia, serif;
-      }
-    }
-  }
-}
-#interactive {
-  width:100%;
-  min-height:500px;
-  .hidden {
-    display:none !important;
-  }
-  .black_overlay{
-    position: fixed;
-    overflow-y: hidden;
-    cursor: pointer;
-    top: 0%;
-    left: 0%;
-    width: 100%;
-    height: 100%;
-    background-color: $dr-darkgreen;
-    z-index: 1001;
-    opacity: 0.9;
-    filter: alpha(opacity=90);
-    }
-  .white_content {
-    position: fixed;
-    top: 25%;
-    left: 25%;
-    width: 50%;
-    max-height: 65%;
-    padding: 1em;
-    z-index: 1002;
-    background: $white;
-    overflow: scroll;
-    .bio {
-      @include clearfix;
-      img {
+      padding-left: 0.5em;
+      border-left: 2px solid $dr-orange;
+      font-size:2.4em;
+      margin-bottom: 0.5em;
+      @include media($desktop) {
+        font-size: 3.25em;
         @include span-columns(5.5);
       }
-      .details {
+      @include media($mobile) {
+        font-size: 1.75em;
+      }
+      @include media($xlarge) {
+        font-size: 4em;
+      }
+    }
+    .description {
+      line-height: 1.4em;
+      padding: 0;
+      strong {
+        text-transform: uppercase;
+        padding: 0.1em 0.25em;
+        background-color: rgba(168,192,183,0.5);
+        font-family: $base-sans-serif;
+        letter-spacing: 0.05em;
+        font-size: 0.875em;
+      }
+      @include media ($desktop) {
         @include span-columns(6.5);
         @include omega();
-        h2 {
-          margin-bottom: 0.5em;
-          font-size: 1.75em;
-          letter-spacing: 0.03em;
+      }
+      .share {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        @include media ($mobile) {
+          width: 60%;
+          margin: 0 auto;
+          text-align: center;
         }
-        p {
-          line-height: 1.1em;
-          margin-bottom: 0.75em;
-          label {
-            text-transform: uppercase;
-            font-size: 0.875em;
-            font-weight: 700;
-            letter-spacing: 0.03em;
+        li {
+          display: inline-block;
+          padding-right: 1em;
+          @include media ($mobile) {
+            padding-right: 3em;
           }
-        }
-        hr {
-          margin: 0.75em 0;
-          background-color: $dr-seafoam;
+          .fa {
+            color: $dr-seafoam;
+            font-size: 24px;
+          }
+          &:last-child {
+            @include media($mobile) {
+              padding-right: 0;
+              margin-bottom: 0;
+            }
+          }
         }
       }
     }
-    .close-lightbox{
-      cursor: pointer;
-      color: $dr-seafoam;
-      position: absolute;
-      top: 0.1em;
-      right: 0.1em;
-      font-size: 2em;
+    @include clearfix;
+  }
+  &.filters {
+    background-color: $dr-seafoam;
+    padding: 1em;
+    margin: 1em 0;
+    .container {
+      @include media($desktop) {
+        max-width: 767px;
+        margin: 0 auto;
+      }
+      h3 {
+        letter-spacing: 0.03em;
+        margin-bottom: 1em;
+        font-size:1.3em;
+      }
+      .all-criteria {
+        .criteria{
+          h4{
+            background-color: $dr-darkgreen;
+            color: $white;
+            font-weight: 400;
+            letter-spacing: 0.06em;
+            padding: 0.5em;
+            text-transform: uppercase;
+            margin-bottom: 0.85em;
+            span {
+              text-transform: none;
+              font-weight: 300;
+            }
+          }
+          ul {
+            margin: 0;
+            li{
+              display: inline-block;
+              margin: 0 0.15em 0 0;
+              input[type='checkbox'] {
+                display: none;
+              }
+              input[type='checkbox'] + label {
+                font-size: 0.9em;
+                text-transform: uppercase;
+                cursor: pointer;
+                letter-spacing: 0.01em;
+                margin-right: 0.25em;
+                &:before {
+                  content: "";
+                  display: inline-block;
+                  vertical-align: -2px;
+                  width: 15px;
+                  height: 15px;
+                  border: 2px solid $white;
+                  margin-right: 3px;
+                  @include media($mobile) {
+                    width: 17px;
+                    height: 17px;
+                    vertical-align: -3px;
+                    margin-right: 7px;
+                  }
+                }
+                @include media($mobile) {
+                  font-size: 1em;
+                }
+              }
+              input[type='checkbox']:checked + label:before {
+                background-color: $dr-orange;
+              }
+            }
+          }
+          &#race_criteria {
+            @include media($xlarge) {
+              @include span-columns(5);
+            }
+            @include media($desktop) {
+              @include span-columns(7);
+            }
+            @include media($mobile) {
+              width: 35%;
+              float: left;
+              li {
+                display: block;
+                margin-bottom: 1.25em;
+                input[type='checkbox']:checked + label {
+                  margin-right: 0;
+                }
+              }
+            }
+          }
+          &#sex_criteria {
+            @include media($xlarge) {
+              @include span-columns(2.15);
+            }
+            @include media($desktop) {
+              margin-top:2em;
+              @include span-columns(7);
+            }
+            @include media($mobile) {
+              width: 62%;
+              float: right;
+            }
+          }
+          &#age_criteria {
+            @include media($xlarge) {
+              @include span-columns(2.25);
+            }
+            @include media($desktop) {
+              @include span-columns(5);
+              @include omega();
+            }
+            @include media($mobile) {
+              width: 62%;
+              float: right;
+            }
+          }
+          &#timeserved_criteria {
+            @include media($xlarge) {
+              @include span-columns(2.6);
+            }
+            @include media($desktop) {
+              margin-top:2em;
+              @include span-columns(5);
+              @include omega();
+            }
+            @include media($mobile) {
+              width: 62%;
+              float: right;
+            }
+          }
+          @include media($mobile) {
+            margin-bottom: 1em;
+          }
+        }
+        @include clearfix;
+      }
+      .num-match{
+        text-align: center;
+        margin: 2.75em 0 1em;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        #total_inmates {
+          vertical-align: -0.25em;
+          padding: 0.25em 0.25em 0.1em;
+          margin: 0 0.25em;
+          background-color: $white;
+          font: 700 2.5em 'Stardos Stencil', georgia, serif;
+        }
+        @include media($mobile) {
+          margin: 1em 0;
+        }
+      }
     }
   }
-  .inmates {
-    .inmate {
-      margin-bottom:10px;
-      height: 250px;
-      line-height: 1em;
+  &#interactive {
+    width:100%;
+    min-height:500px;
+    .hidden {
+      display:none !important;
+    }
+    .black_overlay {
+      position: fixed;
+      overflow-y: hidden;
       cursor: pointer;
-      position: relative;
-      overflow: hidden;
-      width: 20%;
-      border-right: 5px solid $white;
-      border-left: 5px solid $white;
-      border-bottom: 8px solid $white;
-      float: left;
-      img {
-        width: 100%;
-        &.grayscale {
-          filter: grayscale(100%);
-        }
+      top: 0%;
+      left: 0%;
+      width: 100%;
+      height: 100%;
+      background-color: $dr-darkgreen;
+      z-index: 1001;
+      opacity: 0.9;
+      filter: alpha(opacity=90);
       }
-      .outline {
-        display: block;
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        height: 100%;
-        width: 100%;
-        background: rgba(255,133,33,0.7);
-        color: white;
-        opacity: 0;
-        transition: opacity .25s ease-in;
-        padding: 0.5em 0.75em;
-        h2 {
-          letter-spacing: 0.03em;
-          line-height: 1.1em;
+    .white_content {
+      position: fixed;
+      padding: 1em;
+      z-index: 1002;
+      background: $white;
+      border:2px solid $dr-seafoam;
+      @include media($xlarge) {
+        top: 25%;
+        left: 25%;
+        width: 50%;
+      }
+      top: 20%;
+      left: 15%;
+      width: 70%;
+      .bio {
+        @include clearfix;
+        img {
+          @include span-columns(5.5);
         }
         .details {
-          position: absolute;
-          bottom: 2.5em;
-          .label {
-            font-size: 0.8em;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            font-weight:700;
+          @include span-columns(6.5);
+          @include omega();
+          h2 {
+            margin-bottom: 0.5em;
+            font-size: 1.75em;
+            letter-spacing: 0.03em;
+          }
+          p {
+            line-height: 1.1em;
+            margin-bottom: 0.75em;
+            label {
+              text-transform: uppercase;
+              font-size: 0.875em;
+              font-weight: 700;
+              letter-spacing: 0.03em;
+            }
+          }
+          hr {
+            margin: 0.75em 0;
+            background-color: $dr-seafoam;
           }
         }
       }
-      .info-button {
-        display: block;
+      .close-lightbox{
+        cursor: pointer;
         position: absolute;
-        left: 10px;
-        bottom: 4px;
-        .fa {
-          height: 1em;
-          width: 1em;
-          color: $dr-orange;
-          opacity: 0.7;
-          font-size: 1.5em;
+        top: -0.5em;
+        right: 0.5em;
+        font-size: 2em;
+        .fa-times-circle {
+          color: $dr-seafoam;
+          position: absolute;
+        }
+        .fa-circle {
+          color: $white;
+          position: absolute;
         }
       }
-      &:hover {
-        .info {
-          display: block;
-          padding: 1em;
+    }
+    .inmates {
+      .inmate {
+        margin-bottom:10px;
+        line-height: 1em;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        border-right: 5px solid $white;
+        border-left: 5px solid $white;
+        border-bottom: 8px solid $white;
+        float: left;
+        height: 200px;
+        width: 25%;
+        @include media ($desktop) {
+          width: 20%;
+          height: 250px; //hoping to remove with batch crop images
+        }
+        @include media ($small) {
+          width: 33%;
+        }
+        @include media ($mobile) {
+          float: none;
+          width: 98%;
+          max-width: 300px;
+          margin: 0 auto 10px auto;
+          height: auto;
+        }
+        img {
+          width: 100%;
+          &.grayscale {
+            filter: grayscale(100%);
+          }
         }
         .outline {
-          opacity: 1;
-        }
-        .info-button {
-          .fa {
-            color: $white;
-            opacity: 1;
-          }
-          transition: opacity .25s ease-in;
-        }
-        .detail {
-          opacity: 0;
-        }
-        &:after {
-          content: "";
-          opacity: 0.75;
-          top: 0;
+          display: block;
+          position: absolute;
           left: 0;
           bottom: 0;
-          right: 0;
+          height: 100%;
+          width: 100%;
+          background: rgba(255,133,33,0.7);
+          color: white;
+          opacity: 0;
+          transition: opacity .25s ease-in;
+          padding: 0.5em 0.75em;
+          h2 {
+            letter-spacing: 0.03em;
+            line-height: 1.1em;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+          .details {
+            position: absolute;
+            bottom: 2.5em;
+            .label {
+              font-size: 0.8em;
+              text-transform: uppercase;
+              letter-spacing: 0.05em;
+              font-weight:700;
+            }
+          }
+        }
+        .info-button {
+          display: block;
           position: absolute;
-          z-index: -1;
+          left: 10px;
+          bottom: 4px;
+          .fa {
+            height: 1em;
+            width: 1em;
+            color: $dr-orange;
+            opacity: 0.7;
+            font-size: 1.5em;
+          }
+        }
+        &:hover {
+          .info {
+            display: block;
+            padding: 1em;
+          }
+          .outline {
+            opacity: 1;
+          }
+          .info-button {
+            .fa {
+              color: $white;
+              opacity: 1;
+            }
+            transition: opacity .25s ease-in;
+          }
+          .detail {
+            opacity: 0;
+          }
+          &:after {
+            content: "";
+            opacity: 0.75;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            position: absolute;
+            z-index: -1;
+          }
         }
       }
     }

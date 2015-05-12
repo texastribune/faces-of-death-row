@@ -80,38 +80,35 @@
             <p>{{ inmate.time_served }}</p>
           </div>
         </div>
-        <div class="info-button"><i class="fa fa-info-circle"></i></div>
+        <div class="info-button"><i class="fa"></i></div>
       </div>
+      <div id="light-inmate-{{ inmate.tdcj_id }}" class="white_content hidden">
+        <div class="bio">
+          <img src="assets/images/{{ inmate.mug }}" />
+          <div class="details">
+            <h2>{{ inmate.first_name }} {{inmate.last_name }}</h2>
+            <p><label>Race:</label> {{ inmate.race }}</p>
+            <p><label>Age:</label> {{ inmate.age }}</p>
+            <p><label>Sex:</label> {{ inmate.sex }}</p>
+            <p><label>Time on Death Row:</label> {{ inmate.time_served }}</p>
+            <hr>
+            <p><label>Crime:</label> {{ inmate.offense_date }}</p>
+            <p><label>Conviction:</label> {{ inmate.received_date }}</p>
+            <p><label>County:</label> {{ inmate.county }}</p>
+            <hr>
+            <p><label>Summary of the Crime:</label></p>
+            <p>{{ inmate.summary }}</p>
+          </div>
+        </div>
+        <div class="close-lightbox">
+          <i class="fa fa-circle"></i>
+          <i class="fa fa-times-circle"></i>
+        </div>
+      </div>
+      <div id="fade-inmate-{{ inmate.tdcj_id }}" class="black_overlay hidden"></div>
     </div>
     {% endfor %}
   </div>
-
-  {% for inmate in INMATES %}
-  <div id="light-inmate-{{ inmate.tdcj_id }}" class="white_content hidden">
-    <div class="bio">
-      <img src="assets/images/{{ inmate.mug }}" />
-      <div class="details">
-        <h2>{{ inmate.first_name }} {{inmate.last_name }}</h2>
-        <p><label>Race:</label> {{ inmate.race }}</p>
-        <p><label>Age:</label> {{ inmate.age }}</p>
-        <p><label>Sex:</label> {{ inmate.sex }}</p>
-        <p><label>Time on Death Row:</label> {{ inmate.time_served }}</p>
-        <hr>
-        <p><label>Crime:</label> {{ inmate.offense_date }}</p>
-        <p><label>Conviction:</label> {{ inmate.received_date }}</p>
-        <p><label>County:</label> {{ inmate.county }}</p>
-        <hr>
-        <p><label>Summary of the Crime:</label></p>
-        <p>{{ inmate.summary }}</p>
-      </div>
-    </div>
-    <div class="close-lightbox">
-      <i class="fa fa-circle"></i>
-      <i class="fa fa-times-circle"></i>
-    </div>
-  </div>
-  <div id="fade-inmate-{{ inmate.tdcj_id }}" class="black_overlay hidden"></div>
-  {% endfor %}
 </section>
 {% endblock %}
 

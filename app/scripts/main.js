@@ -111,11 +111,13 @@
     var nextViewable = $parentEls.nextAll().not('.hidden').first();
     var prevViewable = $parentEls.prevAll().not('.hidden').first();
 
-    console.log(nextViewable);  // the next available to view
-    console.log(prevViewable);  // the previous available to view
+    //console.log(nextViewable);  // the next available to view
+    //console.log(prevViewable);  // the previous available to view
 
-    $('#light-' + inmate).removeClass('hidden');
-    $('#fade-' + inmate).removeClass('hidden');
+    $('#' + inmate + ' img').toggleClass('grayscale');
+    $('#light-' + inmate).toggleClass('hidden');
+    $('#fade-' + inmate).toggleClass('hidden');
+
   });
 
   $('.black_overlay').click(function() {

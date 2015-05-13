@@ -118,6 +118,7 @@
 
     if($windowWidth < 460) {
       $('#' + inmate + ' img').toggleClass('grayscale');
+      $('#' + inmate + ' .info-button').toggleClass('up');
     }
     $('#light-' + inmate).toggleClass('hidden');
     $('#fade-' + inmate).toggleClass('hidden');

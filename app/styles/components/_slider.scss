@@ -1,13 +1,13 @@
 $dr-orange: rgb(255,133,33);
 $dr-darkgreen: rgb(47,79,79);
 
-$desktop: new-breakpoint(min-width 767px);
 $mobile: new-breakpoint(max-width 460px);
-
 $small: new-breakpoint(min-width 461px max-width 660px);
 $medium: new-breakpoint(min-width 661px max-width 860px);
 $large: new-breakpoint(min-width 861px max-width 1080px);
 $xlarge: new-breakpoint(min-width 1081px);
+
+$morethan-460: new-breakpoint(min-width 461px);
 
 
 .critieria_slider {
@@ -47,6 +47,15 @@ $xlarge: new-breakpoint(min-width 1081px);
     width: 62%;
     @include media($xlarge) {
       width: 59%;
+    }
+    @include media($large) {
+      width: 78%;
+    }
+    @include media($medium) {
+      width: 70%;
+    }
+    @include media($small) {
+      width: 74%;
     }
 }.ui-slider-horizontal .ui-slider-handle {
     top: -0.3em;

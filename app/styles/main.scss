@@ -20,42 +20,54 @@ section {
 }
 .container {
   width: 95%;
-  @include media($mobile) {
+  @include media($morethan-460) {
     width: 90%;
-  }
-  margin: 0 auto;
-  @include media($xlarge){
     max-width: 980px;
   }
+  margin: 0 auto;
 }
 #header {
-  margin: 2em auto;
-  @include media($mobile) {
-    margin: 1.5em auto 1em;
+  margin: 1.5em auto 1em;
+  padding: 0 1em;
+  @include media($morethan-460) {
+    margin: 2em auto;
+    padding: 0;
   }
   h1 {
     font-weight: 400;
     font-family: 'Stardos Stencil', georgia, serif;
     line-height: 1em;
     text-transform: uppercase;
-    padding-left: 0.5em;
+    padding-left: 0.25em;
     border-left: 2px solid $dr-orange;
-    font-size:2.4em;
+    font-size: 1.75em;
     margin-bottom: 0.5em;
-    @include media($desktop) {
-      font-size: 3.25em;
-      @include span-columns(5.5);
+    @include media($small) {
+      font-size: 2.4em;
     }
-    @include media($mobile) {
-      font-size: 1.75em;
+    @include media($medium) {
+      font-size: 3em;
+    }
+    @include media($large) {
+      font-size: 3.25em;
+      @include span-columns(5);
     }
     @include media($xlarge) {
       font-size: 4em;
+      @include span-columns(5);
     }
   }
   .description {
     line-height: 1.4em;
     padding: 0;
+    @include media($large) {
+      @include span-columns(7);
+      @include omega();
+    }
+    @include media($xlarge) {
+      @include span-columns(7);
+      @include omega();
+    }
     strong {
       text-transform: uppercase;
       padding: 0.1em 0.25em;
@@ -64,34 +76,29 @@ section {
       letter-spacing: 0.05em;
       font-size: 0.875em;
     }
-    @include media ($desktop) {
-      @include span-columns(6.5);
-      @include omega();
-    }
     .share {
       list-style: none;
-      margin: 0;
       padding: 0;
-      @include media ($mobile) {
-        width: 60%;
-        margin: 0 auto;
-        text-align: center;
+      width: 60%;
+      margin: 0 auto;
+      text-align: center;
+      @include media($morethan-460) {
+        width: 100%;
+        text-align: left;
       }
       li {
         display: inline-block;
-        padding-right: 1em;
-        @include media ($mobile) {
-          padding-right: 3em;
+        padding-right: 3em;
+        @include media ($morethan-460) {
+          padding-right: 1.5em;
+        }
+        &:last-child {
+          padding: 0;
+          margin-bottom: 0;
         }
         .fa {
           color: $dr-seafoam;
           font-size: 24px;
-        }
-        &:last-child {
-          @include media($mobile) {
-            padding-right: 0;
-            margin-bottom: 0;
-          }
         }
       }
     }
@@ -103,10 +110,10 @@ section {
   padding: 1em;
   margin: 1em 0;
   .container {
-    // @include media($desktop) {
-    //   max-width: 767px;
-    //   margin: 0 auto;
-    // }
+    width: 100%;
+    @include media($large) {
+      max-width: 767px;
+    }
     h3 {
       letter-spacing: 0.03em;
       margin-bottom: 1em;
@@ -114,6 +121,7 @@ section {
     }
     .all-criteria {
       .criteria{
+        margin-bottom: 1em;
         h4{
           background-color: $dr-darkgreen;
           color: $white;
@@ -136,28 +144,31 @@ section {
               display: none;
             }
             input[type='checkbox'] + label {
-              font-size: 0.9em;
+              font-size: 1em;
               text-transform: uppercase;
               cursor: pointer;
               letter-spacing: 0.01em;
               margin-right: 0.25em;
+              @include media($medium) {
+                margin-right: 0.15em;
+              }
               &:before {
                 content: "";
                 display: inline-block;
-                vertical-align: -2px;
-                width: 15px;
-                height: 15px;
+                vertical-align: -3px;
+                width: 17px;
+                height: 17px;
                 border: 2px solid $white;
-                margin-right: 3px;
-                @include media($mobile) {
-                  width: 17px;
-                  height: 17px;
-                  vertical-align: -3px;
-                  margin-right: 7px;
+                margin-right: 7px;
+                @include media($morethan-460) {
+                  width: 15px;
+                  height: 15px;
+                  vertical-align: -2px;
+                  margin-right: 3px;
                 }
               }
-              @include media($mobile) {
-                font-size: 1em;
+              @include media($morethan-460) {
+                font-size: 0.9em;
               }
             }
             input[type='checkbox']:checked + label:before {
@@ -166,89 +177,110 @@ section {
           }
         }
         &#race_criteria {
-          // @include media($desktop) {
-          //   @include span-columns(7);
-          // }
-          @include media($mobile) {
-            width: 35%;
-            float: left;
-            li {
-              display: block;
-              margin-bottom: 1.25em;
-              input[type='checkbox']:checked + label {
-                margin-right: 0;
-              }
-            }
-          }
+          width: 35%;
+          float: left;
           @include media($xlarge) {
             @include span-columns(5);
           }
+          @include media($large) {
+            @include span-columns(7);
+          }
+          @include media($medium) {
+            @include span-columns(7.5);
+          }
+          li {
+            display: block;
+            margin-bottom: 1.25em;
+            input[type='checkbox']:checked + label {
+              margin-right: 0;
+            }
+            @include media($xlarge) {
+              display: inline-block;
+              margin-bottom: 1em;
+            }
+            @include media($large) {
+              display: inline-block;
+              margin-bottom: 1em;
+            }
+            @include media($medium) {
+              display: inline-block;
+              margin-bottom: 1em;
+            }
+          }
         }
         &#sex_criteria {
-          // @include media($desktop) {
-          //   margin-top:2em;
-          //   @include span-columns(7);
-          // }
-          @include media($mobile) {
-            width: 62%;
-            float: right;
-          }
+          width: 62%;
+          float: right;
           @include media($xlarge) {
             @include span-columns(2.15);
           }
+          @include media($large) {
+            @include span-columns(7);
+          }
+          @include media($medium) {
+            @include span-columns(7.5);
+          }
         }
         &#age_criteria {
-          // @include media($desktop) {
-          //   @include span-columns(5);
-          //   @include omega();
-          // }
+          width: 62%;
+          float: right;
           @include media($xlarge) {
             @include span-columns(2.25);
           }
-          @include media($mobile) {
-            width: 62%;
-            float: right;
+          @include media($large) {
+            @include span-columns(5);
+            @include omega();
+          }
+          @include media($medium) {
+            @include span-columns(4.5);
+            @include omega();
           }
         }
         &#timeserved_criteria {
-          // @include media($desktop) {
-          //   margin-top:2em;
-          //   @include span-columns(5);
-          //   @include omega();
-          // }
+          width: 62%;
+          float: right;
           @include media($xlarge) {
             @include span-columns(2.6);
+            @include omega();
           }
-          @include media($mobile) {
-            width: 62%;
-            float: right;
+          @include media($large) {
+            @include span-columns(5);
+            @include omega();
           }
-        }
-        @include media($mobile) {
-          margin-bottom: 1em;
+          @include media($medium) {
+            @include span-columns(4.5);
+            @include omega();
+          }
         }
       }
       @include clearfix;
     }
     .num-match{
       text-align: center;
-      margin: 2.75em 0 1em;
+      margin: 0.5em 0;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.1em;
       #total_inmates {
         vertical-align: -0.25em;
-        padding: 0.25em 0.25em 0.1em;
+        padding: 0.1em 0.2em 0;
         margin: 0 0.25em;
         background-color: $white;
         font: 700 2.5em 'Stardos Stencil', georgia, serif;
-        @include media($mobile) {
-          padding: 0.1em 0.2em 0;
+        @include media($large) {
+          padding: 0.25em 0.25em 0.1em;
+        }
+         @include media($xlarge) {
+          padding: 0.25em 0.25em 0.1em;
         }
       }
-      @include media($mobile) {
-        margin: 0.5em 0;
+      @include media($xlarge) {
+        margin: 2em 0 1em;
       }
+      @include media($large) {
+        margin: 2em 0 1em;
+      }
+
     }
   }
 }
@@ -259,6 +291,7 @@ section {
     display:none !important;
   }
   .black_overlay {
+    display: none;
     position: fixed;
     overflow-y: hidden;
     cursor: pointer;
@@ -270,57 +303,61 @@ section {
     z-index: 1001;
     opacity: 0.9;
     filter: alpha(opacity=90);
-    @include media($mobile) {
-      display: none;
+    @include media($morethan-460) {
+      display: block;
     }
   }
   .white_content {
-    position: fixed;
-    padding: 1em;
-    z-index: 1002;
-    background: $white;
-    border:2px solid $dr-seafoam;
-    top: 20%;
-    left: 15%;
-    width: 70%;
+    @include media($morethan-460) {
+      position: fixed;
+      border: 2px solid $dr-seafoam;
+      background: $white;
+      padding: 1em;
+      z-index: 1002;
+      top: 20%;
+      left: 15%;
+      width: 70%;
+    }
     @include media($xlarge) {
       top: 25%;
       left: 25%;
       width: 50%;
     }
-    @include media($mobile) {
-      position: relative;
-      border: 0px;
-      top: 0%;
-      left: 0%;
-      width: 100%;
-      padding: 0;
-    }
     .bio {
       @include clearfix;
+      border-bottom: 2px solid $dr-orange;
+      @include media($morethan-460) {
+        border-bottom: 0px;
+      }
       img {
-        @include span-columns(5.5);
-        @include media($mobile) {
-          display: none;
+        display: none;
+        @include media($morethan-460) {
+          display: block;
+          @include span-columns(5.5);
         }
       }
       .details {
-        @include span-columns(6.5);
-        @include omega();
-        @include media($mobile) {
-          width: 100%;
+        padding-bottom: 2.5em;
+        @include media($morethan-460) {
+          padding-bottom: 0;
+          @include span-columns(6.5);
+          @include omega();
         }
         h2 {
-          margin-bottom: 0.5em;
+          color: $white;
+          padding: 0.25em;
+          text-align: center;
+          background: rgba(255,133,33,0.7);
+          margin: 0 0 0.5em;
           font-size: 1.75em;
           line-height: 1em;
           letter-spacing: 0.03em;
-          @include media($mobile) {
-            color: white;
-            padding: 0.25em;
-            text-align: center;
-            background: rgba(255,133,33,0.7);
-            margin-top: -1.5em;
+          @include media($morethan-460) {
+            margin: 0 0 0.5em;
+            color: $black;
+            padding: 0;
+            text-align: left;
+            background: none;
           }
         }
         p {
@@ -340,6 +377,10 @@ section {
       }
     }
     .close-lightbox{
+      @include media($morethan-460) {
+        display: block;
+      }
+      display: none;
       cursor: pointer;
       position: absolute;
       top: -0.5em;
@@ -353,35 +394,35 @@ section {
         color: $white;
         position: absolute;
       }
-      @include media($mobile) {
-        display: none;
-      }
     }
   }
   .inmates {
     .inmate {
       position: relative;
-      margin-bottom:10px;
+      width: 98%;
+      max-width: 250px;
+      margin: 0 auto 10px auto;
       line-height: 1em;
       cursor: pointer;
       overflow: hidden;
       border-right: 5px solid $white;
       border-left: 5px solid $white;
       border-bottom: 8px solid $white;
-      float: left;
-      width: 25%;
-      @include media ($desktop) {
-        width: 20%;
-      }
-      @include media ($small) {
+      @include media($small) {
+        float:left;
         width: 33%;
       }
-      @include media ($mobile) {
-        float: none;
-        width: 98%;
-        max-width: 250px;
-        margin: 0 auto 10px auto;
-        height: auto;
+      @include media($medium) {
+        float: left;
+        width: 25%;
+      }
+      @include media($large) {
+        float: left;
+        width: 20%;
+      }
+      @include media($xlarge) {
+        float:left;
+        width: 20%;
       }
       .open-lightbox {
         img {
@@ -391,10 +432,10 @@ section {
           }
         }
         .outline {
-          @include media($mobile) {
-            display: none;
+          @include media($morethan-460) {
+            display: block;
           }
-          display: block;
+          display: none;
           position: absolute;
           left: 0;
           bottom: 0;
@@ -423,20 +464,27 @@ section {
           }
         }
         .info-button {
+          cursor: pointer;
           display: block;
           position: absolute;
           left: 10px;
           bottom: 5px;
           .fa:before {
-            content: '\f05a';
+            content: '\f13a';
             height: 1em;
             width: 1em;
             color: $dr-orange;
             opacity: 0.7;
-            font-size: 1.5em;
-            @include media($mobile) {
-              content: '\f13a';
-              font-size: 2.5em;
+            font-size: 2em;
+            @include media($morethan-460) {
+              content: '\f05a';
+              font-size: 1.5em;
+            }
+          }
+          &.up {
+            bottom: 10px;
+            .fa:before {
+              content: '\f139';
             }
           }
         }
@@ -450,10 +498,10 @@ section {
           }
           .info-button {
             .fa:before {
-              color: $white;
+              color: $dr-orange;
               opacity: 1;
-              @include media($mobile) {
-                color: $dr-orange;
+              @include media($morethan-460) {
+                color: $white;
               }
             }
             transition: opacity .25s ease-in;

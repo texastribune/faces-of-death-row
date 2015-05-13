@@ -12,7 +12,7 @@ $dr-darkgreen: rgb(47,79,79);
 $dr-dark-gray: $bodytext-black;
 
 section {
-  font-size:16px;
+  font-size:15px;
   color: $dr-dark-gray;
   @include media($mobile) {
     font-size: 0.9em;
@@ -60,11 +60,7 @@ section {
   .description {
     line-height: 1.4em;
     padding: 0;
-    @include media($large) {
-      @include span-columns(7);
-      @include omega();
-    }
-    @include media($xlarge) {
+    @include media($desktop) {
       @include span-columns(7);
       @include omega();
     }
@@ -75,6 +71,16 @@ section {
       font-family: $base-sans-serif;
       letter-spacing: 0.05em;
       font-size: 0.875em;
+    }
+    .byline {
+      margin-bottom: 1em;
+      font-size:0.9em;
+      font-family: $base-sans-serif;
+      a {
+        font-weight: 700;
+        color: $dr-darkgreen;
+        text-transform: uppercase;
+      }
     }
     .share {
       list-style: none;
@@ -126,14 +132,10 @@ section {
           background-color: $dr-darkgreen;
           color: $white;
           font-weight: 400;
-          letter-spacing: 0.06em;
+          letter-spacing: 0.04em;
           padding: 0.5em;
           text-transform: uppercase;
           margin-bottom: 0.85em;
-          span {
-            text-transform: none;
-            font-weight: 300;
-          }
         }
         ul {
           margin: 0;
@@ -176,17 +178,31 @@ section {
             }
           }
         }
+        &#timeserved_criteria {
+          width: 62%;
+          float: right;
+          @include media($xlarge) {
+            @include span-columns(2.6);
+          }
+          @include media($large) {
+            @include span-columns(5);
+          }
+          @include media($medium) {
+            @include span-columns(4.5);
+          }
+        }
         &#race_criteria {
           width: 35%;
           float: left;
           @include media($xlarge) {
-            @include span-columns(5);
+            @include span-columns(4.8);
           }
           @include media($large) {
             @include span-columns(7);
           }
           @include media($medium) {
             @include span-columns(7.5);
+            @include omega();
           }
           li {
             display: block;
@@ -194,11 +210,7 @@ section {
             input[type='checkbox']:checked + label {
               margin-right: 0;
             }
-            @include media($xlarge) {
-              display: inline-block;
-              margin-bottom: 1em;
-            }
-            @include media($large) {
+            @include media($desktop) {
               display: inline-block;
               margin-bottom: 1em;
             }
@@ -208,47 +220,32 @@ section {
             }
           }
         }
-        &#sex_criteria {
-          width: 62%;
-          float: right;
-          @include media($xlarge) {
-            @include span-columns(2.15);
-          }
-          @include media($large) {
-            @include span-columns(7);
-          }
-          @include media($medium) {
-            @include span-columns(7.5);
-          }
-        }
         &#age_criteria {
           width: 62%;
           float: right;
           @include media($xlarge) {
-            @include span-columns(2.25);
+            @include span-columns(2.6);
           }
           @include media($large) {
             @include span-columns(5);
-            @include omega();
           }
           @include media($medium) {
             @include span-columns(4.5);
-            @include omega();
           }
         }
-        &#timeserved_criteria {
+        &#sex_criteria {
           width: 62%;
           float: right;
           @include media($xlarge) {
-            @include span-columns(2.6);
+            @include span-columns(2);
             @include omega();
           }
           @include media($large) {
-            @include span-columns(5);
+            @include span-columns(7);
             @include omega();
           }
           @include media($medium) {
-            @include span-columns(4.5);
+            @include span-columns(7.5);
             @include omega();
           }
         }
@@ -267,20 +264,13 @@ section {
         margin: 0 0.25em;
         background-color: $white;
         font: 700 2.5em 'Stardos Stencil', georgia, serif;
-        @include media($large) {
-          padding: 0.25em 0.25em 0.1em;
-        }
-         @include media($xlarge) {
+        @include media($desktop) {
           padding: 0.25em 0.25em 0.1em;
         }
       }
-      @include media($xlarge) {
+      @include media($desktop) {
         margin: 2em 0 1em;
       }
-      @include media($large) {
-        margin: 2em 0 1em;
-      }
-
     }
   }
 }
@@ -310,7 +300,6 @@ section {
   .white_content {
     @include media($morethan-460) {
       position: fixed;
-      border: 2px solid $dr-seafoam;
       background: $white;
       padding: 1em;
       z-index: 1002;
@@ -360,9 +349,15 @@ section {
             background: none;
           }
         }
+        .crime-details {
+          text-align: right;
+          label {
+            float: left;
+          }
+        }
         p {
-          line-height: 1.1em;
-          margin-bottom: 0.75em;
+          line-height: 1.25em;
+          margin-bottom: 0.5em;
           label {
             text-transform: uppercase;
             font-size: 0.875em;
@@ -416,12 +411,8 @@ section {
         float: left;
         width: 25%;
       }
-      @include media($large) {
+      @include media($desktop) {
         float: left;
-        width: 20%;
-      }
-      @include media($xlarge) {
-        float:left;
         width: 20%;
       }
       .open-lightbox {
@@ -451,10 +442,19 @@ section {
             line-height: 1.1em;
             overflow: hidden;
             text-overflow: ellipsis;
+            @include media($medium) {
+              font-size: 1.25em;
+            }
+            @include media($small) {
+              font-size: 1.25em;
+            }
           }
           .details {
             position: absolute;
             bottom: 2.5em;
+            @include media($small) {
+              font-size: 0.9em;
+            }
             .label {
               font-size: 0.8em;
               text-transform: uppercase;

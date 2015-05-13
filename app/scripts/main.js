@@ -102,8 +102,18 @@
       $this.removeClass('hidden');
       return true;
     });
+    var numInmates = leadingZeros(activeInmates.length);
+    $totalInmates.text(numInmates);
+  }
 
-    $totalInmates.text(activeInmates.length);
+  function leadingZeros(num) {
+      if (num < 100) {
+        if(num < 10) {
+          return '00' + num;
+        }
+        return '0' + num;
+      }
+      return num;
   }
 
   $inmatesContainer.find('.open-lightbox').click(function() {

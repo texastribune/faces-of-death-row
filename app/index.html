@@ -9,6 +9,13 @@
   <div class="container">
     <h3>Filter Inmates</h3>
     <div class="all-criteria">
+      <div class="criteria" id="timeserved_criteria">
+        <h4>Years on death row</h4>
+        <span id="timeserved_range_label_start" class="slider-label start">{{ META.min_years }}</span>
+        <div id="timeserved_slider" class="slider"></div>
+        <span id="timeserved_range_label_end" class="slider-label end">{{ META.max_years }}</span>
+        <input type="hidden" id="timeserved_filter" value="{{ META.min_years }}-{{ META.max_years }}"/>
+      </div>
       <div class="criteria" id="race_criteria">
         <h4>Race</h4>
         <ul>
@@ -56,13 +63,6 @@
             </li>
           </ul>
       </div>
-      <div class="criteria" id="timeserved_criteria">
-        <h4>Years <span>(on death row)</span></h4>
-        <span id="timeserved_range_label_start" class="slider-label start">{{ META.min_years }}</span>
-        <div id="timeserved_slider" class="slider"></div>
-        <span id="timeserved_range_label_end" class="slider-label end">{{ META.max_years }}</span>
-        <input type="hidden" id="timeserved_filter" value="{{ META.min_years }}-{{ META.max_years }}"/>
-      </div>
     </div>
     <div class="num-match">Viewing <span id="total_inmates">{{ META.total_inmates }}</span> inmates</div>
   </div>
@@ -76,7 +76,7 @@
         <div class="outline">
           <h2>{{ inmate.first_name }} {{ inmate.last_name }}</h2>
           <div class="details">
-            <p class="label">Time on death row:</p>
+            <p class="label">On death row:</p>
             <p>{{ inmate.time_served }}</p>
           </div>
         </div>
@@ -87,17 +87,19 @@
           <img src="assets/images/{{ inmate.mug }}" />
           <div class="details">
             <h2>{{ inmate.first_name }} {{inmate.last_name }}</h2>
+            <p><label>Time on Death Row:</label> {{ inmate.time_served }}</p>
             <p><label>Race:</label> {{ inmate.race }}</p>
             <p><label>Age:</label> {{ inmate.age }}</p>
             <p><label>Sex:</label> {{ inmate.sex }}</p>
-            <p><label>Time on Death Row:</label> {{ inmate.time_served }}</p>
-            <hr>
-            <p><label>Crime:</label> {{ inmate.offense_date }}</p>
-            <p><label>Conviction:</label> {{ inmate.received_date }}</p>
-            <p><label>County:</label> {{ inmate.county }}</p>
             <hr>
             <p><label>Summary of the Crime:</label></p>
             <p>{{ inmate.summary }}</p>
+            <hr>
+            <div class="crime-details">
+              <p><label>Crime Committed on:</label> {{ inmate.offense_date }}</p>
+              <p><label>Convicted on:</label> {{ inmate.received_date }}</p>
+              <p><label>Prosecuted in:</label> {{ inmate.county }} County</p>
+            </div>
           </div>
         </div>
         <div class="close-lightbox">

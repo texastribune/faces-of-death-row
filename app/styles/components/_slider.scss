@@ -44,12 +44,9 @@ $xlarge: new-breakpoint(min-width 1081px);
     height: 0.4em;
     background: $white;
     top:-0.2em;
-    width: 78%;
-    @include media($large) {
+    width: 62%;
+    @include media($xlarge) {
       width: 59%;
-    }
-    @include media($mobile) {
-      width: 62%;
     }
 }.ui-slider-horizontal .ui-slider-handle {
     top: -0.3em;

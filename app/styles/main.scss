@@ -13,465 +13,463 @@ $dr-dark-gray: $bodytext-black;
 
 section {
   font-size:16px;
+  color: $dr-dark-gray;
   @include media($mobile) {
     font-size: 0.9em;
   }
-  &.container {
-    width: 95%;
-    @include media($mobile) {
-      width: 90%;
+}
+.container {
+  width: 95%;
+  @include media($mobile) {
+    width: 90%;
+  }
+  margin: 0 auto;
+  @include media($xlarge){
+    max-width: 980px;
+  }
+}
+#header {
+  margin: 2em auto;
+  @include media($mobile) {
+    margin: 1.5em auto 1em;
+  }
+  h1 {
+    font-weight: 400;
+    font-family: 'Stardos Stencil', georgia, serif;
+    line-height: 1em;
+    text-transform: uppercase;
+    padding-left: 0.5em;
+    border-left: 2px solid $dr-orange;
+    font-size:2.4em;
+    margin-bottom: 0.5em;
+    @include media($desktop) {
+      font-size: 3.25em;
+      @include span-columns(5.5);
     }
-    margin: 0 auto;
-    color: $dr-dark-gray;
-    @include media($xlarge){
-      max-width: 980px;
+    @include media($mobile) {
+      font-size: 1.75em;
+    }
+    @include media($xlarge) {
+      font-size: 4em;
     }
   }
-  &#header {
-    margin: 2em auto;
-    @include media($mobile) {
-      margin: 1.5em auto 1em;
-    }
-    h1 {
-      font-weight: 400;
-      font-family: 'Stardos Stencil', georgia, serif;
-      line-height: 1em;
+  .description {
+    line-height: 1.4em;
+    padding: 0;
+    strong {
       text-transform: uppercase;
-      padding-left: 0.5em;
-      border-left: 2px solid $dr-orange;
-      font-size:2.4em;
-      margin-bottom: 0.5em;
-      @include media($desktop) {
-        font-size: 3.25em;
-        @include span-columns(5.5);
-      }
-      @include media($mobile) {
-        font-size: 1.75em;
-      }
-      @include media($xlarge) {
-        font-size: 4em;
-      }
+      padding: 0.1em 0.25em;
+      background-color: rgba(168,192,183,0.5);
+      font-family: $base-sans-serif;
+      letter-spacing: 0.05em;
+      font-size: 0.875em;
     }
-    .description {
-      line-height: 1.4em;
+    @include media ($desktop) {
+      @include span-columns(6.5);
+      @include omega();
+    }
+    .share {
+      list-style: none;
+      margin: 0;
       padding: 0;
-      strong {
-        text-transform: uppercase;
-        padding: 0.1em 0.25em;
-        background-color: rgba(168,192,183,0.5);
-        font-family: $base-sans-serif;
-        letter-spacing: 0.05em;
-        font-size: 0.875em;
+      @include media ($mobile) {
+        width: 60%;
+        margin: 0 auto;
+        text-align: center;
       }
-      @include media ($desktop) {
-        @include span-columns(6.5);
-        @include omega();
-      }
-      .share {
-        list-style: none;
-        margin: 0;
-        padding: 0;
+      li {
+        display: inline-block;
+        padding-right: 1em;
         @include media ($mobile) {
-          width: 60%;
-          margin: 0 auto;
-          text-align: center;
+          padding-right: 3em;
         }
-        li {
-          display: inline-block;
-          padding-right: 1em;
-          @include media ($mobile) {
-            padding-right: 3em;
-          }
-          .fa {
-            color: $dr-seafoam;
-            font-size: 24px;
-          }
-          &:last-child {
-            @include media($mobile) {
-              padding-right: 0;
-              margin-bottom: 0;
-            }
+        .fa {
+          color: $dr-seafoam;
+          font-size: 24px;
+        }
+        &:last-child {
+          @include media($mobile) {
+            padding-right: 0;
+            margin-bottom: 0;
           }
         }
       }
     }
-    @include clearfix;
   }
-  &.filters {
-    background-color: $dr-seafoam;
-    padding: 1em;
-    margin: 1em 0;
-    .container {
-      @include media($desktop) {
-        max-width: 767px;
-        margin: 0 auto;
-      }
-      h3 {
-        letter-spacing: 0.03em;
-        margin-bottom: 1em;
-        font-size:1.3em;
-      }
-      .all-criteria {
-        .criteria{
-          h4{
-            background-color: $dr-darkgreen;
-            color: $white;
-            font-weight: 400;
-            letter-spacing: 0.06em;
-            padding: 0.5em;
-            text-transform: uppercase;
-            margin-bottom: 0.85em;
-            span {
-              text-transform: none;
-              font-weight: 300;
-            }
-          }
-          ul {
-            margin: 0;
-            li{
-              display: inline-block;
-              margin: 0 0.15em 0 0;
-              input[type='checkbox'] {
-                display: none;
-              }
-              input[type='checkbox'] + label {
-                font-size: 0.9em;
-                text-transform: uppercase;
-                cursor: pointer;
-                letter-spacing: 0.01em;
-                margin-right: 0.25em;
-                &:before {
-                  content: "";
-                  display: inline-block;
-                  vertical-align: -2px;
-                  width: 15px;
-                  height: 15px;
-                  border: 2px solid $white;
-                  margin-right: 3px;
-                  @include media($mobile) {
-                    width: 17px;
-                    height: 17px;
-                    vertical-align: -3px;
-                    margin-right: 7px;
-                  }
-                }
-                @include media($mobile) {
-                  font-size: 1em;
-                }
-              }
-              input[type='checkbox']:checked + label:before {
-                background-color: $dr-orange;
-              }
-            }
-          }
-          &#race_criteria {
-            @include media($xlarge) {
-              @include span-columns(5);
-            }
-            @include media($desktop) {
-              @include span-columns(7);
-            }
-            @include media($mobile) {
-              width: 35%;
-              float: left;
-              li {
-                display: block;
-                margin-bottom: 1.25em;
-                input[type='checkbox']:checked + label {
-                  margin-right: 0;
-                }
-              }
-            }
-          }
-          &#sex_criteria {
-            @include media($xlarge) {
-              @include span-columns(2.15);
-            }
-            @include media($desktop) {
-              margin-top:2em;
-              @include span-columns(7);
-            }
-            @include media($mobile) {
-              width: 62%;
-              float: right;
-            }
-          }
-          &#age_criteria {
-            @include media($xlarge) {
-              @include span-columns(2.25);
-            }
-            @include media($desktop) {
-              @include span-columns(5);
-              @include omega();
-            }
-            @include media($mobile) {
-              width: 62%;
-              float: right;
-            }
-          }
-          &#timeserved_criteria {
-            @include media($xlarge) {
-              @include span-columns(2.6);
-            }
-            @include media($desktop) {
-              margin-top:2em;
-              @include span-columns(5);
-              @include omega();
-            }
-            @include media($mobile) {
-              width: 62%;
-              float: right;
-            }
-          }
-          @include media($mobile) {
-            margin-bottom: 1em;
+  @include clearfix;
+}
+.filters {
+  background-color: $dr-seafoam;
+  padding: 1em;
+  margin: 1em 0;
+  .container {
+    // @include media($desktop) {
+    //   max-width: 767px;
+    //   margin: 0 auto;
+    // }
+    h3 {
+      letter-spacing: 0.03em;
+      margin-bottom: 1em;
+      font-size:1.3em;
+    }
+    .all-criteria {
+      .criteria{
+        h4{
+          background-color: $dr-darkgreen;
+          color: $white;
+          font-weight: 400;
+          letter-spacing: 0.06em;
+          padding: 0.5em;
+          text-transform: uppercase;
+          margin-bottom: 0.85em;
+          span {
+            text-transform: none;
+            font-weight: 300;
           }
         }
-        @include clearfix;
-      }
-      .num-match{
-        text-align: center;
-        margin: 2.75em 0 1em;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-        #total_inmates {
-          vertical-align: -0.25em;
-          padding: 0.25em 0.25em 0.1em;
-          margin: 0 0.25em;
-          background-color: $white;
-          font: 700 2.5em 'Stardos Stencil', georgia, serif;
+        ul {
+          margin: 0;
+          li{
+            display: inline-block;
+            margin: 0 0.15em 0 0;
+            input[type='checkbox'] {
+              display: none;
+            }
+            input[type='checkbox'] + label {
+              font-size: 0.9em;
+              text-transform: uppercase;
+              cursor: pointer;
+              letter-spacing: 0.01em;
+              margin-right: 0.25em;
+              &:before {
+                content: "";
+                display: inline-block;
+                vertical-align: -2px;
+                width: 15px;
+                height: 15px;
+                border: 2px solid $white;
+                margin-right: 3px;
+                @include media($mobile) {
+                  width: 17px;
+                  height: 17px;
+                  vertical-align: -3px;
+                  margin-right: 7px;
+                }
+              }
+              @include media($mobile) {
+                font-size: 1em;
+              }
+            }
+            input[type='checkbox']:checked + label:before {
+              background-color: $dr-orange;
+            }
+          }
+        }
+        &#race_criteria {
+          // @include media($desktop) {
+          //   @include span-columns(7);
+          // }
           @include media($mobile) {
-            padding: 0.1em 0.2em 0;
+            width: 35%;
+            float: left;
+            li {
+              display: block;
+              margin-bottom: 1.25em;
+              input[type='checkbox']:checked + label {
+                margin-right: 0;
+              }
+            }
+          }
+          @include media($xlarge) {
+            @include span-columns(5);
+          }
+        }
+        &#sex_criteria {
+          // @include media($desktop) {
+          //   margin-top:2em;
+          //   @include span-columns(7);
+          // }
+          @include media($mobile) {
+            width: 62%;
+            float: right;
+          }
+          @include media($xlarge) {
+            @include span-columns(2.15);
+          }
+        }
+        &#age_criteria {
+          // @include media($desktop) {
+          //   @include span-columns(5);
+          //   @include omega();
+          // }
+          @include media($xlarge) {
+            @include span-columns(2.25);
+          }
+          @include media($mobile) {
+            width: 62%;
+            float: right;
+          }
+        }
+        &#timeserved_criteria {
+          // @include media($desktop) {
+          //   margin-top:2em;
+          //   @include span-columns(5);
+          //   @include omega();
+          // }
+          @include media($xlarge) {
+            @include span-columns(2.6);
+          }
+          @include media($mobile) {
+            width: 62%;
+            float: right;
           }
         }
         @include media($mobile) {
-          margin: 0.5em 0;
+          margin-bottom: 1em;
         }
+      }
+      @include clearfix;
+    }
+    .num-match{
+      text-align: center;
+      margin: 2.75em 0 1em;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      #total_inmates {
+        vertical-align: -0.25em;
+        padding: 0.25em 0.25em 0.1em;
+        margin: 0 0.25em;
+        background-color: $white;
+        font: 700 2.5em 'Stardos Stencil', georgia, serif;
+        @include media($mobile) {
+          padding: 0.1em 0.2em 0;
+        }
+      }
+      @include media($mobile) {
+        margin: 0.5em 0;
       }
     }
   }
-  &#interactive {
-    width:100%;
-    min-height:500px;
-    .hidden {
-      display:none !important;
+}
+#interactive {
+  width:100%;
+  min-height:500px;
+  .hidden {
+    display:none !important;
+  }
+  .black_overlay {
+    position: fixed;
+    overflow-y: hidden;
+    cursor: pointer;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: $dr-darkgreen;
+    z-index: 1001;
+    opacity: 0.9;
+    filter: alpha(opacity=90);
+    @include media($mobile) {
+      display: none;
     }
-    .black_overlay {
-      position: fixed;
-      overflow-y: hidden;
-      cursor: pointer;
+  }
+  .white_content {
+    position: fixed;
+    padding: 1em;
+    z-index: 1002;
+    background: $white;
+    border:2px solid $dr-seafoam;
+    top: 20%;
+    left: 15%;
+    width: 70%;
+    @include media($xlarge) {
+      top: 25%;
+      left: 25%;
+      width: 50%;
+    }
+    @include media($mobile) {
+      position: relative;
+      border: 0px;
       top: 0%;
       left: 0%;
       width: 100%;
-      height: 100%;
-      background-color: $dr-darkgreen;
-      z-index: 1001;
-      opacity: 0.9;
-      filter: alpha(opacity=90);
-      @include media($mobile) {
-        display: none;
-      }
+      padding: 0;
     }
-    .white_content {
-      position: fixed;
-      padding: 1em;
-      z-index: 1002;
-      background: $white;
-      border:2px solid $dr-seafoam;
-      top: 20%;
-      left: 15%;
-      width: 70%;
-      @include media($xlarge) {
-        top: 25%;
-        left: 25%;
-        width: 50%;
-      }
-      @include media($mobile) {
-        position: relative;
-        border: 0px;
-        top: 0%;
-        left: 0%;
-        width: 100%;
-        padding: 0;
-      }
-      .bio {
-        @include clearfix;
-        img {
-          @include span-columns(5.5);
-          @include media($mobile) {
-            display: none;
-          }
-        }
-        .details {
-          @include span-columns(6.5);
-          @include omega();
-          @include media($mobile) {
-            width: 100%;
-          }
-          h2 {
-            margin-bottom: 0.5em;
-            font-size: 1.75em;
-            letter-spacing: 0.03em;
-            @include media($mobile) {
-              line-height: 1em;
-              color: white;
-              padding: 0.25em;
-              text-align: center;
-              background: rgba(255,133,33,0.7);
-              margin-top: -1.5em;
-            }
-          }
-          p {
-            line-height: 1.1em;
-            margin-bottom: 0.75em;
-            label {
-              text-transform: uppercase;
-              font-size: 0.875em;
-              font-weight: 700;
-              letter-spacing: 0.03em;
-            }
-          }
-          hr {
-            margin: 0.75em 0;
-            background-color: $dr-seafoam;
-          }
-        }
-      }
-      .close-lightbox{
-        cursor: pointer;
-        position: absolute;
-        top: -0.5em;
-        right: 0.5em;
-        font-size: 2em;
-        .fa-times-circle {
-          color: $dr-seafoam;
-          position: absolute;
-        }
-        .fa-circle {
-          color: $white;
-          position: absolute;
-        }
+    .bio {
+      @include clearfix;
+      img {
+        @include span-columns(5.5);
         @include media($mobile) {
           display: none;
         }
       }
+      .details {
+        @include span-columns(6.5);
+        @include omega();
+        @include media($mobile) {
+          width: 100%;
+        }
+        h2 {
+          margin-bottom: 0.5em;
+          font-size: 1.75em;
+          line-height: 1em;
+          letter-spacing: 0.03em;
+          @include media($mobile) {
+            color: white;
+            padding: 0.25em;
+            text-align: center;
+            background: rgba(255,133,33,0.7);
+            margin-top: -1.5em;
+          }
+        }
+        p {
+          line-height: 1.1em;
+          margin-bottom: 0.75em;
+          label {
+            text-transform: uppercase;
+            font-size: 0.875em;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+          }
+        }
+        hr {
+          margin: 0.75em 0;
+          background-color: $dr-seafoam;
+        }
+      }
     }
-    .inmates {
-      .inmate {
-        position: relative;
-        margin-bottom:10px;
-        line-height: 1em;
-        cursor: pointer;
-        overflow: hidden;
-        border-right: 5px solid $white;
-        border-left: 5px solid $white;
-        border-bottom: 8px solid $white;
-        float: left;
-        height: 200px;
-        width: 25%;
-        @include media ($desktop) {
-          width: 20%;
-          height: 250px; //hoping to remove with batch crop images
+    .close-lightbox{
+      cursor: pointer;
+      position: absolute;
+      top: -0.5em;
+      right: 0.5em;
+      font-size: 2em;
+      .fa-times-circle {
+        color: $dr-seafoam;
+        position: absolute;
+      }
+      .fa-circle {
+        color: $white;
+        position: absolute;
+      }
+      @include media($mobile) {
+        display: none;
+      }
+    }
+  }
+  .inmates {
+    .inmate {
+      position: relative;
+      margin-bottom:10px;
+      line-height: 1em;
+      cursor: pointer;
+      overflow: hidden;
+      border-right: 5px solid $white;
+      border-left: 5px solid $white;
+      border-bottom: 8px solid $white;
+      float: left;
+      width: 25%;
+      @include media ($desktop) {
+        width: 20%;
+      }
+      @include media ($small) {
+        width: 33%;
+      }
+      @include media ($mobile) {
+        float: none;
+        width: 98%;
+        max-width: 250px;
+        margin: 0 auto 10px auto;
+        height: auto;
+      }
+      .open-lightbox {
+        img {
+          width: 100%;
+          &.grayscale {
+            filter: grayscale(100%);
+          }
         }
-        @include media ($small) {
-          width: 33%;
-        }
-        @include media ($mobile) {
-          float: none;
-          width: 98%;
-          max-width: 250px;
-          margin: 0 auto 10px auto;
-          height: auto;
-        }
-        .open-lightbox {
-          img {
-            width: 100%;
-            &.grayscale {
-              filter: grayscale(100%);
+        .outline {
+          @include media($mobile) {
+            display: none;
+          }
+          display: block;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          height: 100%;
+          width: 100%;
+          background: rgba(255,133,33,0.7);
+          color: white;
+          opacity: 0;
+          transition: opacity .25s ease-in;
+          padding: 0.5em 0.75em;
+          h2 {
+            letter-spacing: 0.03em;
+            line-height: 1.1em;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+          .details {
+            position: absolute;
+            bottom: 2.5em;
+            .label {
+              font-size: 0.8em;
+              text-transform: uppercase;
+              letter-spacing: 0.05em;
+              font-weight:700;
             }
+          }
+        }
+        .info-button {
+          display: block;
+          position: absolute;
+          left: 10px;
+          bottom: 5px;
+          .fa:before {
+            content: '\f05a';
+            height: 1em;
+            width: 1em;
+            color: $dr-orange;
+            opacity: 0.7;
+            font-size: 1.5em;
+            @include media($mobile) {
+              content: '\f13a';
+              font-size: 2.5em;
+            }
+          }
+        }
+        &:hover {
+          .info {
+            display: block;
+            padding: 1em;
           }
           .outline {
-            @include media($mobile) {
-              display: none;
-            }
-            display: block;
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            height: 100%;
-            width: 100%;
-            background: rgba(255,133,33,0.7);
-            color: white;
-            opacity: 0;
-            transition: opacity .25s ease-in;
-            padding: 0.5em 0.75em;
-            h2 {
-              letter-spacing: 0.03em;
-              line-height: 1.1em;
-              overflow: hidden;
-              text-overflow: ellipsis;
-            }
-            .details {
-              position: absolute;
-              bottom: 2.5em;
-              .label {
-                font-size: 0.8em;
-                text-transform: uppercase;
-                letter-spacing: 0.05em;
-                font-weight:700;
-              }
-            }
+            opacity: 1;
           }
           .info-button {
-            display: block;
-            position: absolute;
-            left: 10px;
-            bottom: 5px;
             .fa:before {
-              content: '\f05a';
-              height: 1em;
-              width: 1em;
-              color: $dr-orange;
-              opacity: 0.7;
-              font-size: 1.5em;
-              @include media($mobile) {
-                content: '\f13a';
-                font-size: 2.5em;
-              }
-            }
-          }
-          &:hover {
-            .info {
-              display: block;
-              padding: 1em;
-            }
-            .outline {
+              color: $white;
               opacity: 1;
-            }
-            .info-button {
-              .fa:before {
-                color: $white;
-                opacity: 1;
-                @include media($mobile) {
-                  color: $dr-orange;
-                }
+              @include media($mobile) {
+                color: $dr-orange;
               }
-              transition: opacity .25s ease-in;
             }
-            .detail {
-              opacity: 0;
-            }
-            &:after {
-              content: "";
-              opacity: 0.75;
-              top: 0;
-              left: 0;
-              bottom: 0;
-              right: 0;
-              position: absolute;
-              z-index: -1;
-            }
+            transition: opacity .25s ease-in;
+          }
+          .detail {
+            opacity: 0;
+          }
+          &:after {
+            content: "";
+            opacity: 0.75;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            position: absolute;
+            z-index: -1;
           }
         }
       }

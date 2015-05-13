@@ -1,6 +1,8 @@
 (function() {
   'use strict';
 
+  var $windowWidth = $(window).width();
+
   var $inmatesContainer = $('#inmates');
   var $inmates = $inmatesContainer.find('.inmate');
 
@@ -111,10 +113,12 @@
     var nextViewable = $parentEls.nextAll().not('.hidden').first();
     var prevViewable = $parentEls.prevAll().not('.hidden').first();
 
-    //console.log(nextViewable);  // the next available to view
-    //console.log(prevViewable);  // the previous available to view
+    console.log(nextViewable);  // the next available to view
+    console.log(prevViewable);  // the previous available to view
 
-    $('#' + inmate + ' img').toggleClass('grayscale');
+    if($windowWidth < 460) {
+      $('#' + inmate + ' img').toggleClass('grayscale');
+    }
     $('#light-' + inmate).toggleClass('hidden');
     $('#fade-' + inmate).toggleClass('hidden');
 

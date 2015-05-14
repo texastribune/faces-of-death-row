@@ -11,13 +11,14 @@
     "total_inmates": "265",
     "min_age": "20",
     "max_age": "80",
-    "min_years": "0",
+    "min_years": "00",
     "max_years": "40",
     "email_line": "Check out the Texas Tribune's new interactive feature: Faces of Death Row",
     "byline": "Jolie McCullough",
     "byline_url": "http://www.texastribune.org/about/staff/jolie-mccullough",
     "byline_2": "Ben Hasson",
-    "byline_2_url": "http://www.texastribune.org/about/staff/#ben-hasson"
+    "byline_2_url": "http://www.texastribune.org/about/staff/#ben-hasson",
+    "updated_date": "May 13, 2015"
   },
   "INMATES": [
     {
@@ -58,7 +59,7 @@
       "unit": "POLUNSKY",
       "received_date": "6/14/2013",
       "received_date_cacl": 41439,
-      "years_served_calc": "1.91",
+      "years_served_calc": "1.92",
       "timeserved": 1.8575342465753424,
       "time_served": "1 year, 10 months",
       "offense_date": "11/24/1975",
@@ -154,7 +155,7 @@
       "unit": "POLUNSKY",
       "received_date": "10/10/1978",
       "received_date_cacl": 28773,
-      "years_served_calc": "36.61",
+      "years_served_calc": "36.62",
       "timeserved": 36.558904109589044,
       "time_served": "36 years, 7 months",
       "offense_date": "1/7/1978",
@@ -178,7 +179,7 @@
       "unit": "POLUNSKY",
       "received_date": "2/26/1980",
       "received_date_cacl": 29277,
-      "years_served_calc": "35.23",
+      "years_served_calc": "35.24",
       "timeserved": 35.178082191780824,
       "time_served": "35 years, 2 months",
       "offense_date": "2/27/1979",
@@ -226,7 +227,7 @@
       "unit": "POLUNSKY",
       "received_date": "7/24/1980",
       "received_date_cacl": 29426,
-      "years_served_calc": "34.82",
+      "years_served_calc": "34.83",
       "timeserved": 34.76986301369863,
       "time_served": "34 years, 9 months",
       "offense_date": "4/25/1980",
@@ -354,7 +355,7 @@
       "offense": "CAP MURDER (DEATH)",
       "county": "Grayson",
       "mug": "000764.jpg",
-      "summary": "Bower was convicted in the shooting deaths of four men at an ultralight airplane hanger near Sherman. Among those killed was a Grayson County sheriff's deputy."
+      "summary": "Bower was convicted in the shooting deaths of four men at an ultralight airplane hangar near Sherman. Among those killed was a Grayson County sheriff's deputy."
     },
     {
       "tdcj_id": 778,
@@ -370,7 +371,7 @@
       "unit": "POLUNSKY",
       "received_date": "1/7/1985",
       "received_date_cacl": 31054,
-      "years_served_calc": "30.36",
+      "years_served_calc": "30.37",
       "timeserved": 30.30958904109589,
       "time_served": "30 years, 4 months",
       "offense_date": "11/4/1983",
@@ -497,7 +498,7 @@
       "offense": "CAPT MURDER (DEATH)",
       "county": "Harris",
       "mug": "000889.jpg",
-      "summary": "Mcgowen was onvicted in the murder of a 68-year-old woman during an attempted robbery of a Montrose-area bar in Houston."
+      "summary": "Mcgowen was convicted in the murder of a 68-year-old woman during an attempted robbery of a Montrose-area bar in Houston."
     },
     {
       "tdcj_id": 869,
@@ -536,7 +537,7 @@
       "unit": "POLUNSKY",
       "received_date": "2/15/2007",
       "received_date_cacl": 39128,
-      "years_served_calc": "8.24",
+      "years_served_calc": "8.25",
       "timeserved": 8.189041095890412,
       "time_served": "8 years, 2 months",
       "offense_date": "8/3/1986",
@@ -560,7 +561,7 @@
       "unit": "POLUNSKY",
       "received_date": "12/19/2006",
       "received_date_cacl": 39070,
-      "years_served_calc": "8.40",
+      "years_served_calc": "8.41",
       "timeserved": 8.347945205479451,
       "time_served": "8 years, 4 months",
       "offense_date": "8/27/1986",
@@ -656,7 +657,7 @@
       "unit": "POLUNSKY",
       "received_date": "12/10/1997",
       "received_date_cacl": 35774,
-      "years_served_calc": "17.43",
+      "years_served_calc": "17.44",
       "timeserved": 17.378082191780823,
       "time_served": "17 years, 5 months",
       "offense_date": "3/6/1987",
@@ -751,7 +752,7 @@
       "unit": "POLUNSKY",
       "received_date": "6/16/1988",
       "received_date_cacl": 32310,
-      "years_served_calc": "26.92",
+      "years_served_calc": "26.93",
       "timeserved": 26.86849315068493,
       "time_served": "26 years, 11 months",
       "offense_date": "8/28/1987",
@@ -799,7 +800,7 @@
       "unit": "POLUNSKY",
       "received_date": "5/10/1991",
       "received_date_cacl": 33368,
-      "years_served_calc": "24.02",
+      "years_served_calc": "24.03",
       "timeserved": 23.96986301369863,
       "time_served": "24 years",
       "offense_date": "12/23/1987",
@@ -896,7 +897,7 @@
       "received_date_cacl": 33165,
       "years_served_calc": "24.58",
       "timeserved": 24.526027397260275,
-      "time_served": "24 years, 6 months",
+      "time_served": "24 years, 7 months",
       "offense_date": "8/25/1989",
       "offsense_date_calc": 32745,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -942,7 +943,7 @@
       "unit": "POLUNSKY",
       "received_date": "8/2/1991",
       "received_date_cacl": 33452,
-      "years_served_calc": "23.79",
+      "years_served_calc": "23.80",
       "timeserved": 23.73972602739726,
       "time_served": "23 years, 9 months",
       "offense_date": "10/15/1989",
@@ -966,7 +967,7 @@
       "unit": "POLUNSKY",
       "received_date": "9/13/1996",
       "received_date_cacl": 35321,
-      "years_served_calc": "18.67",
+      "years_served_calc": "18.68",
       "timeserved": 18.61917808219178,
       "time_served": "18 years, 8 months",
       "offense_date": "12/2/1989",
@@ -1014,7 +1015,7 @@
       "unit": "POLUNSKY",
       "received_date": "3/6/1991",
       "received_date_cacl": 33303,
-      "years_served_calc": "24.20",
+      "years_served_calc": "24.21",
       "timeserved": 24.147945205479452,
       "time_served": "24 years, 2 months",
       "offense_date": "6/27/1990",
@@ -1086,7 +1087,7 @@
       "unit": "POLUNSKY",
       "received_date": "1/28/1992",
       "received_date_cacl": 33631,
-      "years_served_calc": "23.30",
+      "years_served_calc": "23.31",
       "timeserved": 23.24931506849315,
       "time_served": "23 years, 3 months",
       "offense_date": "12/13/1990",
@@ -1110,7 +1111,7 @@
       "unit": "POLUNSKY",
       "received_date": "7/10/1992",
       "received_date_cacl": 33795,
-      "years_served_calc": "22.85",
+      "years_served_calc": "22.86",
       "timeserved": 22.8,
       "time_served": "22 years, 10 months",
       "offense_date": "1/3/1991",
@@ -1133,7 +1134,7 @@
       "age": 61,
       "received_date": "8/12/1992",
       "received_date_cacl": 33828,
-      "years_served_calc": "22.76",
+      "years_served_calc": "22.77",
       "timeserved": 22.70958904109589,
       "time_served": "22 years, 9 months",
       "offense_date": "1/17/1991",
@@ -1205,7 +1206,7 @@
       "unit": "POLUNSKY",
       "received_date": "9/18/1992",
       "received_date_cacl": 33865,
-      "years_served_calc": "22.66",
+      "years_served_calc": "22.67",
       "timeserved": 22.60821917808219,
       "time_served": "22 years, 7 months",
       "offense_date": "5/16/1991",
@@ -1228,7 +1229,7 @@
       "age": 41,
       "received_date": "9/10/1992",
       "received_date_cacl": 33857,
-      "years_served_calc": "22.68",
+      "years_served_calc": "22.69",
       "timeserved": 22.63013698630137,
       "time_served": "22 years, 8 months",
       "offense_date": "6/27/1991",
@@ -1276,7 +1277,7 @@
       "unit": "POLUNSKY",
       "received_date": "4/24/1996",
       "received_date_cacl": 35179,
-      "years_served_calc": "19.06",
+      "years_served_calc": "19.07",
       "timeserved": 19.008219178082193,
       "time_served": "19 years",
       "offense_date": "8/28/1991",
@@ -1324,7 +1325,7 @@
       "unit": "POLUNSKY",
       "received_date": "9/29/1992",
       "received_date_cacl": 33876,
-      "years_served_calc": "22.63",
+      "years_served_calc": "22.64",
       "timeserved": 22.578082191780823,
       "time_served": "22 years, 7 months",
       "offense_date": "11/15/1991",
@@ -1372,7 +1373,7 @@
       "unit": "POLUNSKY",
       "received_date": "5/6/1993",
       "received_date_cacl": 34095,
-      "years_served_calc": "22.03",
+      "years_served_calc": "22.04",
       "timeserved": 21.97808219178082,
       "time_served": "22 years",
       "offense_date": "2/7/1992",
@@ -1492,7 +1493,7 @@
       "unit": "POLUNSKY",
       "received_date": "9/25/1995",
       "received_date_cacl": 34967,
-      "years_served_calc": "19.64",
+      "years_served_calc": "19.65",
       "timeserved": 19.589041095890412,
       "time_served": "19 years, 7 months",
       "offense_date": "9/8/1992",
@@ -1636,7 +1637,7 @@
       "unit": "MOUNTAIN VIEW",
       "received_date": "4/25/1995",
       "received_date_cacl": 34814,
-      "years_served_calc": "20.06",
+      "years_served_calc": "20.07",
       "timeserved": 20.008219178082193,
       "time_served": "20 years",
       "offense_date": "6/30/1993",
@@ -1684,7 +1685,7 @@
       "unit": "POLUNSKY",
       "received_date": "7/28/1997",
       "received_date_cacl": 35639,
-      "years_served_calc": "17.80",
+      "years_served_calc": "17.81",
       "timeserved": 17.747945205479454,
       "time_served": "17 years, 9 months",
       "offense_date": "9/21/1993",
@@ -1708,7 +1709,7 @@
       "unit": "POLUNSKY",
       "received_date": "6/8/1994",
       "received_date_cacl": 34493,
-      "years_served_calc": "20.94",
+      "years_served_calc": "20.95",
       "timeserved": 20.887671232876713,
       "time_served": "20 years, 11 months",
       "offense_date": "10/29/1993",
@@ -1779,7 +1780,7 @@
       "unit": "POLUNSKY",
       "received_date": "12/11/1995",
       "received_date_cacl": 35044,
-      "years_served_calc": "19.43",
+      "years_served_calc": "19.44",
       "timeserved": 19.378082191780823,
       "time_served": "19 years, 5 months",
       "offense_date": "4/21/1994",
@@ -1851,7 +1852,7 @@
       "unit": "POLUNSKY",
       "received_date": "4/16/1997",
       "received_date_cacl": 35536,
-      "years_served_calc": "18.08",
+      "years_served_calc": "18.09",
       "timeserved": 18.03013698630137,
       "time_served": "18 years, 1 month",
       "offense_date": "11/9/1994",
@@ -1925,7 +1926,7 @@
       "received_date_cacl": 36145,
       "years_served_calc": "16.42",
       "timeserved": 16.361643835616437,
-      "time_served": "16 years, 4 months",
+      "time_served": "16 years, 5 months",
       "offense_date": "11/26/1994",
       "offsense_date_calc": 34664,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -1995,7 +1996,7 @@
       "unit": "POLUNSKY",
       "received_date": "6/25/1997",
       "received_date_cacl": 35606,
-      "years_served_calc": "17.89",
+      "years_served_calc": "17.90",
       "timeserved": 17.838356164383562,
       "time_served": "17 years, 10 months",
       "offense_date": "7/30/1995",
@@ -2019,7 +2020,7 @@
       "unit": "POLUNSKY",
       "received_date": "9/17/1997",
       "received_date_cacl": 35690,
-      "years_served_calc": "17.66",
+      "years_served_calc": "17.67",
       "timeserved": 17.60821917808219,
       "time_served": "17 years, 7 months",
       "offense_date": "9/5/1995",
@@ -2115,7 +2116,7 @@
       "unit": "POLUNSKY",
       "received_date": "9/13/1996",
       "received_date_cacl": 35321,
-      "years_served_calc": "18.67",
+      "years_served_calc": "18.68",
       "timeserved": 18.61917808219178,
       "time_served": "18 years, 8 months",
       "offense_date": "1/1/1996",
@@ -2307,7 +2308,7 @@
       "unit": "JESTER IV",
       "received_date": "12/10/1998",
       "received_date_cacl": 36139,
-      "years_served_calc": "16.43",
+      "years_served_calc": "16.44",
       "timeserved": 16.378082191780823,
       "time_served": "16 years, 5 months",
       "offense_date": "11/23/1996",
@@ -2477,7 +2478,7 @@
       "received_date_cacl": 36054,
       "years_served_calc": "16.67",
       "timeserved": 16.610958904109587,
-      "time_served": "16 years, 7 months",
+      "time_served": "16 years, 8 months",
       "offense_date": "7/29/1997",
       "offsense_date_calc": 35640,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -2523,7 +2524,7 @@
       "unit": "POLUNSKY",
       "received_date": "9/2/1998",
       "received_date_cacl": 36040,
-      "years_served_calc": "16.70",
+      "years_served_calc": "16.71",
       "timeserved": 16.649315068493152,
       "time_served": "16 years, 8 months",
       "offense_date": "11/13/1997",
@@ -2595,7 +2596,7 @@
       "unit": "POLUNSKY",
       "received_date": "4/2/1999",
       "received_date_cacl": 36252,
-      "years_served_calc": "16.12",
+      "years_served_calc": "16.13",
       "timeserved": 16.068493150684933,
       "time_served": "16 years, 1 month",
       "offense_date": "1/29/1998",
@@ -2667,7 +2668,7 @@
       "unit": "POLUNSKY",
       "received_date": "5/5/1999",
       "received_date_cacl": 36285,
-      "years_served_calc": "16.03",
+      "years_served_calc": "16.04",
       "timeserved": 15.978082191780821,
       "time_served": "16 years",
       "offense_date": "4/30/1998",
@@ -2715,7 +2716,7 @@
       "unit": "POLUNSKY",
       "received_date": "11/3/1999",
       "received_date_cacl": 36467,
-      "years_served_calc": "15.53",
+      "years_served_calc": "15.54",
       "timeserved": 15.479452054794521,
       "time_served": "15 years, 6 months",
       "offense_date": "5/22/1998",
@@ -2739,7 +2740,7 @@
       "unit": "POLUNSKY",
       "received_date": "5/5/1999",
       "received_date_cacl": 36285,
-      "years_served_calc": "16.03",
+      "years_served_calc": "16.04",
       "timeserved": 15.978082191780821,
       "time_served": "16 years",
       "offense_date": "5/31/1998",
@@ -2787,9 +2788,9 @@
       "unit": "POLUNSKY",
       "received_date": "7/17/1998",
       "received_date_cacl": 35993,
-      "years_served_calc": "16.83",
+      "years_served_calc": "16.84",
       "timeserved": 16.778082191780822,
-      "time_served": "16 years, 9 months",
+      "time_served": "16 years, 10 months",
       "offense_date": "6/7/1998",
       "offsense_date_calc": 35953,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -2835,7 +2836,7 @@
       "unit": "POLUNSKY",
       "received_date": "10/20/1999",
       "received_date_cacl": 36453,
-      "years_served_calc": "15.57",
+      "years_served_calc": "15.58",
       "timeserved": 15.517808219178082,
       "time_served": "15 years, 6 months",
       "offense_date": "9/10/1998",
@@ -2867,12 +2868,12 @@
       "offense": "CAPITAL MURDER (DEATH)",
       "county": "Harris",
       "mug": "999360.jpg",
-      "summary": "9/17/1998 during the night in Houston, Garcia and three co-defendants approached a hispanic male who was walking to his vehicle in the parking lot of an apartment complex. Garcia demanded the victim's money and then shot him in the head with a .25 caliber pistol, killing him. Garcia took $8 in cash from the victim."
+      "summary": "Garcia was convicted of shooting a man in the parking lot of an apartment complex after demanding money from him. "
     },
     {
       "tdcj_id": 999333,
       "sid": 4787369,
-      "last_name": "Mamou, Jr.",
+      "last_name": "Mamou Jr.",
       "first_name": "Charles",
       "middle_name": "",
       "race": "Black",
@@ -2891,7 +2892,7 @@
       "offense": "CAPITAL MURDER (DEATH)",
       "county": "Harris",
       "mug": "999333.jpg",
-      "summary": "On 12/07/98, in Houston, Texas, Mamou shot and killed a black male during a drug deal. Two other male victims were also shot during the incident. Mamou drove another victim, a black female to an abandoned house and shot and killed her. Her body was discovered two days later."
+      "summary": "Mamou was convicted of shooting and killing a man during a drug deal in Houston and later taking a woman to an abandoned house and shooting and killing her. "
     },
     {
       "tdcj_id": 999361,
@@ -2907,7 +2908,7 @@
       "unit": "POLUNSKY",
       "received_date": "7/12/2000",
       "received_date_cacl": 36719,
-      "years_served_calc": "14.84",
+      "years_served_calc": "14.85",
       "timeserved": 14.789041095890411,
       "time_served": "14 years, 10 months",
       "offense_date": "12/8/1998",
@@ -2915,12 +2916,12 @@
       "offense": "CAPITAL MURDER (DEATH)",
       "county": "Montgomery",
       "mug": "999361.jpg",
-      "summary": "Swearingen kidnapped and strangled a 19 year old white female on 12/8/1998."
+      "summary": "Swearingen was convicted of kidnapping and strangling a 19-year-old female."
     },
     {
       "tdcj_id": 999354,
       "sid": 4104818,
-      "last_name": "Garza, Jr.",
+      "last_name": "Garza Jr.",
       "first_name": "Joe",
       "middle_name": "Franco",
       "race": "Hispanic",
@@ -2939,12 +2940,12 @@
       "offense": "CAPITAL MURDER (DEATH)",
       "county": "Lubbock",
       "mug": "999354.jpg",
-      "summary": "Convicted in the December 31, 1998 choking death of a 26-year-old Hispanic male. Garza and the victim were partying in the victim's vehicle when Garza choked him to death with a rope and took his vehicle and money. Garza then dumped the victim's body on the street and fled the scene."
+      "summary": "Garza was convicted in the choking death of a 26-year-old male. "
     },
     {
       "tdcj_id": 999433,
       "sid": 5866073,
-      "last_name": "Prible, Jr.",
+      "last_name": "Prible Jr.",
       "first_name": "Ronald",
       "middle_name": "Jeffery",
       "race": "White",
@@ -2963,7 +2964,7 @@
       "offense": "CAPITAL MURDER",
       "county": "Harris",
       "mug": "999433.jpg",
-      "summary": "On 04/24/1999, in Houston, Prible shot and killed a 34-year old Hispanic male and a 23-year old Hispanic female. Prible then started a fire in the residence, causing the death of three children from smoke inhalation."
+      "summary": "Prible was convicted of shooting and killing a 34-year-old male and a 23-year-old female and starting a fire that caused the death of three children."
     },
     {
       "tdcj_id": 999416,
@@ -2987,7 +2988,7 @@
       "offense": "CAPITAL MURDER (DEATH)",
       "county": "Bexar",
       "mug": "999416.jpg",
-      "summary": "On 05/29/1999 in San Antonio, Texas, Gutierrez abducted and murdered an adult Hispanic male. The victim was abducted in a parking lot of a convenience store by Gutierrez at gunpoint with a piston grip 12-guage shotgun. The victim was taken to a secluded location where Gutierrez shot him 5 times with the 12-guage shotgun. After seeing the media coverage of the incident on the news, Gutierrez went back on 05/31/1999 and set fire to the body."
+      "summary": "Gutierrez was convicted of abducting and murdering a man. "
     },
     {
       "tdcj_id": 999373,
@@ -3011,7 +3012,7 @@
       "offense": "CAPITAL MURDER \"DEATH\"",
       "county": "Harris",
       "mug": "999373.jpg",
-      "summary": "On 9/2/1999, Green entered the apartment of a 19 year old white female, raping and killing her. DNA evidence confirmed the identity of Green as the assailant."
+      "summary": "Green was convicted of raping and killing a 19-year-old female."
     },
     {
       "tdcj_id": 999379,
@@ -3035,7 +3036,7 @@
       "offense": "CAPITAL MURDER (DEATH)",
       "county": "Tarrant",
       "mug": "999379.jpg",
-      "summary": "On 9/11/1999, Jones murdered his 83 year old aunt with a baseball bat. He struck her numerous times over the head and took property from her residence."
+      "summary": "Jones was convicted of murdering his 83-year-old aunt with a baseball bat. "
     },
     {
       "tdcj_id": 999371,
@@ -3059,7 +3060,7 @@
       "offense": "CAPITAL MURDER \"DEATH\"",
       "county": "Dallas",
       "mug": "999371.jpg",
-      "summary": "On 11/16/1999 in Dallas, Rayford murdered a 44 year old black female by strangulation, stabbing, and blunt force. Rayford took the victim's body and threw it into a nearby creek. The murder took place in the home of the victim and was witnessed by her 11 and 14 year old sons."
+      "summary": "Rayford was convicted of murdering a 44-year-old female by strangulation, stabbing and blunt force. "
     },
     {
       "tdcj_id": 999376,
@@ -3083,7 +3084,7 @@
       "offense": "CAPITAL MURDER (DEATH)",
       "county": "Harris",
       "mug": "999376.jpg",
-      "summary": "On 12/12/1999 in Houston, Gates entered the residence of a 41 year old female. He sexually assaulted the victim and then strangled and smothered her to death."
+      "summary": "Gates was convicted of strangling and smothering a 41-year-old female to death. "
     },
     {
       "tdcj_id": 999411,
@@ -3107,7 +3108,7 @@
       "offense": "CAPITAL MURDER (DEATH)",
       "county": "Bee",
       "mug": "999411.jpg",
-      "summary": "On December 17, 1999, Pruett physically assaulted a male correctional officer at the McConnell Unit in Bee County, resulting in the death of the correctional officer."
+      "summary": "Pruett was convicted of physically assaulting and killing a correctional officer at the McConnell Unit in Bee County."
     },
     {
       "tdcj_id": 999396,
@@ -3131,7 +3132,7 @@
       "offense": "CAPITAL MURDER (DEATH)",
       "county": "Bexar",
       "mug": "999396.jpg",
-      "summary": "On 2/4/2000 in San Antonio, Weathers entered a bar and demanded money from the adult white male bartender. The bartender refused and Weathers shot him, resulting in his death."
+      "summary": "Weathers was convicted of shooting and killing a bartender during a robbery. "
     },
     {
       "tdcj_id": 999388,
@@ -3146,7 +3147,7 @@
       "age": 34,
       "received_date": "6/20/2001",
       "received_date_cacl": 37062,
-      "years_served_calc": "13.90",
+      "years_served_calc": "13.91",
       "timeserved": 13.849315068493151,
       "time_served": "13 years, 10 months",
       "offense_date": "2/12/2000",
@@ -3154,12 +3155,12 @@
       "offense": "CAPITAL MURDER (DEATH)",
       "county": "Harris",
       "mug": "999388.jpg",
-      "summary": "On 02/12/2000, in Houston, Woodard attempted to rob a convenience store. When the owners of the store, a male and female from India, were unable to open the cash register fast enough to suit Woodard, he shot and killed them. He took lottery scratch off tickets and left the store. Once outside, he took the vehicle of a customer and fled the scene."
+      "summary": "Woodard was convicted of shooting and killing two convenience store owners."
     },
     {
       "tdcj_id": 999391,
       "sid": 6382584,
-      "last_name": "Avila, Jr.",
+      "last_name": "Avila Jr.",
       "first_name": "Rigoberto",
       "middle_name": "",
       "race": "Hispanic",
@@ -3170,7 +3171,7 @@
       "unit": "POLUNSKY",
       "received_date": "7/19/2001",
       "received_date_cacl": 37091,
-      "years_served_calc": "13.82",
+      "years_served_calc": "13.83",
       "timeserved": 13.76986301369863,
       "time_served": "13 years, 9 months",
       "offense_date": "2/29/2000",
@@ -3178,7 +3179,7 @@
       "offense": "CAPITAL MURDER",
       "county": "El Paso",
       "mug": "999391.jpg",
-      "summary": "On 02/29/2000, El Paso, Avila was babysitting a 19 month old Hispanic male and his sibling at their residence. Avila struck the victim in the abdomen, causing the death of the child."
+      "summary": "Avila was convicted of striking and killing a child in El Paso."
     },
     {
       "tdcj_id": 999381,
@@ -3202,7 +3203,7 @@
       "offense": "CAPITAL MURDER (DEATH)",
       "county": "Hopkins",
       "mug": "999381.jpg",
-      "summary": "On 03/12/2000, Acker caused the death of a 32 year old female. Acker kidnapped the victim, then murdered her by strangulation and blunt force trauma. The victim's body was found along side a county road."
+      "summary": "Acker was convicted in the kidnapping and murder of a 32-year-old female. "
     },
     {
       "tdcj_id": 999386,
@@ -3226,7 +3227,7 @@
       "offense": "CAPITAL MURDER (DEATH)",
       "county": "Harris",
       "mug": "999386.jpg",
-      "summary": "On 05/10/2000 in Houston, Allen sexually assaulted and murdered a two year old black female in her home. The mother of the victim had left her four children under the care of Allen while she went to work. The cause of victim's death was determined to be blunt force trauma to the abdomen and chest."
+      "summary": "Allen was convicted of sexually assaulting and murdering a 2-year-old female."
     },
     {
       "tdcj_id": 999383,
@@ -3242,7 +3243,7 @@
       "unit": "POLUNSKY",
       "received_date": "4/26/2001",
       "received_date_cacl": 37007,
-      "years_served_calc": "14.05",
+      "years_served_calc": "14.06",
       "timeserved": 14,
       "time_served": "14 years",
       "offense_date": "5/12/2000",
@@ -3250,7 +3251,7 @@
       "offense": "CAPITAL MURDER \"DEATH\"",
       "county": "Hardin",
       "mug": "999383.jpg",
-      "summary": "On 5/12/2000, Howard robbed a convenience store in Silsbee. During the robbery, Howard shot a 42 year old white female clerk one time in the chest, causing her death. Howard took $114 from the cash register during the robbery."
+      "summary": "Howard was convicted of shooting a 42-year-old clerk while robbing a convenience store in Silsbee."
     },
     {
       "tdcj_id": 999390,
@@ -3274,7 +3275,7 @@
       "offense": "CAPITAL MURDER (DEATH)",
       "county": "Harris",
       "mug": "999390.jpg",
-      "summary": "On 06/02/2000, in Houston, Guevara and two co-defendants attempted to rob a market. A struggle ensued between Guevara and the two store employees. Guevara shot and killed both victims, a 48 year old South Korean male and a 21 year old Guatemalan male. Guevara and the co-defendant's fled the scene."
+      "summary": "Guevara was convicted of shooting and killing two employees in a market he was trying to rob. "
     },
     {
       "tdcj_id": 999446,
@@ -3298,7 +3299,7 @@
       "offense": "CAPITAL MURDER",
       "county": "Harris",
       "mug": "999446.jpg",
-      "summary": "Sales and two codefendants fatally shot a 30 year old black male, so he could not testify against them in another deadly conduct charge."
+      "summary": "Sales and two co-defendants were convicted of fatally shooting a 30-year-old male so that he could not testify against them in another deadly conduct charge."
     },
     {
       "tdcj_id": 999419,
@@ -3322,7 +3323,7 @@
       "offense": "CAPITAL MURDER",
       "county": "Madison",
       "mug": "999419.jpg",
-      "summary": "On 09/06/2000 in Madison County, Texas, Holiday killed 3 victims by burning their residence. The victims were 7 year old black female, 5 year old black female and 1 year old black female. The 7 year old and the 5 year old were step-daughters to Holiday, and the 1 year old was the daughter of Holiday."
+      "summary": "Holiday was convicted of killing three people by burning their residence. "
     },
     {
       "tdcj_id": 999420,
@@ -3346,7 +3347,7 @@
       "offense": "CAPITAL MURDER",
       "county": "Harris",
       "mug": "999420.jpg",
-      "summary": "On 09/07/2000, in Houston, Texas, Williams fatally shot an adult white male victim. Williams and 3 co-defendants were riding around when they targeted the victim, who was returning a video. Williams exited the car and abducted the victim at gunpoint. Williams shot the victim 1 time in the head resulting in his death."
+      "summary": "Williams was convicted of fatally shooting a man he abducted. "
     },
     {
       "tdcj_id": 999392,
@@ -3370,7 +3371,7 @@
       "offense": "CAPITAL MURDER (DEATH)",
       "county": "Dallas",
       "mug": "999392.jpg",
-      "summary": "On 10/04/2000, in Garland, Murphy forced a 79 year old white female to give him a ride at gunpoint. After riding for about 30 minutes, Murphy forced the victim into the trunk of the car. The victim was shot while getting into the trunk. Murphy then drove the victim's car to Van Zandt County, where the victim was removed from the trunk and drowned in a creek. Murphy later used the victim's credit cards to purchase alcohol and cigarettes."
+      "summary": "Murphy was convicted in the shooting and drowning a 79-year-old woman he abducted. "
     },
     {
       "tdcj_id": 999399,
@@ -3394,12 +3395,12 @@
       "offense": "CAPITAL MURDER (DEATH)",
       "county": "Collin",
       "mug": "999399.jpg",
-      "summary": "On 11/04/2000 in Dallas, Cantu shot and killed a 27 year old Hispanic male (cousin to Cantu) and a 21 year old white female. In addition, Cantu took jewelry and a vehicle from the victim's residence."
+      "summary": "Cantu was convicted of fatally shooting his 27-year-old cousin and a 21-year-old female."
     },
     {
       "tdcj_id": 999402,
       "sid": 5486303,
-      "last_name": "Will, II",
+      "last_name": "Will II",
       "first_name": "Robert",
       "middle_name": "Gene",
       "race": "White",
@@ -3418,7 +3419,7 @@
       "offense": "CAPITAL MURDER",
       "county": "Harris",
       "mug": "999402.jpg",
-      "summary": "On 12/04/2000 in Houston, Will, who was attempting to burglarize a vehicle, was being chased by a white male police officer. Once the officer reached Will and attempted to apply restraints to him, Will shot the officer seven times in the head, resulting in the officer's death."
+      "summary": "Will was convicted of shooting and killing a police officer after he was caught attempting to burglarize a vehicle."
     },
     {
       "tdcj_id": 999461,
@@ -3442,7 +3443,7 @@
       "offense": "CAPITAL MURDER (DEATH)",
       "county": "Dallas",
       "mug": "999461.jpg",
-      "summary": "On 12/24/2000, in Irving, Texas, Murphy and six codefendants fatally shot a 31 year old white male police officer while on escape from the TDCJ Connally Unit."
+      "summary": "Murphy and six co-defendants were convicted of fatally shooting a 31-year-old police officer in Irving while on escape from the TDCJ Connally Unit."
     },
     {
       "tdcj_id": 999453,
@@ -3466,7 +3467,7 @@
       "offense": "CAPITAL MURDER",
       "county": "Dallas",
       "mug": "999453.jpg",
-      "summary": "On 12/24/2000, in Irving, Texas, Halprin and six codefendants fatally shot a 31 year old white male police officer while on escape from the TDCJ Connally Unit."
+      "summary": "Halprin and six co-defendants were convicted of fatally shooting a 31-year-old police officer in Irving while on escape from the TDCJ Connally Unit."
     },
     {
       "tdcj_id": 999441,
@@ -3490,7 +3491,7 @@
       "offense": "CAPITAL MURDER (DEATH)",
       "county": "Dallas",
       "mug": "999441.jpg",
-      "summary": "On 12/24/2000, in Irving, Texas, Garcia and six codefendants fatally shot a 31 year old white male police officer while on escape from the TDCJ Connally Unit."
+      "summary": "Garcia and six co-defendants were convicted of fatally shooting a 31-year-old police officer in Irving while on escape from the TDCJ Connally Unit."
     },
     {
       "tdcj_id": 999513,
@@ -3514,7 +3515,7 @@
       "offense": "CAPITAL MURDER-DEATH",
       "county": "Medina",
       "mug": "999513.jpg",
-      "summary": "On January 15, 2001 in Medina County, Gonzales kidnapped an eighteen year old female, sexually assaulted and fatally shot her."
+      "summary": "Gonzales was convicted of kidnapping, sexually assaulting and fatally shooting an 18-year-old woman."
     },
     {
       "tdcj_id": 999414,
@@ -3530,7 +3531,7 @@
       "unit": "POLUNSKY",
       "received_date": "5/15/2002",
       "received_date_cacl": 37391,
-      "years_served_calc": "13.00",
+      "years_served_calc": "13.01",
       "timeserved": 12.947945205479453,
       "time_served": "13 years",
       "offense_date": "1/26/2001",
@@ -3538,7 +3539,7 @@
       "offense": "CAPITAL MURDER (DEATH)",
       "county": "Harris",
       "mug": "999414.jpg",
-      "summary": "On 02/09/2001 in Houston, Masterson choked the victim, an adult white male, resulting in the victim's death. Masterson also took the victim's vehicle after the murder."
+      "summary": "Masterson was convicted of choking a man to death. "
     },
     {
       "tdcj_id": 999412,
@@ -3562,7 +3563,7 @@
       "offense": "CAPITAL MURDER MULTIPLE (DEATH)",
       "county": "Dallas",
       "mug": "999412.jpg",
-      "summary": "On May 12, 2001, Battaglia shot and killed his two daughters, ages 6 and 9. The mother of the children was on the phone with the 9 year old daughter at the time of the offense and heard the gunshots."
+      "summary": "Battaglia was convicted of shooting and killing his two daughters, ages 6 and 9. "
     },
     {
       "tdcj_id": 999406,
@@ -3586,7 +3587,7 @@
       "offense": "CAPITAL MURDER (DEATH)",
       "county": "Harris",
       "mug": "999406.jpg",
-      "summary": "On 05/16/2001 Carty and three co-defendants invaded the home of a 25 year old female. The victim and her three day old baby were kidnapped and two other victims were beaten, duct taped, and left in the residence. The 25 year old female was hog-tied with duct tape, a bag was taped over her head, and she was placed in the trunk of a car. This victim died from suffocation."
+      "summary": "Carty and three co-defendants were convicted of invading the home of a 25-year-old woman and killing her."
     },
     {
       "tdcj_id": 999430,
@@ -3602,7 +3603,7 @@
       "unit": "POLUNSKY",
       "received_date": "10/11/2002",
       "received_date_cacl": 37540,
-      "years_served_calc": "12.59",
+      "years_served_calc": "12.60",
       "timeserved": 12.53972602739726,
       "time_served": "12 years, 7 months",
       "offense_date": "5/30/2001",
@@ -3610,7 +3611,7 @@
       "offense": "CAPITAL MURDER (DEATH)",
       "county": "Smith",
       "mug": "999430.jpg",
-      "summary": "On 05/30/2001, in Tyler, Russeau struck a 75-year old white male numerous times in the head causing his death. Russeau also took the victim's wallet and a vehicle from the victim's place of business."
+      "summary": "Russeau was convicted in the fatal beating of a 75-year old male."
     },
     {
       "tdcj_id": 999423,
@@ -3634,12 +3635,12 @@
       "offense": "CAPITAL MURDER(DEATH)",
       "county": "El Paso",
       "mug": "999423.jpg",
-      "summary": "On 06/04/2001, in El Paso, Texas, Davis followed a 16 year old Hispanic female from a party. Davis drug her into an elementary school yard where he choked her with an unknown ligature and hit her in the head with an unknown object and killed the victim. Davis also sexually assaulted the victim."
+      "summary": "Davis was convicted in the murder of a 16-year-old female he followed from a party in El Paso."
     },
     {
       "tdcj_id": 999443,
       "sid": 4523826,
-      "last_name": "Russell, Jr.",
+      "last_name": "Russell Jr.",
       "first_name": "Pete",
       "middle_name": "",
       "race": "Black",
@@ -3658,12 +3659,12 @@
       "offense": "CAPITAL MURDER (DEATH)",
       "county": "Harris",
       "mug": "999443.jpg",
-      "summary": "On 08/13/2001, in Houston, Texas, Russell fatally stabbed a 40 year old black female. Russell believed that the victim had set him up on a delivery of cocaine charge. Russell was sentenced to ten year on the cocaine charge, and committed this offense while on bond from the court to get his personal affairs in order before serving his sentence."
+      "summary": "Russell was convicted in the fatal stabbing of a 40-year-old female."
     },
     {
       "tdcj_id": 999436,
       "sid": 5333961,
-      "last_name": "Hamilton, Jr.",
+      "last_name": "Hamilton Jr.",
       "first_name": "Ronald",
       "middle_name": "James",
       "race": "Black",
@@ -3682,7 +3683,7 @@
       "offense": "CAPITAL MURDER (DEATH)",
       "county": "Harris",
       "mug": "999436.jpg",
-      "summary": "On 11/07/2001, in Houston, Hamilton and one co-defendant murdered a store clerk during a robbery. Hamilton entered a convenience store armed with a handgun. Hamilton fatally shot a 36-year old Iranian male and then shot a 38 year old Iranian male. Hamilton then removed a cash register and left the store."
+      "summary": "Hamilton was convicted of murdering a store clerk during a robbery. "
     },
     {
       "tdcj_id": 999460,
@@ -3698,7 +3699,7 @@
       "unit": "POLUNSKY",
       "received_date": "11/20/2003",
       "received_date_cacl": 37945,
-      "years_served_calc": "11.48",
+      "years_served_calc": "11.49",
       "timeserved": 11.43013698630137,
       "time_served": "11 years, 5 months",
       "offense_date": "11/18/2001",
@@ -3706,7 +3707,7 @@
       "offense": "CAPITAL MURDER (DEATH)",
       "county": "El Paso",
       "mug": "999460.jpg",
-      "summary": "On November 18, 2001, in El Paso, Texas, Renteria abducted a 5 year old hispanic female, fatally choked her and burned her body."
+      "summary": "Renteria was convicted in the abduction and murder of a 5-year-old female."
     },
     {
       "tdcj_id": 999432,
@@ -3730,7 +3731,7 @@
       "offense": "CAPITAL MURDER-POLICE OFFICER",
       "county": "Dallas",
       "mug": "999432.jpg",
-      "summary": "On 11/25/2001, in Dallas, Escamilla was engaged in a fight in the parking lot of a nightclub. When Dallas City police officers arrived to stop the fight, Escamilla shot an adult white male police officer two times. The officer died en-route to the hospital."
+      "summary": "Escamilla was convicted of shooting and killing a police officer who arrived to the scene of a fight in the parking lot of a nightclub."
     },
     {
       "tdcj_id": 999447,
@@ -3746,7 +3747,7 @@
       "unit": "POLUNSKY",
       "received_date": "4/15/2003",
       "received_date_cacl": 37726,
-      "years_served_calc": "12.08",
+      "years_served_calc": "12.09",
       "timeserved": 12.03013698630137,
       "time_served": "12 years, 1 month",
       "offense_date": "11/26/2001",
@@ -3754,7 +3755,7 @@
       "offense": "CAPITAL MURDER",
       "county": "Midland",
       "mug": "999447.jpg",
-      "summary": "In November 2001, Young fatally shot a 41 year old white male and a 52 year old white male. Both victims were murdered for the use of their vehicles and both incidents occurred within a 48 hour period."
+      "summary": "Young was convicted of fatally shooting a 41-year-old male and a 52-year-old male."
     },
     {
       "tdcj_id": 999469,
@@ -3778,7 +3779,7 @@
       "offense": "CAPITAL MURDER (DEATH)",
       "county": "Harris",
       "mug": "999469.jpg",
-      "summary": "On 12/11/2001, in Harris County, Texas, Gallo sexually assaulted and struck a 3 year old hispanic female in the head, resulting in her death."
+      "summary": "Gallo was convicted in the sexual assault and murder of a 3-year-old female."
     },
     {
       "tdcj_id": 999480,
@@ -3802,12 +3803,12 @@
       "offense": "CAPITAL MURDER (DEATH)",
       "county": "Harris",
       "mug": "999480.jpg",
-      "summary": "On 01/19/2002 in Harris County, Texas, Cubas and co-defendants kidnapped a fifteen year old Hispanic female and took her to an open field where they sexually assaulted her and shot her in the head, resulting in her death."
+      "summary": "Cubas was convicted of kidnapping, sexually assaulting and shooting a 15-year-old female. "
     },
     {
       "tdcj_id": 999442,
       "sid": 4253507,
-      "last_name": "Roberson, III",
+      "last_name": "Roberson III",
       "first_name": "Robert",
       "middle_name": "Leslie",
       "race": "White",
@@ -3826,7 +3827,7 @@
       "offense": "CAPITAL MURDER (DEATH)",
       "county": "Anderson",
       "mug": "999442.jpg",
-      "summary": "On 01/31/2002, in Palestine, Texas, Roberson took his two year old white female daughter to Palestine Regional Medical Center, claiming she had fallen out of bed. The victim had suffered severe trauma to her head from being struck by Roberson. The victim was life flighted to Dallas Children's Hospital, where she died from her injuries the next day. Roberson was in the course of committing or attempting to commit aggravated sexual assault on the victim."
+      "summary": "Roberson was convicted in the murder of his 2-year-old daughter."
     },
     {
       "tdcj_id": 999473,
@@ -3842,7 +3843,7 @@
       "unit": "POLUNSKY",
       "received_date": "3/24/2004",
       "received_date_cacl": 38070,
-      "years_served_calc": "11.14",
+      "years_served_calc": "11.15",
       "timeserved": 11.087671232876712,
       "time_served": "11 years, 1 month",
       "offense_date": "4/3/2002",
@@ -3850,7 +3851,7 @@
       "offense": "CAPITAL MURDER (DEATH)",
       "county": "Travis",
       "mug": "999473.jpg",
-      "summary": "On April 3, 2002, in Travis County, Texas, Allen engaged in a physical altercation with his girlfriend, a forty-seven year old black female. After witnessing the assault, the victim's daughter, a nineteen year old black female, called the police. Upon arrival, the police found both female victims stabbed to death."
+      "summary": "Allen was convicted in the stabbing deaths of his girlfriend and her daughter. "
     },
     {
       "tdcj_id": 999458,
@@ -3874,7 +3875,7 @@
       "offense": "CAPITAL MURDER",
       "county": "Harris",
       "mug": "999458.jpg",
-      "summary": "On April 18, 2002, in Houston, Texas, Freeney took his girlfriend to a motel where he sexually assaulted her and stabbed her multiple times, resulting in her death. He left the scene and went to an apartment complex where he attacked a second female victim as she entered her home. He sexually assaulted her and stabbed her until she lost consciousness. He left the residence, picked up a third victim, took her to his residence where he choked her until she lost consciousness. When she awoke, he sexually assaulted her and stabbed her multiple times, resulting in her death."
+      "summary": "Freeney was convicted in the sexual assault and murder of two women in Houston."
     },
     {
       "tdcj_id": 999465,
@@ -3898,7 +3899,7 @@
       "offense": "CAPITAL MURDER (DEATH) MULTIPLE",
       "county": "Harris",
       "mug": "999465.jpg",
-      "summary": "On May 31, 2002, in Harris County, Texas, Sorto and co-defendants Cubas and Navarro kidnapped two hispanic females, sexually assaulted them and shot them in the head resulting in their deaths."
+      "summary": "Sorto was convicted in the kidnapping, sexual assault and murder of two females."
     },
     {
       "tdcj_id": 999463,
@@ -3922,7 +3923,7 @@
       "offense": "CAPITAL MURDER (DEATH)",
       "county": "Dallas",
       "mug": "999463.jpg",
-      "summary": "On July 8, 2002 in Dallas, Edwards and co-defendent Kirk Edwards entered a restaurant, fatally shot an adult male and an adult female, took money from the cash register and fled the scene."
+      "summary": "Edwards was convicted of shooting a man and woman while robbing a restaurant in Dallas."
     },
     {
       "tdcj_id": 999450,
@@ -3938,7 +3939,7 @@
       "unit": "POLUNSKY",
       "received_date": "5/15/2003",
       "received_date_cacl": 37756,
-      "years_served_calc": "12.00",
+      "years_served_calc": "12.01",
       "timeserved": 11.947945205479453,
       "time_served": "12 years",
       "offense_date": "8/4/2002",
@@ -3946,7 +3947,7 @@
       "offense": "CAPITAL MURDER/MULT",
       "county": "Dallas",
       "mug": "999450.jpg",
-      "summary": "On August 4, 2002, in Dallas, Texas, Ochoa fatally shot his 29 year old wife, his 7 year old daughter, his 9 month old daughter, his father-in-law and his sister-in-law."
+      "summary": "Ochoa was convicted of fatally shooting his 29-year-old wife, his 7-year-old daughter, his 9-month-old daughter, his father-in-law and his sister-in-law."
     },
     {
       "tdcj_id": 999497,
@@ -3970,7 +3971,7 @@
       "offense": "CAPITAL MURDER (DEATH)",
       "county": "El Paso",
       "mug": "999497.jpg",
-      "summary": "On 10/28/2002 in El Paso County, Texas, Hall fatally strangled a female (race and age unknown) with a black electrical cord."
+      "summary": "Hall was convicted of strangling a woman with an electrical cord."
     },
     {
       "tdcj_id": 999464,
@@ -3986,7 +3987,7 @@
       "unit": "POLUNSKY",
       "received_date": "12/5/2003",
       "received_date_cacl": 37960,
-      "years_served_calc": "11.44",
+      "years_served_calc": "11.45",
       "timeserved": 11.389041095890411,
       "time_served": "11 years, 5 months",
       "offense_date": "10/31/2002",
@@ -3994,7 +3995,7 @@
       "offense": "CAPITAL MURDER (DEATH)",
       "county": "Brazos",
       "mug": "999464.jpg",
-      "summary": "On October 31, 2002, in Brazos County, Texas, Druery and co-defendants Pitts and Harris drove a 20 year old black male to a pasture owned by Druery's family. Druery forced the victim exit the vehicle and shot him repeatedly at close range. Druery took the victim's cash, cell phone, pager and a bag of Marijuana and set his body on fire."
+      "summary": "Druery was convicted of driving a 20-year-old man to a pasture and shooting him."
     },
     {
       "tdcj_id": 999501,
@@ -4018,7 +4019,7 @@
       "offense": "CAPITAL MURDER (DEATH)",
       "county": "Hidalgo",
       "mug": "999501.jpg",
-      "summary": "On 01/05/2003 in Hidalgo County, Texas, Medrano and 10 co-defendants entered a private residence. After demanding drugs, money and guns, the subjects fatally shot 6 Hispanic males."
+      "summary": "Medrano was among 11 defendants convicted of shooting six males after entering a private residence and demanding drugs, money and guns."
     },
     {
       "tdcj_id": 999495,
@@ -4034,7 +4035,7 @@
       "unit": "POLUNSKY",
       "received_date": "3/31/2005",
       "received_date_cacl": 38442,
-      "years_served_calc": "10.12",
+      "years_served_calc": "10.13",
       "timeserved": 10.068493150684931,
       "time_served": "10 years, 1 month",
       "offense_date": "1/5/2003",
@@ -4042,7 +4043,7 @@
       "offense": "CAPITAL MURDER (DEATH)",
       "county": "Hidalgo",
       "mug": "999495.jpg",
-      "summary": "On 1/5/2003 in Hidalgo County, Texas, Garza and 10 co-defendants entered two private residences and fatally shot six Hispanic males."
+      "summary": "Garza was among 11 defendants convicted of shooting six males after entering a private residence and demanding drugs, money and guns."
     },
     {
       "tdcj_id": 999490,
@@ -4066,7 +4067,7 @@
       "offense": "CAPITAL MURDER (DEATH)",
       "county": "Hidalgo",
       "mug": "999490.jpg",
-      "summary": "On 01/05/2003 in Hidalgo County, Texas, Navarro-Ramirez and 10 co-defendants entered a residence to steal a large quantity of marijuana. During the course of stealing the marijuana, Navarro-Ramirez and his co-defendants killed six Hispanic males."
+      "summary": "Ramirez was among 11 defendants convicted of shooting six males after entering a private residence and demanding drugs, money and guns."
     },
     {
       "tdcj_id": 999505,
@@ -4090,7 +4091,7 @@
       "offense": "CAPITAL MURDER (DEATH)",
       "county": "Potter",
       "mug": "999505.jpg",
-      "summary": "On 01/29/2003 in Potter County, while incarcerated in the TDCJ Clements Unit, Runnels fatally stabbed a forty year old white male, who was working as an Industrial Supervisor in the unit boot factory."
+      "summary": "Runnels was convicted of fatally stabbing a 40-year-old male while incarcerated in the TDCJ Clements Unit."
     },
     {
       "tdcj_id": 999477,
@@ -4106,7 +4107,7 @@
       "unit": "POLUNSKY",
       "received_date": "5/21/2004",
       "received_date_cacl": 38128,
-      "years_served_calc": "10.98",
+      "years_served_calc": "10.99",
       "timeserved": 10.92876712328767,
       "time_served": "10 years, 11 months",
       "offense_date": "3/2/2003",
@@ -4114,7 +4115,7 @@
       "offense": "CAPITAL MURDER (DEATH)",
       "county": "Harris",
       "mug": "999477.jpg",
-      "summary": "On March 2, 2003, in Harris County, Texas, Reynosa approached an adult male and female, pointed a gun at them and demanded their money. The male victim complied, but the female told him that she did not have any money. Reynosa struck the female with his fist causing her to fall to her knees where he fatally shot her in the chest."
+      "summary": "Reynosa was convicted in the shooting of a woman he was attempting to rob."
     },
     {
       "tdcj_id": 999476,
@@ -4138,7 +4139,7 @@
       "offense": "CAPITAL MURDER (DEATH)",
       "county": "Harris",
       "mug": "999476.jpg",
-      "summary": "On March 6, 2003, in Harris County, Texas, Matthews approached a Hispanic male and demanded that he turn over his car keys. When the victim did not comply, Matthews shot him, resulting in his death."
+      "summary": "Matthews was convicted of shooting a man after he refused to turn over his car keys."
     },
     {
       "tdcj_id": 999462,
@@ -4154,7 +4155,7 @@
       "unit": "POLUNSKY",
       "received_date": "11/24/2003",
       "received_date_cacl": 37949,
-      "years_served_calc": "11.47",
+      "years_served_calc": "11.48",
       "timeserved": 11.419178082191781,
       "time_served": "11 years, 5 months",
       "offense_date": "3/11/2003",
@@ -4162,7 +4163,7 @@
       "offense": "CAPITAL MURDER (DEATH)",
       "county": "Cameron",
       "mug": "999462.jpg",
-      "summary": "On March 11, 2003, in Cameron County, Texas, Rubio and co-defendant Camacho fatally stabbed and beheaded Rubio's 2 month old daughter, his 1 year old son and Camacho's 3 year old daughter."
+      "summary": "Rubio and a co-defendant were convicted in the stabbing and beheading of Rubio's 2-month-old daughter, his 1-year-old son and the co-defendant's 3-year-old daughter."
     },
     {
       "tdcj_id": 999504,
@@ -4201,7 +4202,7 @@
       "unit": "POLUNSKY",
       "received_date": "1/13/2005",
       "received_date_cacl": 38365,
-      "years_served_calc": "10.33",
+      "years_served_calc": "10.34",
       "timeserved": 10.27945205479452,
       "time_served": "10 years, 4 months",
       "offense_date": "4/3/2003",
@@ -4225,7 +4226,7 @@
       "unit": "POLUNSKY",
       "received_date": "10/8/2003",
       "received_date_cacl": 37902,
-      "years_served_calc": "11.60",
+      "years_served_calc": "11.61",
       "timeserved": 11.547945205479452,
       "time_served": "11 years, 7 months",
       "offense_date": "4/6/2003",
@@ -4249,7 +4250,7 @@
       "unit": "POLUNSKY",
       "received_date": "12/8/2004",
       "received_date_cacl": 38329,
-      "years_served_calc": "10.43",
+      "years_served_calc": "10.44",
       "timeserved": 10.378082191780821,
       "time_served": "10 years, 5 months",
       "offense_date": "5/11/2003",
@@ -4369,7 +4370,7 @@
       "unit": "POLUNSKY",
       "received_date": "8/13/2004",
       "received_date_cacl": 38212,
-      "years_served_calc": "10.75",
+      "years_served_calc": "10.76",
       "timeserved": 10.698630136986301,
       "time_served": "10 years, 9 months",
       "offense_date": "11/25/2003",
@@ -4561,9 +4562,9 @@
       "unit": "JESTER IV",
       "received_date": "3/16/2005",
       "received_date_cacl": 38427,
-      "years_served_calc": "10.16",
+      "years_served_calc": "10.17",
       "timeserved": 10.10958904109589,
-      "time_served": "10 years, 1 month",
+      "time_served": "10 years, 2 months",
       "offense_date": "3/27/2004",
       "offsense_date_calc": 38073,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -4633,7 +4634,7 @@
       "unit": "POLUNSKY",
       "received_date": "3/31/2006",
       "received_date_cacl": 38807,
-      "years_served_calc": "9.12",
+      "years_served_calc": "9.13",
       "timeserved": 9.068493150684931,
       "time_served": "9 years, 1 month",
       "offense_date": "11/21/2004",
@@ -4705,7 +4706,7 @@
       "unit": "POLUNSKY",
       "received_date": "4/25/2006",
       "received_date_cacl": 38832,
-      "years_served_calc": "9.05",
+      "years_served_calc": "9.06",
       "timeserved": 9,
       "time_served": "9 years",
       "offense_date": "2/17/2005",
@@ -4897,7 +4898,7 @@
       "unit": "POLUNSKY",
       "received_date": "1/31/2007",
       "received_date_cacl": 39113,
-      "years_served_calc": "8.28",
+      "years_served_calc": "8.29",
       "timeserved": 8.23013698630137,
       "time_served": "8 years, 3 months",
       "offense_date": "8/24/2005",
@@ -4945,7 +4946,7 @@
       "unit": "POLUNSKY",
       "received_date": "3/12/2008",
       "received_date_cacl": 39519,
-      "years_served_calc": "7.17",
+      "years_served_calc": "7.18",
       "timeserved": 7.117808219178082,
       "time_served": "7 years, 2 months",
       "offense_date": "10/28/2005",
@@ -5017,7 +5018,7 @@
       "unit": "POLUNSKY",
       "received_date": "3/25/2014",
       "received_date_cacl": 41723,
-      "years_served_calc": "1.13",
+      "years_served_calc": "1.14",
       "timeserved": 1.0794520547945206,
       "time_served": "1 year, 1 month",
       "offense_date": "12/6/2005",
@@ -5089,7 +5090,7 @@
       "unit": "POLUNSKY",
       "received_date": "10/18/2007",
       "received_date_cacl": 39373,
-      "years_served_calc": "7.57",
+      "years_served_calc": "7.58",
       "timeserved": 7.517808219178082,
       "time_served": "7 years, 6 months",
       "offense_date": "7/8/2006",
@@ -5161,7 +5162,7 @@
       "unit": "MOUNTAIN VIEW",
       "received_date": "8/12/2008",
       "received_date_cacl": 39672,
-      "years_served_calc": "6.75",
+      "years_served_calc": "6.76",
       "timeserved": 6.698630136986301,
       "time_served": "6 years, 9 months",
       "offense_date": "2/17/2007",
@@ -5280,7 +5281,7 @@
       "unit": "POLUNSKY",
       "received_date": "5/16/2008",
       "received_date_cacl": 39584,
-      "years_served_calc": "6.99",
+      "years_served_calc": "7.00",
       "timeserved": 6.93972602739726,
       "time_served": "6 years, 11 months",
       "offense_date": "5/17/2007",
@@ -5288,7 +5289,7 @@
       "offense": "CAPITAL MURDER(DEATH)",
       "county": "Henderson",
       "mug": "999535.jpg",
-      "summary": "The subject on 05/17/2007, involved in the shooting of two law enforcement officers, causing both of the victims to become deceased."
+      "summary": "Mays was convicted in the shooting of two law enforcement officers."
     },
     {
       "tdcj_id": 999546,
@@ -5303,7 +5304,7 @@
       "age": 27,
       "received_date": "3/4/2009",
       "received_date_cacl": 39876,
-      "years_served_calc": "6.19",
+      "years_served_calc": "6.20",
       "timeserved": 6.13972602739726,
       "time_served": "6 years, 2 months",
       "offense_date": "6/3/2007",
@@ -5311,7 +5312,7 @@
       "offense": "CAPITAL MURDER(DEATH)",
       "county": "Brazos",
       "mug": "999546.jpg",
-      "summary": "On June 3, 2007, the subject and codefendant, an adult white female entered victims house through a garage and door that led to the house. The subject struck the victim, an adult white female, with a metal bar causing her death."
+      "summary": "Olsen was convicted of killing a woman with a metal bar."
     },
     {
       "tdcj_id": 999550,
@@ -5335,7 +5336,7 @@
       "offense": "CAPITAL MURDER(DEATH)",
       "county": "Travis",
       "mug": "999550.jpg",
-      "summary": "Devoe was convicted in the shooting deaths of four people during a home invasion. The victims included two teenage girls, ages 15 and 17."
+      "summary": "Devoe was convicted in the shooting deaths of four people during a home invasion. "
     },
     {
       "tdcj_id": 999542,
@@ -5359,7 +5360,7 @@
       "offense": "CAPITAL MURDER/MULTI/RE(DEATH)",
       "county": "Dallas",
       "mug": "999542.jpg",
-      "summary": "Sparks was convicted in the stabbing deaths of a woman and two nine-year-old boys."
+      "summary": "Sparks was convicted in the stabbing deaths of a woman and two 9-year-old boys."
     },
     {
       "tdcj_id": 999563,
@@ -5519,7 +5520,7 @@
       "unit": "POLUNSKY",
       "received_date": "6/11/2010",
       "received_date_cacl": 40340,
-      "years_served_calc": "4.92",
+      "years_served_calc": "4.93",
       "timeserved": 4.868493150684931,
       "time_served": "4 years, 11 months",
       "offense_date": "12/2/2008",
@@ -5617,7 +5618,7 @@
       "received_date_cacl": 41073,
       "years_served_calc": "2.92",
       "timeserved": 2.8602739726027395,
-      "time_served": "2 years, 10 months",
+      "time_served": "2 years, 11 months",
       "offense_date": "3/17/2009",
       "offsense_date_calc": 39889,
       "offense": "CAPITAL MURDER",
@@ -5663,7 +5664,7 @@
       "unit": "POLUNSKY",
       "received_date": "3/3/2014",
       "received_date_cacl": 41701,
-      "years_served_calc": "1.19",
+      "years_served_calc": "1.20",
       "timeserved": 1.1397260273972603,
       "time_served": "1 year, 2 months",
       "offense_date": "5/1/2009",
@@ -5711,7 +5712,7 @@
       "unit": "POLUNSKY",
       "received_date": "3/23/2011",
       "received_date_cacl": 40625,
-      "years_served_calc": "4.14",
+      "years_served_calc": "4.15",
       "timeserved": 4.087671232876712,
       "time_served": "4 years, 1 month",
       "offense_date": "9/20/2009",
@@ -5735,7 +5736,7 @@
       "unit": "POLUNSKY",
       "received_date": "11/22/2010",
       "received_date_cacl": 40504,
-      "years_served_calc": "4.47",
+      "years_served_calc": "4.48",
       "timeserved": 4.419178082191781,
       "time_served": "4 years, 5 months",
       "offense_date": "9/22/2009",
@@ -5759,7 +5760,7 @@
       "unit": "POLUNSKY",
       "received_date": "6/29/2011",
       "received_date_cacl": 40723,
-      "years_served_calc": "3.87",
+      "years_served_calc": "3.88",
       "timeserved": 3.819178082191781,
       "time_served": "3 years, 10 months",
       "offense_date": "12/17/2009",
@@ -5831,7 +5832,7 @@
       "unit": "JESTER IV",
       "received_date": "1/30/2012",
       "received_date_cacl": 40938,
-      "years_served_calc": "3.28",
+      "years_served_calc": "3.29",
       "timeserved": 3.23013698630137,
       "time_served": "3 years, 3 months",
       "offense_date": "2/23/2010",
@@ -5927,7 +5928,7 @@
       "unit": "POLUNSKY",
       "received_date": "7/2/2012",
       "received_date_cacl": 41092,
-      "years_served_calc": "2.86",
+      "years_served_calc": "2.87",
       "timeserved": 2.808219178082192,
       "time_served": "2 years, 10 months",
       "offense_date": "9/19/2010",
@@ -5951,7 +5952,7 @@
       "unit": "POLUNSKY",
       "received_date": "7/24/2014",
       "received_date_cacl": 41844,
-      "years_served_calc": "0.80",
+      "years_served_calc": "0.81",
       "timeserved": 0.7479452054794521,
       "time_served": "9 months",
       "offense_date": "12/10/2010",
@@ -5975,7 +5976,7 @@
       "unit": "POLUNSKY",
       "received_date": "10/16/2012",
       "received_date_cacl": 41198,
-      "years_served_calc": "2.57",
+      "years_served_calc": "2.58",
       "timeserved": 2.5178082191780824,
       "time_served": "2 years, 6 months",
       "offense_date": "3/3/2011",
@@ -6071,7 +6072,7 @@
       "unit": "POLUNSKY",
       "received_date": "4/16/2014",
       "received_date_cacl": 41745,
-      "years_served_calc": "1.07",
+      "years_served_calc": "1.08",
       "timeserved": 1.0191780821917809,
       "time_served": "1 year",
       "offense_date": "5/20/2011",
@@ -6095,7 +6096,7 @@
       "unit": "POLUNSKY",
       "received_date": "6/10/2013",
       "received_date_cacl": 41435,
-      "years_served_calc": "1.92",
+      "years_served_calc": "1.93",
       "timeserved": 1.8684931506849316,
       "time_served": "1 year, 11 months",
       "offense_date": "7/20/2011",
@@ -6119,7 +6120,7 @@
       "unit": "POLUNSKY",
       "received_date": "7/9/2013",
       "received_date_cacl": 41464,
-      "years_served_calc": "1.84",
+      "years_served_calc": "1.85",
       "timeserved": 1.789041095890411,
       "time_served": "1 year, 10 months",
       "offense_date": "8/22/2011",
@@ -6143,7 +6144,7 @@
       "unit": "POLUNSKY",
       "received_date": "10/30/2014",
       "received_date_cacl": 41942,
-      "years_served_calc": "0.53",
+      "years_served_calc": "0.54",
       "timeserved": 0.4794520547945205,
       "time_served": "6 months",
       "offense_date": "12/26/2011",
@@ -6191,7 +6192,7 @@
       "unit": "POLUNSKY",
       "received_date": "5/8/2013",
       "received_date_cacl": 41402,
-      "years_served_calc": "2.01",
+      "years_served_calc": "2.02",
       "timeserved": 1.9589041095890412,
       "time_served": "2 years",
       "offense_date": "3/14/2012",
@@ -6215,7 +6216,7 @@
       "unit": "POLUNSKY",
       "received_date": "3/7/2014",
       "received_date_cacl": 41705,
-      "years_served_calc": "1.18",
+      "years_served_calc": "1.19",
       "timeserved": 1.1287671232876713,
       "time_served": "1 year, 2 months",
       "offense_date": "4/6/2012",
@@ -6263,7 +6264,7 @@
       "unit": "POLUNSKY",
       "received_date": "11/21/2013",
       "received_date_cacl": 41599,
-      "years_served_calc": "1.47",
+      "years_served_calc": "1.48",
       "timeserved": 1.4191780821917808,
       "time_served": "1 year, 5 months",
       "offense_date": "9/6/2012",
@@ -6359,7 +6360,7 @@
       "unit": "POLUNSKY",
       "received_date": "5/19/2014",
       "received_date_cacl": 41778,
-      "years_served_calc": "0.98",
+      "years_served_calc": "0.99",
       "timeserved": 0.9287671232876712,
       "time_served": "11 months",
       "offense_date": "5/1/2013",

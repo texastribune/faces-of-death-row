@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block content %}
-<section class="filters">
+<section id="filters">
   <div class="container">
     <h3>Filter Inmates</h3>
     <div class="all-criteria">
@@ -111,6 +111,10 @@
     </div>
     {% endfor %}
   </div>
+</section>
+<section id="disclaimer" class="container prose">
+  <p>Source: <a href="http://www.tdcj.state.tx.us/">Texas Department of Criminal Justice</a> | Developed and maintained by <a href="http://www.texastribune.org">The Texas Tribune</a> | <a href="http://www.texastribune.org/feedback/">Feedback</a></p>
+  <p>Note: The data in this app was released under the Texas Public Information Act and is current as of {{ META.updated_date }}.</p>
 </section>
 {% endblock %}
 

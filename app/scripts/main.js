@@ -45,6 +45,9 @@
     step: 5,
     range:true,
     slide: function(event, ui) {
+      if(ui.values[0] < 10) {
+        ui.values[0] = '0' + ui.values[0];
+      }
       $timeServedRangeLabelStart.text(ui.values[0]);
       $timeServedRangeLabelEnd.text(ui.values[1]);
 
@@ -102,11 +105,11 @@
       $this.removeClass('hidden');
       return true;
     });
-    var numInmates = leadingZeros(activeInmates.length);
+    var numInmates = threeDigits(activeInmates.length);
     $totalInmates.text(numInmates);
   }
 
-  function leadingZeros(num) {
+  function threeDigits(num) {
       if (num < 100) {
         if(num < 10) {
           return '00' + num;

@@ -208,9 +208,6 @@ section {
           li {
             display: block;
             margin-bottom: 1.25em;
-            input[type='checkbox']:checked + label {
-              margin-right: 0;
-            }
             @include media($desktop) {
               display: inline-block;
               margin-bottom: 1em;
@@ -304,31 +301,49 @@ section {
       background: $white;
       padding: 1em;
       z-index: 1002;
-      top: 20%;
-      left: 15%;
-      width: 70%;
+      top: 5%;
+      max-height: 90%;
+      left: 20%;
+      width: 60%;
+      overflow-y: scroll;
     }
-    @include media($xlarge) {
-      top: 25%;
+    @include media($medium) {
+      top:10%;
+      max-height: 80%;
+    }
+    @include media($desktop) {
+      top: 20%;
       left: 25%;
       width: 50%;
+      max-height: 60%;
     }
     .bio {
       @include clearfix;
       border-bottom: 2px solid $dr-orange;
       @include media($morethan-460) {
         border-bottom: 0px;
+        margin-top: 0.5em;
       }
       img {
         display: none;
-        @include media($morethan-460) {
+        max-height: 100%;
+        @include media($medium) {
+          display: block;
+          @include span-columns(5.5);
+        }
+        @include media($desktop) {
           display: block;
           @include span-columns(5.5);
         }
       }
       .details {
         padding-bottom: 2.5em;
-        @include media($morethan-460) {
+        @include media($medium) {
+          padding-bottom: 0;
+          @include span-columns(6.5);
+          @include omega();
+        }
+        @include media($desktop) {
           padding-bottom: 0;
           @include span-columns(6.5);
           @include omega();
@@ -343,7 +358,6 @@ section {
           line-height: 1em;
           letter-spacing: 0.03em;
           @include media($morethan-460) {
-            margin: 0 0 0.5em;
             color: $black;
             padding: 0;
             text-align: left;
@@ -379,16 +393,11 @@ section {
       display: none;
       cursor: pointer;
       position: absolute;
-      top: -0.5em;
-      right: 0.5em;
-      font-size: 2em;
-      .fa-times-circle {
-        color: $dr-seafoam;
-        position: absolute;
-      }
-      .fa-circle {
-        color: $white;
-        position: absolute;
+      top: 3px;
+      right: 5px;
+      font-size: 1.5em;
+      .fa-times {
+        color: $dr-darkgreen;
       }
     }
   }

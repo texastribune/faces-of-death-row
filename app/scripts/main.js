@@ -132,6 +132,8 @@
     if($windowWidth < 460) {
       $('#' + inmate + ' img').toggleClass('grayscale');
       $('#' + inmate + ' .info-button').toggleClass('up');
+    } else {
+      $('body').css('overflow', 'hidden');
     }
     $('#light-' + inmate).toggleClass('hidden');
     $('#fade-' + inmate).toggleClass('hidden');
@@ -141,10 +143,12 @@
   $('.black_overlay').click(function() {
     $('.black_overlay').addClass('hidden');
     $('.white_content').addClass('hidden');
+    $('body').css('overflow', 'auto');
   });
 
   $('.close-lightbox').click(function() {
     $('.black_overlay').addClass('hidden');
     $('.white_content').addClass('hidden');
+    $('body').css('overflow', 'auto');
   });
 })();

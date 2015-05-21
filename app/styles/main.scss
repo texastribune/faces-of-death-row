@@ -296,33 +296,36 @@ section {
     }
   }
   .white_content {
+    cursor: default;
     @include media($morethan-460) {
       position: fixed;
       background: $white;
-      padding: 1em;
+      padding: 1.5em;
       z-index: 1002;
       top: 5%;
-      max-height: 90%;
-      left: 20%;
-      width: 60%;
+      height: 90%;
+      left: 15%;
+      width: 70%;
       overflow-y: scroll;
     }
     @include media($medium) {
       top:10%;
-      max-height: 80%;
+      height: 80%;
     }
     @include media($desktop) {
-      top: 20%;
+      top:20%;
+      height: 60%;
+    }
+    @include media($xlarge) {
       left: 25%;
       width: 50%;
-      max-height: 60%;
     }
     .bio {
       @include clearfix;
       border-bottom: 2px solid $dr-orange;
       @include media($morethan-460) {
         border-bottom: 0px;
-        margin-top: 0.5em;
+        padding-bottom: 2em;
       }
       img {
         display: none;
@@ -393,11 +396,41 @@ section {
       display: none;
       cursor: pointer;
       position: absolute;
-      top: 3px;
+      top: 0px;
       right: 5px;
-      font-size: 1.5em;
+      margin: 2px;
+      font-size: 1.8em;
+      .fa {
+        color: $dr-darkgreen;
+        &.fa-angle-up {
+          position: absolute;
+          right: 0px;
+          top: 6px;
+        }
+      }
       .fa-times {
         color: $dr-darkgreen;
+      }
+    }
+    .pagination {
+      @include media($morethan-460) {
+        display: block;
+      }
+      display: none;
+      cursor: pointer;
+      position: absolute;
+      bottom: 0;
+      color: $dr-darkgreen;
+      margin: 5px;
+      .fa {
+        font-size: 2em;
+        vertical-align: sub;
+      }
+      &.next {
+        right: 0;
+      }
+      &.prev {
+        left: 0;
       }
     }
   }

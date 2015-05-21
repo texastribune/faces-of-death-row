@@ -12984,7 +12984,6 @@ var slider = $.widget( "ui.slider", $.ui.mouse, {
             .focus();
 
         offset = closestHandle.offset();
-        console.log(offset);
         mouseOverHandle = !$( event.target ).parents().addBack().is( ".ui-slider-handle" );
         this._clickOffset = mouseOverHandle ? { left: 0, top: 0 } : {
             left: event.pageX - offset.left - ( closestHandle.width() / 2 ),

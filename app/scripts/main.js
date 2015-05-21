@@ -119,16 +119,9 @@
       return num;
   }
 
+  //when lightbox opens
   $inmatesContainer.find('.open-lightbox').click(function() {
     var inmate = this.id;
-    var $parentEls = $(this).parent();
-
-    var nextViewable = $parentEls.nextAll().not('.hidden').first();
-    var prevViewable = $parentEls.prevAll().not('.hidden').first();
-
-    console.log(nextViewable);  // the next available to view
-    console.log(prevViewable);  // the previous available to view
-
     if($windowWidth < 460) {
       $('#' + inmate + ' img').toggleClass('grayscale');
       $('#' + inmate + ' .info-button').toggleClass('up');
@@ -137,8 +130,53 @@
     }
     $('#light-' + inmate).toggleClass('hidden');
     $('#fade-' + inmate).toggleClass('hidden');
-
   });
+
+  //when click prev or next
+  $inmatesContainer.find('.pagination').click(function() {
+    var parentEls = $(this).parent().parent();
+    var inmate = parentEls.find('.open-lightbox').attr('id');
+    var nextPrev = addNextPrevious(inmate, parentEls);
+    if ($(this).hasClass('next')) {
+      nextInmate(inmate, nextPrev[1]);
+    } else {
+      prevInmate(inmate, nextPrev[0]);
+    }
+
+    //add funcitonality that doesn't do anything if it's first or last of set - grays out link
+  });
+
+  //finds next and prev available
+  function addNextPrevious(inmate, parentEls) {
+    var nextViewable = parentEls.nextAll().not('.hidden').first()[0];
+    var prevViewable = parentEls.prevAll().not('.hidden').first()[0];
+
+    var nextID, prevID;
+
+    if(nextViewable) {
+      nextID = $(nextViewable).find('.open-lightbox')[0].id;  // the next available to view
+    }
+    if(prevViewable) {
+      prevID = $(prevViewable).find('.open-lightbox')[0].id;  // the previous available to view
+    }
+    return [prevID, nextID];
+  }
+
+  //moves forward
+  function nextInmate(inmate, nextID) {
+    $('#light-' + inmate).toggleClass('hidden');
+    $('#fade-' + inmate).toggleClass('hidden');
+    $('#light-' + nextID).toggleClass('hidden');
+    $('#fade-' + nextID).toggleClass('hidden');
+  }
+
+  //moves back
+  function prevInmate (inmate, prevID) {
+    $('#light-' + inmate).toggleClass('hidden');
+    $('#fade-' + inmate).toggleClass('hidden');
+    $('#light-' + prevID).toggleClass('hidden');
+    $('#fade-' + prevID).toggleClass('hidden');
+  }
 
   $('.black_overlay').click(function() {
     $('.black_overlay').addClass('hidden');

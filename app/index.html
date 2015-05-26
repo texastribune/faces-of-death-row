@@ -106,10 +106,10 @@
           <i class="fa fa-angle-down"></i>
           <i class="fa fa-angle-up"></i>
         </div>
-        <div class="prev pagination">
+        <div class="prev pagination{% if loop.first %} inactive {% endif %}">
           <i class="fa fa-angle-left"></i>&nbsp;&nbsp;Previous
         </div>
-        <div class="next pagination">
+        <div class="next pagination{% if loop.last %} inactive {% endif %}">
           Next&nbsp;&nbsp;<i class="fa fa-angle-right"></i>
         </div>
       </div>
@@ -120,7 +120,7 @@
 </section>
 <section id="disclaimer" class="container prose">
   <p>Source: <a href="http://www.tdcj.state.tx.us/">Texas Department of Criminal Justice</a> | Developed and maintained by <a href="http://www.texastribune.org">The Texas Tribune</a> | <a href="http://www.texastribune.org/feedback/">Feedback</a></p>
-  <p>Note: The data in this app was released under the Texas Public Information Act and is current as of {{ META.updated_date }}.</p>
+  <p>Note: The data in this app was released under the Texas Public Information Act and is current as of {{ META.updated_date }}. The summaries are gathered from TDCJ records and news articles.</p>
 </section>
 {% endblock %}
 

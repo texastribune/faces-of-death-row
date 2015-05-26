@@ -73,6 +73,8 @@
   var activeInmates = [];
 
   function filter() {
+    $inmatesContainer.find('.inactive').toggleClass('inactive');
+
     var state = getState();
 
     activeInmates = $inmates.filter(function() {
@@ -107,6 +109,17 @@
     });
     var numInmates = threeDigits(activeInmates.length);
     $totalInmates.text(numInmates);
+
+    //cancel pagination on first and last of filter
+    var firstInmate = $(activeInmates[0]);
+    var lastInmate = $(activeInmates[activeInmates.length -1]);
+    console.log(firstInmate);
+    console.log(lastInmate);
+    firstInmate.find('.prev.pagination').toggleClass('inactive');
+    lastInmate.find('.next.pagination').toggleClass('inactive');
+
+    //need to reset on filter at beginning of filter!
+    //need to set 1st and last as inactive before filter
   }
 
   function threeDigits(num) {
@@ -122,6 +135,7 @@
   //when lightbox opens
   $inmatesContainer.find('.open-lightbox').click(function() {
     var inmate = this.id;
+
     if($windowWidth < 460) {
       $('#' + inmate + ' img').toggleClass('grayscale');
       $('#' + inmate + ' .info-button').toggleClass('up');
@@ -136,38 +150,32 @@
   $inmatesContainer.find('.pagination').click(function() {
     var parentEls = $(this).parent().parent();
     var inmate = parentEls.find('.open-lightbox').attr('id');
-    var nextPrev = addNextPrevious(inmate, parentEls);
-    if ($(this).hasClass('next')) {
-      nextInmate(inmate, nextPrev[1]);
-    } else {
-      prevInmate(inmate, nextPrev[0]);
-    }
+    var prevNext = addPreviousNext(inmate, parentEls);
 
-    //add funcitonality that doesn't do anything if it's first or last of set - grays out link
+    if ($(this).hasClass('prev') && !$(this).hasClass('inactive')) {
+      prevInmate(inmate, prevNext[0]);
+    }
+    if ($(this).hasClass('next') && !$(this).hasClass('inactive')) {
+      nextInmate(inmate, prevNext[1]);
+    }
   });
 
   //finds next and prev available
-  function addNextPrevious(inmate, parentEls) {
-    var nextViewable = parentEls.nextAll().not('.hidden').first()[0];
+  function addPreviousNext(inmate, parentEls) {
     var prevViewable = parentEls.prevAll().not('.hidden').first()[0];
+    var nextViewable = parentEls.nextAll().not('.hidden').first()[0];
 
-    var nextID, prevID;
+    var prevID, nextID;
+
+    if(prevViewable) {
+      prevID = $(prevViewable).find('.open-lightbox')[0].id;  // the previous available to view
+    }
 
     if(nextViewable) {
       nextID = $(nextViewable).find('.open-lightbox')[0].id;  // the next available to view
     }
-    if(prevViewable) {
-      prevID = $(prevViewable).find('.open-lightbox')[0].id;  // the previous available to view
-    }
-    return [prevID, nextID];
-  }
 
-  //moves forward
-  function nextInmate(inmate, nextID) {
-    $('#light-' + inmate).toggleClass('hidden');
-    $('#fade-' + inmate).toggleClass('hidden');
-    $('#light-' + nextID).toggleClass('hidden');
-    $('#fade-' + nextID).toggleClass('hidden');
+    return [prevID, nextID];
   }
 
   //moves back
@@ -178,6 +186,15 @@
     $('#fade-' + prevID).toggleClass('hidden');
   }
 
+  //moves forward
+  function nextInmate(inmate, nextID) {
+    $('#light-' + inmate).toggleClass('hidden');
+    $('#fade-' + inmate).toggleClass('hidden');
+    $('#light-' + nextID).toggleClass('hidden');
+    $('#fade-' + nextID).toggleClass('hidden');
+  }
+
+  //close lightbox
   $('.black_overlay').click(function() {
     $('.black_overlay').addClass('hidden');
     $('.white_content').addClass('hidden');

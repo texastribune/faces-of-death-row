@@ -422,6 +422,10 @@ section {
       bottom: 0;
       color: $dr-darkgreen;
       margin: 5px;
+      &.inactive {
+        color: #999;
+        cursor: default;
+      }
       .fa {
         font-size: 2em;
         vertical-align: sub;

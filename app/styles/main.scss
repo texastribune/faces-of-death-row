@@ -282,7 +282,7 @@ section {
     display: none;
     position: fixed;
     overflow-y: hidden;
-    cursor: pointer;
+    cursor: zoom-out;
     top: 0%;
     left: 0%;
     width: 100%;
@@ -306,7 +306,7 @@ section {
       height: 90%;
       left: 15%;
       width: 70%;
-      overflow-y: scroll;
+      overflow: visible;
     }
     @include media($medium) {
       top:10%;
@@ -326,10 +326,11 @@ section {
       @include media($morethan-460) {
         border-bottom: 0px;
         padding-bottom: 2em;
+        overflow-y: scroll;
+        height: 100%;
       }
       img {
         display: none;
-        max-height: 100%;
         @include media($medium) {
           display: block;
           @include span-columns(5.5);
@@ -396,20 +397,20 @@ section {
       display: none;
       cursor: pointer;
       position: absolute;
-      top: 0px;
-      right: 5px;
-      margin: 2px;
-      font-size: 1.8em;
+      margin: 0 2px;
+      top: -10px;
+      right: -10px;
+      font-size: 28px;
+      color: white;
+      font-weight: 300;
       .fa {
-        color: $dr-darkgreen;
-        &.fa-angle-up {
-          position: absolute;
-          right: 0px;
-          top: 6px;
-        }
-      }
-      .fa-times {
-        color: $dr-darkgreen;
+        color: $dr-seafoam;
+        position: absolute;
+        font-size: 1.2em;
+        z-index: -1000;
+        margin: -1px;
+        top: -5px;
+        right: -5px;
       }
     }
     .pagination {
@@ -421,20 +422,38 @@ section {
       position: absolute;
       bottom: 0;
       color: $dr-darkgreen;
-      margin: 5px;
+      width: 80px;
+      height: 80px;
+      bottom: 45%;
       &.inactive {
-        color: #999;
         cursor: default;
-      }
-      .fa {
-        font-size: 2em;
-        vertical-align: sub;
+        &:before {
+          border-left-color: rgba(168,192,183,0.2) !important;
+          border-right-color: rgba(168,192,183,0.2) !important;
+        }
       }
       &.next {
-        right: 0;
+        right: -80px;
+        padding: 20px;
+        &:before {
+          content: '';
+          border-top: 20px solid transparent;
+          border-bottom: 20px solid transparent;
+          border-left: 20px solid $dr-seafoam;
+          display: block;
+        }
+
       }
       &.prev {
-        left: 0;
+        left: -80px;
+        padding: 20px;
+        &:before {
+          content: '';
+          border-right: 20px solid $dr-seafoam;
+          border-top: 20px solid transparent;
+          border-bottom: 20px solid transparent;
+          display: block;
+        }
       }
     }
   }

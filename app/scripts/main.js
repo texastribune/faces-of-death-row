@@ -3,6 +3,9 @@
 
   var $windowWidth = $(window).width();
 
+  var $windowHeight = $(window).height();
+  console.log($windowHeight);
+
   var $inmatesContainer = $('#inmates');
   var $inmates = $inmatesContainer.find('.inmate');
 
@@ -118,7 +121,6 @@
     firstInmate.find('.prev.pagination').toggleClass('inactive');
     lastInmate.find('.next.pagination').toggleClass('inactive');
 
-    //need to reset on filter at beginning of filter!
     //need to set 1st and last as inactive before filter
   }
 

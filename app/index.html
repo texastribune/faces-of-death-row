@@ -1,5 +1,9 @@
 {% extends "templates/_base.html" %}
 
+{% block meta %}
+{{ super () }}
+{% endblock %}
+
 {% block styles %}
 {{ super() }}
 {% endblock %}
@@ -92,26 +96,21 @@
             <p><label>Age:</label> {{ inmate.age }}</p>
             <p><label>Sex:</label> {{ inmate.sex }}</p>
             <hr>
-            <p><label>Summary of the Crime:</label></p>
+            <p><label>Summary of Conviction:</label></p>
             <p>{{ inmate.summary }}</p>
             <hr>
             <div class="crime-details">
               <p><label>Crime Committed on:</label> {{ inmate.offense_date }}</p>
-              <p><label>Convicted on:</label> {{ inmate.received_date }}</p>
-              <p><label>Prosecuted in:</label> {{ inmate.county }} County</p>
+              <p><label>On death row since:</label> {{ inmate.received_date }}</p>
+              <p><label>Crime Committed in:</label> {{ inmate.county }} County</p>
             </div>
           </div>
         </div>
         <div class="close-lightbox">
-          <i class="fa fa-angle-down"></i>
-          <i class="fa fa-angle-up"></i>
+          <i class="fa fa-circle"></i>&times;
         </div>
-        <div class="prev pagination{% if loop.first %} inactive {% endif %}">
-          <i class="fa fa-angle-left"></i>&nbsp;&nbsp;Previous
-        </div>
-        <div class="next pagination{% if loop.last %} inactive {% endif %}">
-          Next&nbsp;&nbsp;<i class="fa fa-angle-right"></i>
-        </div>
+        <div class="prev pagination{% if loop.first %} inactive {% endif %}"></div>
+        <div class="next pagination{% if loop.last %} inactive {% endif %}"></div>
       </div>
       <div id="fade-inmate-{{ inmate.tdcj_id }}" class="black_overlay hidden"></div>
     </div>

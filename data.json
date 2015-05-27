@@ -18,7 +18,8 @@
     "byline_url": "http://www.texastribune.org/about/staff/jolie-mccullough",
     "byline_2": "Ben Hasson",
     "byline_2_url": "http://www.texastribune.org/about/staff/#ben-hasson",
-    "updated_date": "May 13, 2015"
+    "updated_date": "May 13, 2015",
+    "shareline": "See details on each inmate on Texas' death row in using this filterable search"
   },
   "INMATES": [
     {
@@ -43,7 +44,7 @@
       "offense": "CAP MURDER (DEATH SENT)",
       "county": "Harris",
       "mug": "000541.jpg",
-      "summary": "Riles was convicted of the attempted robbery and murder of a 31-year-old used car dealer in Houston."
+      "summary": "Riles was convicted in the attempted robbery and murder of a 31-year-old used car dealer in Houston."
     },
     {
       "tdcj_id": 999581,

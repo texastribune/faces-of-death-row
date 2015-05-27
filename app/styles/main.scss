@@ -30,7 +30,7 @@ section {
   margin: 1.5em auto 1em;
   padding: 0 1em;
   @include media($morethan-460) {
-    margin: 2em auto;
+    margin: 2em auto 1.5em;
     padding: 0;
   }
   h1 {
@@ -74,12 +74,15 @@ section {
     }
     .byline {
       margin-bottom: 1em;
-      font-size:0.9em;
+      font-size:0.8em;
       font-family: $base-sans-serif;
       a {
         font-weight: 700;
         color: $dr-darkgreen;
         text-transform: uppercase;
+      }
+      @include media($morethan-460) {
+        font-size: 0.9em;
       }
     }
     .share {
@@ -133,9 +136,12 @@ section {
           color: $white;
           font-weight: 400;
           letter-spacing: 0.04em;
-          padding: 0.5em;
+          padding: 0.5em 0.25em;
           text-transform: uppercase;
           margin-bottom: 0.85em;
+          @include media($morethan-460) {
+            padding: 0.5em;
+          }
         }
         ul {
           margin: 0;
@@ -372,6 +378,7 @@ section {
           text-align: right;
           label {
             float: left;
+            margin-right: 5px;
           }
         }
         p {
@@ -598,4 +605,9 @@ section {
   p {
     margin-bottom: 0.5em;
   }
+}
+.banner-ad {
+  text-align: center;
+  padding-top: 0.75em;
+  border-top: 2px solid $border-gray;
 }

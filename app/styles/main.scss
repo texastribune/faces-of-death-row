@@ -30,7 +30,7 @@ section {
   margin: 1.5em auto 1em;
   padding: 0 1em;
   @include media($morethan-460) {
-    margin: 2em auto 1.5em;
+    margin: 2em auto 1em;
     padding: 0;
   }
   h1 {
@@ -609,5 +609,5 @@ section {
 .banner-ad {
   text-align: center;
   padding-top: 0.75em;
-  border-top: 2px solid $border-gray;
+  border-top: 1px solid $border-gray;
 }

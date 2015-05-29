@@ -228,7 +228,7 @@
         $inmatesContainer.find('.black_overlay:not(.hidden)').addClass('hidden');
       }
     }
-    //figure out where lightbox should go
+    //figure out where lightbox should be placed on screen!!
     if(resizedWidth > 460) {
       $inmatesContainer.find('.open-lightbox').click(function() {
         var inmate = this.id;

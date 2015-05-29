@@ -11,6 +11,15 @@ $dr-seafoam: rgb(168,192,183);
 $dr-darkgreen: rgb(47,79,79);
 $dr-dark-gray: $bodytext-black;
 
+$mobile: new-breakpoint(max-width 460px);
+$small: new-breakpoint(min-width 461px max-width 660px);
+$medium: new-breakpoint(min-width 661px max-width 860px);
+$large: new-breakpoint(min-width 861px max-width 1080px);
+$xlarge: new-breakpoint(min-width 1081px);
+
+$morethan-460: new-breakpoint(min-width 461px);
+$desktop: new-breakpoint(min-width 861px );
+
 section {
   font-size:15px;
   color: $dr-dark-gray;
@@ -310,18 +319,19 @@ section {
       padding: 1.5em;
       z-index: 1002;
       overflow: visible;
-      max-height: 95%;
-      max-width: 95%;
+      max-height: 93%;
+      max-width: 93%;
+    }
+    @include media($small) {
+      height: 93%;
+      width: 93%;
+      padding: 2.5em;
     }
     @include media($medium) {
-      top:10%;
-      height: 80%;
+      width: 550px;
+      height: 430px;
     }
     @include media($desktop) {
-      top:20%;
-      height: 60%;
-    }
-    @include media($xlarge) {
       width: 675px;
       height: 410px;
     }
@@ -331,11 +341,18 @@ section {
         overflow-y: scroll;
         height: 100%;
       }
+      @include media($small) {
+        text-align: center;
+      }
       img {
+        @include media($mobile) {
+          display: none;
+        }
+        @include media($small) {
+          height: 250px;
+        }
         @include media($medium) {
-          float: left;
-          height: 100%;
-          margin-right: 1em;
+          @include span-columns(5);
         }
         @include media($desktop) {
           float: left;
@@ -344,6 +361,13 @@ section {
         }
       }
       .details {
+        @include media($small) {
+          text-align: left;
+        }
+        @include media($medium) {
+          @include span-columns(7);
+          @include omega();
+        }
         h2 {
           color: $white;
           padding: 0.25em;
@@ -427,6 +451,9 @@ section {
       &.next {
         right: -80px;
         padding: 20px;
+        @include media($small) {
+          right: -35px;
+        }
         &:before {
           content: '';
           border-top: 20px solid transparent;
@@ -438,6 +465,9 @@ section {
       &.prev {
         left: -80px;
         padding: 20px;
+        @include media($small) {
+          left: -35px;
+        }
         &:before {
           content: '';
           border-right: 20px solid rgba(168,192,183,0.8);

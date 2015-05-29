@@ -40,7 +40,7 @@ section {
     text-transform: uppercase;
     padding-left: 0.25em;
     border-left: 2px solid $dr-orange;
-    font-size: 1.75em;
+    font-size: 2.75em;
     margin-bottom: 0.5em;
     @include media($small) {
       font-size: 2.4em;
@@ -303,16 +303,15 @@ section {
   }
   .white_content {
     cursor: default;
+    padding-bottom: 2.25em;
     @include media($morethan-460) {
       position: fixed;
       background: $white;
       padding: 1.5em;
       z-index: 1002;
-      top: 5%;
-      height: 90%;
-      left: 15%;
-      width: 70%;
       overflow: visible;
+      max-height: 95%;
+      max-width: 95%;
     }
     @include media($medium) {
       top:10%;
@@ -323,41 +322,28 @@ section {
       height: 60%;
     }
     @include media($xlarge) {
-      left: 25%;
-      width: 50%;
+      width: 675px;
+      height: 410px;
     }
     .bio {
       @include clearfix;
-      border-bottom: 2px solid $dr-orange;
       @include media($morethan-460) {
-        border-bottom: 0px;
-        padding-bottom: 2em;
         overflow-y: scroll;
         height: 100%;
       }
       img {
-        display: none;
         @include media($medium) {
-          display: block;
-          @include span-columns(5.5);
+          float: left;
+          height: 100%;
+          margin-right: 1em;
         }
         @include media($desktop) {
-          display: block;
-          @include span-columns(5.5);
+          float: left;
+          height: 100%;
+          margin-right: 1em;
         }
       }
       .details {
-        padding-bottom: 2.5em;
-        @include media($medium) {
-          padding-bottom: 0;
-          @include span-columns(6.5);
-          @include omega();
-        }
-        @include media($desktop) {
-          padding-bottom: 0;
-          @include span-columns(6.5);
-          @include omega();
-        }
         h2 {
           color: $white;
           padding: 0.25em;
@@ -390,10 +376,16 @@ section {
             font-weight: 700;
             letter-spacing: 0.03em;
           }
+          @include media($mobile) {
+            padding: 0 1em;
+          }
         }
         hr {
           margin: 0.75em 0;
           background-color: $dr-seafoam;
+          @include media($mobile) {
+            margin: 0.75em 1em;
+          }
         }
       }
     }
@@ -432,13 +424,6 @@ section {
       width: 80px;
       height: 80px;
       bottom: 45%;
-      &.inactive {
-        cursor: default;
-        &:before {
-          border-left-color: rgba(168,192,183,0.2) !important;
-          border-right-color: rgba(168,192,183,0.2) !important;
-        }
-      }
       &.next {
         right: -80px;
         padding: 20px;
@@ -446,20 +431,33 @@ section {
           content: '';
           border-top: 20px solid transparent;
           border-bottom: 20px solid transparent;
-          border-left: 20px solid $dr-seafoam;
+          border-left: 20px solid rgba(168,192,183,0.8);
           display: block;
         }
-
       }
       &.prev {
         left: -80px;
         padding: 20px;
         &:before {
           content: '';
-          border-right: 20px solid $dr-seafoam;
+          border-right: 20px solid rgba(168,192,183,0.8);
           border-top: 20px solid transparent;
           border-bottom: 20px solid transparent;
           display: block;
+        }
+      }
+      &.inactive {
+        cursor: default;
+        &:before, &:hover:before {
+          border-left-color: rgba(168,192,183,0.2) !important;
+          border-right-color: rgba(168,192,183,0.2) !important;
+        }
+
+      }
+      &:hover {
+        &:before {
+          border-left-color: $dr-seafoam !important;
+          border-right-color: $dr-seafoam !important;
         }
       }
     }
@@ -468,14 +466,14 @@ section {
     .inmate {
       position: relative;
       width: 98%;
-      max-width: 250px;
-      margin: 0 auto 10px auto;
+      margin: 0 auto;
+      padding: 5px 0;
       line-height: 1em;
       cursor: pointer;
       overflow: hidden;
+      border-top: 2px solid $white;
       border-right: 5px solid $white;
       border-left: 5px solid $white;
-      border-bottom: 8px solid $white;
       @include media($small) {
         float:left;
         width: 33%;
@@ -489,6 +487,9 @@ section {
         width: 20%;
       }
       .open-lightbox {
+        max-width: 250px;
+        margin: 0 auto;
+        position: relative;
         img {
           width: 100%;
           &.grayscale {
@@ -554,10 +555,19 @@ section {
               font-size: 1.5em;
             }
           }
+          .close-text {
+            display: none;
+          }
           &.up {
-            bottom: 10px;
             .fa:before {
               content: '\f139';
+            }
+            .close-text {
+                display: inline-block;
+                vertical-align: 0.25em;
+                letter-spacing: 0.03em;
+                font-size: 1.1em;
+                color: $dr-orange;
             }
           }
         }
@@ -592,6 +602,12 @@ section {
             position: absolute;
             z-index: -1;
           }
+        }
+      }
+      &.open {
+        border: 2px solid rgba(255,133,33,0.7);
+        .open-lightbox {
+          position: static;
         }
       }
     }

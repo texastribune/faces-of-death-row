@@ -11,7 +11,7 @@
     "total_inmates": "265",
     "min_age": "20",
     "max_age": "80",
-    "min_years": "00",
+    "min_years": "0",
     "max_years": "40",
     "email_line": "Check out the Texas Tribune's new interactive feature: Faces of Death Row",
     "byline": "Jolie McCullough",
@@ -523,7 +523,7 @@
       "offense": "CAPITAL MURDER \"DEATH\"",
       "county": "Bowie",
       "mug": "999366.jpg",
-      "summary": "Canales was convicted of strangling to death a 47-year-old offender in his cell."
+      "summary": "Canales was convicted of strangling to death a 47-year-old offender in a prison cell."
     },
     {
       "tdcj_id": 999279,
@@ -1625,7 +1625,7 @@
       "offense": "CAPITAL MURDER(DEATH)",
       "county": "Dallas",
       "mug": "999585.jpg",
-      "summary": "Davis was convicted in the murder of a 16-year-old girl who had accused him of  rape."
+      "summary": "Davis was convicted in the murder of a 16-year-old girl who had accused him of rape."
     },
     {
       "tdcj_id": 999174,

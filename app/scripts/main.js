@@ -2,9 +2,7 @@
   'use strict';
 
   var $windowWidth = $(window).width();
-
   var $windowHeight = $(window).height();
-  console.log($windowHeight);
 
   var $inmatesContainer = $('#inmates');
   var $inmates = $inmatesContainer.find('.inmate');
@@ -48,9 +46,6 @@
     step: 5,
     range:true,
     slide: function(event, ui) {
-      if(ui.values[0] < 10) {
-        ui.values[0] = '0' + ui.values[0];
-      }
       $timeServedRangeLabelStart.text(ui.values[0]);
       $timeServedRangeLabelEnd.text(ui.values[1]);
 
@@ -116,12 +111,9 @@
     //cancel pagination on first and last of filter
     var firstInmate = $(activeInmates[0]);
     var lastInmate = $(activeInmates[activeInmates.length -1]);
-    console.log(firstInmate);
-    console.log(lastInmate);
     firstInmate.find('.prev.pagination').toggleClass('inactive');
     lastInmate.find('.next.pagination').toggleClass('inactive');
 
-    //need to set 1st and last as inactive before filter
   }
 
   function threeDigits(num) {
@@ -137,15 +129,24 @@
   //when lightbox opens
   $inmatesContainer.find('.open-lightbox').click(function() {
     var inmate = this.id;
+    var parent = $(this).parent().attr('id');
 
     if($windowWidth < 460) {
       $('#' + inmate + ' img').toggleClass('grayscale');
       $('#' + inmate + ' .info-button').toggleClass('up');
+      $('#' + parent).toggleClass('open');
     } else {
       $('body').css('overflow', 'hidden');
     }
     $('#light-' + inmate).toggleClass('hidden');
     $('#fade-' + inmate).toggleClass('hidden');
+
+    //set lightbox top/left
+    var lightboxHeight = $('#light-' + inmate).outerHeight();
+    var lightboxWidth = $('#light-' + inmate).outerWidth();
+    var top = ( $windowHeight - lightboxHeight )/2;
+    var left = ( $windowWidth - lightboxWidth)/2;
+    $('#interactive .white_content').css({'top': top, 'left': left});
   });
 
   //when click prev or next
@@ -208,4 +209,37 @@
     $('.white_content').addClass('hidden');
     $('body').css('overflow', 'auto');
   });
+
+  //resets if you go between lightbox mode and dropdown mode
+  $(window).resize(function() {
+    var resizedWidth = $(window).width();
+
+    if($windowWidth >= 460) {
+      if(resizedWidth < 460) {
+        $('body').css('overflow', 'auto');
+        $inmatesContainer.find('.white_content:not(.hidden)').addClass('hidden');
+      }
+    } else {
+      if(resizedWidth >= 460) {
+        $inmatesContainer.find('.open-lightbox img:not(.grayscale)').addClass('grayscale');
+        $inmatesContainer.find('.info-button.up').toggleClass('up');
+        $inmatesContainer.find('.inmate.open').toggleClass('open');
+        $inmatesContainer.find('.white_content:not(.hidden)').addClass('hidden');
+        $inmatesContainer.find('.black_overlay:not(.hidden)').addClass('hidden');
+      }
+    }
+    //figure out where lightbox should go
+    if(resizedWidth > 460) {
+      $inmatesContainer.find('.open-lightbox').click(function() {
+        var inmate = this.id;
+        var lightboxHeight = $('#light-' + inmate).outerHeight();
+        var lightboxWidth = $('#light-' + inmate).outerWidth();
+        var top = ( $windowHeight - lightboxHeight )/2;
+        var left = ( $windowWidth - lightboxWidth)/2;
+        $('#interactive .white_content').css({'top': top, 'left': left});
+      });
+    }
+  });
+
 })();
+

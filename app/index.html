@@ -74,7 +74,7 @@
 <section id="interactive" class="container">
   <div class="inmates" id="inmates">
     {% for inmate in INMATES %}
-    <div class="inmate" data-race="{{ inmate.race }}" data-sex="{{ inmate.sex }}" data-age="{{ inmate.age }}" data-time="{{ inmate.timeserved }}">
+    <div class="inmate" id="id{{ inmate.tdcj_id }}" data-race="{{ inmate.race }}" data-sex="{{ inmate.sex }}" data-age="{{ inmate.age }}" data-time="{{ inmate.timeserved }}">
       <div class="open-lightbox" id="inmate-{{ inmate.tdcj_id }}">
         <img class="grayscale" src="assets/images/{{ inmate.mug }}" />
         <div class="outline">
@@ -84,7 +84,10 @@
             <p>{{ inmate.time_served }}</p>
           </div>
         </div>
-        <div class="info-button"><i class="fa"></i></div>
+        <div class="info-button">
+          <i class="fa"></i>
+          <div class="close-text">Close</div>
+        </div>
       </div>
       <div id="light-inmate-{{ inmate.tdcj_id }}" class="white_content hidden">
         <div class="bio">

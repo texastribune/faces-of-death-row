@@ -20,6 +20,9 @@ $xlarge: new-breakpoint(min-width 1081px);
 $morethan-460: new-breakpoint(min-width 461px);
 $desktop: new-breakpoint(min-width 861px );
 
+.fixed {
+  overflow: hidden;
+}
 section {
   font-size:15px;
   color: $dr-dark-gray;
@@ -291,7 +294,7 @@ section {
   width:100%;
   min-height:500px;
   .hidden {
-    display:none !important;
+    display: none !important;
   }
   .black_overlay {
     display: none;
@@ -341,15 +344,14 @@ section {
         overflow-y: scroll;
         height: 100%;
       }
-      @include media($small) {
-        text-align: center;
-      }
       img {
         @include media($mobile) {
           display: none;
         }
         @include media($small) {
-          height: 250px;
+          width: 40%;
+          float: left;
+          margin-right: 1em;
         }
         @include media($medium) {
           @include span-columns(5);
@@ -361,9 +363,6 @@ section {
         }
       }
       .details {
-        @include media($small) {
-          text-align: left;
-        }
         @include media($medium) {
           @include span-columns(7);
           @include omega();
@@ -522,6 +521,11 @@ section {
         position: relative;
         img {
           width: 100%;
+          &:target {
+            @include media($mobile) {
+              filter: grayscale(100%);
+            }
+          }
           &.grayscale {
             filter: grayscale(100%);
           }

@@ -132,11 +132,11 @@
     var parent = $(this).parent().attr('id');
 
     if($windowWidth < 460) {
-      $('#' + inmate + ' img').toggleClass('grayscale');
-      $('#' + inmate + ' .info-button').toggleClass('up');
-      $('#' + parent).toggleClass('open');
+       $('#' + inmate + ' img').toggleClass('grayscale');
+       $('#' + inmate + ' .info-button').toggleClass('up');
+       $('#' + parent).toggleClass('open');
     } else {
-      $('body').css('overflow', 'hidden');
+       $('body').toggleClass('fixed');
     }
     $('#light-' + inmate).toggleClass('hidden');
     $('#fade-' + inmate).toggleClass('hidden');
@@ -201,45 +201,45 @@
   $('.black_overlay').click(function() {
     $('.black_overlay').addClass('hidden');
     $('.white_content').addClass('hidden');
-    $('body').css('overflow', 'auto');
+    $('body').removeClass('fixed');
   });
 
   $('.close-lightbox').click(function() {
     $('.black_overlay').addClass('hidden');
     $('.white_content').addClass('hidden');
-    $('body').css('overflow', 'auto');
+    $('body').removeClass('fixed');
   });
 
   //resets if you go between lightbox mode and dropdown mode
-  $(window).resize(function() {
-    var resizedWidth = $(window).width();
+  // $(window).resize(function() {
+  //   var resizedWidth = $(window).width();
 
-    if($windowWidth >= 460) {
-      if(resizedWidth < 460) {
-        $('body').css('overflow', 'auto');
-        $inmatesContainer.find('.white_content:not(.hidden)').addClass('hidden');
-      }
-    } else {
-      if(resizedWidth >= 460) {
-        $inmatesContainer.find('.open-lightbox img:not(.grayscale)').addClass('grayscale');
-        $inmatesContainer.find('.info-button.up').toggleClass('up');
-        $inmatesContainer.find('.inmate.open').toggleClass('open');
-        $inmatesContainer.find('.white_content:not(.hidden)').addClass('hidden');
-        $inmatesContainer.find('.black_overlay:not(.hidden)').addClass('hidden');
-      }
-    }
-    //figure out where lightbox should be placed on screen!!
-    if(resizedWidth > 460) {
-      $inmatesContainer.find('.open-lightbox').click(function() {
-        var inmate = this.id;
-        var lightboxHeight = $('#light-' + inmate).outerHeight();
-        var lightboxWidth = $('#light-' + inmate).outerWidth();
-        var top = ( $windowHeight - lightboxHeight )/2;
-        var left = ( $windowWidth - lightboxWidth)/2;
-        $('#interactive .white_content').css({'top': top, 'left': left});
-      });
-    }
-  });
+  //   if($windowWidth >= 460) {
+  //     if(resizedWidth < 460) {
+  //       $('body').css('overflow', 'auto');
+  //       $inmatesContainer.find('.white_content:not(.hidden)').addClass('hidden');
+  //     }
+  //   } else {
+  //     if(resizedWidth >= 460) {
+  //       $inmatesContainer.find('.open-lightbox img:not(.grayscale)').addClass('grayscale');
+  //       $inmatesContainer.find('.info-button.up').toggleClass('up');
+  //       $inmatesContainer.find('.inmate.open').toggleClass('open');
+  //       $inmatesContainer.find('.white_content:not(.hidden)').addClass('hidden');
+  //       $inmatesContainer.find('.black_overlay:not(.hidden)').addClass('hidden');
+  //     }
+  //   }
+  //   //figure out where lightbox should be placed on screen!!
+  //   if(resizedWidth > 460) {
+  //     $inmatesContainer.find('.open-lightbox').click(function() {
+  //       var inmate = this.id;
+  //       var lightboxHeight = $('#light-' + inmate).outerHeight();
+  //       var lightboxWidth = $('#light-' + inmate).outerWidth();
+  //       var top = ( $windowHeight - lightboxHeight )/2;
+  //       var left = ( $windowWidth - lightboxWidth)/2;
+  //       $('#interactive .white_content').css({'top': top, 'left': left});
+  //     });
+  //   }
+  // });
 
 })();
 

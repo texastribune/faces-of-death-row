@@ -21,11 +21,7 @@ $morethan-460: new-breakpoint(min-width 461px);
 $desktop: new-breakpoint(min-width 861px );
 
 .fixed {
-  @include media($morethan-460) {
-    position: fixed;
-    overflow: hidden;
-    top: -500px;
-  }
+  overflow: hidden;
 }
 section {
   font-size:15px;
@@ -349,9 +345,14 @@ section {
         height: 100%;
       }
       img {
-        width: 40%;
-        float: left;
-        margin-right: 5%;
+        @include media($mobile) {
+          display: none;
+        }
+        @include media($small) {
+          width: 40%;
+          float: left;
+          margin-right: 1em;
+        }
         @include media($medium) {
           @include span-columns(5);
         }
@@ -367,13 +368,19 @@ section {
           @include omega();
         }
         h2 {
+          color: $white;
+          padding: 0.25em;
+          text-align: center;
+          background: rgba(255,133,33,0.7);
           margin: 0 0 0.5em;
           font-size: 1.75em;
           line-height: 1em;
           letter-spacing: 0.03em;
-          @include media($mobile) {
-            font-size: 1.5em;
-            line-height: 1.1em;
+          @include media($morethan-460) {
+            color: $black;
+            padding: 0;
+            text-align: left;
+            background: none;
           }
         }
         .crime-details {
@@ -401,7 +408,6 @@ section {
           background-color: $dr-seafoam;
           @include media($mobile) {
             margin: 0.75em 1em;
-            background-color: $white;
           }
         }
       }
@@ -490,14 +496,13 @@ section {
       position: relative;
       width: 98%;
       margin: 0 auto;
-      padding: 0;
+      padding: 5px 0;
       line-height: 1em;
       cursor: pointer;
       overflow: hidden;
-      border: 5px solid $white;
-      @include media($mobile) {
-        margin-bottom: 5px;
-      }
+      border-top: 2px solid $white;
+      border-right: 5px solid $white;
+      border-left: 5px solid $white;
       @include media($small) {
         float:left;
         width: 33%;
@@ -511,18 +516,25 @@ section {
         width: 20%;
       }
       .open-lightbox {
+        max-width: 250px;
+        margin: 0 auto;
+        position: relative;
         img {
           width: 100%;
+          &:target {
+            @include media($mobile) {
+              filter: grayscale(100%);
+            }
+          }
           &.grayscale {
             filter: grayscale(100%);
           }
-          @include media($mobile) {
-            width: 40%;
-            margin-right: 5%;
-            float: left;
-          }
         }
         .outline {
+          @include media($morethan-460) {
+            display: block;
+          }
+          display: none;
           position: absolute;
           left: 0;
           bottom: 0;
@@ -533,15 +545,6 @@ section {
           opacity: 0;
           transition: opacity .25s ease-in;
           padding: 0.5em 0.75em;
-          @include media ($mobile) {
-            position: relative;
-            opacity: 1;
-            background-color: transparent;
-            color: $dr-dark-gray;
-            width: 55%;
-            float: left;
-            padding: 0;
-          }
           h2 {
             letter-spacing: 0.03em;
             line-height: 1.1em;
@@ -555,15 +558,10 @@ section {
             }
           }
           .details {
-            @include media($morethan-460) {
-              position: absolute;
-              bottom: 2.5em;
-            }
+            position: absolute;
+            bottom: 2.5em;
             @include media($small) {
               font-size: 0.9em;
-            }
-            @include media($mobile) {
-              margin-top: 0.5em;
             }
             .label {
               font-size: 0.8em;
@@ -579,10 +577,6 @@ section {
           position: absolute;
           left: 10px;
           bottom: 5px;
-          @include media($mobile) {
-            left: 3px;
-            bottom: 0px;
-          }
           .fa:before {
             content: '\f13a';
             height: 1em;
@@ -601,15 +595,13 @@ section {
           &.up {
             .fa:before {
               content: '\f139';
-              color: $white;
-              opacity: 1;
             }
             .close-text {
                 display: inline-block;
                 vertical-align: 0.25em;
                 letter-spacing: 0.03em;
                 font-size: 1.1em;
-                color: $white;
+                color: $dr-orange;
             }
           }
         }
@@ -623,18 +615,13 @@ section {
           }
           .info-button {
             .fa:before {
-              color: $white;
+              color: $dr-orange;
               opacity: 1;
-              @include media($mobile) {
-                color: $dr-orange;
-              }
-            }
-            transition: opacity .25s ease-in;
-            &.up {
-              .fa:before {
+              @include media($morethan-460) {
                 color: $white;
               }
             }
+            transition: opacity .25s ease-in;
           }
           .detail {
             opacity: 0;
@@ -652,17 +639,9 @@ section {
         }
       }
       &.open {
-        @include media($mobile) {
-          border: 5px solid transparent;
-          background: rgba(255,133,33,0.7);
-          .open-lightbox {
-            img {
-              display: none;
-            }
-            .outline {
-              display: none;
-            }
-          }
+        border: 2px solid rgba(255,133,33,0.7);
+        .open-lightbox {
+          position: static;
         }
       }
     }

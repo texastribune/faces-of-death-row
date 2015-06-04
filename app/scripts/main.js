@@ -1,11 +1,11 @@
 (function() {
   'use strict';
 
-  var $windowWidth = window.innerWidth ? window.innerWidth : $(window).width();
-  var $windowHeight = window.innerHeight ? window.innerHeight : $(window).height();
+  //var $windowWidth = window.innerWidth ? window.innerWidth : $(window).width();
+  //var $windowHeight = window.innerHeight ? window.innerHeight : $(window).height();
 
   var $inmatesContainer = $('#inmates');
-  var $inmates = $inmatesContainer.find('.inmate');window
+  var $inmates = $inmatesContainer.find('.inmate');
 
   var $raceCriteria = $('#race_criteria').find('input[type=checkbox]');
 
@@ -128,7 +128,7 @@
 
   //when lightbox opens
   $inmatesContainer.find('.open-lightbox').click(function() {
-    var inmate = this.id;
+    //var inmate = this.id;
     var parent = $(this).parent().attr('id');
 
     $inmatesContainer.find('.open').removeClass('open');

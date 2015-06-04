@@ -454,7 +454,7 @@ section {
         display: none;
         position: fixed;
         overflow-y: hidden;
-        cursor: zoom-out;
+        cursor: default;
         top: 0%;
         left: 0%;
         width: 100%;
@@ -476,21 +476,23 @@ section {
           overflow: visible;
           top: 5%;
           left: 5%;
-          height: 90%;
+          max-height: 90%;
           width: 90%;
         }
         @include media($medium) {
-
-          width: 550px;
-          height: 430px;
-        }
-        @include media($desktop) {
-          //width: 675px;
-          //height: 410px;
           top: 15%;
+          width: 74%;
+          left: 13%;
+        }
+        @include media($large) {
+          top: 15%;
+          width: 74%;
+          left: 13%;
+        }
+        @include media($xlarge) {
+          top: 20%;
           left: 25%;
           width: 50%;
-          height: auto;
         }
         .bio {
           @include clearfix;
@@ -569,12 +571,13 @@ section {
           font-size: 28px;
           color: white;
           font-weight: 300;
+          line-height: 0.65em;
           .fa {
             color: $dr-seafoam;
             position: absolute;
             font-size: 1.2em;
             z-index: -1000;
-            margin: -1px;
+            margin: 0 -1px;
             top: -5px;
             right: -5px;
           }

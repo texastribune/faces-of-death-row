@@ -22,9 +22,7 @@ $desktop: new-breakpoint(min-width 861px );
 
 .fixed {
   @include media($morethan-460) {
-    position: fixed;
     overflow: hidden;
-    top: -500px;
   }
 }
 section {
@@ -300,191 +298,6 @@ section {
   .hidden {
     display: none !important;
   }
-  .black_overlay {
-    display: none;
-    position: fixed;
-    overflow-y: hidden;
-    cursor: zoom-out;
-    top: 0%;
-    left: 0%;
-    width: 100%;
-    height: 100%;
-    background-color: $dr-darkgreen;
-    z-index: 1001;
-    opacity: 0.9;
-    filter: alpha(opacity=90);
-    @include media($morethan-460) {
-      display: block;
-    }
-  }
-  .white_content {
-    cursor: default;
-    padding-bottom: 2.25em;
-    @include media($morethan-460) {
-      position: fixed;
-      background: $white;
-      padding: 1.5em;
-      z-index: 1002;
-      overflow: visible;
-      max-height: 93%;
-      max-width: 93%;
-    }
-    @include media($small) {
-      height: 93%;
-      width: 93%;
-      padding: 2.5em;
-    }
-    @include media($medium) {
-      width: 550px;
-      height: 430px;
-    }
-    @include media($desktop) {
-      width: 675px;
-      height: 410px;
-    }
-    .bio {
-      @include clearfix;
-      @include media($morethan-460) {
-        overflow-y: scroll;
-        height: 100%;
-      }
-      img {
-        width: 40%;
-        float: left;
-        margin-right: 5%;
-        @include media($medium) {
-          @include span-columns(5);
-        }
-        @include media($desktop) {
-          float: left;
-          height: 100%;
-          margin-right: 1em;
-        }
-      }
-      .details {
-        @include media($medium) {
-          @include span-columns(7);
-          @include omega();
-        }
-        h2 {
-          margin: 0 0 0.5em;
-          font-size: 1.75em;
-          line-height: 1em;
-          letter-spacing: 0.03em;
-          @include media($mobile) {
-            font-size: 1.5em;
-            line-height: 1.1em;
-          }
-        }
-        .crime-details {
-          text-align: right;
-          label {
-            float: left;
-            margin-right: 5px;
-          }
-        }
-        p {
-          line-height: 1.25em;
-          margin-bottom: 0.5em;
-          label {
-            text-transform: uppercase;
-            font-size: 0.875em;
-            font-weight: 700;
-            letter-spacing: 0.03em;
-          }
-          @include media($mobile) {
-            padding: 0 1em;
-          }
-        }
-        hr {
-          margin: 0.75em 0;
-          background-color: $dr-seafoam;
-          @include media($mobile) {
-            margin: 0.75em 1em;
-            background-color: $white;
-          }
-        }
-      }
-    }
-    .close-lightbox{
-      @include media($morethan-460) {
-        display: block;
-      }
-      display: none;
-      cursor: pointer;
-      position: absolute;
-      margin: 0 2px;
-      top: -10px;
-      right: -10px;
-      font-size: 28px;
-      color: white;
-      font-weight: 300;
-      .fa {
-        color: $dr-seafoam;
-        position: absolute;
-        font-size: 1.2em;
-        z-index: -1000;
-        margin: -1px;
-        top: -5px;
-        right: -5px;
-      }
-    }
-    .pagination {
-      @include media($morethan-460) {
-        display: block;
-      }
-      display: none;
-      cursor: pointer;
-      position: absolute;
-      bottom: 0;
-      color: $dr-darkgreen;
-      width: 80px;
-      height: 80px;
-      bottom: 45%;
-      &.next {
-        right: -80px;
-        padding: 20px;
-        @include media($small) {
-          right: -35px;
-        }
-        &:before {
-          content: '';
-          border-top: 20px solid transparent;
-          border-bottom: 20px solid transparent;
-          border-left: 20px solid rgba(168,192,183,0.8);
-          display: block;
-        }
-      }
-      &.prev {
-        left: -80px;
-        padding: 20px;
-        @include media($small) {
-          left: -35px;
-        }
-        &:before {
-          content: '';
-          border-right: 20px solid rgba(168,192,183,0.8);
-          border-top: 20px solid transparent;
-          border-bottom: 20px solid transparent;
-          display: block;
-        }
-      }
-      &.inactive {
-        cursor: default;
-        &:before, &:hover:before {
-          border-left-color: rgba(168,192,183,0.2) !important;
-          border-right-color: rgba(168,192,183,0.2) !important;
-        }
-
-      }
-      &:hover {
-        &:before {
-          border-left-color: $dr-seafoam !important;
-          border-right-color: $dr-seafoam !important;
-        }
-      }
-    }
-  }
   .inmates {
     .inmate {
       position: relative;
@@ -598,20 +411,6 @@ section {
           .close-text {
             display: none;
           }
-          &.up {
-            .fa:before {
-              content: '\f139';
-              color: $white;
-              opacity: 1;
-            }
-            .close-text {
-                display: inline-block;
-                vertical-align: 0.25em;
-                letter-spacing: 0.03em;
-                font-size: 1.1em;
-                color: $white;
-            }
-          }
         }
         &:hover {
           .info {
@@ -630,11 +429,11 @@ section {
               }
             }
             transition: opacity .25s ease-in;
-            &.up {
-              .fa:before {
-                color: $white;
-              }
-            }
+            // &.up {
+            //   .fa:before {
+            //     color: $white;
+            //   }
+            // }
           }
           .detail {
             opacity: 0;
@@ -651,7 +450,200 @@ section {
           }
         }
       }
+      .black_overlay {
+        display: none;
+        position: fixed;
+        overflow-y: hidden;
+        cursor: zoom-out;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        background-color: $dr-darkgreen;
+        z-index: 1001;
+        opacity: 0.9;
+        filter: alpha(opacity=90);
+      }
+      .white_content {
+        display: none;
+        cursor: default;
+        padding-bottom: 2.25em;
+        @include media($morethan-460) {
+          position: fixed;
+          background: $white;
+          padding: 1.5em;
+          z-index: 1002;
+          overflow: visible;
+          top: 5%;
+          left: 5%;
+          height: 90%;
+          width: 90%;
+        }
+        @include media($medium) {
+
+          width: 550px;
+          height: 430px;
+        }
+        @include media($desktop) {
+          //width: 675px;
+          //height: 410px;
+          top: 15%;
+          left: 25%;
+          width: 50%;
+          height: auto;
+        }
+        .bio {
+          @include clearfix;
+          @include media($morethan-460) {
+            overflow-y: scroll;
+            height: 100%;
+          }
+          img {
+            width: 40%;
+            float: left;
+            margin-right: 5%;
+            @include media($medium) {
+              @include span-columns(5);
+            }
+            @include media($desktop) {
+              float: left;
+              height: 100%;
+              margin-right: 1em;
+            }
+          }
+          .details {
+            @include media($medium) {
+              @include span-columns(7);
+              @include omega();
+            }
+            h2 {
+              margin: 0 0 0.5em;
+              font-size: 1.75em;
+              line-height: 1em;
+              letter-spacing: 0.03em;
+              @include media($mobile) {
+                font-size: 1.5em;
+                line-height: 1.1em;
+              }
+            }
+            .crime-details {
+              text-align: right;
+              label {
+                float: left;
+                margin-right: 5px;
+              }
+            }
+            p {
+              line-height: 1.25em;
+              margin-bottom: 0.5em;
+              label {
+                text-transform: uppercase;
+                font-size: 0.875em;
+                font-weight: 700;
+                letter-spacing: 0.03em;
+              }
+              @include media($mobile) {
+                padding: 0 1em;
+              }
+            }
+            hr {
+              margin: 0.75em 0;
+              background-color: $dr-seafoam;
+              @include media($mobile) {
+                margin: 0.75em 1em;
+                background-color: $white;
+              }
+            }
+          }
+        }
+        .close-lightbox{
+          @include media($morethan-460) {
+            display: block;
+          }
+          display: none;
+          cursor: pointer;
+          position: absolute;
+          margin: 0 2px;
+          top: -10px;
+          right: -10px;
+          font-size: 28px;
+          color: white;
+          font-weight: 300;
+          .fa {
+            color: $dr-seafoam;
+            position: absolute;
+            font-size: 1.2em;
+            z-index: -1000;
+            margin: -1px;
+            top: -5px;
+            right: -5px;
+          }
+        }
+        .pagination {
+          @include media($morethan-460) {
+            display: block;
+          }
+          display: none;
+          cursor: pointer;
+          position: absolute;
+          bottom: 0;
+          color: $dr-darkgreen;
+          width: 80px;
+          height: 80px;
+          bottom: 45%;
+          &.next {
+            right: -80px;
+            padding: 20px;
+            @include media($small) {
+              right: -35px;
+            }
+            &:before {
+              content: '';
+              border-top: 20px solid transparent;
+              border-bottom: 20px solid transparent;
+              border-left: 20px solid rgba(168,192,183,0.8);
+              display: block;
+            }
+          }
+          &.prev {
+            left: -80px;
+            padding: 20px;
+            @include media($small) {
+              left: -35px;
+            }
+            &:before {
+              content: '';
+              border-right: 20px solid rgba(168,192,183,0.8);
+              border-top: 20px solid transparent;
+              border-bottom: 20px solid transparent;
+              display: block;
+            }
+          }
+          &.inactive {
+            cursor: default;
+            &:before, &:hover:before {
+              border-left-color: rgba(168,192,183,0.2) !important;
+              border-right-color: rgba(168,192,183,0.2) !important;
+            }
+
+          }
+          &:hover {
+            &:before {
+              border-left-color: $dr-seafoam !important;
+              border-right-color: $dr-seafoam !important;
+            }
+          }
+        }
+      }
       &.open {
+        .white_content {
+          display: block;
+        }
+        @include media($morethan-460) {
+          .black_overlay {
+            display: block;
+          }
+        }
         @include media($mobile) {
           border: 5px solid transparent;
           background: rgba(255,133,33,0.7);
@@ -661,6 +653,22 @@ section {
             }
             .outline {
               display: none;
+            }
+            .info-button {
+              @include media($mobile) {
+                .fa:before {
+                  content: '\f139';
+                  color: $white;
+                  opacity: 1;
+                }
+                .close-text {
+                    display: inline-block;
+                    vertical-align: 0.25em;
+                    letter-spacing: 0.03em;
+                    font-size: 1.1em;
+                    color: $white;
+                }
+              }
             }
           }
         }

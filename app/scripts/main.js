@@ -1,11 +1,11 @@
 (function() {
   'use strict';
 
-  var $windowWidth = $(window).width();
-  var $windowHeight = $(window).height();
+  var $windowWidth = window.innerWidth ? window.innerWidth : $(window).width();
+  var $windowHeight = window.innerHeight ? window.innerHeight : $(window).height();
 
   var $inmatesContainer = $('#inmates');
-  var $inmates = $inmatesContainer.find('.inmate');
+  var $inmates = $inmatesContainer.find('.inmate');window
 
   var $raceCriteria = $('#race_criteria').find('input[type=checkbox]');
 
@@ -131,19 +131,25 @@
     var inmate = this.id;
     var parent = $(this).parent().attr('id');
 
-    $('#' + inmate + ' .info-button').toggleClass('up');
+    $inmatesContainer.find('.open').removeClass('open');
+    //$inmatesContainer.find('.white_content').addClass('hidden');
     $('#' + parent).toggleClass('open');
-    $('.full-wrapper').toggleClass('fixed');
+    $('body').addClass('fixed');
 
-    $('#light-' + inmate).toggleClass('hidden');
-    $('#fade-' + inmate).toggleClass('hidden');
+    // $('#light-' + inmate).toggleClass('hidden');
+    // $('#fade-' + inmate).toggleClass('hidden');
+
 
     //set lightbox top/left
-    var lightboxHeight = $('#light-' + inmate).outerHeight();
-    var lightboxWidth = $('#light-' + inmate).outerWidth();
-    var top = ( $windowHeight - lightboxHeight )/2;
-    var left = ( $windowWidth - lightboxWidth)/2;
-    $('#interactive .white_content').css({'top': top, 'left': left});
+    // if($windowHeight < $windowWidth) {
+    //   var lightboxHeight = $('#light-' + inmate).height();
+    //   var lightboxWidth = $('#light-' + inmate).width();
+    //   var top = ( $windowHeight - lightboxHeight )/2;
+    //   var left = ( $windowWidth - lightboxWidth)/2;
+    //   $('#interactive .white_content').css({'top': top, 'left': left});
+    // } else {
+    //   $('#interactive .white_content').css({'top': '5%', 'left': '5%', height: '90%', width: '90%'});
+    // }
   });
 
   //when click prev or next
@@ -180,42 +186,44 @@
 
   //moves back
   function prevInmate (inmate, prevID) {
-    $('#light-' + inmate).toggleClass('hidden');
-    $('#fade-' + inmate).toggleClass('hidden');
-    $('#light-' + prevID).toggleClass('hidden');
-    $('#fade-' + prevID).toggleClass('hidden');
+    // $('#light-' + inmate).toggleClass('hidden');
+    // $('#fade-' + inmate).toggleClass('hidden');
+    // $('#light-' + prevID).toggleClass('hidden');
+    // $('#fade-' + prevID).toggleClass('hidden');
+    $('#' + inmate).parent().removeClass('open');
+    $('#' + prevID).parent().addClass('open');
   }
 
   //moves forward
   function nextInmate(inmate, nextID) {
-    $('#light-' + inmate).toggleClass('hidden');
-    $('#fade-' + inmate).toggleClass('hidden');
-    $('#light-' + nextID).toggleClass('hidden');
-    $('#fade-' + nextID).toggleClass('hidden');
+    // $('#light-' + inmate).toggleClass('hidden');
+    // $('#fade-' + inmate).toggleClass('hidden');
+    // $('#light-' + nextID).toggleClass('hidden');
+    // $('#fade-' + nextID).toggleClass('hidden');
+    $('#' + inmate).parent().removeClass('open');
+    $('#' + nextID).parent().addClass('open');
   }
 
   //close lightbox
   $('.black_overlay').click(function() {
     var inmate = $(this).parent().attr('id');
-    $('.black_overlay').addClass('hidden');
-    $('.white_content').addClass('hidden');
-    $('.full-wrapper').toggleClass('fixed');
+    // $('.black_overlay').addClass('hidden');
+    // $('.white_content').addClass('hidden');
+    $('body').removeClass('fixed');
     $('#' + inmate).toggleClass('open');
-    $('#' + inmate + ' .open-lightbox .info-button').toggleClass('up');
   });
 
   $('.close-lightbox').click(function() {
     var inmate = $(this).parent().parent().attr('id');
-    $('.black_overlay').addClass('hidden');
-    $('.white_content').addClass('hidden');
-    $('.full-wrapper').toggleClass('fixed');
+    // $('.black_overlay').addClass('hidden');
+    // $('.white_content').addClass('hidden');
+    $('body').removeClass('fixed');
     $('#' + inmate).toggleClass('open');
-    $('#' + inmate + ' .open-lightbox .info-button').toggleClass('up');
   });
 
   //resets if you go between lightbox mode and dropdown mode
-   $(window).resize(function() {
-     var resizedWidth = $(window).width();
+  // $(window).resize(function() {
+  //   var resizedWidth = $(window).width();
 
   //   //figure out where lightbox should be placed on screen!!
   //   if(resizedWidth > 460) {
@@ -228,7 +236,7 @@
   //       $('#interactive .white_content').css({'top': top, 'left': left});
   //     });
   //   }
-   });
+  // });
 
 })();
 

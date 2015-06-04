@@ -89,7 +89,7 @@
           <div class="close-text">Close</div>
         </div>
       </div>
-      <div id="light-inmate-{{ inmate.tdcj_id }}" class="white_content hidden">
+      <div id="light-inmate-{{ inmate.tdcj_id }}" class="white_content">
         <div class="bio">
           <img src="assets/images/{{ inmate.mug }}" />
           <div class="details">
@@ -115,7 +115,7 @@
         <div class="prev pagination{% if loop.first %} inactive {% endif %}"></div>
         <div class="next pagination{% if loop.last %} inactive {% endif %}"></div>
       </div>
-      <div id="fade-inmate-{{ inmate.tdcj_id }}" class="black_overlay hidden"></div>
+      <div id="fade-inmate-{{ inmate.tdcj_id }}" class="black_overlay"></div>
     </div>
     {% endfor %}
   </div>

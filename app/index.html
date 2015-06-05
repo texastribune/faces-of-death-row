@@ -90,30 +90,36 @@
         </div>
       </div>
       <div id="light-inmate-{{ inmate.tdcj_id }}" class="white_content">
-        <div class="bio">
-          <img src="assets/images/{{ inmate.mug }}" />
-          <div class="details">
-            <h2>{{ inmate.first_name }} {{inmate.last_name }}</h2>
-            <p><label>Time on Death Row:</label> {{ inmate.time_served }}</p>
-            <p><label>Race:</label> {{ inmate.race }}</p>
-            <p><label>Age:</label> {{ inmate.age }}</p>
-            <p><label>Sex:</label> {{ inmate.sex }}</p>
-            <hr>
-            <p><label>Summary of Conviction:</label></p>
-            <p>{{ inmate.summary }}</p>
-            <hr>
-            <div class="crime-details">
-              <p><label>Crime Committed on:</label> {{ inmate.offense_date }}</p>
-              <p><label>On death row since:</label> {{ inmate.received_date }}</p>
-              <p><label>Crime Committed in:</label> {{ inmate.county }} County</p>
+        <div class="scroll-box">
+          <div class="bio">
+            <img src="assets/images/{{ inmate.mug }}" />
+            <div class="details">
+              <h2>{{ inmate.first_name }} {{inmate.last_name }}</h2>
+              <p><label>Time on Death Row:</label> {{ inmate.time_served }}</p>
+              <p><label>Race:</label> {{ inmate.race }}</p>
+              <p><label>Age:</label> {{ inmate.age }}</p>
+              <p><label>Sex:</label> {{ inmate.sex }}</p>
+              <hr>
+              <p><label>Summary of Conviction:</label></p>
+              <p>{{ inmate.summary }}</p>
+              <hr>
+              <div class="crime-details">
+                <p><label>Crime Committed on:</label> {{ inmate.offense_date }}</p>
+                <p><label>On death row since:</label> {{ inmate.received_date }}</p>
+                <p><label>Crime Committed in:</label> {{ inmate.county }} County</p>
+              </div>
             </div>
           </div>
         </div>
         <div class="close-lightbox">
           <i class="fa fa-circle"></i>&times;
         </div>
-        <div class="prev pagination{% if loop.first %} inactive {% endif %}"></div>
-        <div class="next pagination{% if loop.last %} inactive {% endif %}"></div>
+        <div class="prev pagination{% if loop.first %} inactive {% endif %}">
+          <i class="arrow"></i>
+        </div>
+        <div class="next pagination{% if loop.last %} inactive {% endif %}">
+          <i class="arrow"></i>
+        </div>
       </div>
       <div id="fade-inmate-{{ inmate.tdcj_id }}" class="black_overlay"></div>
     </div>

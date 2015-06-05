@@ -476,48 +476,52 @@ section {
           overflow: visible;
           top: 5%;
           left: 5%;
-          max-height: 90%;
+          height: 90%;
           width: 90%;
         }
         @include media($medium) {
           top: 15%;
           width: 74%;
           left: 13%;
+          max-height: 80%;
         }
         @include media($large) {
           top: 15%;
           width: 74%;
           left: 13%;
+          max-height: 80%;
         }
         @include media($xlarge) {
           top: 20%;
           left: 25%;
           width: 50%;
+          max-height: 75%;
         }
         .bio {
           @include clearfix;
+          position: relative;
           @include media($morethan-460) {
             overflow-y: scroll;
             height: 100%;
           }
           img {
-            width: 40%;
-            float: left;
-            margin-right: 5%;
-            @include media($medium) {
-              @include span-columns(5);
-            }
-            @include media($desktop) {
-              float: left;
-              height: 100%;
-              margin-right: 1em;
-            }
+            // width: 40%;
+            // float: left;
+            // margin-right: 5%;
+            // @include media($medium) {
+            //   @include span-columns(5);
+            // }
+            // @include media($desktop) {
+            //   float: left;
+            //   margin-right: 1em;
+            // }
+            @include span-columns(5);
           }
           .details {
-            @include media($medium) {
+            //@include media($medium) {
               @include span-columns(7);
               @include omega();
-            }
+           // }
             h2 {
               margin: 0 0 0.5em;
               font-size: 1.75em;
@@ -559,27 +563,42 @@ section {
           }
         }
         .close-lightbox{
-          @include media($morethan-460) {
-            display: block;
-          }
-          display: none;
           cursor: pointer;
           position: absolute;
-          margin: 0 2px;
-          top: -10px;
-          right: -10px;
-          font-size: 28px;
-          color: white;
+          font-size: 32px;
+          color: $white;
           font-weight: 300;
-          line-height: 0.65em;
-          .fa {
-            color: $dr-seafoam;
-            position: absolute;
-            font-size: 1.2em;
-            z-index: -1000;
-            margin: 0 -1px;
-            top: -5px;
-            right: -5px;
+          @include media($mobile) {
+            bottom: 0px;
+            left: 5px;
+            font-size: 0px;
+            .fa-circle {
+              font-size: 26px;
+              &:before {
+                content: '\f139';
+              }
+            }
+            &:after {
+              content: 'Close';
+              font-size: 16px;
+              margin-left: 0.25em;
+              vertical-align: 0.1em;
+              letter-spacing: 0.03em;
+            }
+
+          }
+          @include media($morethan-460) {
+            top: -10px;
+            right: -10px;
+            .fa {
+              color: $dr-seafoam;
+              position: absolute;
+              font-size: 1.2em;
+              z-index: -1000;
+              margin: -2px;
+              top: -5px;
+              right: -5px;
+            }
           }
         }
         .pagination {
@@ -591,49 +610,55 @@ section {
           position: absolute;
           bottom: 0;
           color: $dr-darkgreen;
-          width: 80px;
-          height: 80px;
-          bottom: 45%;
+          height: 90%;
+          bottom: 0;
+          padding: 15px;
+          width: 75px;
+          i {
+            position: absolute;
+            top: 40%;
+            &:before {
+              content: '';
+              display: block;
+              border-top: 20px solid transparent;
+              border-bottom: 20px solid transparent;
+            }
+          }
           &.next {
-            right: -80px;
-            padding: 20px;
+            right: -75px;
             @include media($small) {
               right: -35px;
             }
-            &:before {
-              content: '';
-              border-top: 20px solid transparent;
-              border-bottom: 20px solid transparent;
-              border-left: 20px solid rgba(168,192,183,0.8);
-              display: block;
+            i {
+              right: 25%;
+              &:before {
+                border-left: 20px solid $dr-seafoam;
+              }
             }
           }
           &.prev {
-            left: -80px;
-            padding: 20px;
+            left: -75px;
             @include media($small) {
               left: -35px;
             }
-            &:before {
-              content: '';
-              border-right: 20px solid rgba(168,192,183,0.8);
-              border-top: 20px solid transparent;
-              border-bottom: 20px solid transparent;
-              display: block;
+            i {
+              left: 25%;
+              &:before {
+                border-right: 20px solid $dr-seafoam;
+              }
+            }
+          }
+          &:hover {
+            i:before {
+              border-left-color: white !important;
+              border-right-color: white !important;
             }
           }
           &.inactive {
             cursor: default;
-            &:before, &:hover:before {
+            i:before {
               border-left-color: rgba(168,192,183,0.2) !important;
               border-right-color: rgba(168,192,183,0.2) !important;
-            }
-
-          }
-          &:hover {
-            &:before {
-              border-left-color: $dr-seafoam !important;
-              border-right-color: $dr-seafoam !important;
             }
           }
         }
@@ -658,20 +683,7 @@ section {
               display: none;
             }
             .info-button {
-              @include media($mobile) {
-                .fa:before {
-                  content: '\f139';
-                  color: $white;
-                  opacity: 1;
-                }
-                .close-text {
-                    display: inline-block;
-                    vertical-align: 0.25em;
-                    letter-spacing: 0.03em;
-                    font-size: 1.1em;
-                    color: $white;
-                }
-              }
+              display: none;
             }
           }
         }

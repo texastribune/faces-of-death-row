@@ -1,9 +1,6 @@
 (function() {
   'use strict';
 
-  //var $windowWidth = window.innerWidth ? window.innerWidth : $(window).width();
-  //var $windowHeight = window.innerHeight ? window.innerHeight : $(window).height();
-
   var $inmatesContainer = $('#inmates');
   var $inmates = $inmatesContainer.find('.inmate');
 
@@ -129,10 +126,18 @@
   //when lightbox opens
   $inmatesContainer.find('.open-lightbox').click(function() {
     var parent = $(this).parent().attr('id');
+    var inmate = $(this).attr('id');
 
     $inmatesContainer.find('.open').removeClass('open');
     $('#' + parent).toggleClass('open');
     $('body').addClass('fixed');
+
+    //determine if needs scrolling or not
+    var lightboxHeight = $('#light-' + inmate).height();
+    var bioHeight = $('#light-' + inmate).children('.bio').height();
+    if(lightboxHeight < bioHeight) {
+      $('.white_content').css({'height': '90%', 'top': '5%'});
+    }
   });
 
   //when click prev or next
@@ -213,6 +218,29 @@
     var inmate = $(this).parent().parent().attr('id');
     if ($('#' + inmate).hasClass('open')) {
       $('#' + inmate).removeClass('open');
+    }
+  });
+
+  //determine lightbox dimensions on resize
+  $(window).resize(function() {
+    if( $('.inmate.open').length ) {
+      var inmate = $('.inmate.open').find('.white_content').attr('id');
+      var lightboxHeight = $('#' + inmate).height();
+      var bioHeight = $('#' + inmate).children('.bio').height();
+      var $windowWidth = window.innerWidth ? window.innerWidth : $(window).width();
+
+      console.log('LB: ' + lightboxHeight + ' | BH: ' + bioHeight);
+      if(lightboxHeight < bioHeight) {
+        $('.white_content').css({'height': '90%', 'top': '5%'});
+
+      } else {
+        $('.white_content').css('height', 'auto');
+        if ($windowWidth >= 1081) {
+          $('.white_content').css('top', '20%');
+        } else if ($windowWidth >= 661) {
+          $('.white_content').css('top', '15%');
+        }
+      }
     }
   });
 

@@ -149,7 +149,7 @@ section {
           background-color: $dr-darkgreen;
           color: $white;
           font-weight: 400;
-          letter-spacing: 0.04em;
+          letter-spacing: 0.02em;
           padding: 0.5em 0.25em;
           text-transform: uppercase;
           margin-bottom: 0.85em;
@@ -429,11 +429,6 @@ section {
               }
             }
             transition: opacity .25s ease-in;
-            // &.up {
-            //   .fa:before {
-            //     color: $white;
-            //   }
-            // }
           }
           .detail {
             opacity: 0;
@@ -476,8 +471,12 @@ section {
           overflow: visible;
           top: 5%;
           left: 5%;
-          height: 90%;
+          max-height: 90%;
           width: 90%;
+        }
+        @include media($small) {
+          padding: 1.5em 2.5em;
+          max-height: 90%;
         }
         @include media($medium) {
           top: 15%;
@@ -501,27 +500,22 @@ section {
           @include clearfix;
           position: relative;
           @include media($morethan-460) {
-            overflow-y: scroll;
+            overflow-y: auto;
             height: 100%;
           }
           img {
-            // width: 40%;
-            // float: left;
-            // margin-right: 5%;
-            // @include media($medium) {
-            //   @include span-columns(5);
-            // }
-            // @include media($desktop) {
-            //   float: left;
-            //   margin-right: 1em;
-            // }
-            @include span-columns(5);
+            width: 40%;
+            float: left;
+            margin-right: 5%;
+            @include media($morethan-460) {
+              @include span-columns(5);
+            }
           }
           .details {
-            //@include media($medium) {
+            @include media($morethan-460) {
               @include span-columns(7);
               @include omega();
-           // }
+            }
             h2 {
               margin: 0 0 0.5em;
               font-size: 1.75em;
@@ -627,7 +621,7 @@ section {
           &.next {
             right: -75px;
             @include media($small) {
-              right: -35px;
+              right: -15px;
             }
             i {
               right: 25%;
@@ -639,7 +633,7 @@ section {
           &.prev {
             left: -75px;
             @include media($small) {
-              left: -35px;
+              left: -15px;
             }
             i {
               left: 25%;
@@ -652,6 +646,10 @@ section {
             i:before {
               border-left-color: white !important;
               border-right-color: white !important;
+              @include media($small) {
+                border-left-color: $dr-darkgreen !important;
+                border-right-color: $dr-darkgreen !important;
+              }
             }
           }
           &.inactive {

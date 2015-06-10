@@ -229,7 +229,6 @@
       var bioHeight = $('#' + inmate).children('.bio').height();
       var $windowWidth = window.innerWidth ? window.innerWidth : $(window).width();
 
-      console.log('LB: ' + lightboxHeight + ' | BH: ' + bioHeight);
       if(lightboxHeight < bioHeight) {
         $('.white_content').css({'height': '90%', 'top': '5%'});
 
@@ -239,6 +238,8 @@
           $('.white_content').css('top', '20%');
         } else if ($windowWidth >= 661) {
           $('.white_content').css('top', '15%');
+        } else if ($windowWidth >=480) {
+          $('.white_content').css('top', '5%');
         }
       }
     }

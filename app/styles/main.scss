@@ -6,9 +6,9 @@
 @import 'components/masthead';
 
 @import url(http://fonts.googleapis.com/css?family=Stardos+Stencil:400,700);
-$dr-orange: rgb(255,133,33);
-$dr-seafoam: rgb(168,192,183);
-$dr-darkgreen: rgb(47,79,79);
+$dr-orange: rgb(255, 133, 33);
+$dr-seafoam: rgb(168, 192, 183);
+$dr-darkgreen: rgb(47, 79, 79);
 $dr-dark-gray: $bodytext-black;
 
 $mobile: new-breakpoint(max-width 460px);
@@ -18,703 +18,856 @@ $large: new-breakpoint(min-width 861px max-width 1080px);
 $xlarge: new-breakpoint(min-width 1081px);
 
 $morethan-460: new-breakpoint(min-width 461px);
-$desktop: new-breakpoint(min-width 861px );
+$desktop: new-breakpoint(min-width 861px);
 
 .fixed {
   overflow: hidden;
+
   @include media($mobile) {
     overflow: auto;
   }
 }
+
 section {
-  font-size:15px;
   color: $dr-dark-gray;
+  font-size: 15px;
+
   @include media($mobile) {
-    font-size: 0.9em;
+    font-size: .9em;
   }
 }
+
 .container {
-  width: 90%;
+  margin: 0 auto;
   max-width: 980px;
+  width: 90%;
+
   @include media($mobile) {
     width: 95%;
   }
-  margin: 0 auto;
 }
-#header {
+
+.header {
+
+  @include clearfix;
   margin: 2em auto 1em;
   padding: 0;
+
   @include media($mobile) {
     margin: 1.5em auto 1em;
     padding: 0 1em;
   }
+
   h1 {
-    font-weight: 400;
-    font-family: 'Stardos Stencil', georgia, serif;
-    line-height: 1em;
-    text-transform: uppercase;
-    padding-left: 0.25em;
     border-left: 2px solid $dr-orange;
+    font-family: 'Stardos Stencil', georgia, serif;
     font-size: 2.75em;
-    margin-bottom: 0.5em;
+    font-weight: 400;
+    line-height: 1em;
+    margin-bottom: .5em;
+    padding-left: .25em;
+    text-transform: uppercase;
+
     @include media($small) {
       font-size: 2.4em;
     }
+
     @include media($medium) {
       font-size: 3em;
     }
+
     @include media($large) {
+
+      @include span-columns(5);
       font-size: 3.25em;
-      @include span-columns(5);
     }
+
     @include media($xlarge) {
-      font-size: 4em;
+
       @include span-columns(5);
+      font-size: 4em;
     }
   }
+
   .description {
     line-height: 1.4em;
     padding: 0;
+
     @include media($desktop) {
       @include span-columns(7);
       @include omega();
     }
+
     strong {
+      background-color: rgba(168, 192, 183, .5);
+      font-family: $base-sans-serif;
+      font-size: .875em;
+      letter-spacing: .05em;
+      padding: .1em .25em;
       text-transform: uppercase;
-      padding: 0.1em 0.25em;
-      background-color: rgba(168,192,183,0.5);
-      font-family: $base-sans-serif;
-      letter-spacing: 0.05em;
-      font-size: 0.875em;
     }
-    .byline {
-      margin-bottom: 1em;
-      font-size:0.9em;
-      font-family: $base-sans-serif;
-      a {
-        font-weight: 700;
-        color: $dr-darkgreen;
-        text-transform: uppercase;
-      }
-      @include media($mobile) {
-        font-size: 0.8em;
-      }
+
+  }
+
+}
+
+.byline {
+  font-family: $base-sans-serif;
+  font-size: .9em;
+  margin-bottom: 1em;
+
+  @include media($mobile) {
+    font-size: .8em;
+  }
+
+  a {
+    color: $dr-darkgreen;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+}
+
+.share {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+
+  @include media($mobile) {
+    text-align: center;
+    width: 60%;
+  }
+
+  li {
+    display: inline-block;
+    padding-right: 1.5em;
+
+    @include media ($mobile) {
+      padding-right: 3em;
     }
-    .share {
-      list-style: none;
+
+    &:last-child {
+      margin-bottom: 0;
       padding: 0;
-      margin: 0 auto;
-      @include media($mobile) {
-        width: 60%;
-        text-align: center;
-      }
-      li {
-        display: inline-block;
-        padding-right: 1.5em;
-        @include media ($mobile) {
-          padding-right: 3em;
-        }
-        &:last-child {
-          padding: 0;
-          margin-bottom: 0;
-        }
-        .fa {
-          color: $dr-seafoam;
-          font-size: 24px;
-        }
-      }
+    }
+
+    .fa {
+      color: $dr-seafoam;
+      font-size: 24px;
     }
   }
-  @include clearfix;
 }
-#filters {
+
+.filters {
   background-color: $dr-seafoam;
-  padding: 1em;
   margin: 1em 0;
+  padding: 1em;
+
   .container {
     width: 100%;
+
     @include media($large) {
       max-width: 767px;
     }
-    h3 {
-      letter-spacing: 0.03em;
-      margin-bottom: 1em;
-      font-size:1.3em;
-    }
-    .all-criteria {
-      .criteria{
-        margin-bottom: 1em;
-        h4{
-          background-color: $dr-darkgreen;
-          color: $white;
-          font-weight: 400;
-          letter-spacing: 0.02em;
-          padding: 0.5em;
-          text-transform: uppercase;
-          margin-bottom: 0.85em;
-          @include media($mobile) {
-            padding: 0.5em 0.25em;
-          }
-        }
-        ul {
-          margin: 0;
-          li{
-            display: inline-block;
-            margin: 0 0.15em 0 0;
-            input[type='checkbox'] {
-              display: none;
-            }
-            input[type='checkbox'] + label {
-              font-size: 0.9em;
-              text-transform: uppercase;
-              cursor: pointer;
-              letter-spacing: 0.01em;
-              margin-right: 0.25em;
-              @include media($medium) {
-                margin-right: 0.15em;
-              }
-              &:before {
-                content: "";
-                display: inline-block;
-                vertical-align: -2px;
-                width: 15px;
-                height: 15px;
-                border: 2px solid $white;
-                margin-right: 3px;
-                @include media($mobile) {
-                  width: 17px;
-                  height: 17px;
-                  vertical-align: -3px;
-                  margin-right: 7px;
-                }
-              }
-              @include media($mobile) {
-                font-size: 1em;
-              }
-            }
-            input[type='checkbox']:checked + label:before {
-              background-color: $dr-orange;
-            }
-          }
-        }
-        &#timeserved_criteria {
-          @include span-columns(2.6);
-          @include media($large) {
-            @include span-columns(6);
-          }
-          @include media($medium) {
-            @include span-columns(5);
-          }
-          @include media($small) {
-            width: 62%;
-            float: right;
-            margin-right: 0;
-          }
-          @include media($mobile) {
-            width: 62%;
-            float: right;
-            margin-right: 0;
-          }
-        }
-        &#race_criteria {
-          @include span-columns(4.8);
-          @include media($large) {
-            @include span-columns(6);
-            @include omega();
-          }
-          @include media($medium) {
-            @include span-columns(7);
-            @include omega();
-          }
-          @include media($small) {
-            width: 35%;
-            float: left;
-          }
-          @include media($mobile) {
-            width: 35%;
-            float: left;
-          }
-          li {
-            display: block;
-            margin-bottom: 1.25em;
-            @include media($desktop) {
-              display: inline-block;
-              margin-bottom: 1em;
-            }
-            @include media($medium) {
-              display: inline-block;
-              margin-bottom: 1em;
-            }
-          }
-        }
-        &#age_criteria {
-          @include span-columns(2.6);
-          @include media($large) {
-            @include span-columns(6);
-          }
-          @include media($medium) {
-            @include span-columns(5);
-          }
-          @include media($small) {
-            width: 62%;
-            float: right;
-            margin-right: 0;
-          }
-          @include media($mobile) {
-            width: 62%;
-            float: right;
-            margin-right: 0;
-          }
-        }
-        &#sex_criteria {
-          @include span-columns(2);
-          @include omega();
-          @include media($large) {
-            @include span-columns(6);
-          }
-          @include media($medium) {
-            @include span-columns(7);
-          }
-          @include media($small) {
-            width: 62%;
-            float: right;
-          }
-          @include media($mobile) {
-            width: 62%;
-            float: right;
-          }
-        }
-      }
-      @include clearfix;
-    }
-    .num-match{
-      text-align: center;
-      margin: 0.5em 0;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      #total_inmates {
-        vertical-align: -0.25em;
-        padding: 0.1em 0.2em 0;
-        margin: 0 0.25em;
-        background-color: $white;
-        font: 700 2.5em 'Stardos Stencil', georgia, serif;
-        @include media($desktop) {
-          padding: 0.25em 0.25em 0.1em;
-        }
-      }
-      @include media($desktop) {
-        margin: 2em 0 1em;
-      }
-    }
-  }
-}
-#interactive {
-  width:100%;
-  min-height:500px;
-  .hidden {
-    display: none !important;
-  }
-  .inmates {
-    .inmate {
-      position: relative;
-      margin: 0 auto;
-      padding: 0;
-      line-height: 1em;
-      cursor: pointer;
-      overflow: hidden;
-      border: 5px solid $white;
-      width: 20%;
-      float: left;
-      @include media($mobile) {
-        margin-bottom: 5px;
-        width: 98%;
-        float: none;
-      }
-      @include media($small) {
-        width: 33%;
-      }
-      @include media($medium) {
-        width: 25%;
-      }
-      .open-lightbox {
-        img {
-          width: 100%;
-          &.grayscale {
-            filter: grayscale(100%);
-          }
-          @include media($mobile) {
-            width: 40%;
-            margin-right: 5%;
-            float: left;
-          }
-        }
-        .outline {
-          position: absolute;
-          left: 0;
-          bottom: 0;
-          height: 100%;
-          width: 100%;
-          background: rgba(255,133,33,0.7);
-          color: white;
-          opacity: 0;
-          transition: opacity .25s ease-in;
-          padding: 0.5em 0.75em;
-          @include media ($mobile) {
-            position: relative;
-            opacity: 1;
-            background-color: transparent;
-            color: $dr-dark-gray;
-            width: 55%;
-            float: left;
-            padding: 0;
-          }
-          h2 {
-            letter-spacing: 0.03em;
-            line-height: 1.1em;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            @include media($medium) {
-              font-size: 1.25em;
-            }
-            @include media($small) {
-              font-size: 1.25em;
-            }
-          }
-          .details {
-            position: absolute;
-            bottom: 2.5em;
-            @include media($small) {
-              font-size: 0.9em;
-            }
-            @include media($mobile) {
-              margin-top: 0.5em;
-              position: relative;
-              bottom: 0;
-            }
-            .label {
-              font-size: 0.8em;
-              text-transform: uppercase;
-              letter-spacing: 0.05em;
-              font-weight:700;
-            }
-          }
-        }
-        .info-button {
-          cursor: pointer;
-          display: block;
-          position: absolute;
-          left: 10px;
-          bottom: 5px;
-          @include media($mobile) {
-            left: 3px;
-            bottom: 0px;
-          }
-          .fa:before {
-            content: '\f05a';
-            height: 1em;
-            width: 1em;
-            color: $dr-orange;
-            opacity: 0.7;
-            font-size: 1.5em;
-            @include media($mobile) {
-              content: '\f13a';
-              font-size: 2em;
-            }
-          }
-          .close-text {
-            display: none;
-          }
-        }
-        &:hover {
-          .info {
-            display: block;
-            padding: 1em;
-          }
-          .outline {
-            opacity: 1;
-          }
-          .info-button {
-            .fa:before {
-              color: $white;
-              opacity: 1;
-              @include media($mobile) {
-                color: $dr-orange;
-              }
-            }
-            transition: opacity .25s ease-in;
-          }
-          .detail {
-            opacity: 0;
-          }
-          &:after {
-            content: "";
-            opacity: 0.75;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            position: absolute;
-            z-index: -1;
-          }
-        }
-      }
-      .black_overlay {
-        display: none;
-        position: fixed;
-        overflow-y: hidden;
-        cursor: default;
-        top: 0%;
-        left: 0%;
-        width: 100%;
-        height: 100%;
-        background-color: $dr-darkgreen;
-        z-index: 1001;
-        opacity: 0.9;
-        filter: alpha(opacity=90);
-      }
-      .white_content {
-        display: none;
-        cursor: default;
-        padding: 1.5em;
-        overflow: visible;
-        z-index: 1002;
-        position: fixed;
-        background: $white;
-        @include media($mobile) {
-          position: relative;
-          background: transparent;
-          padding: 0 0 2.25em 0;
-        }
-        @include media($small) {
-          top: 5%;
-          padding: 1.5em 2.5em;
-          width: 90%;
-          left: 5%;
-          max-height: 90%;
-        }
-        @include media($medium) {
-          top: 15%;
-          width: 74%;
-          left: 13%;
-          max-height: 80%;
-        }
-        @include media($large) {
-          top: 15%;
-          width: 74%;
-          left: 13%;
-          max-height: 80%;
-        }
-        @include media($xlarge) {
-          top: 20%;
-          left: 25%;
-          width: 50%;
-          max-height: 75%;
-        }
-        .bio {
-          @include clearfix;
-          position: relative;
-          overflow-y: auto;
-          height: 100%;
-          img {
-            @include span-columns(5);
-            @include media($mobile) {
-              width: 40%;
-              float: left;
-              margin: 0 1em 0.5em 0;
-            }
-          }
-          .details {
-            @include span-columns(7);
-            @include omega();
-            @include media($mobile) {
-              width: 100%;
-              float: none;
-              margin: 0;
-            }
-            h2 {
-              margin: 0 0 0.5em;
-              font-size: 1.75em;
-              line-height: 1em;
-              letter-spacing: 0.03em;
-              @include media($mobile) {
-                font-size: 1.5em;
-                line-height: 1.1em;
-              }
-            }
-            .crime-details {
-              text-align: right;
-              label {
-                float: left;
-                margin-right: 5px;
-              }
-            }
-            p {
-              line-height: 1.25em;
-              margin-bottom: 0.5em;
-              label {
-                text-transform: uppercase;
-                font-size: 0.875em;
-                font-weight: 700;
-                letter-spacing: 0.03em;
-              }
-              @include media($mobile) {
-                padding: 0 1em;
-              }
-            }
-            hr {
-              margin: 0.75em 0;
-              background-color: $dr-seafoam;
-              @include media($mobile) {
-                margin: 0.75em 1em;
-                background-color: $white;
-              }
-            }
-          }
-        }
-        .close-lightbox {
-          cursor: pointer;
-          position: absolute;
-          font-size: 32px;
-          color: $white;
-          font-weight: 300;
-          @include media($mobile) {
-            bottom: 0px;
-            left: 5px;
-            font-size: 0px;
-            .fa-circle {
-              font-size: 26px;
-              &:before {
-                content: '\f139';
-              }
-            }
-            &:after {
-              content: 'Close';
-              font-size: 16px;
-              margin-left: 0.25em;
-              vertical-align: 0.1em;
-              letter-spacing: 0.03em;
-            }
 
-          }
-          @include media($morethan-460) {
-            top: -10px;
-            right: -10px;
-            .fa {
-              color: $dr-seafoam;
-              position: absolute;
-              font-size: 1.2em;
-              z-index: -1000;
-              margin: -2px;
-              top: -5px;
-              right: -5px;
-            }
-          }
-        }
-        .pagination {
-          @include media($mobile) {
-            display: none;
-          }
-          cursor: pointer;
-          position: absolute;
-          bottom: 0;
-          color: $dr-darkgreen;
-          height: 90%;
-          bottom: 0;
-          padding: 15px;
-          width: 75px;
-          i {
-            position: absolute;
-            top: 40%;
-            &:before {
-              content: '';
-              display: block;
-              border-top: 20px solid transparent;
-              border-bottom: 20px solid transparent;
-            }
-          }
-          &.next {
-            right: -75px;
-            @include media($small) {
-              right: -15px;
-            }
-            i {
-              right: 25%;
-              &:before {
-                border-left: 20px solid $dr-seafoam;
-              }
-            }
-          }
-          &.prev {
-            left: -75px;
-            @include media($small) {
-              left: -15px;
-            }
-            i {
-              left: 25%;
-              &:before {
-                border-right: 20px solid $dr-seafoam;
-              }
-            }
-          }
-          &:hover {
-            i:before {
-              border-left-color: white !important;
-              border-right-color: white !important;
-              @include media($small) {
-                border-left-color: $dr-darkgreen !important;
-                border-right-color: $dr-darkgreen !important;
-              }
-            }
-          }
-          &.inactive {
-            cursor: default;
-            i:before {
-              border-left-color: rgba(168,192,183,0.2) !important;
-              border-right-color: rgba(168,192,183,0.2) !important;
-            }
-          }
-        }
-      }
-      &.open {
-        .white_content {
-          display: block;
-        }
-        @include media($morethan-460) {
-          .black_overlay {
-            display: block;
-          }
-        }
-        @include media($mobile) {
-          border: 5px solid transparent;
-          background: rgba(255,133,33,0.7);
-          .open-lightbox {
-            img {
-              display: none;
-            }
-            .outline {
-              display: none;
-            }
-            .info-button {
-              display: none;
-            }
-          }
-        }
-      }
+    h3 {
+      font-size: 1.3em;
+      letter-spacing: .03em;
+      margin-bottom: 1em;
     }
   }
 }
-#disclaimer {
-  font-size: 0.8em;
+
+.all-criteria {
+
+  @include clearfix;
+
+}
+
+.criteria {
+  margin-bottom: 1em;
+
+  h4 {
+    background-color: $dr-darkgreen;
+    color: $white;
+    font-weight: 400;
+    letter-spacing: .02em;
+    margin-bottom: .85em;
+    padding: .5em;
+    text-transform: uppercase;
+
+    @include media($mobile) {
+      padding: .5em .25em;
+    }
+
+  }
+
+  ul {
+    margin: 0;
+  }
+
+  &.timeserved {
+    @include span-columns(2.6);
+    @include media($large) {
+      @include span-columns(6);
+    }
+
+    @include media($medium) {
+      @include span-columns(5);
+    }
+
+    @include media($small) {
+      float: right;
+      margin-right: 0;
+      width: 62%;
+    }
+
+    @include media($mobile) {
+      float: right;
+      margin-right: 0;
+      width: 62%;
+    }
+  }
+
+  &.race {
+    @include span-columns(4.8);
+    @include media($large) {
+      @include span-columns(6);
+      @include omega();
+    }
+
+    @include media($medium) {
+      @include span-columns(7);
+      @include omega();
+    }
+
+    @include media($small) {
+      float: left;
+      width: 35%;
+    }
+
+    @include media($mobile) {
+      float: left;
+      width: 35%;
+    }
+
+    li {
+      display: block;
+      margin-bottom: 1.25em;
+
+      @include media($desktop) {
+        display: inline-block;
+        margin-bottom: 1em;
+      }
+
+      @include media($medium) {
+        display: inline-block;
+        margin-bottom: 1em;
+      }
+    }
+  }
+
+  &.age {
+    @include span-columns(2.6);
+    @include media($large) {
+      @include span-columns(6);
+    }
+
+    @include media($medium) {
+      @include span-columns(5);
+    }
+
+    @include media($small) {
+      float: right;
+      margin-right: 0;
+      width: 62%;
+    }
+
+    @include media($mobile) {
+      float: right;
+      margin-right: 0;
+      width: 62%;
+    }
+  }
+
+  &.sex {
+    @include span-columns(2);
+    @include omega();
+    @include media($large) {
+      @include span-columns(6);
+    }
+
+    @include media($medium) {
+      @include span-columns(7);
+    }
+
+    @include media($small) {
+      float: right;
+      width: 62%;
+    }
+
+    @include media($mobile) {
+      float: right;
+      width: 62%;
+    }
+  }
+}
+
+.checkbox {
+  display: inline-block;
+  margin: 0 .15em 0 0;
+
+  input {
+    display: none;
+  }
+
+  label {
+    cursor: pointer;
+    font-size: .9em;
+    letter-spacing: .01em;
+    margin-right: .25em;
+    text-transform: uppercase;
+
+    @include media($mobile) {
+      font-size: 1em;
+    }
+
+    @include media($medium) {
+      margin-right: .15em;
+    }
+
+    &:before {
+      border: 2px solid $white;
+      content: '';
+      display: inline-block;
+      height: 15px;
+      margin-right: 3px;
+      vertical-align: -2px;
+      width: 15px;
+
+      @include media($mobile) {
+        height: 17px;
+        margin-right: 7px;
+        vertical-align: -3px;
+        width: 17px;
+      }
+    }
+  }
+
+  input:checked + label:before {
+    background-color: $dr-orange;
+  }
+}
+
+.num-match {
+  font-weight: 700;
+  letter-spacing: .1em;
+  margin: .5em 0;
+  text-align: center;
+  text-transform: uppercase;
+
+  @include media($desktop) {
+    margin: 2em 0 1em;
+  }
+
+  span {
+    background-color: $white;
+    font: 700 2.5em 'Stardos Stencil', georgia, serif;
+    margin: 0 .25em;
+    padding: .1em .2em 0;
+    vertical-align: -.25em;
+
+    @include media($desktop) {
+      padding: .25em .25em .1em;
+    }
+  }
+}
+
+.interactive {
+  min-height: 500px;
+  width: 100%;
+
+  .hidden {
+    display: none;
+  }
+}
+
+.inmate {
+  border: 5px solid $white;
+  cursor: pointer;
+  float: left;
+  line-height: 1em;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  width: 20%;
+
+  @include media($mobile) {
+    float: none;
+    margin-bottom: 5px;
+    width: 98%;
+  }
+
+  @include media($small) {
+    width: 33%;
+  }
+
+  @include media($medium) {
+    width: 25%;
+  }
+}
+
+.open-lightbox {
+  img {
+    width: 100%;
+
+    @include media($mobile) {
+      float: left;
+      margin-right: 5%;
+      width: 40%;
+    }
+
+    &.grayscale {
+      filter: grayscale(100%);
+    }
+  }
+
+  .info-button {
+    bottom: 5px;
+    cursor: pointer;
+    display: block;
+    left: 10px;
+    position: absolute;
+
+    @include media($mobile) {
+      bottom: 0;
+      left: 3px;
+    }
+
+    .fa:before {
+      color: $dr-orange;
+      content: '\f05a';
+      font-size: 1.5em;
+      height: 1em;
+      opacity: .7;
+      width: 1em;
+
+      @include media($mobile) {
+        content: '\f13a';
+        font-size: 2em;
+      }
+    }
+
+    .close-text {
+      display: none;
+    }
+  }
+
+  &:hover {
+
+    .info {
+      display: block;
+      padding: 1em;
+    }
+
+    .hover-state {
+      opacity: 1;
+    }
+
+    .info-button {
+      transition: opacity .25s ease-in;
+    }
+
+    .fa:before {
+      color: $white;
+      opacity: 1;
+
+      @include media($mobile) {
+        color: $dr-orange;
+      }
+    }
+
+    .detail {
+      opacity: 0;
+    }
+
+    &:after {
+      bottom: 0;
+      content: '';
+      left: 0;
+      opacity: .75;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: -1;
+    }
+  }
+}
+
+.hover-state {
+  background: rgba(255, 133, 33, .7);
+  bottom: 0;
+  color: $white;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  padding: .5em .75em;
+  position: absolute;
+  transition: opacity .25s ease-in;
+  width: 100%;
+
+  @include media ($mobile) {
+    background-color: transparent;
+    color: $dr-dark-gray;
+    float: left;
+    opacity: 1;
+    padding: 0;
+    position: relative;
+    width: 55%;
+  }
+
+  h2 {
+    letter-spacing: .03em;
+    line-height: 1.1em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    @include media($medium) {
+      font-size: 1.25em;
+    }
+
+    @include media($small) {
+      font-size: 1.25em;
+    }
+  }
+
+  .details {
+    bottom: 2.5em;
+    position: absolute;
+
+    @include media($small) {
+      font-size: .9em;
+    }
+
+    @include media($mobile) {
+      bottom: 0;
+      margin-top: .5em;
+      position: relative;
+    }
+
+    .label {
+      font-size: .8em;
+      font-weight: 700;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+    }
+  }
+}
+
+
+.black-overlay {
+  background-color: $dr-darkgreen;
+  cursor: default;
+  display: none;
+  filter: alpha(opacity=90);
+  height: 100%;
+  left: 0%;
+  opacity: .9;
+  overflow-y: hidden;
+  position: fixed;
+  top: 0%;
+  width: 100%;
+  z-index: 1001;
+}
+
+.white-content {
+  background: $white;
+  cursor: default;
+  display: none;
+  overflow: visible;
+  padding: 1.5em;
+  position: fixed;
+  z-index: 1002;
+
+  @include media($mobile) {
+    background: transparent;
+    padding: 0 0 2.25em;
+    position: relative;
+  }
+
+  @include media($small) {
+    left: 5%;
+    max-height: 90%;
+    padding: 1.5em 2.5em;
+    top: 5%;
+    width: 90%;
+  }
+
+  @include media($medium) {
+    left: 13%;
+    max-height: 80%;
+    top: 15%;
+    width: 74%;
+  }
+
+  @include media($large) {
+    left: 13%;
+    max-height: 80%;
+    top: 15%;
+    width: 74%;
+  }
+
+  @include media($xlarge) {
+    left: 25%;
+    max-height: 75%;
+    top: 20%;
+    width: 50%;
+  }
+
+  .bio {
+    @include clearfix;
+    height: 100%;
+    overflow-y: auto;
+    position: relative;
+
+    img {
+      @include span-columns(5);
+      @include media($mobile) {
+        float: left;
+        margin: 0 1em .5em 0;
+        width: 40%;
+      }
+    }
+
+    .details {
+      @include span-columns(7);
+      @include omega();
+      @include media($mobile) {
+        float: none;
+        margin: 0;
+        width: 100%;
+      }
+    }
+
+    h2 {
+      font-size: 1.75em;
+      letter-spacing: .03em;
+      line-height: 1em;
+      margin: 0 0 .5em;
+
+      @include media($mobile) {
+        font-size: 1.5em;
+        line-height: 1.1em;
+      }
+    }
+
+    p {
+      line-height: 1.25em;
+      margin-bottom: .5em;
+
+      @include media($mobile) {
+        padding: 0 1em;
+      }
+    }
+
+    label {
+      font-size: .875em;
+      font-weight: 700;
+      letter-spacing: .03em;
+      text-transform: uppercase;
+    }
+
+    hr {
+      background-color: $dr-seafoam;
+      margin: .75em 0;
+
+      @include media($mobile) {
+        background-color: $white;
+        margin: .75em 1em;
+      }
+    }
+  }
+
+  .crime-details {
+    text-align: right;
+
+    label {
+      float: left;
+      margin-right: 5px;
+    }
+  }
+}
+
+.close-lightbox {
+  color: $white;
+  cursor: pointer;
+  font-size: 32px;
+  font-weight: 300;
+  position: absolute;
+
+  @include media($mobile) {
+    bottom: 0;
+    font-size: 0;
+    left: 5px;
+
+    .fa-circle {
+      font-size: 26px;
+
+      &:before {
+        content: '\f139';
+      }
+    }
+
+    &:after {
+      content: 'Close';
+      font-size: 16px;
+      letter-spacing: .03em;
+      margin-left: .25em;
+      vertical-align: .1em;
+    }
+  }
+
+  @include media($morethan-460) {
+    right: -10px;
+    top: -10px;
+
+    .fa {
+      color: $dr-seafoam;
+      font-size: 1.2em;
+      margin: -2px;
+      position: absolute;
+      right: -5px;
+      top: -5px;
+      z-index: -1000;
+    }
+  }
+}
+
+.pagination {
+  bottom: 0;
+  color: $dr-darkgreen;
+  cursor: pointer;
+  height: 90%;
+  padding: 15px;
+  position: absolute;
+  width: 75px;
+
+  @include media($mobile) {
+    display: none;
+  }
+
+  i {
+    position: absolute;
+    top: 40%;
+
+    &:before {
+      border-bottom: 20px solid transparent;
+      border-top: 20px solid transparent;
+      content: '';
+      display: block;
+    }
+  }
+
+  &:hover {
+
+    i:before {
+      border-left-color: $white;
+      border-right-color: $white;
+
+      @include media($small) {
+        border-left-color: $dr-darkgreen;
+        border-right-color: $dr-darkgreen;
+      }
+    }
+  }
+
+  &.inactive {
+    cursor: default;
+
+    i:before {
+      border-left-color: rgba(168, 192, 183, .2);
+      border-right-color: rgba(168, 192, 183, .2);
+    }
+  }
+}
+
+.next {
+  right: -75px;
+
+  @include media($small) {
+    right: -15px;
+  }
+
+  i {
+    right: 25%;
+
+    &:before {
+      border-left: 20px solid $dr-seafoam;
+    }
+  }
+}
+
+.prev {
+  left: -75px;
+
+  @include media($small) {
+    left: -15px;
+  }
+
+  i {
+    left: 25%;
+
+    &:before {
+      border-right: 20px solid $dr-seafoam;
+    }
+  }
+}
+
+.open {
+  @include media($morethan-460) {
+    .black-overlay {
+      display: block;
+    }
+  }
+
+  @include media($mobile) {
+    background: rgba(255, 133, 33, .7);
+    border: 5px solid transparent;
+
+    .open-lightbox {
+      img {
+        display: none;
+      }
+
+      .hover-state {
+        display: none;
+      }
+
+      .info-button {
+        display: none;
+      }
+    }
+  }
+
+  .white-content {
+    display: block;
+  }
+}
+
+.disclaimer {
+  font-size: .8em;
+  margin: 0 auto;
   padding: 0;
   width: 98%;
-  margin: 0 auto;
+
   p {
-    margin-bottom: 0.5em;
+    margin-bottom: .5em;
   }
 }
+
 .banner-ad {
-  text-align: center;
-  padding-top: 0.75em;
   border-top: 1px solid $border-gray;
+  padding-top: .75em;
+  text-align: center;
 }

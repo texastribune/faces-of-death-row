@@ -136,7 +136,7 @@
     var lightboxHeight = $('#light-' + inmate).height();
     var bioHeight = $('#light-' + inmate).children('.bio').height();
     if(lightboxHeight < bioHeight) {
-      $('.white_content').css({'height': '90%', 'top': '5%'});
+      $('.white-content').css({'height': '90%', 'top': '5%'});
     }
   });
 
@@ -202,7 +202,7 @@
   }
 
   //close lightbox
-  $('.black_overlay').click(function() {
+  $('.black-overlay').click(function() {
     var inmate = $(this).parent().attr('id');
     $('body').removeClass('fixed');
     $('#' + inmate).toggleClass('open');
@@ -224,22 +224,22 @@
   //determine lightbox dimensions on resize
   $(window).resize(function() {
     if( $('.inmate.open').length ) {
-      var inmate = $('.inmate.open').find('.white_content').attr('id');
+      var inmate = $('.inmate.open').find('.white-content').attr('id');
       var lightboxHeight = $('#' + inmate).height();
       var bioHeight = $('#' + inmate).children('.bio').height();
       var $windowWidth = window.innerWidth ? window.innerWidth : $(window).width();
 
       if(lightboxHeight < bioHeight) {
-        $('.white_content').css({'height': '90%', 'top': '5%'});
+        $('.white-content').css({'height': '90%', 'top': '5%'});
 
       } else {
-        $('.white_content').css('height', 'auto');
+        $('.white-content').css('height', 'auto');
         if ($windowWidth >= 1081) {
-          $('.white_content').css('top', '20%');
+          $('.white-content').css('top', '20%');
         } else if ($windowWidth >= 661) {
-          $('.white_content').css('top', '15%');
+          $('.white-content').css('top', '15%');
         } else if ($windowWidth >=480) {
-          $('.white_content').css('top', '5%');
+          $('.white-content').css('top', '5%');
         }
       }
     }

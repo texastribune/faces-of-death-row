@@ -9,43 +9,43 @@
 {% endblock %}
 
 {% block content %}
-<section id="filters">
+<section class="filters">
   <div class="container">
     <h3>Filter Inmates</h3>
     <div class="all-criteria">
-      <div class="criteria" id="timeserved_criteria">
+      <div class="criteria timeserved" id="timeserved_criteria">
         <h4>Years on death row</h4>
         <span id="timeserved_range_label_start" class="slider-label start">{{ META.min_years }}</span>
         <div id="timeserved_slider" class="slider"></div>
         <span id="timeserved_range_label_end" class="slider-label end">{{ META.max_years }}</span>
         <input type="hidden" id="timeserved_filter" value="{{ META.min_years }}-{{ META.max_years }}"/>
       </div>
-      <div class="criteria" id="race_criteria">
+      <div class="criteria race" id="race_criteria">
         <h4>Race</h4>
         <ul>
-          <li>
+          <li class="checkbox">
             <input id="white" type="checkbox" value="White">
             <label for="white">White</label>
           </li>
-          <li>
+          <li class="checkbox">
             <input id="black" type="checkbox" value="Black">
             <label for="black">Black</label>
           </li>
-          <li>
+          <li class="checkbox">
             <input id="hispanic" type="checkbox" value="Hispanic">
             <label for="hispanic">Hispanic</label>
           </li>
-          <li>
+          <li class="checkbox">
             <input id="asian" type="checkbox" value="Asian">
             <label for="asian">Asian</label>
           </li>
-          <li>
+          <li class="checkbox">
             <input id="other"type="checkbox" value="Other">
             <label for="other">Other</label>
           </li>
         </ul>
       </div>
-      <div class="criteria" id="age_criteria">
+      <div class="criteria age" id="age_criteria">
         <h4>Age</h4>
         <div class="criteria_slider">
           <div id="age_range_label_start" class="slider-label start">{{ META.min_age }}</div>
@@ -54,14 +54,14 @@
           <input type="hidden" id="age_filter" value="{{ META.min_age }}-{{ META.max_age }}"/>
         </div>
       </div>
-      <div class="criteria" id="sex_criteria">
+      <div class="criteria sex" id="sex_criteria">
         <h4>Sex</h4>
-          <ul>
-            <li>
+          <ul class="checkboxes">
+            <li class="checkbox">
               <input id="male" type="checkbox" value="Male">
               <label for="male">Male</label>
             </li>
-            <li>
+            <li class="checkbox">
               <input id="female" type="checkbox" value="Female">
               <label for="female">Female</label>
             </li>
@@ -71,13 +71,13 @@
     <div class="num-match">Viewing <span id="total_inmates">{{ META.total_inmates }}</span> inmates</div>
   </div>
 </section>
-<section id="interactive" class="container">
+<section class="container interactive">
   <div class="inmates" id="inmates">
     {% for inmate in INMATES %}
     <div class="inmate" id="id{{ inmate.tdcj_id }}" data-race="{{ inmate.race }}" data-sex="{{ inmate.sex }}" data-age="{{ inmate.age }}" data-time="{{ inmate.timeserved }}">
       <div class="open-lightbox" id="inmate-{{ inmate.tdcj_id }}">
         <img class="grayscale" src="assets/images/{{ inmate.mug }}" />
-        <div class="outline">
+        <div class="hover-state">
           <h2>{{ inmate.first_name }} {{ inmate.last_name }}</h2>
           <div class="details">
             <p class="label">On death row:</p>
@@ -89,7 +89,7 @@
           <div class="close-text">Close</div>
         </div>
       </div>
-      <div id="light-inmate-{{ inmate.tdcj_id }}" class="white_content">
+      <div id="light-inmate-{{ inmate.tdcj_id }}" class="white-content">
         <div class="bio">
           <img src="assets/images/{{ inmate.mug }}" />
           <div class="details">
@@ -119,12 +119,12 @@
           <i class="arrow"></i>
         </div>
       </div>
-      <div id="fade-inmate-{{ inmate.tdcj_id }}" class="black_overlay"></div>
+      <div id="fade-inmate-{{ inmate.tdcj_id }}" class="black-overlay"></div>
     </div>
     {% endfor %}
   </div>
 </section>
-<section id="disclaimer" class="container prose">
+<section class="disclaimer container prose">
   <p>Source: <a href="http://www.tdcj.state.tx.us/">Texas Department of Criminal Justice</a> | Developed and maintained by <a href="http://www.texastribune.org">The Texas Tribune</a> | <a href="http://www.texastribune.org/feedback/">Feedback</a></p>
   <p>Note: The data in this app was released under the Texas Public Information Act and is current as of {{ META.updated_date }}. Conviction summaries are gathered from TDCJ records, court documents and news articles.</p>
 </section>

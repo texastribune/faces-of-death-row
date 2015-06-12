@@ -1,6 +1,7 @@
 {
   "META": {
     "project_title": "Faces of Death Row",
+    "description": "There are currently 261 inmates living on death row in Texas, the state with the most active execution chamber by far. Use this interactive to search through these men and women by the length of their stay, race, age and sex. ",
     "average_age": "44",
     "average_time_served": "13 years, 8 months",
     "dominant_sex": "Male",

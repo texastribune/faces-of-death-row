@@ -8,18 +8,19 @@
   <!--   Open Graph -->
   <meta property="og:site_name" content="The Texas Tribune">
   <meta property="og:type" content="website">
-  <!-- Twitter settings -->
-  <meta name="twitter:card" value="summary_large_image">
-  <meta name="twitter:site" value="@TexasTribune">
-  <meta name="twitter:creator" content="@newsapps">
   <meta property="og:url" content="http://apps.texastribune.org/death-row/">
   <meta property="og:title" content="{{ META.project_title }}">
   <meta property="og:description" content="{{ META.shareline }}">
   <meta property="og:redirect_uri" content="//s3.amazonaws.com/apps.texastribune.org/death-row/index.html">
-  <meta property="og:image" content="//s3.amazonaws.com/apps.texastribune.org/death-row/assets/images/social/*******.png">
-  <meta name="twitter:title" content="Faces of Texas' Death Row">
+  <meta property="og:image" content="//s3.amazonaws.com/apps.texastribune.org/death-row/assets/images/social/30over.png">
+
+  <!-- Twitter settings -->
+  <meta name="twitter:card" value="summary_large_image">
+  <meta name="twitter:site" value="@TexasTribune">
+  <meta name="twitter:creator" content="@newsapps">
+  <meta name="twitter:title" content="{{ META.project_title }}">
   <meta name="twitter:description" content="{{ META.shareline }}">
-  <meta name="twitter:image" content="//s3.amazonaws.com/apps.texastribune.org/death-row/assets/images/social/*******.png">
+  <meta name="twitter:image" content="//s3.amazonaws.com/apps.texastribune.org/death-row/assets/images/social/30over.png">
   {% endblock %}
   <link rel="shortcut icon" type="image/x-icon" href="//s3.amazonaws.com/static.texastribune.org/common/images/favicon.ico">
   <!--[if lt IE 9]>
@@ -51,15 +52,15 @@
           By {% if META.byline_url %}<a href="{{META.byline_url}}">{% endif %}{{ META.byline }}{% if META.byline_url %}</a>{% endif %}{% if META.byline_2 %} and {% if META.byline_2_url %}<a href="{{META.byline_2_url}}">{% endif %}{{ META.byline_2 }}{% if META.byline_2_url %}</a>{% endif %}{% endif %}
         </div>
       {% endif %}
-      <p>Here is a look at the <strong>{{ META.total_inmates }}</strong> inmates currently on Texas' death row. Texas, which reinstated the death penalty in 1976, has the most active execution chamber. But on average, inmates spend <strong>{{ META.average_time_served }}</strong> on death row before their punishment is carried out. <strong>{{ META.percent_black }} percent</strong> of death row inmates are black, contrasting with black residents making up {{ META.texas_percent_black }} percent of the state population.</p>
+      <p>Here is a look at the <strong>{{ META.total_inmates }}</strong> inmates currently on Texas' death row. Texas, which reinstated the death penalty in 1976, has the most active execution chamber. But on average, these inmates have spent <strong>{{ META.average_time_served }}</strong> on death row without an execution. <strong>{{ META.percent_black }} percent</strong> of death row inmates are black, contrasting with black residents making up {{ META.texas_percent_black }} percent of the state population.</p>
       <ul class="share">
         <li>
-          <a href="https://twitter.com/intent/tweet?text={{ META.project_title | urlencode }}%20http%3A%2F%2Fapps.texastribune.org%2Fdeath-row%2F&amp;via=texastribune" title="share on Twitter" class="social-share" target="_blank">
+          <a href="https://twitter.com/intent/tweet?text={{ META.project_title | urlencode }}%2C%20{{ META.shareline | urlencode }}%20{{ META.short_url | urlencode }}%20&via=texastribune" title="share on Twitter" class="social-share" target="_blank">
             <i class="fa fa-twitter"></i>
           </a>
         </li>
         <li>
-          <a href="https://www.facebook.com/dialog/share?app_id=154122474650943&amp;display=popup&amp;href=http%3A%2F%2Fapps.texastribune.org%2Fdeath-row%2F&amp;redirect_uri=http%3A%2F%2Fapps.texastribune.org%2Fdeath-row%2F" title="share on Facebook" class="social-share" target="_blank">
+          <a href="https://www.facebook.com/dialog/share?app_id=154122474650943&display=popup&href=http%3A%2F%2Fapps.texastribune.org%2Fdeath-row&redirect_uri=http%3A%2F%2Fapps.texastribune.org%2Fdeath-row" title="share on Facebook" class="social-share" target="_blank">
             <i class="fa fa-facebook"></i>
           </a>
         </li>

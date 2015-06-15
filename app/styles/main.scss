@@ -32,9 +32,9 @@ section {
   color: $dr-dark-gray;
   font-size: 15px;
 
-  @include media($mobile) {
-    font-size: .9em;
-  }
+  // @include media($mobile) {
+  //   font-size: .9em;
+  // }
 }
 
 .container {
@@ -116,9 +116,9 @@ section {
   font-size: .9em;
   margin-bottom: 1em;
 
-  @include media($mobile) {
-    font-size: .8em;
-  }
+  // @include media($mobile) {
+  //   font-size: .8em;
+  // }
 
   a {
     color: $dr-darkgreen;

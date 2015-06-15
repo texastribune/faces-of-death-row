@@ -51,7 +51,7 @@
           By {% if META.byline_url %}<a href="{{META.byline_url}}">{% endif %}{{ META.byline }}{% if META.byline_url %}</a>{% endif %}{% if META.byline_2 %} and {% if META.byline_2_url %}<a href="{{META.byline_2_url}}">{% endif %}{{ META.byline_2 }}{% if META.byline_2_url %}</a>{% endif %}{% endif %}
         </div>
       {% endif %}
-      <p>Here is a look at the <strong>{{ META.total_inmates }}</strong> inmates currently on Texas' death row. Texas, which reinstated the death penalty in 1976, has the most active execution chamber. But on average, these inmates have spent <strong>{{ META.average_time_served }}</strong> on death row without an execution. <strong>{{ META.percent_black }} percent</strong> of death row inmates are black, contrasting with black residents making up {{ META.texas_percent_black }} percent of the state population.</p>
+      <p>Here is a look at the <strong>{{ META.total_inmates }}</strong> inmates currently on Texas' death row. Texas, which reinstated the death penalty in 1976, has the most active execution chamber in the nation. On average, these inmates have spent <strong>{{ META.average_time_served }}</strong> on death row. Though {{ META.texas_percent_black }} percent of the state's residents are black, <strong>{{ META.percent_black }} percent</strong> of death row inmates are.</p>
       <ul class="share">
         <li>
           <a href="https://twitter.com/intent/tweet?text={{ META.project_title | urlencode }}%2C%20{{ META.shareline | urlencode }}%20{{ META.short_url | urlencode }}%20&via=texastribune" title="share on Twitter" class="social-share" target="_blank">

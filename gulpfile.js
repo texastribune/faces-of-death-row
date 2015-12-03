@@ -15,6 +15,18 @@ var del = require('del');
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 
+function get_current_date() {
+  //get current date
+  var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
+  'August', 'September', 'October', 'November', 'December'];
+  var month, date, year;
+  var today = new Date();
+  month = today.getMonth();
+  date = today.getDate();
+  year = today.getFullYear();
+  return months[month] + ' ' + date + ', ' + year;
+}
+
 gulp.task('jshint', function() {
   return gulp.src(['app/scripts/**/*.js', '!app/scripts/libs/**/*.js'])
     .pipe($.jshint())
@@ -71,6 +83,8 @@ gulp.task('templates', function() {
   env.addFilter('json', function(obj) {
     return JSON.stringify(obj);
   });
+
+  data.BUILD = {'BUILD_DATE': get_current_date()};
 
   var nunjuckified = map(function(code, filename) {
     return env.renderString(code.toString(), data);

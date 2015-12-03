@@ -245,14 +245,4 @@
     }
   });
 
-  //get current date
-  var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
-  'August', 'September', 'October', 'November', 'December'];
-  var month, date, year;
-  var today = new Date();
-  month = today.getMonth();
-  date = today.getDate();
-  year = today.getFullYear();
-  $('#date').html(months[month] + ' ' + date + ', ' + year);
-
 })();

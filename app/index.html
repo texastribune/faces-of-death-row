@@ -78,7 +78,7 @@
       <div class="open-lightbox" id="inmate-{{ inmate.tdcj_id }}">
         <img class="grayscale" src="assets/images/{{ inmate.mug }}" />
         <div class="hover-state">
-          <h2>{{ inmate.first_name }} {{ inmate.last_name }}</h2>
+          <h2>{{ inmate.first_name }} {{ inmate.middle_name }} {{ inmate.last_name }}</h2>
           <div class="details">
             <p class="label">On death row:</p>
             <p>{{ inmate.time_served }}</p>
@@ -93,7 +93,7 @@
         <div class="bio">
           <img src="assets/images/{{ inmate.mug }}" />
           <div class="details">
-            <h2>{{ inmate.first_name }} {{inmate.last_name }}</h2>
+            <h2>{{ inmate.first_name }} {{ inmate.middle_name }} {{inmate.last_name }}</h2>
             <p><label>Time on Death Row:</label> {{ inmate.time_served }}</p>
             <p><label>Race:</label> {{ inmate.race }}</p>
             <p><label>Age:</label> {{ inmate.age }}</p>

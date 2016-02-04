@@ -35,6 +35,18 @@
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css" rel="stylesheet">
   {% endblock %}
   <script src="http://graphics.texastribune.org.s3.amazonaws.com/graphics/vendor-scripts/modernizer.min.js"></script>
+  <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "NewsArticle",
+        "headline": "{{ META.project_title }}",
+        "url": "http://apps.texastribune.org/death-row",
+        "thumbnailUrl": "http://apps.texastribune.org/death-row/assets/images/social/bars.png",
+        "dateCreated": "2015-06-15T06:00:00-06:00",
+        "articleSection": "FRONT PAGE, LAW & ORDER",
+        "creator": ["Jolie McCullough, Ben Hasson"]
+      }
+  </script>
 </head>
 <body>
 <div class="full-wrapper">
@@ -132,6 +144,7 @@
   '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','mipData','GTM-NBBG35');
 </script>
+{% include 'templates/includes/_parsely.html' %}
 {% endblock %}
 
 </body>

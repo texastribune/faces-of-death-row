@@ -68,13 +68,22 @@
           </ul>
       </div>
     </div>
+    <div class="criteria execution" id="execution_criteria">
+      <h4>Execution Date?</h4>
+        <ul class="checkboxes">
+          <li class="checkbox">
+            <input id="yes" type="checkbox" value="Yes">
+            <label for="yes">Yes</label>
+          </li>
+        </ul>
+    </div>
     <div class="num-match">Viewing <span id="total_inmates">{{ META.total_inmates }}</span> inmates</div>
   </div>
 </section>
 <section class="container interactive">
   <div class="inmates" id="inmates">
     {% for inmate in INMATES %}
-    <div class="inmate" id="id{{ inmate.tdcj_id }}" data-race="{{ inmate.race }}" data-sex="{{ inmate.sex }}" data-age="{{ inmate.age }}" data-time="{{ inmate.timeserved }}">
+    <div class="inmate" id="id{{ inmate.tdcj_id }}" data-race="{{ inmate.race }}" data-sex="{{ inmate.sex }}" data-age="{{ inmate.age }}" data-time="{{ inmate.timeserved }}" data-execution="{% if inmate.execution_date %}Yes{% else %}No{% endif %}"}>
       <div class="open-lightbox" id="inmate-{{ inmate.tdcj_id }}">
         <img class="grayscale" src="assets/images/{{ inmate.mug }}" />
         <div class="hover-state">
@@ -107,6 +116,11 @@
               <p><label>On death row since:</label> {{ inmate.received_date }}</p>
               <p><label>Crime Committed in:</label> {{ inmate.county }} County</p>
             </div>
+            {% if inmate.execution_date %}
+            <div class="execution-date">
+              <p><label>Scheduled execution date:</label> {{ inmate.execution_date }}</p>
+            </div>
+            {% endif %}
           </div>
         </div>
         <div class="close-lightbox">

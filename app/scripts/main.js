@@ -50,17 +50,25 @@
     }
   });
 
+  var $executionCritera = $('#execution_criteria').find('input[type=checkbox]');
+
+  $executionCritera.change(function() {
+    filter();
+  });
+
   function getState() {
     var raceSelection = $raceCriteria.filter(':checked').map(function() { return this.value; }).get();
     var sexSelection = $sexCriteria.filter(':checked').map(function() { return this.value; }).get();
     var ageRange = [+$ageRangeLabelStart.text(), +$ageRangeLabelEnd.text()];
     var timeRange = [+$timeServedRangeLabelStart.text(), +$timeServedRangeLabelEnd.text()];
+    var executionSelection = $executionCritera.filter(':checked').map(function() { return this.value; }).get();
 
     return {
       raceSelection: raceSelection,
       sexSelection: sexSelection,
       ageRange: ageRange,
-      timeRange: timeRange
+      timeRange: timeRange,
+      executionSelection: executionSelection
     };
   }
 
@@ -72,8 +80,14 @@
 
     var state = getState();
 
+    //console.log(state);
+
+
+
     activeInmates = $inmates.filter(function() {
       var $this = $(this);
+
+      console.log($this.data('execution'));
 
       if ($.inArray($this.data('race'), state.raceSelection) < 0 && state.raceSelection.length) {
         $this.addClass('hidden');
@@ -95,6 +109,11 @@
       var time = +$this.data('time');
 
       if (state.timeRange[0] > time || time > state.timeRange[1]) {
+        $this.addClass('hidden');
+        return false;
+      }
+
+      if ($.inArray($this.data('execution'), state.executionSelection) < 0 && state.executionSelection.length) {
         $this.addClass('hidden');
         return false;
       }

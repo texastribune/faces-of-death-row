@@ -68,12 +68,19 @@
           </ul>
       </div>
     </div>
+    <div class="criteria county" id="county_criteria">
+      <h4>County</h4>
+        <select class="select">
+          <option value="">All</option>
+          <option value="Harris">Harris</option>
+          <option value="Bexar">Bexar</option>
+        </select>
+    </div>
     <div class="criteria execution" id="execution_criteria">
-      <h4>Execution Date?</h4>
         <ul class="checkboxes">
           <li class="checkbox">
             <input id="yes" type="checkbox" value="Yes">
-            <label for="yes">Yes</label>
+            <label for="yes">Execution date set</label>
           </li>
         </ul>
     </div>
@@ -83,7 +90,7 @@
 <section class="container interactive">
   <div class="inmates" id="inmates">
     {% for inmate in INMATES %}
-    <div class="inmate" id="id{{ inmate.tdcj_id }}" data-race="{{ inmate.race }}" data-sex="{{ inmate.sex }}" data-age="{{ inmate.age }}" data-time="{{ inmate.timeserved }}" data-execution="{% if inmate.execution_date %}Yes{% else %}No{% endif %}"}>
+    <div class="inmate" id="id{{ inmate.tdcj_id }}" data-race="{{ inmate.race }}" data-sex="{{ inmate.sex }}" data-age="{{ inmate.age }}" data-time="{{ inmate.timeserved }}" data-county="{{ inmate.county }}" data-execution="{% if inmate.execution_date %}Yes{% else %}No{% endif %}"}>
       <div class="open-lightbox" id="inmate-{{ inmate.tdcj_id }}">
         <img class="grayscale" src="assets/images/{{ inmate.mug }}" />
         <div class="hover-state">

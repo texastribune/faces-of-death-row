@@ -80,14 +80,8 @@
 
     var state = getState();
 
-    //console.log(state);
-
-
-
     activeInmates = $inmates.filter(function() {
       var $this = $(this);
-
-      console.log($this.data('execution'));
 
       if ($.inArray($this.data('race'), state.raceSelection) < 0 && state.raceSelection.length) {
         $this.addClass('hidden');

@@ -2,14 +2,22 @@
   "META": {
     "project_title": "Faces of Death Row",
     "description": "There are currently 253 inmates living on death row in Texas, the state with the most active execution chamber by far. Use this interactive to search through these men and women by the length of their stay, race, age and sex. ",
+<<<<<<< HEAD
     "average_age": "44",
+=======
+    "average_age": "45",
+>>>>>>> master
     "average_time_served": "14 years, 2 months",
     "dominant_sex": "Male",
     "dominant_race": "Black",
     "percent_black": "43",
     "texas_percent_black": 12,
     "dominant_county": "Harris",
+<<<<<<< HEAD
     "total_inmates": "249",
+=======
+    "total_inmates": "247",
+>>>>>>> master
     "min_age": "20",
     "max_age": "80",
     "min_years": "0",
@@ -36,8 +44,13 @@
       "unit": "POLUNSKY",
       "received_date": "4/2/2001",
       "received_date_cacl": 36983,
+<<<<<<< HEAD
       "timeserved": "14.97",
       "time_served": "14 years, 11 months",
+=======
+      "timeserved": "15.01",
+      "time_served": "15 years",
+>>>>>>> master
       "offense_date": "3/12/2000",
       "offsense_date_calc": 36597,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -58,8 +71,13 @@
       "unit": "POLUNSKY",
       "received_date": "3/24/2004",
       "received_date_cacl": 38070,
+<<<<<<< HEAD
       "timeserved": "11.99",
       "time_served": "11 years, 11 months",
+=======
+      "timeserved": "12.04",
+      "time_served": "12 years",
+>>>>>>> master
       "offense_date": "4/3/2002",
       "offsense_date_calc": 37349,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -80,8 +98,13 @@
       "unit": "POLUNSKY",
       "received_date": "5/30/2001",
       "received_date_cacl": 37041,
+<<<<<<< HEAD
       "timeserved": "14.81",
       "time_served": "14 years, 9 months",
+=======
+      "timeserved": "14.85",
+      "time_served": "14 years, 10 months",
+>>>>>>> master
       "offense_date": "5/10/2000",
       "offsense_date_calc": 36656,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -102,7 +125,11 @@
       "unit": "POLUNSKY",
       "received_date": "11/17/1999",
       "received_date_cacl": 36481,
+<<<<<<< HEAD
       "timeserved": "16.34",
+=======
+      "timeserved": "16.39",
+>>>>>>> master
       "time_served": "16 years, 4 months",
       "offense_date": "6/6/1998",
       "offsense_date_calc": 35952,
@@ -120,11 +147,15 @@
       "race": "Black",
       "sex": "Male",
       "dob": 32228,
-      "age": "27",
+      "age": "28",
       "unit": "POLUNSKY",
       "received_date": "11/19/2012",
       "received_date_cacl": 41232,
+<<<<<<< HEAD
       "timeserved": "3.34",
+=======
+      "timeserved": "3.38",
+>>>>>>> master
       "time_served": "3 years, 4 months",
       "offense_date": "10/15/2008",
       "offsense_date_calc": 39736,
@@ -146,7 +177,11 @@
       "unit": "POLUNSKY",
       "received_date": "5/18/1979",
       "received_date_cacl": 28993,
+<<<<<<< HEAD
       "timeserved": "36.85",
+=======
+      "timeserved": "36.89",
+>>>>>>> master
       "time_served": "36 years, 10 months",
       "offense_date": "7/31/1976",
       "offsense_date_calc": 27972,
@@ -168,8 +203,13 @@
       "unit": "POLUNSKY",
       "received_date": "1/30/2007",
       "received_date_cacl": 39112,
+<<<<<<< HEAD
       "timeserved": "9.14",
       "time_served": "9 years, 1 month",
+=======
+      "timeserved": "9.18",
+      "time_served": "9 years, 2 months",
+>>>>>>> master
       "offense_date": "4/21/2006",
       "offsense_date_calc": 38828,
       "offense": "CAPITAL MURDER-DEATH",
@@ -190,8 +230,13 @@
       "unit": "POLUNSKY",
       "received_date": "4/25/2002",
       "received_date_cacl": 37371,
+<<<<<<< HEAD
       "timeserved": "13.91",
       "time_served": "13 years, 10 months",
+=======
+      "timeserved": "13.95",
+      "time_served": "13 years, 11 months",
+>>>>>>> master
       "offense_date": "8/19/1992",
       "offsense_date_calc": 33835,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -212,7 +257,11 @@
       "unit": "POLUNSKY",
       "received_date": "7/19/2001",
       "received_date_cacl": 37091,
+<<<<<<< HEAD
       "timeserved": "14.67",
+=======
+      "timeserved": "14.72",
+>>>>>>> master
       "time_served": "14 years, 8 months",
       "offense_date": "2/29/2000",
       "offsense_date_calc": 36585,
@@ -234,7 +283,11 @@
       "unit": "POLUNSKY",
       "received_date": "9/17/1997",
       "received_date_cacl": 35690,
+<<<<<<< HEAD
       "timeserved": "18.51",
+=======
+      "timeserved": "18.55",
+>>>>>>> master
       "time_served": "18 years, 6 months",
       "offense_date": "9/5/1995",
       "offsense_date_calc": 34947,
@@ -256,8 +309,13 @@
       "unit": "POLUNSKY",
       "received_date": "3/25/2014",
       "received_date_cacl": 41723,
+<<<<<<< HEAD
       "timeserved": "1.99",
       "time_served": "1 year, 11 months",
+=======
+      "timeserved": "2.03",
+      "time_served": "2 years",
+>>>>>>> master
       "offense_date": "12/6/2005",
       "offsense_date_calc": 38692,
       "offense": "CAPITAL MURDER(DEATH)",
@@ -278,7 +336,11 @@
       "unit": "POLUNSKY",
       "received_date": "6/11/1999",
       "received_date_cacl": 36322,
+<<<<<<< HEAD
       "timeserved": "16.78",
+=======
+      "timeserved": "16.82",
+>>>>>>> master
       "time_served": "16 years, 9 months",
       "offense_date": "1/21/1998",
       "offsense_date_calc": 35816,
@@ -296,12 +358,17 @@
       "race": "White",
       "sex": "Male",
       "dob": "3/30/1967",
-      "age": "48",
+      "age": "49",
       "unit": "POLUNSKY",
       "received_date": "2/27/2006",
       "received_date_cacl": 38775,
+<<<<<<< HEAD
       "timeserved": "10.06",
       "time_served": "10 years",
+=======
+      "timeserved": "10.11",
+      "time_served": "10 years, 1 month",
+>>>>>>> master
       "offense_date": "2/19/2005",
       "offsense_date_calc": 38402,
       "offense": "CAPITAL MURDER",
@@ -322,8 +389,13 @@
       "unit": "POLUNSKY",
       "received_date": "9/3/1998",
       "received_date_cacl": 36041,
+<<<<<<< HEAD
       "timeserved": "17.55",
       "time_served": "17 years, 6 months",
+=======
+      "timeserved": "17.59",
+      "time_served": "17 years, 7 months",
+>>>>>>> master
       "offense_date": "8/15/1996",
       "offsense_date_calc": 35292,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -344,8 +416,13 @@
       "unit": "POLUNSKY",
       "received_date": "7/27/2011",
       "received_date_cacl": 40751,
+<<<<<<< HEAD
       "timeserved": "4.65",
       "time_served": "4 years, 7 months",
+=======
+      "timeserved": "4.70",
+      "time_served": "4 years, 8 months",
+>>>>>>> master
       "offense_date": "4/19/2009",
       "offsense_date_calc": 39922,
       "offense": "CAPITAL MURDER(DEATH)",
@@ -366,8 +443,13 @@
       "unit": "POLUNSKY",
       "received_date": "5/1/2002",
       "received_date_cacl": 37377,
+<<<<<<< HEAD
       "timeserved": "13.89",
       "time_served": "13 years, 10 months",
+=======
+      "timeserved": "13.93",
+      "time_served": "13 years, 11 months",
+>>>>>>> master
       "offense_date": "5/2/2001",
       "offsense_date_calc": 37013,
       "offense": "CAPITAL MURDER MULTIPLE (DEATH)",
@@ -389,7 +471,11 @@
       "unit": "POLUNSKY",
       "received_date": "8/13/2004",
       "received_date_cacl": 38212,
+<<<<<<< HEAD
       "timeserved": "11.61",
+=======
+      "timeserved": "11.65",
+>>>>>>> master
       "time_served": "11 years, 7 months",
       "offense_date": "11/25/2003",
       "offsense_date_calc": 37950,
@@ -411,8 +497,13 @@
       "unit": "POLUNSKY",
       "received_date": "9/27/2010",
       "received_date_cacl": 40448,
+<<<<<<< HEAD
       "timeserved": "5.48",
       "time_served": "5 years, 5 months",
+=======
+      "timeserved": "5.52",
+      "time_served": "5 years, 6 months",
+>>>>>>> master
       "offense_date": "10/13/1984",
       "offsense_date_calc": 30968,
       "offense": "CAPITAL MURDER(DEATH)",
@@ -433,7 +524,11 @@
       "unit": "POLUNSKY",
       "received_date": "7/17/2003",
       "received_date_cacl": 37819,
+<<<<<<< HEAD
       "timeserved": "12.68",
+=======
+      "timeserved": "12.72",
+>>>>>>> master
       "time_served": "12 years, 8 months",
       "offense_date": "5/27/1979",
       "offsense_date_calc": 29002,
@@ -451,11 +546,15 @@
       "race": "White",
       "sex": "Male",
       "dob": "4/5/1955",
-      "age": "60",
+      "age": "61",
       "unit": "POLUNSKY",
       "received_date": "5/10/1991",
       "received_date_cacl": 33368,
+<<<<<<< HEAD
       "timeserved": "24.87",
+=======
+      "timeserved": "24.91",
+>>>>>>> master
       "time_served": "24 years, 10 months",
       "offense_date": "12/23/1987",
       "offsense_date_calc": 32134,
@@ -477,7 +576,11 @@
       "unit": "POLUNSKY",
       "received_date": "8/9/2001",
       "received_date_cacl": 37112,
+<<<<<<< HEAD
       "timeserved": "14.62",
+=======
+      "timeserved": "14.66",
+>>>>>>> master
       "time_served": "14 years, 7 months",
       "offense_date": "9/21/1993",
       "offsense_date_calc": 34233,
@@ -499,8 +602,13 @@
       "unit": "POLUNSKY",
       "received_date": "6/4/1991",
       "received_date_cacl": 33393,
+<<<<<<< HEAD
       "timeserved": "24.80",
       "time_served": "24 years, 9 months",
+=======
+      "timeserved": "24.84",
+      "time_served": "24 years, 10 months",
+>>>>>>> master
       "offense_date": "4/26/1990",
       "offsense_date_calc": 32989,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -521,7 +629,11 @@
       "unit": "POLUNSKY",
       "received_date": "5/14/1998",
       "received_date_cacl": 35929,
+<<<<<<< HEAD
       "timeserved": "17.86",
+=======
+      "timeserved": "17.90",
+>>>>>>> master
       "time_served": "17 years, 10 months",
       "offense_date": "5/25/1997",
       "offsense_date_calc": 35575,
@@ -543,8 +655,13 @@
       "unit": "POLUNSKY",
       "received_date": "9/2/2009",
       "received_date_cacl": 40058,
+<<<<<<< HEAD
       "timeserved": "6.55",
       "time_served": "6 years, 6 months",
+=======
+      "timeserved": "6.59",
+      "time_served": "6 years, 7 months",
+>>>>>>> master
       "offense_date": "6/19/2008",
       "offsense_date_calc": 39618,
       "offense": "CAPITAL MURDER/MULTI(DEATH)",
@@ -565,7 +682,11 @@
       "unit": "POLUNSKY",
       "received_date": "6/10/2013",
       "received_date_cacl": 41435,
+<<<<<<< HEAD
       "timeserved": "2.78",
+=======
+      "timeserved": "2.82",
+>>>>>>> master
       "time_served": "2 years, 9 months",
       "offense_date": "7/20/2011",
       "offsense_date_calc": 40744,
@@ -587,8 +708,13 @@
       "unit": "POLUNSKY",
       "received_date": "6/30/1994",
       "received_date_cacl": 34515,
+<<<<<<< HEAD
       "timeserved": "21.73",
       "time_served": "21 years, 8 months",
+=======
+      "timeserved": "21.77",
+      "time_served": "21 years, 9 months",
+>>>>>>> master
       "offense_date": "6/20/1992",
       "offsense_date_calc": 33775,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -609,7 +735,11 @@
       "unit": "POLUNSKY",
       "received_date": "9/18/1992",
       "received_date_cacl": 33865,
+<<<<<<< HEAD
       "timeserved": "23.51",
+=======
+      "timeserved": "23.55",
+>>>>>>> master
       "time_served": "23 years, 6 months",
       "offense_date": "5/16/1991",
       "offsense_date_calc": 33374,
@@ -631,8 +761,13 @@
       "unit": "POLUNSKY",
       "received_date": "6/25/1997",
       "received_date_cacl": 35606,
+<<<<<<< HEAD
       "timeserved": "18.74",
       "time_served": "18 years, 8 months",
+=======
+      "timeserved": "18.78",
+      "time_served": "18 years, 9 months",
+>>>>>>> master
       "offense_date": "7/30/1995",
       "offsense_date_calc": 34910,
       "offense": "CAPITAL MURDER \"DEATH\"",
@@ -649,12 +784,17 @@
       "race": "White",
       "sex": "Male",
       "dob": "3/30/1940",
-      "age": "75",
+      "age": "76",
       "unit": "POLUNSKY",
       "received_date": "3/6/1991",
       "received_date_cacl": 33303,
+<<<<<<< HEAD
       "timeserved": "25.05",
       "time_served": "25 years",
+=======
+      "timeserved": "25.09",
+      "time_served": "25 years, 1 month",
+>>>>>>> master
       "offense_date": "6/27/1990",
       "offsense_date_calc": 33051,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -671,11 +811,15 @@
       "race": "Black",
       "sex": "Male",
       "dob": 25656,
-      "age": "45",
+      "age": "46",
       "unit": "POLUNSKY",
       "received_date": "9/16/1998",
       "received_date_cacl": 36054,
+<<<<<<< HEAD
       "timeserved": "17.51",
+=======
+      "timeserved": "17.56",
+>>>>>>> master
       "time_served": "17 years, 6 months",
       "offense_date": "7/29/1997",
       "offsense_date_calc": 35640,
@@ -697,7 +841,11 @@
       "unit": "POLUNSKY",
       "received_date": "11/18/2005",
       "received_date_cacl": 38674,
+<<<<<<< HEAD
       "timeserved": "10.34",
+=======
+      "timeserved": "10.38",
+>>>>>>> master
       "time_served": "10 years, 4 months",
       "offense_date": "1/30/2004",
       "offsense_date_calc": 38016,
@@ -715,12 +863,17 @@
       "race": "Black",
       "sex": "Male",
       "dob": "4/5/1962",
-      "age": "53",
+      "age": "54",
       "unit": "POLUNSKY",
       "received_date": "12/01/1988",
       "received_date_cacl": 32478,
+<<<<<<< HEAD
       "timeserved": "27.30",
       "time_served": "27 years, 3 months",
+=======
+      "timeserved": "27.35",
+      "time_served": "27 years, 4 months",
+>>>>>>> master
       "offense_date": "8/27/1986",
       "offsense_date_calc": 31651,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -741,7 +894,11 @@
       "unit": "POLUNSKY",
       "received_date": "9/6/2012",
       "received_date_cacl": 41158,
+<<<<<<< HEAD
       "timeserved": "3.54",
+=======
+      "timeserved": "3.58",
+>>>>>>> master
       "time_served": "3 years, 6 months",
       "offense_date": "3/27/2011",
       "offsense_date_calc": 40629,
@@ -762,7 +919,11 @@
       "unit": "POLUNSKY",
       "received_date": "10/16/2015",
       "received_date_cacl": 42293,
+<<<<<<< HEAD
       "timeserved": "0.43",
+=======
+      "timeserved": "0.47",
+>>>>>>> master
       "time_served": "5 months",
       "offense_date": "10/31/2012",
       "offsense_date_calc": 41213,
@@ -784,7 +945,11 @@
       "unit": "POLUNSKY",
       "received_date": "7/10/1992",
       "received_date_cacl": 33795,
+<<<<<<< HEAD
       "timeserved": "23.70",
+=======
+      "timeserved": "23.74",
+>>>>>>> master
       "time_served": "23 years, 8 months",
       "offense_date": "1/3/1991",
       "offsense_date_calc": 33241,
@@ -806,8 +971,13 @@
       "unit": "POLUNSKY",
       "received_date": "11/02/2000",
       "received_date_cacl": 36832,
+<<<<<<< HEAD
       "timeserved": "15.38",
       "time_served": "15 years, 4 months",
+=======
+      "timeserved": "15.43",
+      "time_served": "15 years, 5 months",
+>>>>>>> master
       "offense_date": "7/11/1997",
       "offsense_date_calc": 35622,
       "offense": "CAPITAL MURDER \"DEATH\"",
@@ -828,7 +998,11 @@
       "unit": "POLUNSKY",
       "received_date": "11/8/2001",
       "received_date_cacl": 37203,
+<<<<<<< HEAD
       "timeserved": "14.37",
+=======
+      "timeserved": "14.41",
+>>>>>>> master
       "time_served": "14 years, 4 months",
       "offense_date": "11/4/2000",
       "offsense_date_calc": 36834,
@@ -850,8 +1024,13 @@
       "unit": "POLUNSKY",
       "received_date": "7/29/1998",
       "received_date_cacl": 36005,
+<<<<<<< HEAD
       "timeserved": "17.65",
       "time_served": "17 years, 7 months",
+=======
+      "timeserved": "17.69",
+      "time_served": "17 years, 8 months",
+>>>>>>> master
       "offense_date": "2/22/1997",
       "offsense_date_calc": 35483,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -872,7 +1051,11 @@
       "unit": "MOUNTAIN VIEW",
       "received_date": "6/7/2012",
       "received_date_cacl": 41067,
+<<<<<<< HEAD
       "timeserved": "3.79",
+=======
+      "timeserved": "3.83",
+>>>>>>> master
       "time_served": "3 years, 9 months",
       "offense_date": "6/18/2010",
       "offsense_date_calc": 40347,
@@ -894,7 +1077,11 @@
       "unit": "POLUNSKY",
       "received_date": "4/08/1999",
       "received_date_cacl": 36258,
+<<<<<<< HEAD
       "timeserved": "16.96",
+=======
+      "timeserved": "17.00",
+>>>>>>> master
       "time_served": "16 years, 11 months",
       "offense_date": "8/28/1991",
       "offsense_date_calc": 33478,
@@ -916,7 +1103,11 @@
       "unit": "POLUNSKY",
       "received_date": "12/12/2006",
       "received_date_cacl": 39063,
+<<<<<<< HEAD
       "timeserved": "9.28",
+=======
+      "timeserved": "9.32",
+>>>>>>> master
       "time_served": "9 years, 3 months",
       "offense_date": "4/28/2004",
       "offsense_date_calc": 38105,
@@ -938,8 +1129,13 @@
       "unit": "MOUNTAIN VIEW",
       "received_date": "3/7/2002",
       "received_date_cacl": 37322,
+<<<<<<< HEAD
       "timeserved": "14.04",
       "time_served": "14 years",
+=======
+      "timeserved": "14.08",
+      "time_served": "14 years, 1 month",
+>>>>>>> master
       "offense_date": "5/16/2001",
       "offsense_date_calc": 37027,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -956,12 +1152,17 @@
       "race": "Hispanic",
       "sex": "Male",
       "dob": 29679,
-      "age": "34",
+      "age": "35",
       "unit": "POLUNSKY",
       "received_date": "9/27/2005",
       "received_date_cacl": 38622,
+<<<<<<< HEAD
       "timeserved": "10.48",
       "time_served": "10 years, 5 months",
+=======
+      "timeserved": "10.52",
+      "time_served": "10 years, 6 months",
+>>>>>>> master
       "offense_date": "12/3/2003",
       "offsense_date_calc": 37958,
       "offense": "CAPITAL MURDER-OTHER FELONY (DEA",
@@ -982,8 +1183,13 @@
       "unit": "POLUNSKY",
       "received_date": "4/29/1997",
       "received_date_cacl": 35549,
+<<<<<<< HEAD
       "timeserved": "18.90",
       "time_served": "18 years, 10 months",
+=======
+      "timeserved": "18.94",
+      "time_served": "18 years, 11 months",
+>>>>>>> master
       "offense_date": "9/12/1995",
       "offsense_date_calc": 34954,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -1004,7 +1210,11 @@
       "unit": "POLUNSKY",
       "received_date": "10/18/2007",
       "received_date_cacl": 39373,
+<<<<<<< HEAD
       "timeserved": "8.43",
+=======
+      "timeserved": "8.47",
+>>>>>>> master
       "time_served": "8 years, 5 months",
       "offense_date": "7/8/2006",
       "offsense_date_calc": 38906,
@@ -1026,8 +1236,13 @@
       "unit": "POLUNSKY",
       "received_date": "3/31/2000",
       "received_date_cacl": 36616,
+<<<<<<< HEAD
       "timeserved": "15.98",
       "time_served": "15 years, 11 months",
+=======
+      "timeserved": "16.02",
+      "time_served": "16 years",
+>>>>>>> master
       "offense_date": "5/19/1998",
       "offsense_date_calc": 35934,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -1048,7 +1263,11 @@
       "unit": "POLUNSKY",
       "received_date": "6/14/1990",
       "received_date_cacl": 33038,
+<<<<<<< HEAD
       "timeserved": "25.77",
+=======
+      "timeserved": "25.81",
+>>>>>>> master
       "time_served": "25 years, 9 months",
       "offense_date": "8/29/1989",
       "offsense_date_calc": 32749,
@@ -1070,8 +1289,13 @@
       "unit": "POLUNSKY",
       "received_date": "11/23/2011",
       "received_date_cacl": 40870,
+<<<<<<< HEAD
       "timeserved": "4.33",
       "time_served": "4 years, 3 months",
+=======
+      "timeserved": "4.37",
+      "time_served": "4 years, 4 months",
+>>>>>>> master
       "offense_date": "2/4/2010",
       "offsense_date_calc": 40213,
       "offense": "CAPITAL MURDER(DEATH)",
@@ -1092,8 +1316,13 @@
       "unit": "POLUNSKY",
       "received_date": "2/4/2009",
       "received_date_cacl": 39848,
+<<<<<<< HEAD
       "timeserved": "7.13",
       "time_served": "7 years, 1 month",
+=======
+      "timeserved": "7.17",
+      "time_served": "7 years, 2 months",
+>>>>>>> master
       "offense_date": "3/12/2004",
       "offsense_date_calc": 38058,
       "offense": "CAPITAL MURDER(DEATH)",
@@ -1114,7 +1343,11 @@
       "unit": "POLUNSKY",
       "received_date": "10/8/2003",
       "received_date_cacl": 37902,
+<<<<<<< HEAD
       "timeserved": "12.45",
+=======
+      "timeserved": "12.50",
+>>>>>>> master
       "time_served": "12 years, 5 months",
       "offense_date": "4/6/2003",
       "offsense_date_calc": 37717,
@@ -1136,8 +1369,13 @@
       "unit": "POLUNSKY",
       "received_date": "11/1/2013",
       "received_date_cacl": 41579,
+<<<<<<< HEAD
       "timeserved": "2.39",
       "time_served": "2 years, 4 months",
+=======
+      "timeserved": "2.43",
+      "time_served": "2 years, 5 months",
+>>>>>>> master
       "offense_date": "9/30/1992",
       "offsense_date_calc": 33877,
       "offense": "CAPITAL MURDER(DEATH)",
@@ -1158,7 +1396,11 @@
       "unit": "POLUNSKY",
       "received_date": "6/7/2004",
       "received_date_cacl": 38145,
+<<<<<<< HEAD
       "timeserved": "11.79",
+=======
+      "timeserved": "11.83",
+>>>>>>> master
       "time_served": "11 years, 9 months",
       "offense_date": "1/19/2002",
       "offsense_date_calc": 37275,
@@ -1180,7 +1422,11 @@
       "unit": "POLUNSKY",
       "received_date": "11/13/2012",
       "received_date_cacl": 41226,
+<<<<<<< HEAD
       "timeserved": "3.35",
+=======
+      "timeserved": "3.39",
+>>>>>>> master
       "time_served": "3 years, 4 months",
       "offense_date": "3/28/2011",
       "offsense_date_calc": 40630,
@@ -1202,8 +1448,13 @@
       "unit": "POLUNSKY",
       "received_date": "3/3/2014",
       "received_date_cacl": 41701,
+<<<<<<< HEAD
       "timeserved": "2.05",
       "time_served": "2 years",
+=======
+      "timeserved": "2.09",
+      "time_served": "2 years, 1 month",
+>>>>>>> master
       "offense_date": "5/1/2009",
       "offsense_date_calc": 39934,
       "offense": "CAPITAL MURDER(DEATH)",
@@ -1224,8 +1475,13 @@
       "unit": "POLUNSKY",
       "received_date": "3/7/2014",
       "received_date_cacl": 41705,
+<<<<<<< HEAD
       "timeserved": "2.04",
       "time_served": "2 years",
+=======
+      "timeserved": "2.08",
+      "time_served": "2 years, 1 month",
+>>>>>>> master
       "offense_date": "4/6/2012",
       "offsense_date_calc": 41005,
       "offense": "CAPITAL MURDER(DEATH)",
@@ -1242,12 +1498,17 @@
       "race": "Black",
       "sex": "Male",
       "dob": 31871,
-      "age": "28",
+      "age": "29",
       "unit": "POLUNSKY",
       "received_date": "2/27/2009",
       "received_date_cacl": 39871,
+<<<<<<< HEAD
       "timeserved": "7.06",
       "time_served": "7 years",
+=======
+      "timeserved": "7.10",
+      "time_served": "7 years, 1 month",
+>>>>>>> master
       "offense_date": "4/6/2008",
       "offsense_date_calc": 39544,
       "offense": "CAPITAL MURDER(DEATH)",
@@ -1268,8 +1529,13 @@
       "unit": "POLUNSKY",
       "received_date": "11/21/2013",
       "received_date_cacl": 41599,
+<<<<<<< HEAD
       "timeserved": "2.33",
       "time_served": "2 years, 3 months",
+=======
+      "timeserved": "2.37",
+      "time_served": "2 years, 4 months",
+>>>>>>> master
       "offense_date": "9/6/2012",
       "offsense_date_calc": 41158,
       "offense": "CAPITAL MURDER(DEATH)",
@@ -1290,7 +1556,11 @@
       "unit": "POLUNSKY",
       "received_date": "7/18/2002",
       "received_date_cacl": 37455,
+<<<<<<< HEAD
       "timeserved": "13.68",
+=======
+      "timeserved": "13.72",
+>>>>>>> master
       "time_served": "13 years, 8 months",
       "offense_date": "6/4/2001",
       "offsense_date_calc": 37046,
@@ -1312,7 +1582,11 @@
       "unit": "POLUNSKY",
       "received_date": "7/17/1992",
       "received_date_cacl": 33802,
+<<<<<<< HEAD
       "timeserved": "23.68",
+=======
+      "timeserved": "23.72",
+>>>>>>> master
       "time_served": "23 years, 8 months",
       "offense_date": "8/10/1991",
       "offsense_date_calc": 33460,
@@ -1334,7 +1608,11 @@
       "unit": "POLUNSKY",
       "received_date": "12/18/1997",
       "received_date_cacl": 35782,
+<<<<<<< HEAD
       "timeserved": "18.26",
+=======
+      "timeserved": "18.30",
+>>>>>>> master
       "time_served": "18 years, 3 months",
       "offense_date": "1/24/1996",
       "offsense_date_calc": 35088,
@@ -1356,7 +1634,11 @@
       "unit": "POLUNSKY",
       "received_date": "10/16/2009",
       "received_date_cacl": 40102,
+<<<<<<< HEAD
       "timeserved": "6.43",
+=======
+      "timeserved": "6.47",
+>>>>>>> master
       "time_served": "6 years, 5 months",
       "offense_date": "8/24/2007",
       "offsense_date_calc": 39318,
@@ -1378,8 +1660,13 @@
       "unit": "POLUNSKY",
       "received_date": "12/5/2003",
       "received_date_cacl": 37960,
+<<<<<<< HEAD
       "timeserved": "12.30",
       "time_served": "12 years, 3 months",
+=======
+      "timeserved": "12.34",
+      "time_served": "12 years, 4 months",
+>>>>>>> master
       "offense_date": "10/31/2002",
       "offsense_date_calc": 37560,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -1400,8 +1687,13 @@
       "unit": "POLUNSKY",
       "received_date": "10/26/1977",
       "received_date_cacl": 28424,
+<<<<<<< HEAD
       "timeserved": "38.40",
       "time_served": "38 years, 4 months",
+=======
+      "timeserved": "38.44",
+      "time_served": "38 years, 5 months",
+>>>>>>> master
       "offense_date": "12/7/1976",
       "offsense_date_calc": 28101,
       "offense": "CAP MURDER (DEATH SENT)",
@@ -1422,8 +1714,13 @@
       "unit": "POLUNSKY",
       "received_date": "12/4/2003",
       "received_date_cacl": 37959,
+<<<<<<< HEAD
       "timeserved": "12.30",
       "time_served": "12 years, 3 months",
+=======
+      "timeserved": "12.34",
+      "time_served": "12 years, 4 months",
+>>>>>>> master
       "offense_date": "7/8/2002",
       "offsense_date_calc": 37445,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -1445,8 +1742,13 @@
       "unit": "POLUNSKY",
       "received_date": "6/24/1994",
       "received_date_cacl": 34509,
+<<<<<<< HEAD
       "timeserved": "21.74",
       "time_served": "21 years, 8 months",
+=======
+      "timeserved": "21.79",
+      "time_served": "21 years, 9 months",
+>>>>>>> master
       "offense_date": "1/4/1993",
       "offsense_date_calc": 33973,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -1467,8 +1769,13 @@
       "unit": "POLUNSKY",
       "received_date": "5/26/2011",
       "received_date_cacl": 40689,
+<<<<<<< HEAD
       "timeserved": "4.82",
       "time_served": "4 years, 9 months",
+=======
+      "timeserved": "4.87",
+      "time_served": "4 years, 10 months",
+>>>>>>> master
       "offense_date": "5/31/2009",
       "offsense_date_calc": 39964,
       "offense": "CAPITAL MURDER(DEATH)",
@@ -1489,8 +1796,13 @@
       "unit": "POLUNSKY",
       "received_date": "5/5/1999",
       "received_date_cacl": 36285,
+<<<<<<< HEAD
       "timeserved": "16.88",
       "time_served": "16 years, 10 months",
+=======
+      "timeserved": "16.92",
+      "time_served": "16 years, 11 months",
+>>>>>>> master
       "offense_date": "5/31/1998",
       "offsense_date_calc": 35946,
       "offense": "CAPITAL MURDER(DEATH)",
@@ -1511,8 +1823,13 @@
       "unit": "POLUNSKY",
       "received_date": "4/1/1998",
       "received_date_cacl": 35886,
+<<<<<<< HEAD
       "timeserved": "17.97",
       "time_served": "17 years, 11 months",
+=======
+      "timeserved": "18.02",
+      "time_served": "18 years",
+>>>>>>> master
       "offense_date": "2/21/1997",
       "offsense_date_calc": 35482,
       "offense": "CAPITAL MURDER(DEATH)",
@@ -1533,8 +1850,13 @@
       "unit": "POLUNSKY",
       "received_date": "2/26/1980",
       "received_date_cacl": 29277,
+<<<<<<< HEAD
       "timeserved": "36.07",
       "time_served": "36 years",
+=======
+      "timeserved": "36.11",
+      "time_served": "36 years, 1 month",
+>>>>>>> master
       "offense_date": "2/27/1979",
       "offsense_date_calc": 28913,
       "offense": "CAPT MURDER (DEATH)",
@@ -1555,8 +1877,13 @@
       "unit": "POLUNSKY",
       "received_date": "4/2/1999",
       "received_date_cacl": 36252,
+<<<<<<< HEAD
       "timeserved": "16.97",
       "time_served": "16 years, 11 months",
+=======
+      "timeserved": "17.01",
+      "time_served": "17 years",
+>>>>>>> master
       "offense_date": "1/29/1998",
       "offsense_date_calc": 35824,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -1578,7 +1905,11 @@
       "unit": "POLUNSKY",
       "received_date": "10/14/1993",
       "received_date_cacl": 34256,
+<<<<<<< HEAD
       "timeserved": "22.44",
+=======
+      "timeserved": "22.48",
+>>>>>>> master
       "time_served": "22 years, 5 months",
       "offense_date": "12/18/1991",
       "offsense_date_calc": 33590,
@@ -1600,8 +1931,13 @@
       "unit": "POLUNSKY",
       "received_date": "8/5/2004",
       "received_date_cacl": 38204,
+<<<<<<< HEAD
       "timeserved": "11.63",
       "time_served": "11 years, 7 months",
+=======
+      "timeserved": "11.67",
+      "time_served": "11 years, 8 months",
+>>>>>>> master
       "offense_date": "9/11/2003",
       "offsense_date_calc": 37875,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -1622,8 +1958,13 @@
       "unit": "POLUNSKY",
       "received_date": "5/3/1996",
       "received_date_cacl": 35188,
+<<<<<<< HEAD
       "timeserved": "19.89",
       "time_served": "19 years, 10 months",
+=======
+      "timeserved": "19.93",
+      "time_served": "19 years, 11 months",
+>>>>>>> master
       "offense_date": "11/9/1994",
       "offsense_date_calc": 34647,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -1644,8 +1985,13 @@
       "unit": "POLUNSKY",
       "received_date": "9/25/2003",
       "received_date_cacl": 37889,
+<<<<<<< HEAD
       "timeserved": "12.49",
       "time_served": "12 years, 5 months",
+=======
+      "timeserved": "12.53",
+      "time_served": "12 years, 6 months",
+>>>>>>> master
       "offense_date": "4/18/2002",
       "offsense_date_calc": 37364,
       "offense": "CAPITAL MURDER",
@@ -1666,7 +2012,11 @@
       "unit": "POLUNSKY",
       "received_date": "7/21/2004",
       "received_date_cacl": 38189,
+<<<<<<< HEAD
       "timeserved": "11.67",
+=======
+      "timeserved": "11.71",
+>>>>>>> master
       "time_served": "11 years, 8 months",
       "offense_date": "5/14/2003",
       "offsense_date_calc": 37755,
@@ -1688,8 +2038,13 @@
       "unit": "POLUNSKY",
       "received_date": "2/24/2004",
       "received_date_cacl": 38041,
+<<<<<<< HEAD
       "timeserved": "12.07",
       "time_served": "12 years",
+=======
+      "timeserved": "12.11",
+      "time_served": "12 years, 1 month",
+>>>>>>> master
       "offense_date": "12/11/2001",
       "offsense_date_calc": 37236,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -1710,8 +2065,13 @@
       "unit": "POLUNSKY",
       "received_date": "6/29/2007",
       "received_date_cacl": 39262,
+<<<<<<< HEAD
       "timeserved": "8.73",
       "time_served": "8 years, 8 months",
+=======
+      "timeserved": "8.77",
+      "time_served": "8 years, 9 months",
+>>>>>>> master
       "offense_date": "6/24/2005",
       "offsense_date_calc": 38527,
       "offense": "CAPITAL MURDER(DEATH)",
@@ -1732,7 +2092,11 @@
       "unit": "POLUNSKY",
       "received_date": "02/14/2003       ",
       "received_date_cacl": 37666,
+<<<<<<< HEAD
       "timeserved": "13.10",
+=======
+      "timeserved": "13.14",
+>>>>>>> master
       "time_served": "13 years, 1 month",
       "offense_date": "12/24/2000",
       "offsense_date_calc": 36884,
@@ -1754,7 +2118,11 @@
       "unit": "POLUNSKY",
       "received_date": "11/20/2006",
       "received_date_cacl": 39041,
+<<<<<<< HEAD
       "timeserved": "9.34",
+=======
+      "timeserved": "9.38",
+>>>>>>> master
       "time_served": "9 years, 4 months",
       "offense_date": "1/23/2005",
       "offsense_date_calc": 38375,
@@ -1776,8 +2144,13 @@
       "unit": "POLUNSKY",
       "received_date": "3/31/2005",
       "received_date_cacl": 38442,
+<<<<<<< HEAD
       "timeserved": "10.98",
       "time_served": "10 years, 11 months",
+=======
+      "timeserved": "11.02",
+      "time_served": "11 years",
+>>>>>>> master
       "offense_date": "1/5/2003",
       "offsense_date_calc": 37626,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -1798,7 +2171,11 @@
       "unit": "POLUNSKY",
       "received_date": "4/18/2000",
       "received_date_cacl": 36634,
+<<<<<<< HEAD
       "timeserved": "15.93",
+=======
+      "timeserved": "15.97",
+>>>>>>> master
       "time_served": "15 years, 11 months",
       "offense_date": "12/31/1998",
       "offsense_date_calc": 36160,
@@ -1820,8 +2197,13 @@
       "unit": "POLUNSKY",
       "received_date": "2/21/2001",
       "received_date_cacl": 36943,
+<<<<<<< HEAD
       "timeserved": "15.08",
       "time_served": "15 years",
+=======
+      "timeserved": "15.12",
+      "time_served": "15 years, 1 month",
+>>>>>>> master
       "offense_date": "12/13/1999",
       "offsense_date_calc": 36507,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -1842,7 +2224,11 @@
       "unit": "POLUNSKY",
       "received_date": "3/11/2010",
       "received_date_cacl": 40248,
+<<<<<<< HEAD
       "timeserved": "6.03",
+=======
+      "timeserved": "6.07",
+>>>>>>> master
       "time_served": "6 years",
       "offense_date": "10/6/2003",
       "offsense_date_calc": 37900,
@@ -1864,7 +2250,11 @@
       "unit": "JESTER IV",
       "received_date": "12/10/1998",
       "received_date_cacl": 36139,
+<<<<<<< HEAD
       "timeserved": "17.28",
+=======
+      "timeserved": "17.32",
+>>>>>>> master
       "time_served": "17 years, 3 months",
       "offense_date": "11/23/1996",
       "offsense_date_calc": 35392,
@@ -1886,8 +2276,13 @@
       "unit": "POLUNSKY",
       "received_date": "9/27/2006",
       "received_date_cacl": 38987,
+<<<<<<< HEAD
       "timeserved": "9.48",
       "time_served": "9 years, 5 months",
+=======
+      "timeserved": "9.52",
+      "time_served": "9 years, 6 months",
+>>>>>>> master
       "offense_date": "1/15/2001",
       "offsense_date_calc": 36906,
       "offense": "CAPITAL MURDER-DEATH",
@@ -1908,7 +2303,11 @@
       "unit": "POLUNSKY",
       "received_date": "12/11/1995",
       "received_date_cacl": 35044,
+<<<<<<< HEAD
       "timeserved": "20.28",
+=======
+      "timeserved": "20.32",
+>>>>>>> master
       "time_served": "20 years, 3 months",
       "offense_date": "4/21/1994",
       "offsense_date_calc": 34445,
@@ -1930,8 +2329,13 @@
       "unit": "POLUNSKY",
       "received_date": "1/28/2016",
       "received_date_cacl": 42397,
+<<<<<<< HEAD
       "timeserved": "0.15",
       "time_served": "1 month",
+=======
+      "timeserved": "0.19",
+      "time_served": "2 months",
+>>>>>>> master
       "offense_date": "5/28/2011",
       "offsense_date_calc": 40691,
       "offense": "CAPITAL MURDER-POLICE OFFICER",
@@ -1952,7 +2356,11 @@
       "unit": "POLUNSKY",
       "received_date": "5/8/2013",
       "received_date_cacl": 41402,
+<<<<<<< HEAD
       "timeserved": "2.87",
+=======
+      "timeserved": "2.91",
+>>>>>>> master
       "time_served": "2 years, 10 months",
       "offense_date": "3/14/2012",
       "offsense_date_calc": 40982,
@@ -1974,8 +2382,13 @@
       "unit": "POLUNSKY",
       "received_date": "11/22/2010",
       "received_date_cacl": 40504,
+<<<<<<< HEAD
       "timeserved": "5.33",
       "time_served": "5 years, 3 months",
+=======
+      "timeserved": "5.37",
+      "time_served": "5 years, 4 months",
+>>>>>>> master
       "offense_date": "9/22/2009",
       "offsense_date_calc": 40078,
       "offense": "CAPITAL MURDER MULTIPLE(DEATH)",
@@ -1996,8 +2409,13 @@
       "unit": "POLUNSKY",
       "received_date": "1/4/2001",
       "received_date_cacl": 36895,
+<<<<<<< HEAD
       "timeserved": "15.21",
       "time_served": "15 years, 2 months",
+=======
+      "timeserved": "15.25",
+      "time_served": "15 years, 3 months",
+>>>>>>> master
       "offense_date": "9/2/1999",
       "offsense_date_calc": 36405,
       "offense": "CAPITAL MURDER \"DEATH\"",
@@ -2018,8 +2436,13 @@
       "unit": "POLUNSKY",
       "received_date": "7/2/2012",
       "received_date_cacl": 41092,
+<<<<<<< HEAD
       "timeserved": "3.72",
       "time_served": "3 years, 8 months",
+=======
+      "timeserved": "3.76",
+      "time_served": "3 years, 9 months",
+>>>>>>> master
       "offense_date": "9/19/2010",
       "offsense_date_calc": 40440,
       "offense": "CAPITAL MURDER BY TERR THREAT",
@@ -2040,8 +2463,13 @@
       "unit": "POLUNSKY",
       "received_date": "6/26/2001",
       "received_date_cacl": 37068,
+<<<<<<< HEAD
       "timeserved": "14.74",
       "time_served": "14 years, 8 months",
+=======
+      "timeserved": "14.78",
+      "time_served": "14 years, 9 months",
+>>>>>>> master
       "offense_date": "6/2/2000",
       "offsense_date_calc": 36679,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -2062,7 +2490,11 @@
       "unit": "POLUNSKY",
       "received_date": "4/16/1997",
       "received_date_cacl": 35536,
+<<<<<<< HEAD
       "timeserved": "18.93",
+=======
+      "timeserved": "18.97",
+>>>>>>> master
       "time_served": "18 years, 11 months",
       "offense_date": "11/9/1994",
       "offsense_date_calc": 34647,
@@ -2084,7 +2516,11 @@
       "unit": "POLUNSKY",
       "received_date": "5/21/2002",
       "received_date_cacl": 37397,
+<<<<<<< HEAD
       "timeserved": "13.84",
+=======
+      "timeserved": "13.88",
+>>>>>>> master
       "time_served": "13 years, 10 months",
       "offense_date": "5/29/1999",
       "offsense_date_calc": 36309,
@@ -2106,7 +2542,11 @@
       "unit": "POLUNSKY",
       "received_date": "5/14/1999",
       "received_date_cacl": 36294,
+<<<<<<< HEAD
       "timeserved": "16.86",
+=======
+      "timeserved": "16.90",
+>>>>>>> master
       "time_served": "16 years, 10 months",
       "offense_date": "9/5/1998",
       "offsense_date_calc": 36043,
@@ -2128,7 +2568,11 @@
       "unit": "POLUNSKY",
       "received_date": "10/9/2015",
       "received_date_cacl": 42286,
+<<<<<<< HEAD
       "timeserved": "0.45",
+=======
+      "timeserved": "0.49",
+>>>>>>> master
       "time_served": "5 months",
       "offense_date": "10/20/2011",
       "offsense_date_calc": 40836,
@@ -2150,7 +2594,11 @@
       "unit": "POLUNSKY",
       "received_date": "5/11/2005",
       "received_date_cacl": 38483,
+<<<<<<< HEAD
       "timeserved": "10.86",
+=======
+      "timeserved": "10.90",
+>>>>>>> master
       "time_served": "10 years, 10 months",
       "offense_date": "10/28/2002",
       "offsense_date_calc": 37557,
@@ -2172,7 +2620,11 @@
       "unit": "POLUNSKY",
       "received_date": "06/12/2003       ",
       "received_date_cacl": 37784,
+<<<<<<< HEAD
       "timeserved": "12.78",
+=======
+      "timeserved": "12.82",
+>>>>>>> master
       "time_served": "12 years, 9 months",
       "offense_date": "12/24/2000",
       "offsense_date_calc": 36884,
@@ -2194,7 +2646,11 @@
       "unit": "POLUNSKY",
       "received_date": "11/19/2002",
       "received_date_cacl": 37579,
+<<<<<<< HEAD
       "timeserved": "13.34",
+=======
+      "timeserved": "13.38",
+>>>>>>> master
       "time_served": "13 years, 4 months",
       "offense_date": "11/7/2001",
       "offsense_date_calc": 37202,
@@ -2216,8 +2672,13 @@
       "unit": "POLUNSKY",
       "received_date": "10/22/2010",
       "received_date_cacl": 40473,
+<<<<<<< HEAD
       "timeserved": "5.42",
       "time_served": "5 years, 4 months",
+=======
+      "timeserved": "5.46",
+      "time_served": "5 years, 5 months",
+>>>>>>> master
       "offense_date": "10/24/2008",
       "offsense_date_calc": 39745,
       "offense": "CAPITAL MURDER(DEATH)",
@@ -2238,7 +2699,11 @@
       "unit": "POLUNSKY",
       "received_date": "6/13/2012",
       "received_date_cacl": 41073,
+<<<<<<< HEAD
       "timeserved": "3.77",
+=======
+      "timeserved": "3.81",
+>>>>>>> master
       "time_served": "3 years, 9 months",
       "offense_date": "3/17/2009",
       "offsense_date_calc": 39889,
@@ -2260,7 +2725,11 @@
       "unit": "POLUNSKY",
       "received_date": "12/19/2013",
       "received_date_cacl": 41627,
+<<<<<<< HEAD
       "timeserved": "2.26",
+=======
+      "timeserved": "2.30",
+>>>>>>> master
       "time_served": "2 years, 3 months",
       "offense_date": "1/14/2012",
       "offsense_date_calc": 40922,
@@ -2282,7 +2751,11 @@
       "unit": "POLUNSKY",
       "received_date": "2/9/1996",
       "received_date_cacl": 35104,
+<<<<<<< HEAD
       "timeserved": "20.11",
+=======
+      "timeserved": "20.16",
+>>>>>>> master
       "time_served": "20 years, 1 month",
       "offense_date": "9/19/1995",
       "offsense_date_calc": 34961,
@@ -2304,8 +2777,13 @@
       "unit": "POLUNSKY",
       "received_date": "11/3/1999",
       "received_date_cacl": 36467,
+<<<<<<< HEAD
       "timeserved": "16.38",
       "time_served": "16 years, 4 months",
+=======
+      "timeserved": "16.42",
+      "time_served": "16 years, 5 months",
+>>>>>>> master
       "offense_date": "5/22/1998",
       "offsense_date_calc": 35937,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -2326,7 +2804,11 @@
       "unit": "POLUNSKY",
       "received_date": "6/8/1994",
       "received_date_cacl": 34493,
+<<<<<<< HEAD
       "timeserved": "21.79",
+=======
+      "timeserved": "21.83",
+>>>>>>> master
       "time_served": "21 years, 9 months",
       "offense_date": "10/29/1993",
       "offsense_date_calc": 34271,
@@ -2348,7 +2830,11 @@
       "unit": "POLUNSKY",
       "received_date": "2/9/2010",
       "received_date_cacl": 40218,
+<<<<<<< HEAD
       "timeserved": "6.11",
+=======
+      "timeserved": "6.15",
+>>>>>>> master
       "time_served": "6 years, 1 month",
       "offense_date": "11/3/2006",
       "offsense_date_calc": 39024,
@@ -2370,8 +2856,13 @@
       "unit": "MOUNTAIN VIEW",
       "received_date": "3/27/1998",
       "received_date_cacl": 35881,
+<<<<<<< HEAD
       "timeserved": "17.99",
       "time_served": "17 years, 11 months",
+=======
+      "timeserved": "18.03",
+      "time_served": "18 years",
+>>>>>>> master
       "offense_date": "11/13/1996",
       "offsense_date_calc": 35382,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -2392,8 +2883,13 @@
       "unit": "POLUNSKY",
       "received_date": "4/26/2001",
       "received_date_cacl": 37007,
+<<<<<<< HEAD
       "timeserved": "14.90",
       "time_served": "14 years, 10 months",
+=======
+      "timeserved": "14.95",
+      "time_served": "14 years, 11 months",
+>>>>>>> master
       "offense_date": "5/12/2000",
       "offsense_date_calc": 36658,
       "offense": "CAPITAL MURDER \"DEATH\"",
@@ -2414,8 +2910,13 @@
       "unit": "POLUNSKY",
       "received_date": "6/29/2011",
       "received_date_cacl": 40723,
+<<<<<<< HEAD
       "timeserved": "4.73",
       "time_served": "4 years, 8 months",
+=======
+      "timeserved": "4.77",
+      "time_served": "4 years, 9 months",
+>>>>>>> master
       "offense_date": "12/17/2009",
       "offsense_date_calc": 40164,
       "offense": "CAPITAL MURDER(DEATH)",
@@ -2436,8 +2937,13 @@
       "unit": "POLUNSKY",
       "received_date": "8/5/2004",
       "received_date_cacl": 38204,
+<<<<<<< HEAD
       "timeserved": "11.63",
       "time_served": "11 years, 7 months",
+=======
+      "timeserved": "11.67",
+      "time_served": "11 years, 8 months",
+>>>>>>> master
       "offense_date": "10/25/2003",
       "offsense_date_calc": 37919,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -2458,7 +2964,11 @@
       "unit": "POLUNSKY",
       "received_date": "12/10/1997",
       "received_date_cacl": 35774,
+<<<<<<< HEAD
       "timeserved": "18.28",
+=======
+      "timeserved": "18.32",
+>>>>>>> master
       "time_served": "18 years, 3 months",
       "offense_date": "3/6/1987",
       "offsense_date_calc": 31842,
@@ -2480,8 +2990,13 @@
       "unit": "POLUNSKY",
       "received_date": "3/3/2004",
       "received_date_cacl": 38049,
+<<<<<<< HEAD
       "timeserved": "12.05",
       "time_served": "12 years",
+=======
+      "timeserved": "12.09",
+      "time_served": "12 years, 1 month",
+>>>>>>> master
       "offense_date": "2/14/1987",
       "offsense_date_calc": 31822,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -2502,7 +3017,11 @@
       "unit": "JESTER IV",
       "received_date": "4/19/2007",
       "received_date_cacl": 39191,
+<<<<<<< HEAD
       "timeserved": "8.93",
+=======
+      "timeserved": "8.97",
+>>>>>>> master
       "time_served": "8 years, 11 months",
       "offense_date": "12/5/2005",
       "offsense_date_calc": 38691,
@@ -2524,8 +3043,13 @@
       "unit": "POLUNSKY",
       "received_date": "6/23/2011",
       "received_date_cacl": 40717,
+<<<<<<< HEAD
       "timeserved": "4.75",
       "time_served": "4 years, 8 months",
+=======
+      "timeserved": "4.79",
+      "time_served": "4 years, 9 months",
+>>>>>>> master
       "offense_date": "4/11/2010",
       "offsense_date_calc": 40279,
       "offense": "CAPT MURDER(MULTI MURDER)(DEATH)",
@@ -2546,7 +3070,11 @@
       "unit": "POLUNSKY",
       "received_date": "6/14/2013",
       "received_date_cacl": 41439,
+<<<<<<< HEAD
       "timeserved": "2.77",
+=======
+      "timeserved": "2.81",
+>>>>>>> master
       "time_served": "2 years, 9 months",
       "offense_date": "11/24/1975",
       "offsense_date_calc": 27722,
@@ -2568,7 +3096,11 @@
       "unit": "POLUNSKY",
       "received_date": "11/10/1989",
       "received_date_cacl": 32822,
+<<<<<<< HEAD
       "timeserved": "26.36",
+=======
+      "timeserved": "26.40",
+>>>>>>> master
       "time_served": "26 years, 4 months",
       "offense_date": "7/19/1988",
       "offsense_date_calc": 32343,
@@ -2590,8 +3122,13 @@
       "unit": "POLUNSKY",
       "received_date": "12/5/2013",
       "received_date_cacl": 41613,
+<<<<<<< HEAD
       "timeserved": "2.29",
       "time_served": "2 years, 3 months",
+=======
+      "timeserved": "2.34",
+      "time_served": "2 years, 4 months",
+>>>>>>> master
       "offense_date": "5/20/2012",
       "offsense_date_calc": 41049,
       "offense": "CAPITAL MURDER DEATH",
@@ -2612,8 +3149,13 @@
       "unit": "POLUNSKY",
       "received_date": "7/2/2007",
       "received_date_cacl": 39265,
+<<<<<<< HEAD
       "timeserved": "8.72",
       "time_served": "8 years, 8 months",
+=======
+      "timeserved": "8.76",
+      "time_served": "8 years, 9 months",
+>>>>>>> master
       "offense_date": "6/18/2006",
       "offsense_date_calc": 38886,
       "offense": "CAPITAL MURDER(DEATH)",
@@ -2634,7 +3176,11 @@
       "unit": "POLUNSKY",
       "received_date": "3/16/2001",
       "received_date_cacl": 36966,
+<<<<<<< HEAD
       "timeserved": "15.02",
+=======
+      "timeserved": "15.06",
+>>>>>>> master
       "time_served": "15 years",
       "offense_date": "9/11/1999",
       "offsense_date_calc": 36414,
@@ -2656,7 +3202,11 @@
       "unit": "POLUNSKY",
       "received_date": "1/9/1992",
       "received_date_cacl": 33612,
+<<<<<<< HEAD
       "timeserved": "24.20",
+=======
+      "timeserved": "24.24",
+>>>>>>> master
       "time_served": "24 years, 2 months",
       "offense_date": "4/7/1991",
       "offsense_date_calc": 33335,
@@ -2678,7 +3228,11 @@
       "unit": "POLUNSKY",
       "received_date": "9/12/1978",
       "received_date_cacl": 28745,
+<<<<<<< HEAD
       "timeserved": "37.52",
+=======
+      "timeserved": "37.57",
+>>>>>>> master
       "time_served": "37 years, 6 months",
       "offense_date": "10/14/1977",
       "offsense_date_calc": 28412,
@@ -2700,7 +3254,11 @@
       "unit": "POLUNSKY",
       "received_date": "1/13/2005",
       "received_date_cacl": 38365,
+<<<<<<< HEAD
       "timeserved": "11.19",
+=======
+      "timeserved": "11.23",
+>>>>>>> master
       "time_served": "11 years, 2 months",
       "offense_date": "4/3/2003",
       "offsense_date_calc": 37714,
@@ -2722,8 +3280,13 @@
       "unit": "JESTER IV",
       "received_date": "7/5/1988",
       "received_date_cacl": 32329,
+<<<<<<< HEAD
       "timeserved": "27.71",
       "time_served": "27 years, 8 months",
+=======
+      "timeserved": "27.75",
+      "time_served": "27 years, 9 months",
+>>>>>>> master
       "offense_date": "5/28/1987",
       "offsense_date_calc": 31925,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -2744,8 +3307,13 @@
       "unit": "POLUNSKY",
       "received_date": "2/25/1999",
       "received_date_cacl": 36216,
+<<<<<<< HEAD
       "timeserved": "17.07",
       "time_served": "17 years",
+=======
+      "timeserved": "17.11",
+      "time_served": "17 years, 1 month",
+>>>>>>> master
       "offense_date": "6/7/1998",
       "offsense_date_calc": 35953,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -2766,7 +3334,11 @@
       "unit": "POLUNSKY",
       "received_date": "4/16/2010",
       "received_date_cacl": 40284,
+<<<<<<< HEAD
       "timeserved": "5.93",
+=======
+      "timeserved": "5.97",
+>>>>>>> master
       "time_served": "5 years, 11 months",
       "offense_date": "12/7/2008",
       "offsense_date_calc": 39789,
@@ -2788,7 +3360,11 @@
       "unit": "POLUNSKY",
       "received_date": "10/7/1994",
       "received_date_cacl": 34614,
+<<<<<<< HEAD
       "timeserved": "21.46",
+=======
+      "timeserved": "21.50",
+>>>>>>> master
       "time_served": "21 years, 5 months",
       "offense_date": "11/25/1992",
       "offsense_date_calc": 33933,
@@ -2810,7 +3386,11 @@
       "unit": "POLUNSKY",
       "received_date": "4/15/1987",
       "received_date_cacl": 31882,
+<<<<<<< HEAD
       "timeserved": "28.94",
+=======
+      "timeserved": "28.98",
+>>>>>>> master
       "time_served": "28 years, 11 months",
       "offense_date": "11/30/1986",
       "offsense_date_calc": 31746,
@@ -2832,8 +3412,13 @@
       "unit": "POLUNSKY",
       "received_date": "8/1/2014",
       "received_date_cacl": 41852,
+<<<<<<< HEAD
       "timeserved": "1.64",
       "time_served": "1 year, 7 months",
+=======
+      "timeserved": "1.68",
+      "time_served": "1 year, 8 months",
+>>>>>>> master
       "offense_date": "12/24/2012",
       "offsense_date_calc": 41267,
       "offense": "CAPITAL MURDER(MULT MURD)(DEATH)",
@@ -2853,7 +3438,11 @@
       "age": "39",
       "received_date": "6/9/2009",
       "received_date_cacl": 39973,
+<<<<<<< HEAD
       "timeserved": "6.78",
+=======
+      "timeserved": "6.83",
+>>>>>>> master
       "time_served": "6 years, 9 months",
       "offense_date": "4/4/2007",
       "offsense_date_calc": 39176,
@@ -2875,7 +3464,11 @@
       "unit": "POLUNSKY",
       "received_date": "12/13/2007",
       "received_date_cacl": 39429,
+<<<<<<< HEAD
       "timeserved": "8.27",
+=======
+      "timeserved": "8.31",
+>>>>>>> master
       "time_served": "8 years, 3 months",
       "offense_date": "11/13/2005",
       "offsense_date_calc": 38669,
@@ -2897,7 +3490,11 @@
       "unit": "POLUNSKY",
       "received_date": "10/19/2006",
       "received_date_cacl": 39009,
+<<<<<<< HEAD
       "timeserved": "9.42",
+=======
+      "timeserved": "9.46",
+>>>>>>> master
       "time_served": "9 years, 5 months",
       "offense_date": "5/21/2005",
       "offsense_date_calc": 38493,
@@ -2919,8 +3516,13 @@
       "unit": "POLUNSKY",
       "received_date": "7/25/2013",
       "received_date_cacl": 41480,
+<<<<<<< HEAD
       "timeserved": "2.66",
       "time_served": "2 years, 7 months",
+=======
+      "timeserved": "2.70",
+      "time_served": "2 years, 8 months",
+>>>>>>> master
       "offense_date": "3/28/2011",
       "offsense_date_calc": 40630,
       "offense": "CAPITAL MURDER(DEATH)",
@@ -2941,7 +3543,11 @@
       "unit": "MOUNTAIN VIEW",
       "received_date": "8/12/2008",
       "received_date_cacl": 39672,
+<<<<<<< HEAD
       "timeserved": "7.61",
+=======
+      "timeserved": "7.65",
+>>>>>>> master
       "time_served": "7 years, 7 months",
       "offense_date": "2/17/2007",
       "offsense_date_calc": 39130,
@@ -2963,8 +3569,13 @@
       "unit": "POLUNSKY",
       "received_date": "4/25/2006",
       "received_date_cacl": 38832,
+<<<<<<< HEAD
       "timeserved": "9.91",
       "time_served": "9 years, 10 months",
+=======
+      "timeserved": "9.95",
+      "time_served": "9 years, 11 months",
+>>>>>>> master
       "offense_date": "2/17/2005",
       "offsense_date_calc": 38400,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -2985,7 +3596,11 @@
       "unit": "POLUNSKY",
       "received_date": "11/17/1999",
       "received_date_cacl": 36481,
+<<<<<<< HEAD
       "timeserved": "16.34",
+=======
+      "timeserved": "16.39",
+>>>>>>> master
       "time_served": "16 years, 4 months",
       "offense_date": "12/7/1998",
       "offsense_date_calc": 36136,
@@ -3007,7 +3622,11 @@
       "unit": "POLUNSKY",
       "received_date": "12/8/2004",
       "received_date_cacl": 38329,
+<<<<<<< HEAD
       "timeserved": "11.29",
+=======
+      "timeserved": "11.33",
+>>>>>>> master
       "time_served": "11 years, 3 months",
       "offense_date": "5/11/2003",
       "offsense_date_calc": 37752,
@@ -3029,8 +3648,13 @@
       "unit": "POLUNSKY",
       "received_date": "1/29/1997",
       "received_date_cacl": 35459,
+<<<<<<< HEAD
       "timeserved": "19.14",
       "time_served": "19 years, 1 month",
+=======
+      "timeserved": "19.18",
+      "time_served": "19 years, 2 months",
+>>>>>>> master
       "offense_date": "2/19/1995",
       "offsense_date_calc": 34749,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -3051,7 +3675,11 @@
       "unit": "POLUNSKY",
       "received_date": "7/18/1984",
       "received_date_cacl": 30881,
+<<<<<<< HEAD
       "timeserved": "31.68",
+=======
+      "timeserved": "31.72",
+>>>>>>> master
       "time_served": "31 years, 8 months",
       "offense_date": "7/13/1983",
       "offsense_date_calc": 30510,
@@ -3072,7 +3700,11 @@
       "age": "62",
       "received_date": "8/12/1992",
       "received_date_cacl": 33828,
+<<<<<<< HEAD
       "timeserved": "23.61",
+=======
+      "timeserved": "23.65",
+>>>>>>> master
       "time_served": "23 years, 3 months",
       "offense_date": "1/17/1991",
       "offsense_date_calc": 33255,
@@ -3093,7 +3725,11 @@
       "unit": "POLUNSKY",
       "received_date": "4/20/2004",
       "received_date_cacl": 38097,
+<<<<<<< HEAD
       "timeserved": "11.92",
+=======
+      "timeserved": "11.96",
+>>>>>>> master
       "time_served": "11 years, 11 months",
       "offense_date": "3/6/2003",
       "offsense_date_calc": 37686,
@@ -3115,7 +3751,11 @@
       "unit": "POLUNSKY",
       "received_date": "5/16/2008",
       "received_date_cacl": 39584,
+<<<<<<< HEAD
       "timeserved": "7.85",
+=======
+      "timeserved": "7.89",
+>>>>>>> master
       "time_served": "7 years, 10 months",
       "offense_date": "5/17/2007",
       "offsense_date_calc": 39219,
@@ -3137,8 +3777,13 @@
       "unit": "POLUNSKY",
       "received_date": "9/29/1992",
       "received_date_cacl": 33876,
+<<<<<<< HEAD
       "timeserved": "23.48",
       "time_served": "23 years, 5 months",
+=======
+      "timeserved": "23.52",
+      "time_served": "23 years, 6 months",
+>>>>>>> master
       "offense_date": "11/15/1991",
       "offsense_date_calc": 33557,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -3158,7 +3803,11 @@
       "age": "52",
       "received_date": "11/18/1987",
       "received_date_cacl": 32099,
+<<<<<<< HEAD
       "timeserved": "28.34",
+=======
+      "timeserved": "28.38",
+>>>>>>> master
       "time_served": "28 years, 4 months",
       "offense_date": "3/11/1986",
       "offsense_date_calc": 31482,
@@ -3180,7 +3829,11 @@
       "unit": "POLUNSKY",
       "received_date": "3/9/2009",
       "received_date_cacl": 39881,
+<<<<<<< HEAD
       "timeserved": "7.04",
+=======
+      "timeserved": "7.08",
+>>>>>>> master
       "time_served": "7 years",
       "offense_date": "3/4/2007",
       "offsense_date_calc": 39145,
@@ -3202,7 +3855,11 @@
       "unit": "POLUNSKY",
       "received_date": "9/13/1996",
       "received_date_cacl": 35321,
+<<<<<<< HEAD
       "timeserved": "19.52",
+=======
+      "timeserved": "19.56",
+>>>>>>> master
       "time_served": "19 years, 6 months",
       "offense_date": "1/1/1996",
       "offsense_date_calc": 35065,
@@ -3224,7 +3881,11 @@
       "unit": "POLUNSKY",
       "received_date": "9/8/2005",
       "received_date_cacl": 38603,
+<<<<<<< HEAD
       "timeserved": "10.54",
+=======
+      "timeserved": "10.58",
+>>>>>>> master
       "time_served": "10 years, 6 months",
       "offense_date": "1/5/2003",
       "offsense_date_calc": 37626,
@@ -3246,7 +3907,11 @@
       "unit": "POLUNSKY",
       "received_date": "5/21/1996",
       "received_date_cacl": 35206,
+<<<<<<< HEAD
       "timeserved": "19.84",
+=======
+      "timeserved": "19.88",
+>>>>>>> master
       "time_served": "19 years, 10 months",
       "offense_date": "9/1/1994",
       "offsense_date_calc": 34578,
@@ -3268,8 +3933,13 @@
       "unit": "POLUNSKY",
       "received_date": "7/1/2005",
       "received_date_cacl": 38534,
+<<<<<<< HEAD
       "timeserved": "10.72",
       "time_served": "10 years, 8 months",
+=======
+      "timeserved": "10.77",
+      "time_served": "10 years, 9 months",
+>>>>>>> master
       "offense_date": "3/18/2004",
       "offsense_date_calc": 38064,
       "offense": "CAPITAL MURDER -DEATH",
@@ -3290,7 +3960,11 @@
       "unit": "POLUNSKY",
       "received_date": "6/11/2010",
       "received_date_cacl": 40340,
+<<<<<<< HEAD
       "timeserved": "5.78",
+=======
+      "timeserved": "5.82",
+>>>>>>> master
       "time_served": "5 years, 9 months",
       "offense_date": "12/2/2008",
       "offsense_date_calc": 39784,
@@ -3312,7 +3986,11 @@
       "unit": "POLUNSKY",
       "received_date": "11/19/2009",
       "received_date_cacl": 40136,
+<<<<<<< HEAD
       "timeserved": "6.34",
+=======
+      "timeserved": "6.38",
+>>>>>>> master
       "time_served": "6 years, 4 months",
       "offense_date": "6/1/2008",
       "offsense_date_calc": 39600,
@@ -3334,8 +4012,13 @@
       "unit": "JESTER IV",
       "received_date": "5/7/1987",
       "received_date_cacl": 31904,
+<<<<<<< HEAD
       "timeserved": "28.88",
       "time_served": "28 years, 10 months",
+=======
+      "timeserved": "28.92",
+      "time_served": "28 years, 11 months",
+>>>>>>> master
       "offense_date": "8/16/1984",
       "offsense_date_calc": 30910,
       "offense": "CAPT MURDER (DEATH)",
@@ -3356,8 +4039,13 @@
       "unit": "POLUNSKY",
       "received_date": "7/24/1980",
       "received_date_cacl": 29426,
+<<<<<<< HEAD
       "timeserved": "35.66",
       "time_served": "35 years, 7 months",
+=======
+      "timeserved": "35.70",
+      "time_served": "35 years, 8 months",
+>>>>>>> master
       "offense_date": "4/25/1980",
       "offsense_date_calc": 29336,
       "offense": "CAP MURDER (DEATH)",
@@ -3378,7 +4066,11 @@
       "unit": "POLUNSKY",
       "received_date": "7/9/2013",
       "received_date_cacl": 41464,
+<<<<<<< HEAD
       "timeserved": "2.70",
+=======
+      "timeserved": "2.74",
+>>>>>>> master
       "time_served": "2 years, 8 months",
       "offense_date": "8/22/2011",
       "offsense_date_calc": 40777,
@@ -3400,8 +4092,13 @@
       "unit": "POLUNSKY",
       "received_date": "5/23/2011",
       "received_date_cacl": 40686,
+<<<<<<< HEAD
       "timeserved": "4.83",
       "time_served": "4 years, 9 months",
+=======
+      "timeserved": "4.87",
+      "time_served": "4 years, 10 months",
+>>>>>>> master
       "offense_date": "1/29/2008",
       "offsense_date_calc": 39476,
       "offense": "CAPITAL MURDER(DEATH)",
@@ -3422,8 +4119,13 @@
       "unit": "POLUNSKY",
       "received_date": "7/26/2001",
       "received_date_cacl": 37098,
+<<<<<<< HEAD
       "timeserved": "14.66",
       "time_served": "14 years, 7 months",
+=======
+      "timeserved": "14.70",
+      "time_served": "14 years, 8 months",
+>>>>>>> master
       "offense_date": "10/4/2000",
       "offsense_date_calc": 36803,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -3444,7 +4146,11 @@
       "unit": "POLUNSKY",
       "received_date": "8/18/1998",
       "received_date_cacl": 36025,
+<<<<<<< HEAD
       "timeserved": "17.59",
+=======
+      "timeserved": "17.63",
+>>>>>>> master
       "time_served": "17 years, 7 months",
       "offense_date": "9/19/1997",
       "offsense_date_calc": 35692,
@@ -3466,7 +4172,11 @@
       "unit": "POLUNSKY",
       "received_date": "11/20/2003",
       "received_date_cacl": 37945,
+<<<<<<< HEAD
       "timeserved": "12.34",
+=======
+      "timeserved": "12.38",
+>>>>>>> master
       "time_served": "12 years, 4 months",
       "offense_date": "12/24/2000",
       "offsense_date_calc": 36884,
@@ -3488,7 +4198,11 @@
       "unit": "POLUNSKY",
       "received_date": "10/16/2012",
       "received_date_cacl": 41198,
+<<<<<<< HEAD
       "timeserved": "3.43",
+=======
+      "timeserved": "3.47",
+>>>>>>> master
       "time_served": "3 years, 5 months",
       "offense_date": "3/3/2011",
       "offsense_date_calc": 40605,
@@ -3510,7 +4224,11 @@
       "unit": "POLUNSKY",
       "received_date": "12/12/2008",
       "received_date_cacl": 39794,
+<<<<<<< HEAD
       "timeserved": "7.27",
+=======
+      "timeserved": "7.32",
+>>>>>>> master
       "time_served": "7 years, 3 months",
       "offense_date": "8/24/2005",
       "offsense_date_calc": 38588,
@@ -3532,8 +4250,13 @@
       "unit": "POLUNSKY",
       "received_date": "6/25/1987",
       "received_date_cacl": 31953,
+<<<<<<< HEAD
       "timeserved": "28.74",
       "time_served": "28 years, 8 months",
+=======
+      "timeserved": "28.78",
+      "time_served": "28 years, 9 months",
+>>>>>>> master
       "offense_date": "11/12/1986",
       "offsense_date_calc": 31728,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -3554,7 +4277,11 @@
       "unit": "POLUNSKY",
       "received_date": "5/15/2003",
       "received_date_cacl": 37756,
+<<<<<<< HEAD
       "timeserved": "12.85",
+=======
+      "timeserved": "12.90",
+>>>>>>> master
       "time_served": "12 years, 10 months",
       "offense_date": "8/4/2002",
       "offsense_date_calc": 37472,
@@ -3576,8 +4303,13 @@
       "unit": "POLUNSKY",
       "received_date": "9/25/1995",
       "received_date_cacl": 34967,
+<<<<<<< HEAD
       "timeserved": "20.49",
       "time_served": "20 years, 5 months",
+=======
+      "timeserved": "20.53",
+      "time_served": "20 years, 6 months",
+>>>>>>> master
       "offense_date": "9/8/1992",
       "offsense_date_calc": 33855,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -3598,7 +4330,11 @@
       "unit": "POLUNSKY",
       "received_date": "10/20/1999",
       "received_date_cacl": 36453,
+<<<<<<< HEAD
       "timeserved": "16.42",
+=======
+      "timeserved": "16.46",
+>>>>>>> master
       "time_served": "16 years, 5 months",
       "offense_date": "9/10/1998",
       "offsense_date_calc": 36048,
@@ -3620,8 +4356,13 @@
       "unit": "POLUNSKY",
       "received_date": "5/2/2014",
       "received_date_cacl": 41761,
+<<<<<<< HEAD
       "timeserved": "1.89",
       "time_served": "1 year, 10 months",
+=======
+      "timeserved": "1.93",
+      "time_served": "1 year, 11 months",
+>>>>>>> master
       "offense_date": "9/23/2012",
       "offsense_date_calc": 41175,
       "offense": "CAPITAL MURDER(DEATH)",
@@ -3642,7 +4383,11 @@
       "unit": "POLUNSKY",
       "received_date": "4/16/2014",
       "received_date_cacl": 41745,
+<<<<<<< HEAD
       "timeserved": "1.93",
+=======
+      "timeserved": "1.97",
+>>>>>>> master
       "time_served": "1 year, 11 months",
       "offense_date": "5/20/2011",
       "offsense_date_calc": 40683,
@@ -3664,8 +4409,13 @@
       "unit": "POLUNSKY",
       "received_date": "3/30/2005",
       "received_date_cacl": 38441,
+<<<<<<< HEAD
       "timeserved": "10.98",
       "time_served": "10 years, 11 months",
+=======
+      "timeserved": "11.02",
+      "time_served": "11 years",
+>>>>>>> master
       "offense_date": "2/26/2004",
       "offsense_date_calc": 38043,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -3687,8 +4437,13 @@
       "unit": "POLUNSKY",
       "received_date": "11/4/2002",
       "received_date_cacl": 37564,
+<<<<<<< HEAD
       "timeserved": "13.38",
       "time_served": "13 years, 4 months",
+=======
+      "timeserved": "13.42",
+      "time_served": "13 years, 5 months",
+>>>>>>> master
       "offense_date": "4/24/1999",
       "offsense_date_calc": 36274,
       "offense": "CAPITAL MURDER",
@@ -3709,8 +4464,13 @@
       "unit": "POLUNSKY",
       "received_date": "04/30/2002       ",
       "received_date_cacl": 37376,
+<<<<<<< HEAD
       "timeserved": "13.89",
       "time_served": "13 years, 10 months",
+=======
+      "timeserved": "13.94",
+      "time_served": "13 years, 11 months",
+>>>>>>> master
       "offense_date": "12/17/1999",
       "offsense_date_calc": 36511,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -3732,8 +4492,13 @@
       "unit": "POLUNSKY",
       "received_date": "8/2/1996",
       "received_date_cacl": 35279,
+<<<<<<< HEAD
       "timeserved": "19.64",
       "time_served": "19 years, 7 months",
+=======
+      "timeserved": "19.68",
+      "time_served": "19 years, 8 months",
+>>>>>>> master
       "offense_date": "11/9/1994",
       "offsense_date_calc": 34647,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -3754,8 +4519,13 @@
       "unit": "JESTER IV",
       "received_date": "7/25/1988",
       "received_date_cacl": 32349,
+<<<<<<< HEAD
       "timeserved": "27.66",
       "time_served": "27 years, 7 months",
+=======
+      "timeserved": "27.70",
+      "time_served": "27 years, 8 months",
+>>>>>>> master
       "offense_date": "11/1/1987",
       "offsense_date_calc": 32082,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -3776,8 +4546,13 @@
       "unit": "POLUNSKY",
       "received_date": "6/30/1994",
       "received_date_cacl": 34515,
+<<<<<<< HEAD
       "timeserved": "21.73",
       "time_served": "21 years, 8 months",
+=======
+      "timeserved": "21.77",
+      "time_served": "21 years, 9 months",
+>>>>>>> master
       "offense_date": "10/15/1992",
       "offsense_date_calc": 33892,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -3798,8 +4573,13 @@
       "unit": "POLUNSKY",
       "received_date": "1/31/2007",
       "received_date_cacl": 39113,
+<<<<<<< HEAD
       "timeserved": "9.14",
       "time_served": "9 years, 1 month",
+=======
+      "timeserved": "9.18",
+      "time_served": "9 years, 2 months",
+>>>>>>> master
       "offense_date": "8/24/2005",
       "offsense_date_calc": 38588,
       "offense": "CAPITAL MURDER",
@@ -3820,7 +4600,11 @@
       "unit": "POLUNSKY",
       "received_date": "2/13/2009",
       "received_date_cacl": 39857,
+<<<<<<< HEAD
       "timeserved": "7.10",
+=======
+      "timeserved": "7.14",
+>>>>>>> master
       "time_served": "7 years, 1 month",
       "offense_date": "7/19/2004",
       "offsense_date_calc": 38187,
@@ -3842,8 +4626,13 @@
       "unit": "POLUNSKY",
       "received_date": "12/23/2004",
       "received_date_cacl": 38344,
+<<<<<<< HEAD
       "timeserved": "11.24",
       "time_served": "11 years, 2 months",
+=======
+      "timeserved": "11.29",
+      "time_served": "11 years, 3 months",
+>>>>>>> master
       "offense_date": "1/5/2003",
       "offsense_date_calc": 37626,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -3864,8 +4653,13 @@
       "unit": "POLUNSKY",
       "received_date": "5/6/1993",
       "received_date_cacl": 34095,
+<<<<<<< HEAD
       "timeserved": "22.88",
       "time_served": "22 years, 10 months",
+=======
+      "timeserved": "22.92",
+      "time_served": "22 years, 11 months",
+>>>>>>> master
       "offense_date": "2/7/1992",
       "offsense_date_calc": 33641,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -3886,8 +4680,13 @@
       "unit": "POLUNSKY",
       "received_date": "1/4/2001",
       "received_date_cacl": 36895,
+<<<<<<< HEAD
       "timeserved": "15.21",
       "time_served": "15 years, 2 months",
+=======
+      "timeserved": "15.25",
+      "time_served": "15 years, 3 months",
+>>>>>>> master
       "offense_date": "11/16/1999",
       "offsense_date_calc": 36480,
       "offense": "CAPITAL MURDER \"DEATH\"",
@@ -3908,8 +4707,13 @@
       "unit": "POLUNSKY",
       "received_date": "5/29/1998",
       "received_date_cacl": 35944,
+<<<<<<< HEAD
       "timeserved": "17.82",
       "time_served": "17 years, 9 months",
+=======
+      "timeserved": "17.86",
+      "time_served": "17 years, 10 months",
+>>>>>>> master
       "offense_date": "4/23/1996",
       "offsense_date_calc": 35178,
       "offense": "CAPITAL MURDER(DEATH)",
@@ -3930,7 +4734,11 @@
       "unit": "POLUNSKY",
       "received_date": "11/20/2003",
       "received_date_cacl": 37945,
+<<<<<<< HEAD
       "timeserved": "12.34",
+=======
+      "timeserved": "12.38",
+>>>>>>> master
       "time_served": "12 years, 4 months",
       "offense_date": "11/18/2001",
       "offsense_date_calc": 37213,
@@ -3952,7 +4760,11 @@
       "unit": "POLUNSKY",
       "received_date": "5/21/2004",
       "received_date_cacl": 38128,
+<<<<<<< HEAD
       "timeserved": "11.84",
+=======
+      "timeserved": "11.88",
+>>>>>>> master
       "time_served": "11 years, 10 months",
       "offense_date": "3/2/2003",
       "offsense_date_calc": 37682,
@@ -3974,8 +4786,13 @@
       "unit": "POLUNSKY",
       "received_date": "12/31/1992",
       "received_date_cacl": 33969,
+<<<<<<< HEAD
       "timeserved": "23.22",
       "time_served": "23 years, 2 months",
+=======
+      "timeserved": "23.26",
+      "time_served": "23 years, 3 months",
+>>>>>>> master
       "offense_date": "9/13/1991",
       "offsense_date_calc": 33494,
       "offense": "CAPITAL MURDER",
@@ -3996,7 +4813,11 @@
       "unit": "POLUNSKY",
       "received_date": "5/19/2014",
       "received_date_cacl": 41778,
+<<<<<<< HEAD
       "timeserved": "1.84",
+=======
+      "timeserved": "1.88",
+>>>>>>> master
       "time_served": "1 year, 10 months",
       "offense_date": "5/1/2013",
       "offsense_date_calc": 41395,
@@ -4018,8 +4839,13 @@
       "unit": "JESTER IV",
       "received_date": "2/4/1976",
       "received_date_cacl": 27794,
+<<<<<<< HEAD
       "timeserved": "40.13",
       "time_served": "40 years, 1 month",
+=======
+      "timeserved": "40.17",
+      "time_served": "40 years, 2 months",
+>>>>>>> master
       "offense_date": "12/11/1974",
       "offsense_date_calc": 27374,
       "offense": "CAP MURDER (DEATH SENT)",
@@ -4040,7 +4866,11 @@
       "unit": "POLUNSKY",
       "received_date": "9/15/1999",
       "received_date_cacl": 36418,
+<<<<<<< HEAD
       "timeserved": "16.52",
+=======
+      "timeserved": "16.56",
+>>>>>>> master
       "time_served": "16 years, 6 months",
       "offense_date": "12/25/1997",
       "offsense_date_calc": 35789,
@@ -4062,8 +4892,13 @@
       "unit": "POLUNSKY",
       "received_date": "6/2/1994",
       "received_date_cacl": 34487,
+<<<<<<< HEAD
       "timeserved": "21.80",
       "time_served": "21 years, 9 months",
+=======
+      "timeserved": "21.85",
+      "time_served": "21 years, 10 months",
+>>>>>>> master
       "offense_date": "7/9/1993",
       "offsense_date_calc": 34159,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -4080,12 +4915,17 @@
       "race": "Black",
       "sex": "Male",
       "dob": "3/31/1967",
-      "age": "48",
+      "age": "49",
       "unit": "POLUNSKY",
       "received_date": "12/29/1988",
       "received_date_cacl": 32506,
+<<<<<<< HEAD
       "timeserved": "27.23",
       "time_served": "27 years, 2 months",
+=======
+      "timeserved": "27.27",
+      "time_served": "27 years, 3 months",
+>>>>>>> master
       "offense_date": "5/3/1987",
       "offsense_date_calc": 31900,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -4106,8 +4946,13 @@
       "unit": "POLUNSKY",
       "received_date": "2/21/2003",
       "received_date_cacl": 37673,
+<<<<<<< HEAD
       "timeserved": "13.08",
       "time_served": "13 years",
+=======
+      "timeserved": "13.12",
+      "time_served": "13 years, 1 month",
+>>>>>>> master
       "offense_date": "1/31/2002",
       "offsense_date_calc": 37287,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -4129,8 +4974,13 @@
       "unit": "POLUNSKY",
       "received_date": "2/27/1991",
       "received_date_cacl": 33296,
+<<<<<<< HEAD
       "timeserved": "25.07",
       "time_served": "25 years",
+=======
+      "timeserved": "25.11",
+      "time_served": "25 years, 1 month",
+>>>>>>> master
       "offense_date": "8/19/1989",
       "offsense_date_calc": 32739,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -4151,8 +5001,13 @@
       "unit": "POLUNSKY",
       "received_date": "3/23/2011",
       "received_date_cacl": 40625,
+<<<<<<< HEAD
       "timeserved": "5.00",
       "time_served": "4 years, 11 months",
+=======
+      "timeserved": "5.04",
+      "time_served": "5 years",
+>>>>>>> master
       "offense_date": "9/20/2009",
       "offsense_date_calc": 40076,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -4173,7 +5028,11 @@
       "unit": "POLUNSKY",
       "received_date": "12/16/1998",
       "received_date_cacl": 36145,
+<<<<<<< HEAD
       "timeserved": "17.26",
+=======
+      "timeserved": "17.31",
+>>>>>>> master
       "time_served": "17 years, 3 months",
       "offense_date": "11/26/1994",
       "offsense_date_calc": 34664,
@@ -4195,8 +5054,13 @@
       "unit": "JESTER IV",
       "received_date": "1/30/2012",
       "received_date_cacl": 40938,
+<<<<<<< HEAD
       "timeserved": "4.14",
       "time_served": "4 years, 1 month",
+=======
+      "timeserved": "4.18",
+      "time_served": "4 years, 2 months",
+>>>>>>> master
       "offense_date": "2/23/2010",
       "offsense_date_calc": 40232,
       "offense": "CAPITAL MURDER(DEATH)",
@@ -4213,11 +5077,15 @@
       "race": "Hispanic",
       "sex": "Male",
       "dob": 29306,
-      "age": "35",
+      "age": "36",
       "unit": "POLUNSKY",
       "received_date": "5/14/2008",
       "received_date_cacl": 39582,
+<<<<<<< HEAD
       "timeserved": "7.85",
+=======
+      "timeserved": "7.90",
+>>>>>>> master
       "time_served": "7 years, 10 months",
       "offense_date": "9/13/2005",
       "offsense_date_calc": 38608,
@@ -4239,7 +5107,11 @@
       "unit": "MOUNTAIN VIEW",
       "received_date": "2/5/1997",
       "received_date_cacl": 35466,
+<<<<<<< HEAD
       "timeserved": "19.12",
+=======
+      "timeserved": "19.16",
+>>>>>>> master
       "time_served": "19 years, 1 month",
       "offense_date": "6/6/1996",
       "offsense_date_calc": 35222,
@@ -4261,8 +5133,13 @@
       "unit": "POLUNSKY",
       "received_date": "11/24/2003",
       "received_date_cacl": 37949,
+<<<<<<< HEAD
       "timeserved": "12.33",
       "time_served": "12 years, 3 months",
+=======
+      "timeserved": "12.37",
+      "time_served": "12 years, 4 months",
+>>>>>>> master
       "offense_date": "3/11/2003",
       "offsense_date_calc": 37691,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -4283,7 +5160,11 @@
       "unit": "POLUNSKY",
       "received_date": "7/16/2008",
       "received_date_cacl": 39645,
+<<<<<<< HEAD
       "timeserved": "7.68",
+=======
+      "timeserved": "7.72",
+>>>>>>> master
       "time_served": "7 years, 8 months",
       "offense_date": "3/23/2007",
       "offsense_date_calc": 39164,
@@ -4305,8 +5186,13 @@
       "unit": "POLUNSKY",
       "received_date": "5/4/1995",
       "received_date_cacl": 34823,
+<<<<<<< HEAD
       "timeserved": "20.88",
       "time_served": "20 years, 10 months",
+=======
+      "timeserved": "20.93",
+      "time_served": "20 years, 11 months",
+>>>>>>> master
       "offense_date": "7/14/1992",
       "offsense_date_calc": 33799,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -4328,7 +5214,11 @@
       "unit": "POLUNSKY",
       "received_date": "11/16/2005",
       "received_date_cacl": 38672,
+<<<<<<< HEAD
       "timeserved": "10.35",
+=======
+      "timeserved": "10.39",
+>>>>>>> master
       "time_served": "10 years, 4 months",
       "offense_date": "1/29/2003",
       "offsense_date_calc": 37650,
@@ -4350,8 +5240,13 @@
       "unit": "POLUNSKY",
       "received_date": "2/26/2003",
       "received_date_cacl": 37678,
+<<<<<<< HEAD
       "timeserved": "13.07",
       "time_served": "13 years",
+=======
+      "timeserved": "13.11",
+      "time_served": "13 years, 1 month",
+>>>>>>> master
       "offense_date": "8/13/2001",
       "offsense_date_calc": 37116,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -4372,7 +5267,11 @@
       "unit": "POLUNSKY",
       "received_date": "9/12/1996",
       "received_date_cacl": 35320,
+<<<<<<< HEAD
       "timeserved": "19.52",
+=======
+      "timeserved": "19.56",
+>>>>>>> master
       "time_served": "19 years, 6 months",
       "offense_date": "11/25/1995",
       "offsense_date_calc": 35028,
@@ -4394,8 +5293,13 @@
       "unit": "POLUNSKY",
       "received_date": "4/2/2003",
       "received_date_cacl": 37713,
+<<<<<<< HEAD
       "timeserved": "12.97",
       "time_served": "12 years, 11 months",
+=======
+      "timeserved": "13.01",
+      "time_served": "13 years",
+>>>>>>> master
       "offense_date": "7/21/2000",
       "offsense_date_calc": 36728,
       "offense": "CAPITAL MURDER",
@@ -4416,7 +5320,11 @@
       "unit": "POLUNSKY",
       "received_date": "2/15/2007",
       "received_date_cacl": 39128,
+<<<<<<< HEAD
       "timeserved": "9.10",
+=======
+      "timeserved": "9.14",
+>>>>>>> master
       "time_served": "9 years, 1 month",
       "offense_date": "8/3/1986",
       "offsense_date_calc": 31627,
@@ -4438,8 +5346,13 @@
       "unit": "MOUNTAIN VIEW",
       "received_date": "4/25/1995",
       "received_date_cacl": 34814,
+<<<<<<< HEAD
       "timeserved": "20.91",
       "time_served": "20 years, 10 months",
+=======
+      "timeserved": "20.95",
+      "time_served": "20 years, 11 months",
+>>>>>>> master
       "offense_date": "6/30/1993",
       "offsense_date_calc": 34150,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -4460,7 +5373,11 @@
       "unit": "POLUNSKY",
       "received_date": "11/15/2004",
       "received_date_cacl": 38306,
+<<<<<<< HEAD
       "timeserved": "11.35",
+=======
+      "timeserved": "11.39",
+>>>>>>> master
       "time_served": "11 years, 4 months",
       "offense_date": "4/16/1992",
       "offsense_date_calc": 33710,
@@ -4478,12 +5395,17 @@
       "race": "White",
       "sex": "Male",
       "dob": "4/4/1962",
-      "age": "53",
+      "age": "54",
       "unit": "POLUNSKY",
       "received_date": "3/31/1995",
       "received_date_cacl": 34789,
+<<<<<<< HEAD
       "timeserved": "20.98",
       "time_served": "20 years, 11 months",
+=======
+      "timeserved": "21.02",
+      "time_served": "21 years",
+>>>>>>> master
       "offense_date": "12/31/1993",
       "offsense_date_calc": 34334,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -4500,12 +5422,17 @@
       "race": "Black",
       "sex": "Male",
       "dob": 27117,
-      "age": "41",
+      "age": "42",
       "unit": "POLUNSKY",
       "received_date": "11/1/1996",
       "received_date_cacl": 35370,
+<<<<<<< HEAD
       "timeserved": "19.39",
       "time_served": "19 years, 4 months",
+=======
+      "timeserved": "19.43",
+      "time_served": "19 years, 5 months",
+>>>>>>> master
       "offense_date": "7/19/1995",
       "offsense_date_calc": 34899,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -4526,8 +5453,13 @@
       "unit": "POLUNSKY",
       "received_date": "7/5/2006",
       "received_date_cacl": 38903,
+<<<<<<< HEAD
       "timeserved": "9.71",
       "time_served": "9 years, 8 months",
+=======
+      "timeserved": "9.75",
+      "time_served": "9 years, 9 months",
+>>>>>>> master
       "offense_date": "3/24/2005",
       "offsense_date_calc": 38435,
       "offense": "CAPITAL MURDER-DEATH",
@@ -4548,7 +5480,11 @@
       "unit": "POLUNSKY",
       "received_date": "10/10/1978",
       "received_date_cacl": 28773,
+<<<<<<< HEAD
       "timeserved": "37.45",
+=======
+      "timeserved": "37.49",
+>>>>>>> master
       "time_served": "37 years, 5 months",
       "offense_date": "1/7/1978",
       "offsense_date_calc": 28497,
@@ -4570,7 +5506,11 @@
       "unit": "POLUNSKY",
       "received_date": "6/12/1981",
       "received_date_cacl": 29749,
+<<<<<<< HEAD
       "timeserved": "34.78",
+=======
+      "timeserved": "34.82",
+>>>>>>> master
       "time_served": "34 years, 9 months",
       "offense_date": "7/13/1980",
       "offsense_date_calc": 29415,
@@ -4592,8 +5532,13 @@
       "unit": "POLUNSKY",
       "received_date": "3/28/2012",
       "received_date_cacl": 40996,
+<<<<<<< HEAD
       "timeserved": "3.98",
       "time_served": "3 years, 11 months",
+=======
+      "timeserved": "4.02",
+      "time_served": "4 years",
+>>>>>>> master
       "offense_date": "6/29/2010",
       "offsense_date_calc": 40358,
       "offense": "CAPITAL MURDER(DEATH)",
@@ -4614,7 +5559,11 @@
       "unit": "POLUNSKY",
       "received_date": "12/11/2003",
       "received_date_cacl": 37966,
+<<<<<<< HEAD
       "timeserved": "12.28",
+=======
+      "timeserved": "12.32",
+>>>>>>> master
       "time_served": "12 years, 3 months",
       "offense_date": "5/31/2002",
       "offsense_date_calc": 37407,
@@ -4636,7 +5585,11 @@
       "unit": "POLUNSKY",
       "received_date": "1/7/1985",
       "received_date_cacl": 31054,
+<<<<<<< HEAD
       "timeserved": "31.20",
+=======
+      "timeserved": "31.24",
+>>>>>>> master
       "time_served": "31 years, 2 months",
       "offense_date": "11/4/1983",
       "offsense_date_calc": 30624,
@@ -4658,7 +5611,11 @@
       "unit": "POLUNSKY",
       "received_date": "1/8/2009",
       "received_date_cacl": 39821,
+<<<<<<< HEAD
       "timeserved": "7.20",
+=======
+      "timeserved": "7.24",
+>>>>>>> master
       "time_served": "7 years, 2 months",
       "offense_date": "9/15/2007",
       "offsense_date_calc": 39340,
@@ -4680,8 +5637,13 @@
       "unit": "POLUNSKY",
       "received_date": "10/30/2001",
       "received_date_cacl": 37194,
+<<<<<<< HEAD
       "timeserved": "14.39",
       "time_served": "14 years, 4 months",
+=======
+      "timeserved": "14.43",
+      "time_served": "14 years, 5 months",
+>>>>>>> master
       "offense_date": "7/11/1997",
       "offsense_date_calc": 35622,
       "offense": "CAP MURDER",
@@ -4702,8 +5664,13 @@
       "unit": "POLUNSKY",
       "received_date": "8/2/1991",
       "received_date_cacl": 33452,
+<<<<<<< HEAD
       "timeserved": "24.64",
       "time_served": "24 years, 7 months",
+=======
+      "timeserved": "24.68",
+      "time_served": "24 years, 8 months",
+>>>>>>> master
       "offense_date": "10/15/1989",
       "offsense_date_calc": 32796,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -4724,7 +5691,11 @@
       "unit": "POLUNSKY",
       "received_date": "9/16/2008",
       "received_date_cacl": 39707,
+<<<<<<< HEAD
       "timeserved": "7.51",
+=======
+      "timeserved": "7.55",
+>>>>>>> master
       "time_served": "7 years, 6 months",
       "offense_date": "10/16/2006",
       "offsense_date_calc": 39006,
@@ -4746,8 +5717,13 @@
       "unit": "POLUNSKY",
       "received_date": "10/30/2014",
       "received_date_cacl": 41942,
+<<<<<<< HEAD
       "timeserved": "1.39",
       "time_served": "1 year, 4 months",
+=======
+      "timeserved": "1.43",
+      "time_served": "1 year, 5 months",
+>>>>>>> master
       "offense_date": "12/26/2011",
       "offsense_date_calc": 40903,
       "offense": "CAPITAL MURDER(DEATH)",
@@ -4768,7 +5744,11 @@
       "unit": "POLUNSKY",
       "received_date": "7/12/2000",
       "received_date_cacl": 36719,
+<<<<<<< HEAD
       "timeserved": "15.69",
+=======
+      "timeserved": "15.73",
+>>>>>>> master
       "time_served": "15 years, 8 months",
       "offense_date": "12/8/1998",
       "offsense_date_calc": 36137,
@@ -4790,8 +5770,13 @@
       "unit": "POLUNSKY",
       "received_date": "4/5/2007",
       "received_date_cacl": 39177,
+<<<<<<< HEAD
       "timeserved": "8.96",
       "time_served": "8 years, 11 months",
+=======
+      "timeserved": "9.00",
+      "time_served": "9 years",
+>>>>>>> master
       "offense_date": "11/26/2004",
       "offsense_date_calc": 38317,
       "offense": "CAPITAL MURDER-DEATH",
@@ -4812,7 +5797,11 @@
       "unit": "POLUNSKY",
       "received_date": "12/13/2000",
       "received_date_cacl": 36873,
+<<<<<<< HEAD
       "timeserved": "15.27",
+=======
+      "timeserved": "15.31",
+>>>>>>> master
       "time_served": "15 years, 3 months",
       "offense_date": "3/31/1997",
       "offsense_date_calc": 35520,
@@ -4834,8 +5823,13 @@
       "unit": "POLUNSKY",
       "received_date": "12/5/2014",
       "received_date_cacl": 41978,
+<<<<<<< HEAD
       "timeserved": "1.30",
       "time_served": "1 year, 3 months",
+=======
+      "timeserved": "1.34",
+      "time_served": "1 year, 4 months",
+>>>>>>> master
       "offense_date": "11/4/1980",
       "offsense_date_calc": 29529,
       "offense": "CAPITAL MURDER(DEATH)",
@@ -4856,7 +5850,11 @@
       "unit": "JESTER IV",
       "received_date": "3/16/2005",
       "received_date_cacl": 38427,
+<<<<<<< HEAD
       "timeserved": "11.02",
+=======
+      "timeserved": "11.06",
+>>>>>>> master
       "time_served": "11 years",
       "offense_date": "3/27/2004",
       "offsense_date_calc": 38073,
@@ -4877,8 +5875,13 @@
       "age": "55",
       "received_date": "9/2/1987",
       "received_date_cacl": 32022,
+<<<<<<< HEAD
       "timeserved": "28.55",
       "time_served": "28 years, 6 months",
+=======
+      "timeserved": "28.59",
+      "time_served": "28 years, 7 months",
+>>>>>>> master
       "offense_date": "3/16/1986",
       "offsense_date_calc": 31487,
       "offense": "CAPT MURDER (DEATH)",
@@ -4899,8 +5902,13 @@
       "unit": "POLUNSKY",
       "received_date": "5/5/1999",
       "received_date_cacl": 36285,
+<<<<<<< HEAD
       "timeserved": "16.88",
       "time_served": "16 years, 10 months",
+=======
+      "timeserved": "16.92",
+      "time_served": "16 years, 11 months",
+>>>>>>> master
       "offense_date": "4/30/1998",
       "offsense_date_calc": 35915,
       "offense": "CAPITAL MURDER(DEATH)",
@@ -4921,8 +5929,13 @@
       "unit": "POLUNSKY",
       "received_date": "5/28/2010",
       "received_date_cacl": 40326,
+<<<<<<< HEAD
       "timeserved": "5.82",
       "time_served": "5 years, 9 months",
+=======
+      "timeserved": "5.86",
+      "time_served": "5 years, 10 months",
+>>>>>>> master
       "offense_date": "3/6/2009",
       "offsense_date_calc": 39878,
       "offense": "CAPITAL MURDER/MULTI PERS(DEATH)",
@@ -4943,8 +5956,13 @@
       "unit": "POLUNSKY",
       "received_date": "4/1/1998",
       "received_date_cacl": 35886,
+<<<<<<< HEAD
       "timeserved": "17.97",
       "time_served": "17 years, 11 months",
+=======
+      "timeserved": "18.02",
+      "time_served": "18 years",
+>>>>>>> master
       "offense_date": "4/6/1997",
       "offsense_date_calc": 35526,
       "offense": "CAPITAL MURDER(DEATH)",
@@ -4965,8 +5983,13 @@
       "unit": "POLUNSKY",
       "received_date": "8/6/1997",
       "received_date_cacl": 35648,
+<<<<<<< HEAD
       "timeserved": "18.63",
       "time_served": "18 years, 7 months",
+=======
+      "timeserved": "18.67",
+      "time_served": "18 years, 8 months",
+>>>>>>> master
       "offense_date": "6/10/1996",
       "offsense_date_calc": 35226,
       "offense": "CAPITAL MURDER(DEATH)",
@@ -4987,7 +6010,11 @@
       "unit": "POLUNSKY",
       "received_date": "6/10/2011",
       "received_date_cacl": 40704,
+<<<<<<< HEAD
       "timeserved": "4.78",
+=======
+      "timeserved": "4.82",
+>>>>>>> master
       "time_served": "4 years, 9 months",
       "offense_date": "12/27/2009",
       "offsense_date_calc": 40174,
@@ -5009,8 +6036,13 @@
       "unit": "POLUNSKY",
       "received_date": "7/24/2014",
       "received_date_cacl": 41844,
+<<<<<<< HEAD
       "timeserved": "1.66",
       "time_served": "1 year, 7 months",
+=======
+      "timeserved": "1.70",
+      "time_served": "1 year, 8 months",
+>>>>>>> master
       "offense_date": "12/10/2010",
       "offsense_date_calc": 40522,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -5031,8 +6063,13 @@
       "unit": "POLUNSKY",
       "received_date": "6/24/1999",
       "received_date_cacl": 36335,
+<<<<<<< HEAD
       "timeserved": "16.74",
       "time_served": "16 years, 8 months",
+=======
+      "timeserved": "16.79",
+      "time_served": "16 years, 9 months",
+>>>>>>> master
       "offense_date": "3/5/1998",
       "offsense_date_calc": 35859,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -5076,8 +6113,13 @@
       "unit": "POLUNSKY",
       "received_date": "11/1/1996",
       "received_date_cacl": 35370,
+<<<<<<< HEAD
       "timeserved": "19.39",
       "time_served": "19 years, 4 months",
+=======
+      "timeserved": "19.43",
+      "time_served": "19 years, 5 months",
+>>>>>>> master
       "offense_date": "8/28/1994",
       "offsense_date_calc": 34574,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -5086,6 +6128,7 @@
       "summary": "Villanueva was convicted in the rape and murder of 77-year-old Jova Montiel."
     },
     {
+<<<<<<< HEAD
       "tdcj_id": 999525,
       "sid": 6601076,
       "last_name": "Ward",
@@ -5108,6 +6151,8 @@
       "summary": "Ward was convicted in the shooting death of a Commerce code enforcement officer who was recording a housing code violation."
     },
     {
+=======
+>>>>>>> master
       "tdcj_id": 999137,
       "sid": 5047488,
       "last_name": "Wardlow",
@@ -5120,7 +6165,11 @@
       "unit": "POLUNSKY",
       "received_date": "2/13/1995",
       "received_date_cacl": 34743,
+<<<<<<< HEAD
       "timeserved": "21.10",
+=======
+      "timeserved": "21.14",
+>>>>>>> master
       "time_served": "21 years, 1 month",
       "offense_date": "6/14/1993",
       "offsense_date_calc": 34134,
@@ -5142,7 +6191,11 @@
       "unit": "POLUNSKY",
       "received_date": "11/9/1999",
       "received_date_cacl": 36473,
+<<<<<<< HEAD
       "timeserved": "16.37",
+=======
+      "timeserved": "16.41",
+>>>>>>> master
       "time_served": "16 years, 4 months",
       "offense_date": "12/21/1984",
       "offsense_date_calc": 31037,
@@ -5164,7 +6217,11 @@
       "unit": "POLUNSKY",
       "received_date": "12/11/1986",
       "received_date_cacl": 31757,
+<<<<<<< HEAD
       "timeserved": "29.28",
+=======
+      "timeserved": "29.32",
+>>>>>>> master
       "time_served": "29 years, 3 months",
       "offense_date": "12/19/1985",
       "offsense_date_calc": 31400,
@@ -5186,7 +6243,11 @@
       "unit": "POLUNSKY",
       "received_date": "9/13/2001",
       "received_date_cacl": 37147,
+<<<<<<< HEAD
       "timeserved": "14.52",
+=======
+      "timeserved": "14.56",
+>>>>>>> master
       "time_served": "14 years, 6 months",
       "offense_date": "2/4/2000",
       "offsense_date_calc": 36560,
@@ -5208,8 +6269,13 @@
       "unit": "POLUNSKY",
       "received_date": "1/28/1992",
       "received_date_cacl": 33631,
+<<<<<<< HEAD
       "timeserved": "24.15",
       "time_served": "24 years, 1 month",
+=======
+      "timeserved": "24.19",
+      "time_served": "24 years, 2 months",
+>>>>>>> master
       "offense_date": "12/13/1990",
       "offsense_date_calc": 33220,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -5230,8 +6296,13 @@
       "unit": "POLUNSKY",
       "received_date": "3/23/2007",
       "received_date_cacl": 39164,
+<<<<<<< HEAD
       "timeserved": "9.00",
       "time_served": "8 years, 11 months",
+=======
+      "timeserved": "9.04",
+      "time_served": "9 years",
+>>>>>>> master
       "offense_date": "12/10/2003",
       "offsense_date_calc": 37965,
       "offense": "CAPITAL MURDER",
@@ -5252,7 +6323,11 @@
       "unit": "POLUNSKY",
       "received_date": "9/13/1996",
       "received_date_cacl": 35321,
+<<<<<<< HEAD
       "timeserved": "19.52",
+=======
+      "timeserved": "19.56",
+>>>>>>> master
       "time_served": "19 years, 6 months",
       "offense_date": "12/2/1989",
       "offsense_date_calc": 32844,
@@ -5274,7 +6349,11 @@
       "unit": "POLUNSKY",
       "received_date": "3/12/2008",
       "received_date_cacl": 39519,
+<<<<<<< HEAD
       "timeserved": "8.03",
+=======
+      "timeserved": "8.07",
+>>>>>>> master
       "time_served": "8 years",
       "offense_date": "10/28/2005",
       "offsense_date_calc": 38653,
@@ -5296,8 +6375,13 @@
       "unit": "POLUNSKY",
       "received_date": "1/28/2002",
       "received_date_cacl": 37284,
+<<<<<<< HEAD
       "timeserved": "14.15",
       "time_served": "14 years, 1 month",
+=======
+      "timeserved": "14.19",
+      "time_served": "14 years, 2 months",
+>>>>>>> master
       "offense_date": "12/4/2000",
       "offsense_date_calc": 36864,
       "offense": "CAPITAL MURDER",
@@ -5318,7 +6402,11 @@
       "unit": "POLUNSKY",
       "received_date": "12/18/2014",
       "received_date_cacl": 41991,
+<<<<<<< HEAD
       "timeserved": "1.26",
+=======
+      "timeserved": "1.30",
+>>>>>>> master
       "time_served": "1 year, 3 months",
       "offense_date": "3/30/2013",
       "offsense_date_calc": 41363,
@@ -5340,8 +6428,13 @@
       "unit": "POLUNSKY",
       "received_date": "10/27/2006",
       "received_date_cacl": 39017,
+<<<<<<< HEAD
       "timeserved": "9.40",
       "time_served": "9 years, 4 months",
+=======
+      "timeserved": "9.44",
+      "time_served": "9 years, 5 months",
+>>>>>>> master
       "offense_date": "7/9/2005",
       "offsense_date_calc": 38542,
       "offense": "CAPITAL MURDER(DEATH)",
@@ -5362,8 +6455,13 @@
       "unit": "POLUNSKY",
       "received_date": "6/25/2002",
       "received_date_cacl": 37432,
+<<<<<<< HEAD
       "timeserved": "13.74",
       "time_served": "13 years, 8 months",
+=======
+      "timeserved": "13.78",
+      "time_served": "13 years, 9 months",
+>>>>>>> master
       "offense_date": "9/17/2000",
       "offsense_date_calc": 36786,
       "offense": "CAPITAL MURDER",
@@ -5385,8 +6483,13 @@
       "unit": "POLUNSKY",
       "received_date": "5/6/1983",
       "received_date_cacl": 30442,
+<<<<<<< HEAD
       "timeserved": "32.88",
       "time_served": "32 years, 10 months",
+=======
+      "timeserved": "32.92",
+      "time_served": "32 years, 11 months",
+>>>>>>> master
       "offense_date": "4/28/1982",
       "offsense_date_calc": 30069,
       "offense": "CAP MURDER P.O. (DEATH)",
@@ -5407,8 +6510,13 @@
       "unit": "POLUNSKY",
       "received_date": "3/3/1998",
       "received_date_cacl": 35857,
+<<<<<<< HEAD
       "timeserved": "18.05",
       "time_served": "18 years",
+=======
+      "timeserved": "18.09",
+      "time_served": "18 years, 1 month",
+>>>>>>> master
       "offense_date": "1/2/1996",
       "offsense_date_calc": 35066,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -5429,7 +6537,11 @@
       "unit": "POLUNSKY",
       "received_date": "1/14/1993",
       "received_date_cacl": 33983,
+<<<<<<< HEAD
       "timeserved": "23.18",
+=======
+      "timeserved": "23.23",
+>>>>>>> master
       "time_served": "23 years, 2 months",
       "offense_date": "8/28/1987",
       "offsense_date_calc": 32017,
@@ -5450,7 +6562,11 @@
       "age": "35",
       "received_date": "6/20/2001",
       "received_date_cacl": 37062,
+<<<<<<< HEAD
       "timeserved": "14.75",
+=======
+      "timeserved": "14.80",
+>>>>>>> master
       "time_served": "14 years, 9 months",
       "offense_date": "2/12/2000",
       "offsense_date_calc": 36568,
@@ -5472,8 +6588,13 @@
       "unit": "POLUNSKY",
       "received_date": "3/31/2006",
       "received_date_cacl": 38807,
+<<<<<<< HEAD
       "timeserved": "9.98",
       "time_served": "9 years, 11 months",
+=======
+      "timeserved": "10.02",
+      "time_served": "10 years",
+>>>>>>> master
       "offense_date": "11/21/2004",
       "offsense_date_calc": 38312,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -5494,7 +6615,11 @@
       "unit": "POLUNSKY",
       "received_date": "4/15/2003",
       "received_date_cacl": 37726,
+<<<<<<< HEAD
       "timeserved": "12.94",
+=======
+      "timeserved": "12.98",
+>>>>>>> master
       "time_served": "12 years, 11 months",
       "offense_date": "11/26/2001",
       "offsense_date_calc": 37221,
@@ -5518,8 +6643,13 @@
       "unit": "POLUNSKY",
       "received_date": "5/30/2001",
       "received_date_cacl": 37041,
+<<<<<<< HEAD
       "timeserved": "14.81",
       "time_served": "14 years, 9 months",
+=======
+      "timeserved": "14.85",
+      "time_served": "14 years, 10 months",
+>>>>>>> master
       "offense_date": "5/10/2000",
       "offsense_date_calc": 36656,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -5540,7 +6670,11 @@
       "unit": "POLUNSKY",
       "received_date": "11/17/1999",
       "received_date_cacl": 36481,
+<<<<<<< HEAD
       "timeserved": "16.34",
+=======
+      "timeserved": "16.39",
+>>>>>>> master
       "time_served": "16 years, 4 months",
       "offense_date": "6/6/1998",
       "offsense_date_calc": 35952,
@@ -5562,8 +6696,13 @@
       "unit": "POLUNSKY",
       "received_date": "8/4/1994",
       "received_date_cacl": 34550,
+<<<<<<< HEAD
       "timeserved": "21.63",
       "time_served": "21 years, 7 months",
+=======
+      "timeserved": "21.67",
+      "time_served": "21 years, 8 months",
+>>>>>>> master
       "offense_date": "8/19/1992",
       "offsense_date_calc": 33835,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -5584,7 +6723,11 @@
       "unit": "POLUNSKY",
       "received_date": "9/17/1997",
       "received_date_cacl": 35690,
+<<<<<<< HEAD
       "timeserved": "18.51",
+=======
+      "timeserved": "18.55",
+>>>>>>> master
       "time_served": "18 years, 6 months",
       "offense_date": "9/5/1995",
       "offsense_date_calc": 34947,
@@ -5606,8 +6749,13 @@
       "unit": "POLUNSKY",
       "received_date": "3/25/2014",
       "received_date_cacl": 41723,
+<<<<<<< HEAD
       "timeserved": "1.99",
       "time_served": "1 year, 11 months",
+=======
+      "timeserved": "2.03",
+      "time_served": "2 years",
+>>>>>>> master
       "offense_date": "12/6/2005",
       "offsense_date_calc": 38692,
       "offense": "CAPITAL MURDER(DEATH)",
@@ -5628,8 +6776,13 @@
       "unit": "POLUNSKY",
       "received_date": "7/27/2011",
       "received_date_cacl": 40751,
+<<<<<<< HEAD
       "timeserved": "4.65",
       "time_served": "4 years, 7 months",
+=======
+      "timeserved": "4.70",
+      "time_served": "4 years, 8 months",
+>>>>>>> master
       "offense_date": "4/19/2009",
       "offsense_date_calc": 39922,
       "offense": "CAPITAL MURDER(DEATH)",
@@ -5650,7 +6803,11 @@
       "unit": "POLUNSKY",
       "received_date": "7/17/2003",
       "received_date_cacl": 37819,
+<<<<<<< HEAD
       "timeserved": "12.68",
+=======
+      "timeserved": "12.72",
+>>>>>>> master
       "time_served": "12 years, 8 months",
       "offense_date": "5/27/1979",
       "offsense_date_calc": 29002,
@@ -5672,8 +6829,13 @@
       "unit": "POLUNSKY",
       "received_date": "6/30/1994",
       "received_date_cacl": 34515,
+<<<<<<< HEAD
       "timeserved": "21.73",
       "time_served": "21 years, 8 months",
+=======
+      "timeserved": "21.77",
+      "time_served": "21 years, 9 months",
+>>>>>>> master
       "offense_date": "6/20/1992",
       "offsense_date_calc": 33775,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -5694,7 +6856,11 @@
       "unit": "POLUNSKY",
       "received_date": "9/18/1992",
       "received_date_cacl": 33865,
+<<<<<<< HEAD
       "timeserved": "23.51",
+=======
+      "timeserved": "23.55",
+>>>>>>> master
       "time_served": "23 years, 6 months",
       "offense_date": "5/16/1991",
       "offsense_date_calc": 33374,
@@ -5716,8 +6882,13 @@
       "unit": "POLUNSKY",
       "received_date": "6/25/1997",
       "received_date_cacl": 35606,
+<<<<<<< HEAD
       "timeserved": "18.74",
       "time_served": "18 years, 8 months",
+=======
+      "timeserved": "18.78",
+      "time_served": "18 years, 9 months",
+>>>>>>> master
       "offense_date": "7/30/1995",
       "offsense_date_calc": 34910,
       "offense": "CAPITAL MURDER \"DEATH\"",
@@ -5734,11 +6905,15 @@
       "race": "Black",
       "sex": "Male",
       "dob": 25656,
-      "age": "45",
+      "age": "46",
       "unit": "POLUNSKY",
       "received_date": "9/16/1998",
       "received_date_cacl": 36054,
+<<<<<<< HEAD
       "timeserved": "17.51",
+=======
+      "timeserved": "17.56",
+>>>>>>> master
       "time_served": "17 years, 6 months",
       "offense_date": "7/29/1997",
       "offsense_date_calc": 35640,
@@ -5756,11 +6931,15 @@
       "race": "Black",
       "sex": "Male",
       "dob": "4/5/1962",
-      "age": "53",
+      "age": "54",
       "unit": "POLUNSKY",
       "received_date": "12/19/2006",
       "received_date_cacl": 39070,
+<<<<<<< HEAD
       "timeserved": "9.26",
+=======
+      "timeserved": "9.30",
+>>>>>>> master
       "time_served": "9 years, 3 months",
       "offense_date": "8/27/1986",
       "offsense_date_calc": 31651,
@@ -5782,7 +6961,11 @@
       "unit": "POLUNSKY",
       "received_date": "7/10/1992",
       "received_date_cacl": 33795,
+<<<<<<< HEAD
       "timeserved": "23.70",
+=======
+      "timeserved": "23.74",
+>>>>>>> master
       "time_served": "23 years, 8 months",
       "offense_date": "1/3/1991",
       "offsense_date_calc": 33241,
@@ -5804,8 +6987,13 @@
       "unit": "MOUNTAIN VIEW",
       "received_date": "3/7/2002",
       "received_date_cacl": 37322,
+<<<<<<< HEAD
       "timeserved": "14.04",
       "time_served": "14 years",
+=======
+      "timeserved": "14.08",
+      "time_served": "14 years, 1 month",
+>>>>>>> master
       "offense_date": "5/16/2001",
       "offsense_date_calc": 37027,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -5826,8 +7014,13 @@
       "unit": "POLUNSKY",
       "received_date": "4/29/1997",
       "received_date_cacl": 35549,
+<<<<<<< HEAD
       "timeserved": "18.90",
       "time_served": "18 years, 10 months",
+=======
+      "timeserved": "18.94",
+      "time_served": "18 years, 11 months",
+>>>>>>> master
       "offense_date": "9/12/1995",
       "offsense_date_calc": 34954,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -5848,8 +7041,13 @@
       "unit": "POLUNSKY",
       "received_date": "11/23/2011",
       "received_date_cacl": 40870,
+<<<<<<< HEAD
       "timeserved": "4.33",
       "time_served": "4 years, 3 months",
+=======
+      "timeserved": "4.37",
+      "time_served": "4 years, 4 months",
+>>>>>>> master
       "offense_date": "2/4/2010",
       "offsense_date_calc": 40213,
       "offense": "CAPITAL MURDER(DEATH)",
@@ -5870,8 +7068,13 @@
       "unit": "POLUNSKY",
       "received_date": "11/1/2013",
       "received_date_cacl": 41579,
+<<<<<<< HEAD
       "timeserved": "2.39",
       "time_served": "2 years, 4 months",
+=======
+      "timeserved": "2.43",
+      "time_served": "2 years, 5 months",
+>>>>>>> master
       "offense_date": "9/30/1992",
       "offsense_date_calc": 33877,
       "offense": "CAPITAL MURDER(DEATH)",
@@ -5892,7 +7095,11 @@
       "unit": "POLUNSKY",
       "received_date": "6/7/2004",
       "received_date_cacl": 38145,
+<<<<<<< HEAD
       "timeserved": "11.79",
+=======
+      "timeserved": "11.83",
+>>>>>>> master
       "time_served": "11 years, 9 months",
       "offense_date": "1/19/2002",
       "offsense_date_calc": 37275,
@@ -5914,8 +7121,13 @@
       "unit": "POLUNSKY",
       "received_date": "3/3/2014",
       "received_date_cacl": 41701,
+<<<<<<< HEAD
       "timeserved": "2.05",
       "time_served": "2 years",
+=======
+      "timeserved": "2.09",
+      "time_served": "2 years, 1 month",
+>>>>>>> master
       "offense_date": "5/1/2009",
       "offsense_date_calc": 39934,
       "offense": "CAPITAL MURDER(DEATH)",
@@ -5936,7 +7148,11 @@
       "unit": "POLUNSKY",
       "received_date": "7/17/1992",
       "received_date_cacl": 33802,
+<<<<<<< HEAD
       "timeserved": "23.68",
+=======
+      "timeserved": "23.72",
+>>>>>>> master
       "time_served": "23 years, 8 months",
       "offense_date": "8/10/1991",
       "offsense_date_calc": 33460,
@@ -5958,7 +7174,11 @@
       "unit": "POLUNSKY",
       "received_date": "12/18/1997",
       "received_date_cacl": 35782,
+<<<<<<< HEAD
       "timeserved": "18.26",
+=======
+      "timeserved": "18.30",
+>>>>>>> master
       "time_served": "18 years, 3 months",
       "offense_date": "1/24/1996",
       "offsense_date_calc": 35088,
@@ -5980,8 +7200,13 @@
       "unit": "POLUNSKY",
       "received_date": "6/24/1994",
       "received_date_cacl": 34509,
+<<<<<<< HEAD
       "timeserved": "21.74",
       "time_served": "21 years, 8 months",
+=======
+      "timeserved": "21.79",
+      "time_served": "21 years, 9 months",
+>>>>>>> master
       "offense_date": "1/4/1993",
       "offsense_date_calc": 33973,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -6002,8 +7227,13 @@
       "unit": "POLUNSKY",
       "received_date": "5/5/1999",
       "received_date_cacl": 36285,
+<<<<<<< HEAD
       "timeserved": "16.88",
       "time_served": "16 years, 10 months",
+=======
+      "timeserved": "16.92",
+      "time_served": "16 years, 11 months",
+>>>>>>> master
       "offense_date": "5/31/1998",
       "offsense_date_calc": 35946,
       "offense": "CAPITAL MURDER(DEATH)",
@@ -6024,8 +7254,13 @@
       "unit": "POLUNSKY",
       "received_date": "4/1/1998",
       "received_date_cacl": 35886,
+<<<<<<< HEAD
       "timeserved": "17.97",
       "time_served": "17 years, 11 months",
+=======
+      "timeserved": "18.02",
+      "time_served": "18 years",
+>>>>>>> master
       "offense_date": "2/21/1997",
       "offsense_date_calc": 35482,
       "offense": "CAPITAL MURDER(DEATH)",
@@ -6046,8 +7281,13 @@
       "unit": "POLUNSKY",
       "received_date": "8/5/2004",
       "received_date_cacl": 38204,
+<<<<<<< HEAD
       "timeserved": "11.63",
       "time_served": "11 years, 7 months",
+=======
+      "timeserved": "11.67",
+      "time_served": "11 years, 8 months",
+>>>>>>> master
       "offense_date": "9/11/2003",
       "offsense_date_calc": 37875,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -6068,8 +7308,13 @@
       "unit": "POLUNSKY",
       "received_date": "5/3/1996",
       "received_date_cacl": 35188,
+<<<<<<< HEAD
       "timeserved": "19.89",
       "time_served": "19 years, 10 months",
+=======
+      "timeserved": "19.93",
+      "time_served": "19 years, 11 months",
+>>>>>>> master
       "offense_date": "11/9/1994",
       "offsense_date_calc": 34647,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -6090,8 +7335,13 @@
       "unit": "POLUNSKY",
       "received_date": "9/25/2003",
       "received_date_cacl": 37889,
+<<<<<<< HEAD
       "timeserved": "12.49",
       "time_served": "12 years, 5 months",
+=======
+      "timeserved": "12.53",
+      "time_served": "12 years, 6 months",
+>>>>>>> master
       "offense_date": "4/18/2002",
       "offsense_date_calc": 37364,
       "offense": "CAPITAL MURDER",
@@ -6112,8 +7362,13 @@
       "unit": "POLUNSKY",
       "received_date": "2/24/2004",
       "received_date_cacl": 38041,
+<<<<<<< HEAD
       "timeserved": "12.07",
       "time_served": "12 years",
+=======
+      "timeserved": "12.11",
+      "time_served": "12 years, 1 month",
+>>>>>>> master
       "offense_date": "12/11/2001",
       "offsense_date_calc": 37236,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -6134,7 +7389,11 @@
       "unit": "POLUNSKY",
       "received_date": "6/21/2000",
       "received_date_cacl": 36698,
+<<<<<<< HEAD
       "timeserved": "15.75",
+=======
+      "timeserved": "15.79",
+>>>>>>> master
       "time_served": "15 years, 9 months",
       "offense_date": "9/17/1998",
       "offsense_date_calc": 36055,
@@ -6156,8 +7415,13 @@
       "unit": "POLUNSKY",
       "received_date": "2/21/2001",
       "received_date_cacl": 36943,
+<<<<<<< HEAD
       "timeserved": "15.08",
       "time_served": "15 years",
+=======
+      "timeserved": "15.12",
+      "time_served": "15 years, 1 month",
+>>>>>>> master
       "offense_date": "12/13/1999",
       "offsense_date_calc": 36507,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -6178,8 +7442,13 @@
       "unit": "POLUNSKY",
       "received_date": "1/4/2001",
       "received_date_cacl": 36895,
+<<<<<<< HEAD
       "timeserved": "15.21",
       "time_served": "15 years, 2 months",
+=======
+      "timeserved": "15.25",
+      "time_served": "15 years, 3 months",
+>>>>>>> master
       "offense_date": "9/2/1999",
       "offsense_date_calc": 36405,
       "offense": "CAPITAL MURDER \"DEATH\"",
@@ -6200,8 +7469,13 @@
       "unit": "POLUNSKY",
       "received_date": "6/26/2001",
       "received_date_cacl": 37068,
+<<<<<<< HEAD
       "timeserved": "14.74",
       "time_served": "14 years, 8 months",
+=======
+      "timeserved": "14.78",
+      "time_served": "14 years, 9 months",
+>>>>>>> master
       "offense_date": "6/2/2000",
       "offsense_date_calc": 36679,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -6222,7 +7496,11 @@
       "unit": "POLUNSKY",
       "received_date": "4/16/1997",
       "received_date_cacl": 35536,
+<<<<<<< HEAD
       "timeserved": "18.93",
+=======
+      "timeserved": "18.97",
+>>>>>>> master
       "time_served": "18 years, 11 months",
       "offense_date": "11/9/1994",
       "offsense_date_calc": 34647,
@@ -6244,7 +7522,11 @@
       "unit": "POLUNSKY",
       "received_date": "11/19/2002",
       "received_date_cacl": 37579,
+<<<<<<< HEAD
       "timeserved": "13.34",
+=======
+      "timeserved": "13.38",
+>>>>>>> master
       "time_served": "13 years, 4 months",
       "offense_date": "11/7/2001",
       "offsense_date_calc": 37202,
@@ -6266,8 +7548,13 @@
       "unit": "POLUNSKY",
       "received_date": "10/22/2010",
       "received_date_cacl": 40473,
+<<<<<<< HEAD
       "timeserved": "5.42",
       "time_served": "5 years, 4 months",
+=======
+      "timeserved": "5.46",
+      "time_served": "5 years, 5 months",
+>>>>>>> master
       "offense_date": "10/24/2008",
       "offsense_date_calc": 39745,
       "offense": "CAPITAL MURDER(DEATH)",
@@ -6288,8 +7575,13 @@
       "unit": "POLUNSKY",
       "received_date": "11/3/1999",
       "received_date_cacl": 36467,
+<<<<<<< HEAD
       "timeserved": "16.38",
       "time_served": "16 years, 4 months",
+=======
+      "timeserved": "16.42",
+      "time_served": "16 years, 5 months",
+>>>>>>> master
       "offense_date": "5/22/1998",
       "offsense_date_calc": 35937,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -6310,8 +7602,13 @@
       "unit": "POLUNSKY",
       "received_date": "8/5/2004",
       "received_date_cacl": 38204,
+<<<<<<< HEAD
       "timeserved": "11.63",
       "time_served": "11 years, 7 months",
+=======
+      "timeserved": "11.67",
+      "time_served": "11 years, 8 months",
+>>>>>>> master
       "offense_date": "10/25/2003",
       "offsense_date_calc": 37919,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -6332,7 +7629,11 @@
       "unit": "POLUNSKY",
       "received_date": "6/22/1999",
       "received_date_cacl": 36333,
+<<<<<<< HEAD
       "timeserved": "16.75",
+=======
+      "timeserved": "16.79",
+>>>>>>> master
       "time_served": "16 years, 9 months",
       "offense_date": "2/14/1987",
       "offsense_date_calc": 31822,
@@ -6354,7 +7655,11 @@
       "unit": "JESTER IV",
       "received_date": "4/19/2007",
       "received_date_cacl": 39191,
+<<<<<<< HEAD
       "timeserved": "8.93",
+=======
+      "timeserved": "8.97",
+>>>>>>> master
       "time_served": "8 years, 11 months",
       "offense_date": "12/5/2005",
       "offsense_date_calc": 38691,
@@ -6376,8 +7681,13 @@
       "unit": "POLUNSKY",
       "received_date": "6/23/2011",
       "received_date_cacl": 40717,
+<<<<<<< HEAD
       "timeserved": "4.75",
       "time_served": "4 years, 8 months",
+=======
+      "timeserved": "4.79",
+      "time_served": "4 years, 9 months",
+>>>>>>> master
       "offense_date": "4/11/2010",
       "offsense_date_calc": 40279,
       "offense": "CAPT MURDER(MULTI MURDER)(DEATH)",
@@ -6398,8 +7708,13 @@
       "unit": "POLUNSKY",
       "received_date": "11/4/2003",
       "received_date_cacl": 37929,
+<<<<<<< HEAD
       "timeserved": "12.38",
       "time_served": "12 years, 4 months",
+=======
+      "timeserved": "12.42",
+      "time_served": "12 years, 5 months",
+>>>>>>> master
       "offense_date": "7/19/1988",
       "offsense_date_calc": 32343,
       "offense": "CAPITAL MURDER",
@@ -6420,8 +7735,13 @@
       "unit": "POLUNSKY",
       "received_date": "7/2/2007",
       "received_date_cacl": 39265,
+<<<<<<< HEAD
       "timeserved": "8.72",
       "time_served": "8 years, 8 months",
+=======
+      "timeserved": "8.76",
+      "time_served": "8 years, 9 months",
+>>>>>>> master
       "offense_date": "6/18/2006",
       "offsense_date_calc": 38886,
       "offense": "CAPITAL MURDER(DEATH)",
@@ -6442,7 +7762,11 @@
       "unit": "POLUNSKY",
       "received_date": "1/9/1992",
       "received_date_cacl": 33612,
+<<<<<<< HEAD
       "timeserved": "24.20",
+=======
+      "timeserved": "24.24",
+>>>>>>> master
       "time_served": "24 years, 2 months",
       "offense_date": "4/7/1991",
       "offsense_date_calc": 33335,
@@ -6464,7 +7788,11 @@
       "unit": "POLUNSKY",
       "received_date": "9/12/1978",
       "received_date_cacl": 28745,
+<<<<<<< HEAD
       "timeserved": "37.52",
+=======
+      "timeserved": "37.57",
+>>>>>>> master
       "time_served": "37 years, 6 months",
       "offense_date": "10/14/1977",
       "offsense_date_calc": 28412,
@@ -6486,7 +7814,11 @@
       "unit": "POLUNSKY",
       "received_date": "1/13/2005",
       "received_date_cacl": 38365,
+<<<<<<< HEAD
       "timeserved": "11.19",
+=======
+      "timeserved": "11.23",
+>>>>>>> master
       "time_served": "11 years, 2 months",
       "offense_date": "4/3/2003",
       "offsense_date_calc": 37714,
@@ -6508,7 +7840,11 @@
       "unit": "POLUNSKY",
       "received_date": "4/16/2010",
       "received_date_cacl": 40284,
+<<<<<<< HEAD
       "timeserved": "5.93",
+=======
+      "timeserved": "5.97",
+>>>>>>> master
       "time_served": "5 years, 11 months",
       "offense_date": "12/7/2008",
       "offsense_date_calc": 39789,
@@ -6530,8 +7866,13 @@
       "unit": "POLUNSKY",
       "received_date": "8/1/2014",
       "received_date_cacl": 41852,
+<<<<<<< HEAD
       "timeserved": "1.64",
       "time_served": "1 year, 7 months",
+=======
+      "timeserved": "1.68",
+      "time_served": "1 year, 8 months",
+>>>>>>> master
       "offense_date": "12/24/2012",
       "offsense_date_calc": 41267,
       "offense": "CAPITAL MURDER(MULT MURD)(DEATH)",
@@ -6552,7 +7893,11 @@
       "unit": "POLUNSKY",
       "received_date": "11/17/1999",
       "received_date_cacl": 36481,
+<<<<<<< HEAD
       "timeserved": "16.34",
+=======
+      "timeserved": "16.39",
+>>>>>>> master
       "time_served": "16 years, 4 months",
       "offense_date": "12/7/1998",
       "offsense_date_calc": 36136,
@@ -6574,7 +7919,11 @@
       "unit": "POLUNSKY",
       "received_date": "12/8/2004",
       "received_date_cacl": 38329,
+<<<<<<< HEAD
       "timeserved": "11.29",
+=======
+      "timeserved": "11.33",
+>>>>>>> master
       "time_served": "11 years, 3 months",
       "offense_date": "5/11/2003",
       "offsense_date_calc": 37752,
@@ -6596,7 +7945,11 @@
       "unit": "POLUNSKY",
       "received_date": "7/18/1984",
       "received_date_cacl": 30881,
+<<<<<<< HEAD
       "timeserved": "31.68",
+=======
+      "timeserved": "31.72",
+>>>>>>> master
       "time_served": "31 years, 8 months",
       "offense_date": "7/13/1983",
       "offsense_date_calc": 30510,
@@ -6618,7 +7971,11 @@
       "unit": "POLUNSKY",
       "received_date": "5/15/2002",
       "received_date_cacl": 37391,
+<<<<<<< HEAD
       "timeserved": "13.85",
+=======
+      "timeserved": "13.89",
+>>>>>>> master
       "time_served": "13 years, 10 months",
       "offense_date": "1/26/2001",
       "offsense_date_calc": 36917,
@@ -6640,7 +7997,11 @@
       "unit": "POLUNSKY",
       "received_date": "4/20/2004",
       "received_date_cacl": 38097,
+<<<<<<< HEAD
       "timeserved": "11.92",
+=======
+      "timeserved": "11.96",
+>>>>>>> master
       "time_served": "11 years, 11 months",
       "offense_date": "3/6/2003",
       "offsense_date_calc": 37686,
@@ -6662,8 +8023,13 @@
       "unit": "POLUNSKY",
       "received_date": "9/29/1992",
       "received_date_cacl": 33876,
+<<<<<<< HEAD
       "timeserved": "23.48",
       "time_served": "23 years, 5 months",
+=======
+      "timeserved": "23.52",
+      "time_served": "23 years, 6 months",
+>>>>>>> master
       "offense_date": "11/15/1991",
       "offsense_date_calc": 33557,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -6683,7 +8049,11 @@
       "age": "52",
       "received_date": "11/18/1987",
       "received_date_cacl": 32099,
+<<<<<<< HEAD
       "timeserved": "28.34",
+=======
+      "timeserved": "28.38",
+>>>>>>> master
       "time_served": "28 years, 4 months",
       "offense_date": "3/11/1986",
       "offsense_date_calc": 31482,
@@ -6705,7 +8075,11 @@
       "unit": "POLUNSKY",
       "received_date": "9/13/1996",
       "received_date_cacl": 35321,
+<<<<<<< HEAD
       "timeserved": "19.52",
+=======
+      "timeserved": "19.56",
+>>>>>>> master
       "time_served": "19 years, 6 months",
       "offense_date": "1/1/1996",
       "offsense_date_calc": 35065,
@@ -6727,8 +8101,13 @@
       "unit": "POLUNSKY",
       "received_date": "7/24/1980",
       "received_date_cacl": 29426,
+<<<<<<< HEAD
       "timeserved": "35.66",
       "time_served": "35 years, 7 months",
+=======
+      "timeserved": "35.70",
+      "time_served": "35 years, 8 months",
+>>>>>>> master
       "offense_date": "4/25/1980",
       "offsense_date_calc": 29336,
       "offense": "CAP MURDER (DEATH)",
@@ -6749,8 +8128,13 @@
       "unit": "POLUNSKY",
       "received_date": "4/23/2008",
       "received_date_cacl": 39561,
+<<<<<<< HEAD
       "timeserved": "7.91",
       "time_served": "7 years, 10 months",
+=======
+      "timeserved": "7.95",
+      "time_served": "7 years, 11 months",
+>>>>>>> master
       "offense_date": "11/12/1986",
       "offsense_date_calc": 31728,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -6771,7 +8155,11 @@
       "unit": "POLUNSKY",
       "received_date": "4/16/2014",
       "received_date_cacl": 41745,
+<<<<<<< HEAD
       "timeserved": "1.93",
+=======
+      "timeserved": "1.97",
+>>>>>>> master
       "time_served": "1 year, 11 months",
       "offense_date": "5/20/2011",
       "offsense_date_calc": 40683,
@@ -6793,8 +8181,13 @@
       "unit": "POLUNSKY",
       "received_date": "11/4/2002",
       "received_date_cacl": 37564,
+<<<<<<< HEAD
       "timeserved": "13.38",
       "time_served": "13 years, 4 months",
+=======
+      "timeserved": "13.42",
+      "time_served": "13 years, 5 months",
+>>>>>>> master
       "offense_date": "4/24/1999",
       "offsense_date_calc": 36274,
       "offense": "CAPITAL MURDER",
@@ -6815,8 +8208,13 @@
       "unit": "POLUNSKY",
       "received_date": "8/2/1996",
       "received_date_cacl": 35279,
+<<<<<<< HEAD
       "timeserved": "19.64",
       "time_served": "19 years, 7 months",
+=======
+      "timeserved": "19.68",
+      "time_served": "19 years, 8 months",
+>>>>>>> master
       "offense_date": "11/9/1994",
       "offsense_date_calc": 34647,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -6837,8 +8235,13 @@
       "unit": "JESTER IV",
       "received_date": "7/25/1988",
       "received_date_cacl": 32349,
+<<<<<<< HEAD
       "timeserved": "27.66",
       "time_served": "27 years, 7 months",
+=======
+      "timeserved": "27.70",
+      "time_served": "27 years, 8 months",
+>>>>>>> master
       "offense_date": "11/1/1987",
       "offsense_date_calc": 32082,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -6859,8 +8262,13 @@
       "unit": "POLUNSKY",
       "received_date": "6/30/1994",
       "received_date_cacl": 34515,
+<<<<<<< HEAD
       "timeserved": "21.73",
       "time_served": "21 years, 8 months",
+=======
+      "timeserved": "21.77",
+      "time_served": "21 years, 9 months",
+>>>>>>> master
       "offense_date": "10/15/1992",
       "offsense_date_calc": 33892,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -6881,7 +8289,11 @@
       "unit": "POLUNSKY",
       "received_date": "5/21/2004",
       "received_date_cacl": 38128,
+<<<<<<< HEAD
       "timeserved": "11.84",
+=======
+      "timeserved": "11.88",
+>>>>>>> master
       "time_served": "11 years, 10 months",
       "offense_date": "3/2/2003",
       "offsense_date_calc": 37682,
@@ -6903,8 +8315,13 @@
       "unit": "POLUNSKY",
       "received_date": "12/31/1992",
       "received_date_cacl": 33969,
+<<<<<<< HEAD
       "timeserved": "23.22",
       "time_served": "23 years, 2 months",
+=======
+      "timeserved": "23.26",
+      "time_served": "23 years, 3 months",
+>>>>>>> master
       "offense_date": "9/13/1991",
       "offsense_date_calc": 33494,
       "offense": "CAPITAL MURDER",
@@ -6925,8 +8342,13 @@
       "unit": "JESTER IV",
       "received_date": "2/4/1976",
       "received_date_cacl": 27794,
+<<<<<<< HEAD
       "timeserved": "40.13",
       "time_served": "40 years, 1 month",
+=======
+      "timeserved": "40.17",
+      "time_served": "40 years, 2 months",
+>>>>>>> master
       "offense_date": "12/11/1974",
       "offsense_date_calc": 27374,
       "offense": "CAP MURDER (DEATH SENT)",
@@ -6947,7 +8369,11 @@
       "unit": "POLUNSKY",
       "received_date": "9/15/1999",
       "received_date_cacl": 36418,
+<<<<<<< HEAD
       "timeserved": "16.52",
+=======
+      "timeserved": "16.56",
+>>>>>>> master
       "time_served": "16 years, 6 months",
       "offense_date": "12/25/1997",
       "offsense_date_calc": 35789,
@@ -6965,12 +8391,17 @@
       "race": "Black",
       "sex": "Male",
       "dob": "3/31/1967",
-      "age": "48",
+      "age": "49",
       "unit": "POLUNSKY",
       "received_date": "12/29/1988",
       "received_date_cacl": 32506,
+<<<<<<< HEAD
       "timeserved": "27.23",
       "time_served": "27 years, 2 months",
+=======
+      "timeserved": "27.27",
+      "time_served": "27 years, 3 months",
+>>>>>>> master
       "offense_date": "5/3/1987",
       "offsense_date_calc": 31900,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -6991,7 +8422,11 @@
       "unit": "POLUNSKY",
       "received_date": "12/16/1998",
       "received_date_cacl": 36145,
+<<<<<<< HEAD
       "timeserved": "17.26",
+=======
+      "timeserved": "17.31",
+>>>>>>> master
       "time_served": "17 years, 3 months",
       "offense_date": "11/26/1994",
       "offsense_date_calc": 34664,
@@ -7013,8 +8448,13 @@
       "unit": "POLUNSKY",
       "received_date": "2/26/2003",
       "received_date_cacl": 37678,
+<<<<<<< HEAD
       "timeserved": "13.07",
       "time_served": "13 years",
+=======
+      "timeserved": "13.11",
+      "time_served": "13 years, 1 month",
+>>>>>>> master
       "offense_date": "8/13/2001",
       "offsense_date_calc": 37116,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -7035,8 +8475,13 @@
       "unit": "POLUNSKY",
       "received_date": "4/2/2003",
       "received_date_cacl": 37713,
+<<<<<<< HEAD
       "timeserved": "12.97",
       "time_served": "12 years, 11 months",
+=======
+      "timeserved": "13.01",
+      "time_served": "13 years",
+>>>>>>> master
       "offense_date": "7/21/2000",
       "offsense_date_calc": 36728,
       "offense": "CAPITAL MURDER",
@@ -7057,8 +8502,13 @@
       "unit": "MOUNTAIN VIEW",
       "received_date": "4/25/1995",
       "received_date_cacl": 34814,
+<<<<<<< HEAD
       "timeserved": "20.91",
       "time_served": "20 years, 10 months",
+=======
+      "timeserved": "20.95",
+      "time_served": "20 years, 11 months",
+>>>>>>> master
       "offense_date": "6/30/1993",
       "offsense_date_calc": 34150,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -7079,7 +8529,11 @@
       "unit": "POLUNSKY",
       "received_date": "11/15/2004",
       "received_date_cacl": 38306,
+<<<<<<< HEAD
       "timeserved": "11.35",
+=======
+      "timeserved": "11.39",
+>>>>>>> master
       "time_served": "11 years, 4 months",
       "offense_date": "4/16/1992",
       "offsense_date_calc": 33710,
@@ -7097,12 +8551,17 @@
       "race": "Black",
       "sex": "Male",
       "dob": 27117,
-      "age": "41",
+      "age": "42",
       "unit": "POLUNSKY",
       "received_date": "11/1/1996",
       "received_date_cacl": 35370,
+<<<<<<< HEAD
       "timeserved": "19.39",
       "time_served": "19 years, 4 months",
+=======
+      "timeserved": "19.43",
+      "time_served": "19 years, 5 months",
+>>>>>>> master
       "offense_date": "7/19/1995",
       "offsense_date_calc": 34899,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -7123,7 +8582,11 @@
       "unit": "POLUNSKY",
       "received_date": "10/10/1978",
       "received_date_cacl": 28773,
+<<<<<<< HEAD
       "timeserved": "37.45",
+=======
+      "timeserved": "37.49",
+>>>>>>> master
       "time_served": "37 years, 5 months",
       "offense_date": "1/7/1978",
       "offsense_date_calc": 28497,
@@ -7145,8 +8608,13 @@
       "unit": "POLUNSKY",
       "received_date": "7/5/2006",
       "received_date_cacl": 38903,
+<<<<<<< HEAD
       "timeserved": "9.71",
       "time_served": "9 years, 8 months",
+=======
+      "timeserved": "9.75",
+      "time_served": "9 years, 9 months",
+>>>>>>> master
       "offense_date": "3/24/2005",
       "offsense_date_calc": 38435,
       "offense": "CAPITAL MURDER-DEATH",
@@ -7167,7 +8635,11 @@
       "unit": "POLUNSKY",
       "received_date": "6/12/1981",
       "received_date_cacl": 29749,
+<<<<<<< HEAD
       "timeserved": "34.78",
+=======
+      "timeserved": "34.82",
+>>>>>>> master
       "time_served": "34 years, 9 months",
       "offense_date": "7/13/1980",
       "offsense_date_calc": 29415,
@@ -7189,7 +8661,11 @@
       "unit": "POLUNSKY",
       "received_date": "12/11/2003",
       "received_date_cacl": 37966,
+<<<<<<< HEAD
       "timeserved": "12.28",
+=======
+      "timeserved": "12.32",
+>>>>>>> master
       "time_served": "12 years, 3 months",
       "offense_date": "5/31/2002",
       "offsense_date_calc": 37407,
@@ -7211,7 +8687,11 @@
       "unit": "POLUNSKY",
       "received_date": "6/14/1994",
       "received_date_cacl": 34499,
+<<<<<<< HEAD
       "timeserved": "21.77",
+=======
+      "timeserved": "21.81",
+>>>>>>> master
       "time_served": "21 years, 9 months",
       "offense_date": "1/24/1991",
       "offsense_date_calc": 33262,
@@ -7233,7 +8713,11 @@
       "unit": "POLUNSKY",
       "received_date": "12/13/2000",
       "received_date_cacl": 36873,
+<<<<<<< HEAD
       "timeserved": "15.27",
+=======
+      "timeserved": "15.31",
+>>>>>>> master
       "time_served": "15 years, 3 months",
       "offense_date": "3/31/1997",
       "offsense_date_calc": 35520,
@@ -7255,8 +8739,13 @@
       "unit": "POLUNSKY",
       "received_date": "5/5/1999",
       "received_date_cacl": 36285,
+<<<<<<< HEAD
       "timeserved": "16.88",
       "time_served": "16 years, 10 months",
+=======
+      "timeserved": "16.92",
+      "time_served": "16 years, 11 months",
+>>>>>>> master
       "offense_date": "4/30/1998",
       "offsense_date_calc": 35915,
       "offense": "CAPITAL MURDER(DEATH)",
@@ -7277,8 +8766,13 @@
       "unit": "POLUNSKY",
       "received_date": "4/1/1998",
       "received_date_cacl": 35886,
+<<<<<<< HEAD
       "timeserved": "17.97",
       "time_served": "17 years, 11 months",
+=======
+      "timeserved": "18.02",
+      "time_served": "18 years",
+>>>>>>> master
       "offense_date": "4/6/1997",
       "offsense_date_calc": 35526,
       "offense": "CAPITAL MURDER(DEATH)",
@@ -7299,8 +8793,13 @@
       "unit": "POLUNSKY",
       "received_date": "11/1/1996",
       "received_date_cacl": 35370,
+<<<<<<< HEAD
       "timeserved": "19.39",
       "time_served": "19 years, 4 months",
+=======
+      "timeserved": "19.43",
+      "time_served": "19 years, 5 months",
+>>>>>>> master
       "offense_date": "8/28/1994",
       "offsense_date_calc": 34574,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -7321,7 +8820,11 @@
       "unit": "POLUNSKY",
       "received_date": "12/11/1986",
       "received_date_cacl": 31757,
+<<<<<<< HEAD
       "timeserved": "29.28",
+=======
+      "timeserved": "29.32",
+>>>>>>> master
       "time_served": "29 years, 3 months",
       "offense_date": "12/19/1985",
       "offsense_date_calc": 31400,
@@ -7343,8 +8846,13 @@
       "unit": "POLUNSKY",
       "received_date": "9/2/1998",
       "received_date_cacl": 36040,
+<<<<<<< HEAD
       "timeserved": "17.55",
       "time_served": "17 years, 6 months",
+=======
+      "timeserved": "17.59",
+      "time_served": "17 years, 7 months",
+>>>>>>> master
       "offense_date": "11/13/1997",
       "offsense_date_calc": 35747,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -7365,8 +8873,13 @@
       "unit": "POLUNSKY",
       "received_date": "1/28/1992",
       "received_date_cacl": 33631,
+<<<<<<< HEAD
       "timeserved": "24.15",
       "time_served": "24 years, 1 month",
+=======
+      "timeserved": "24.19",
+      "time_served": "24 years, 2 months",
+>>>>>>> master
       "offense_date": "12/13/1990",
       "offsense_date_calc": 33220,
       "offense": "CAPITAL MURDER (DEATH)",
@@ -7387,7 +8900,11 @@
       "unit": "POLUNSKY",
       "received_date": "9/13/1996",
       "received_date_cacl": 35321,
+<<<<<<< HEAD
       "timeserved": "19.52",
+=======
+      "timeserved": "19.56",
+>>>>>>> master
       "time_served": "19 years, 6 months",
       "offense_date": "12/2/1989",
       "offsense_date_calc": 32844,
@@ -7409,8 +8926,13 @@
       "unit": "POLUNSKY",
       "received_date": "1/28/2002",
       "received_date_cacl": 37284,
+<<<<<<< HEAD
       "timeserved": "14.15",
       "time_served": "14 years, 1 month",
+=======
+      "timeserved": "14.19",
+      "time_served": "14 years, 2 months",
+>>>>>>> master
       "offense_date": "12/4/2000",
       "offsense_date_calc": 36864,
       "offense": "CAPITAL MURDER",
@@ -7431,8 +8953,13 @@
       "unit": "POLUNSKY",
       "received_date": "6/25/2002",
       "received_date_cacl": 37432,
+<<<<<<< HEAD
       "timeserved": "13.74",
       "time_served": "13 years, 8 months",
+=======
+      "timeserved": "13.78",
+      "time_served": "13 years, 9 months",
+>>>>>>> master
       "offense_date": "9/17/2000",
       "offsense_date_calc": 36786,
       "offense": "CAPITAL MURDER",
@@ -7453,8 +8980,13 @@
       "unit": "POLUNSKY",
       "received_date": "5/6/1983",
       "received_date_cacl": 30442,
+<<<<<<< HEAD
       "timeserved": "32.88",
       "time_served": "32 years, 10 months",
+=======
+      "timeserved": "32.92",
+      "time_served": "32 years, 11 months",
+>>>>>>> master
       "offense_date": "4/28/1982",
       "offsense_date_calc": 30069,
       "offense": "CAP MURDER P.O. (DEATH)",
@@ -7474,7 +9006,11 @@
       "age": "35",
       "received_date": "6/20/2001",
       "received_date_cacl": 37062,
+<<<<<<< HEAD
       "timeserved": "14.75",
+=======
+      "timeserved": "14.80",
+>>>>>>> master
       "time_served": "14 years, 9 months",
       "offense_date": "2/12/2000",
       "offsense_date_calc": 36568,

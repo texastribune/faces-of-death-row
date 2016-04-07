@@ -38,8 +38,8 @@
 
   $('#timeserved_slider').slider({
     min: 0,
-    max: 40,
-    values:[0, 40],
+    max: 45,
+    values:[0, 45],
     step: 5,
     range:true,
     slide: function(event, ui) {

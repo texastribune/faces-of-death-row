@@ -1,6 +1,80 @@
 (function() {
   'use strict';
 
+  //typeahead for county select
+  var substringMatcher = function(strs) {
+    return function findMatches(q, cb) {
+      var matches, substringRegex;
+
+      // an array that will be populated with substring matches
+      matches = [];
+
+      // regex used to determine if a string contains the substring `q`
+      substringRegex = new RegExp(q, 'i');
+
+      // iterate through the pool of strings and for any string that
+      // contains the substring `q`, add it to the `matches` array
+      $.each(strs, function(i, str) {
+        if (substringRegex.test(str)) {
+          matches.push(str);
+        }
+      });
+
+      cb(matches);
+    };
+  };
+
+  var counties = ['Anderson', 'Andrews', 'Angelina', 'Aransas', 'Archer',
+  'Armstrong', 'Atascosa', 'Austin', 'Bailey', 'Bandera', 'Bastrop', 'Baylor',
+  'Bee', 'Bell', 'Bexar', 'Blanco', 'Borden', 'Bosque', 'Bowie', 'Brazoria',
+  'Brazos', 'Brewster', 'Briscoe', 'Brooks', 'Brown', 'Burleson', 'Burnet',
+  'Caldwell', 'Calhoun', 'Callahan', 'Cameron', 'Camp', 'Carson', 'Cass',
+  'Castro', 'Chambers', 'Cherokee', 'Childress', 'Clay', 'Cochran', 'Coke',
+  'Coleman', 'Collin', 'Collingsworth', 'Colorado', 'Comal', 'Comanche',
+  'Concho', 'Cooke', 'Coryell', 'Cottle', 'Crane', 'Crockett', 'Crosby',
+  'Culberson', 'Dallam', 'Dallas', 'Dawson', 'Deaf Smith', 'Delta', 'Denton',
+  'DeWitt', 'Dickens', 'Dimmit', 'Donley', 'Duval', 'Eastland', 'Ector',
+  'Edwards', 'El Paso', 'Ellis', 'Erath', 'Falls', 'Fannin', 'Fayette',
+  'Fisher', 'Floyd', 'Foard', 'Fort Bend', 'Franklin', 'Freestone', 'Frio',
+  'Gaines', 'Galveston', 'Garza', 'Gillespie', 'Glasscock', 'Goliad',
+  'Gonzales', 'Gray', 'Grayson', 'Gregg', 'Grimes', 'Guadalupe', 'Hale', 'Hall',
+   'Hamilton', 'Hansford', 'Hardeman', 'Hardin', 'Harris', 'Harrison',
+   'Hartley', 'Haskell', 'Hays', 'Hemphill', 'Henderson', 'Hidalgo', 'Hill',
+   'Hockley', 'Hood', 'Hopkins', 'Houston', 'Howard', 'Hudspeth', 'Hunt',
+   'Hutchinson', 'Irion', 'Jack', 'Jackson', 'Jasper', 'Jeff Davis',
+   'Jefferson', 'Jim Hogg', 'Jim Wells', 'Johnson', 'Jones', 'Karnes',
+   'Kaufman', 'Kendall', 'Kenedy', 'Kent', 'Kerr', 'Kimble', 'King', 'Kinney',
+   'Kleberg', 'Knox', 'La Salle', 'Lamar', 'Lamb', 'Lampasas', 'Lavaca', 'Lee',
+   'Leon', 'Liberty', 'Limestone', 'Lipscomb', 'Live Oak', 'Llano', 'Loving',
+   'Lubbock', 'Lynn', 'Madison', 'Marion', 'Martin', 'Mason', 'Matagorda',
+   'Maverick', 'McCulloch', 'McLennan', 'McMullen', 'Medina', 'Menard',
+   'Midland', 'Milam', 'Mills', 'Mitchell', 'Montague', 'Montgomery', 'Moore',
+   'Morris', 'Motley', 'Nacogdoches', 'Navarro', 'Newton', 'Nolan', 'Nueces',
+   'Ochiltree', 'Oldham', 'Orange', 'Palo Pinto', 'Panola', 'Parker', 'Parmer',
+   'Pecos', 'Polk', 'Potter', 'Presidio', 'Rains', 'Randall', 'Reagan', 'Real',
+   'Red River', 'Reeves', 'Refugio', 'Roberts', 'Robertson', 'Rockwall',
+   'Runnels', 'Rusk', 'Sabine', 'San Augustine', 'San Jacinto', 'San Patricio',
+   'San Saba', 'Schleicher', 'Scurry', 'Shackelford', 'Shelby', 'Sherman',
+   'Smith', 'Somervell', 'Starr', 'Stephens', 'Sterling', 'Stonewall', 'Sutton',
+   'Swisher', 'Tarrant', 'Taylor', 'Terrell', 'Terry', 'Throckmorton', 'Titus',
+   'Tom Green', 'Travis', 'Trinity', 'Tyler', 'Upshur', 'Upton', 'Uvalde',
+   'Val Verde', 'Van Zandt', 'Victoria', 'Walker', 'Waller', 'Ward',
+   'Washington', 'Webb', 'Wharton', 'Wheeler', 'Wichita', 'Wilbarger',
+   'Willacy', 'Williamson', 'Wilson', 'Winkler', 'Wise', 'Wood', 'Yoakum',
+   'Young', 'Zapata', 'Zavala'
+  ];
+
+  var countySearch = $('#county_typeahead .typeahead').typeahead({
+    hint: true,
+    highlight: true,
+    minLength: 1
+  },
+  {
+    name: 'counties',
+    source: substringMatcher(counties)
+  });
+
+  //getting inputs
   var $inmatesContainer = $('#inmates');
   var $inmates = $inmatesContainer.find('.inmate');
 
@@ -56,19 +130,28 @@
     filter();
   });
 
+  var countyEntry = '';
+
+  countySearch.on('typeahead:selected', function(e, datum) {
+    countyEntry = datum;
+    filter();
+  });
+
   function getState() {
     var raceSelection = $raceCriteria.filter(':checked').map(function() { return this.value; }).get();
     var sexSelection = $sexCriteria.filter(':checked').map(function() { return this.value; }).get();
     var ageRange = [+$ageRangeLabelStart.text(), +$ageRangeLabelEnd.text()];
     var timeRange = [+$timeServedRangeLabelStart.text(), +$timeServedRangeLabelEnd.text()];
     var executionSelection = $executionCritera.filter(':checked').map(function() { return this.value; }).get();
+    var countySelection = countyEntry;
 
     return {
       raceSelection: raceSelection,
       sexSelection: sexSelection,
       ageRange: ageRange,
       timeRange: timeRange,
-      executionSelection: executionSelection
+      executionSelection: executionSelection,
+      countySelection: countySelection
     };
   }
 
@@ -108,6 +191,11 @@
       }
 
       if ($.inArray($this.data('execution'), state.executionSelection) < 0 && state.executionSelection.length) {
+        $this.addClass('hidden');
+        return false;
+      }
+
+      if (state.countySelection != $this.data('county')) {
         $this.addClass('hidden');
         return false;
       }
@@ -256,50 +344,6 @@
         }
       }
     }
-  });
-
-  //typeahead for county select
-  var substringMatcher = function(strs) {
-    return function findMatches(q, cb) {
-      var matches, substringRegex;
-
-      // an array that will be populated with substring matches
-      matches = [];
-
-      // regex used to determine if a string contains the substring `q`
-      substringRegex = new RegExp(q, 'i');
-
-      // iterate through the pool of strings and for any string that
-      // contains the substring `q`, add it to the `matches` array
-      $.each(strs, function(i, str) {
-        if (substringRegex.test(str)) {
-          matches.push(str);
-        }
-      });
-
-      cb(matches);
-    };
-  };
-
-  var counties = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California',
-    'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii',
-    'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana',
-    'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota',
-    'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire',
-    'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota',
-    'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island',
-    'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont',
-    'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'
-  ];
-
-  $('#county_typeahead .typeahead').typeahead({
-    hint: true,
-    highlight: true,
-    minLength: 1
-  },
-  {
-    name: 'counties',
-    source: substringMatcher(counties)
   });
 
 })();

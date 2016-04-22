@@ -41,7 +41,6 @@ gulp.task('scripts', ['jshint'], function() {
       'app/scripts/libs/jquery-ui-touch-punch.js',
       'app/scripts/libs/ads.js',
       'app/scripts/libs/chosen.jquery.min.js',
-      'app/scripts/libs/chosen.proto.min.js',
       'app/scripts/**/*.js'
     ])
     .pipe($.concat('bundle.js', {newLine: ';'}))

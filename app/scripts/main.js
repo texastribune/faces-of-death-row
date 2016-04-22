@@ -195,7 +195,7 @@
         return false;
       }
 
-      if (state.countySelection != $this.data('county')) {
+      if (state.countySelection !== $this.data('county')) {
         $this.addClass('hidden');
         return false;
       }

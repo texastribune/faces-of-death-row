@@ -70,14 +70,19 @@
     </div>
     <div class="criteria county" id="county_criteria">
       <h4>County</h4>
-        <div id="county_typeahead">
-          <input id="county_search" class="typeahead" type="text" placeholder="Enter a county">
-        </div>
+        <select data-placeholder="Select county(ies)" class="chosen-select" multiple style="width: 300px">
+          <option value></option>
+          {% for county in COUNTIES %}
+            {% if county.county %}
+              <option value="{{ county.county }}">{{ county.county }} ({{county.inmates}})</option>
+            {% endif %}
+          {% endfor %}
+        </select>
     </div>
     <div class="criteria execution" id="execution_criteria">
         <ul class="checkboxes">
           <li class="checkbox">
-            <input id="yes" type="checkbox" value="Yes">
+            <input id="yes" type="checkbox" value="yes">
             <label for="yes">Execution date set</label>
           </li>
         </ul>
@@ -88,7 +93,7 @@
 <section class="container interactive">
   <div class="inmates" id="inmates">
     {% for inmate in INMATES %}
-    <div class="inmate" id="id{{ inmate.tdcj_id }}" data-race="{{ inmate.race }}" data-sex="{{ inmate.sex }}" data-age="{{ inmate.age }}" data-time="{{ inmate.timeserved }}" data-county="{{ inmate.county }}" data-execution="{% if inmate.execution_date %}Yes{% else %}No{% endif %}"}>
+    <div class="inmate" id="id{{ inmate.tdcj_id }}" data-race="{{ inmate.race }}" data-sex="{{ inmate.sex }}" data-age="{{ inmate.age }}" data-time="{{ inmate.timeserved }}" data-county="{{ inmate.county }}" data-execution="{% if inmate.execution_date %}yes{% endif %}">
       <div class="open-lightbox" id="inmate-{{ inmate.tdcj_id }}">
         <img class="grayscale" src="assets/images/{{ inmate.mug }}" />
         <div class="hover-state">

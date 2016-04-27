@@ -1,6 +1,9 @@
 (function() {
   'use strict';
 
+  //activate chosen
+  $('.chosen-select').chosen();
+
   //getting inputs
   var $inmatesContainer = $('#inmates');
   var $inmates = $inmatesContainer.find('.inmate');
@@ -14,6 +17,12 @@
   var $sexCriteria = $('#sex_criteria').find('input[type=checkbox]');
 
   $sexCriteria.change(function() {
+    filter();
+  });
+
+  var $executionCritera = $('#execution_criteria').find('input[type=checkbox]');
+
+  $executionCritera.change(function() {
     filter();
   });
 
@@ -51,27 +60,21 @@
     }
   });
 
-  var $executionCritera = $('#execution_criteria').find('input[type=checkbox]');
-
-  $executionCritera.change(function() {
-    filter();
-  });
-
   function getState() {
     var raceSelection = $raceCriteria.filter(':checked').map(function() { return this.value; }).get();
     var sexSelection = $sexCriteria.filter(':checked').map(function() { return this.value; }).get();
     var ageRange = [+$ageRangeLabelStart.text(), +$ageRangeLabelEnd.text()];
     var timeRange = [+$timeServedRangeLabelStart.text(), +$timeServedRangeLabelEnd.text()];
     var executionSelection = $executionCritera.filter(':checked').map(function() { return this.value; }).get();
-    var countySelection = countyEntry;
+    //var countySelection = countyEntry;
 
     return {
       raceSelection: raceSelection,
       sexSelection: sexSelection,
       ageRange: ageRange,
       timeRange: timeRange,
-      executionSelection: executionSelection,
-      countySelection: countySelection
+      executionSelection: executionSelection
+      //countySelection: countySelection
     };
   }
 
@@ -96,6 +99,11 @@
         return false;
       }
 
+      if ($.inArray($this.data('execution'), state.executionSelection) < 0 && state.executionSelection.length) {
+        $this.addClass('hidden');
+        return false;
+      }
+
       var age = +$this.data('age');
 
       if (state.ageRange[0] > age || age > state.ageRange[1]) {
@@ -110,15 +118,10 @@
         return false;
       }
 
-      if ($.inArray($this.data('execution'), state.executionSelection) < 0 && state.executionSelection.length) {
-        $this.addClass('hidden');
-        return false;
-      }
-
-      if (state.countySelection !== $this.data('county')) {
-        $this.addClass('hidden');
-        return false;
-      }
+      // if (state.countySelection !== $this.data('county')) {
+      //   $this.addClass('hidden');
+      //   return false;
+      // }
 
       $this.removeClass('hidden');
       return true;

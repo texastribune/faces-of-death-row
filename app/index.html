@@ -71,7 +71,6 @@
     <div class="criteria county" id="county_criteria">
       <h4>County</h4>
         <select data-placeholder="Select county(ies)" class="chosen-select" multiple style="width: 300px">
-          <option value></option>
           {% for county in COUNTIES %}
             {% if county.county %}
               <option value="{{ county.county }}">{{ county.county }} ({{county.inmates}})</option>

@@ -2,7 +2,9 @@
   'use strict';
 
   //activate chosen
-  $('.chosen-select').chosen();
+  $('.chosen-select').chosen({
+    enable_split_word_search: false
+  });
 
   //getting inputs
   var $inmatesContainer = $('#inmates');
@@ -23,6 +25,12 @@
   var $executionCritera = $('#execution_criteria').find('input[type=checkbox]');
 
   $executionCritera.change(function() {
+    filter();
+  });
+
+  var $countyCriteria = $('#county_criteria .chosen-select');
+
+  $countyCriteria.on('change', function() {
     filter();
   });
 
@@ -66,15 +74,15 @@
     var ageRange = [+$ageRangeLabelStart.text(), +$ageRangeLabelEnd.text()];
     var timeRange = [+$timeServedRangeLabelStart.text(), +$timeServedRangeLabelEnd.text()];
     var executionSelection = $executionCritera.filter(':checked').map(function() { return this.value; }).get();
-    //var countySelection = countyEntry;
+    var countySelection = $countyCriteria.val();
 
     return {
       raceSelection: raceSelection,
       sexSelection: sexSelection,
       ageRange: ageRange,
       timeRange: timeRange,
-      executionSelection: executionSelection
-      //countySelection: countySelection
+      executionSelection: executionSelection,
+      countySelection: countySelection
     };
   }
 
@@ -104,6 +112,11 @@
         return false;
       }
 
+      if ($.inArray($this.data('county'), state.countySelection) < 0 && state.countySelection !== null) {
+        $this.addClass('hidden');
+        return false;
+      }
+
       var age = +$this.data('age');
 
       if (state.ageRange[0] > age || age > state.ageRange[1]) {
@@ -117,11 +130,6 @@
         $this.addClass('hidden');
         return false;
       }
-
-      // if (state.countySelection !== $this.data('county')) {
-      //   $this.addClass('hidden');
-      //   return false;
-      // }
 
       $this.removeClass('hidden');
       return true;

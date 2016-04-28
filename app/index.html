@@ -69,24 +69,24 @@
             </li>
           </ul>
       </div>
-    </div>
-    <div class="criteria county" id="county_criteria">
-      <h4>County</h4>
-      <select data-placeholder="Select counties" class="county-select" multiple>
-        {% for county in COUNTIES|selectattr("county")|sort(false, false, "county") %}
-          {% if county.county %}
-            <option value="{{ county.county }}">{{ county.county }} ({{county.inmates}})</option>
-          {% endif %}
-        {% endfor %}
-      </select>
-    </div>
-    <div class="criteria execution" id="execution_criteria">
-        <ul class="checkboxes">
-          <li class="checkbox">
-            <input id="yes" type="checkbox" value="yes">
-            <label for="yes">Execution date set</label>
-          </li>
-        </ul>
+      <div class="criteria county" id="county_criteria">
+        <h4>County of crime</h4>
+        <select data-placeholder="Select counties" class="county-select" multiple>
+          {% for county in COUNTIES|selectattr("county")|sort(false, false, "county") %}
+            {% if county.county %}
+              <option value="{{ county.county }}">{{ county.county }} ({{county.inmates}})</option>
+            {% endif %}
+          {% endfor %}
+        </select>
+      </div>
+      <div class="criteria execution" id="execution_criteria">
+          <ul class="checkboxes">
+            <li class="checkbox">
+              <input id="yes" type="checkbox" value="yes">
+              <label for="yes">Execution date set</label>
+            </li>
+          </ul>
+      </div>
     </div>
     <div class="num-match">Viewing <span id="total_inmates">{{ META.total_inmates }}</span> inmates</div>
   </div>

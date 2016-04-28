@@ -1,11 +1,14 @@
 (function() {
   'use strict';
 
+  var $selectWidth = $('#county_criteria').innerWidth() - $('#county_criteria h4').innerWidth();
+  console.log($selectWidth);
+
   //activate chosen
   $('.county-select').chosen({
     enable_split_word_search: false,
     no_results_text: 'No counties match',
-    width: '300px'
+    width: $selectWidth + 'px'
   });
 
   //show sliders after they load
@@ -33,7 +36,7 @@
     filter();
   });
 
-  var $countyCriteria = $('#county_criteria .chosen-select');
+  var $countyCriteria = $('#county_criteria .county-select');
 
   $countyCriteria.on('change', function() {
     filter();

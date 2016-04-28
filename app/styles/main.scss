@@ -2,16 +2,17 @@
 @import 'bower_components/newsapps-styles/initialize';
 @import 'bower_components/newsapps-styles/helpers/grid';
 
+$dr-orange: rgb(255, 133, 33);
+$dr-seafoam: rgb(168, 192, 183);
+$dr-darkgreen: rgb(47, 79, 79);
+$dr-dark-gray: $bodytext-black;
+
 @import 'components/slider';
 @import 'components/masthead';
 @import 'components/chosen';
 @import 'components/dr-chosen';
 
 @import url(https://fonts.googleapis.com/css?family=Stardos+Stencil:400,700);
-$dr-orange: rgb(255, 133, 33);
-$dr-seafoam: rgb(168, 192, 183);
-$dr-darkgreen: rgb(47, 79, 79);
-$dr-dark-gray: $bodytext-black;
 
 $mobile: new-breakpoint(max-width 460px);
 $small: new-breakpoint(min-width 461px max-width 660px);
@@ -312,6 +313,24 @@ section {
       float: right;
       width: 62%;
     }
+  }
+
+  &.county {
+    @include span-columns(7.4);
+    border: 2px solid $dr-darkgreen;
+    height: 32px;
+
+    h4 {
+      float: left;
+    }
+  }
+
+  &.execution {
+    @include span-columns(4.6);
+    @include omega();
+    border: 2px solid $dr-darkgreen;
+    height: 32px;
+    padding: 6px;
   }
 }
 

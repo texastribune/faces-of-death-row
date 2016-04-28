@@ -1,7 +1,24 @@
 //Death row chosen styles
 
+//hide unstyled select box before chosen takes over
 .county-select {
-  width: 0;
-  height: 0;
   border: 0;
+  height: 0;
+  width: 0;
+}
+
+.chosen-container-multi {
+  float: left;
+
+  .chosen-choices {
+    background: $dr-seafoam;
+    border: 0;
+
+    li.search-field input[type="text"] {
+      color: $tribune-black;
+      font-size: 13.5px;
+      letter-spacing: .02em;
+      line-height: 28px
+    }
+  }
 }

@@ -5,6 +5,7 @@
 @import 'components/slider';
 @import 'components/masthead';
 @import 'components/chosen';
+@import 'components/dr-chosen';
 
 @import url(https://fonts.googleapis.com/css?family=Stardos+Stencil:400,700);
 $dr-orange: rgb(255, 133, 33);
@@ -871,4 +872,8 @@ section {
   border-top: 1px solid $border-gray;
   padding-top: .75em;
   text-align: center;
+}
+
+.hide-on-load {
+  display: none;
 }

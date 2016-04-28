@@ -2,9 +2,14 @@
   'use strict';
 
   //activate chosen
-  $('.chosen-select').chosen({
-    enable_split_word_search: false
+  $('.county-select').chosen({
+    enable_split_word_search: false,
+    no_results_text: 'No counties match',
+    width: '300px'
   });
+
+  //show sliders after they load
+  $('.hide-on-load').show();
 
   //getting inputs
   var $inmatesContainer = $('#inmates');

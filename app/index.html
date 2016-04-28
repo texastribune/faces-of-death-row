@@ -71,7 +71,7 @@
       </div>
       <div class="criteria county" id="county_criteria">
         <h4>County of crime</h4>
-        <select data-placeholder="Select counties" class="county-select" multiple>
+        <select data-placeholder="Select counties..." class="county-select" multiple>
           {% for county in COUNTIES|selectattr("county")|sort(false, false, "county") %}
             {% if county.county %}
               <option value="{{ county.county }}">{{ county.county }} ({{county.inmates}})</option>
@@ -83,7 +83,7 @@
           <ul class="checkboxes">
             <li class="checkbox">
               <input id="yes" type="checkbox" value="yes">
-              <label for="yes">Execution date set</label>
+              <label for="yes">Has execution date</label>
             </li>
           </ul>
       </div>

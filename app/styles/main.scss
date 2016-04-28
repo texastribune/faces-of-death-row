@@ -328,8 +328,12 @@ section {
   &.execution {
     @include span-columns(4.6);
     @include omega();
+    background: $dr-darkgreen;
     border: 2px solid $dr-darkgreen;
+    color: $white;
+    font-size: 1.1em;
     height: 32px;
+    letter-spacing: .02em;
     padding: 6px;
   }
 }
@@ -365,6 +369,10 @@ section {
       margin-right: 3px;
       vertical-align: -2px;
       width: 15px;
+
+      .execution & {
+        margin-right: 5px;
+      }
 
       @include media($mobile) {
         height: 17px;

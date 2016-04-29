@@ -1,8 +1,7 @@
 (function() {
   'use strict';
 
-  var $selectWidth = $('#county_criteria').innerWidth() - $('#county_criteria h4').innerWidth();
-  console.log($selectWidth);
+  var $selectWidth = $('#county_criteria').innerWidth() - $('#county_criteria h4').innerWidth() - 1;
 
   //activate chosen
   $('.county-select').chosen({

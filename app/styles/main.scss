@@ -119,10 +119,6 @@ section {
   font-size: .9em;
   margin-bottom: 1em;
 
-  // @include media($mobile) {
-  //   font-size: .8em;
-  // }
-
   a {
     color: $dr-darkgreen;
     font-weight: 700;
@@ -253,21 +249,6 @@ section {
       float: left;
       width: 35%;
     }
-
-    li {
-      display: block;
-      margin-bottom: 1.25em;
-
-      @include media($desktop) {
-        display: inline-block;
-        margin-bottom: 1em;
-      }
-
-      @include media($medium) {
-        display: inline-block;
-        margin-bottom: 1em;
-      }
-    }
   }
 
   &.age {
@@ -296,12 +277,15 @@ section {
   &.sex {
     @include span-columns(2);
     @include omega();
+
     @include media($large) {
       @include span-columns(6);
+      @include omega();
     }
 
     @include media($medium) {
       @include span-columns(7);
+      @include omega();
     }
 
     @include media($small) {
@@ -317,20 +301,67 @@ section {
 
   &.county {
     @include span-columns(7.4);
+    margin-bottom: 0;
 
     h4 {
       float: left;
+    }
+
+    @include media($medium) {
+      @include span-columns(12);
+      margin-bottom: 1em;
+    }
+
+    @include media($small) {
+      @include span-columns(12);
+      margin-bottom: 1em;
+    }
+
+    @include media($mobile) {
+      @include span-columns(12);
+      margin-bottom: 1em;
     }
   }
 
   &.execution {
     @include span-columns(4.6);
     @include omega();
+    margin-bottom: 0;
 
     .checkbox label {
       font-size: 1em;
       letter-spacing: .03em;
       margin-right: .5em;
+    }
+
+    @include media($medium) {
+      width: 44%;
+      margin: 0 28%;
+    }
+
+    @include media($small) {
+      width: 60%;
+      margin: 0 20%;
+    }
+
+    @include media($mobile) {
+      @include span-columns(12);
+      margin-bottom: 1em;
+    }
+  }
+
+  .checkboxes li {
+    display: block;
+    margin-bottom: 1.25em;
+
+    @include media($desktop) {
+      display: inline-block;
+      margin-bottom: 1em;
+    }
+
+    @include media($medium) {
+      display: inline-block;
+      margin-bottom: 1em;
     }
   }
 }
@@ -338,6 +369,10 @@ section {
 .checkbox {
   display: inline-block;
   margin: 0 .15em 0 0;
+
+  @include media($medium) {
+    margin: 0;
+  }
 
   input {
     display: none;

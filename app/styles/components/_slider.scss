@@ -1,5 +1,5 @@
-$dr-orange: rgb(255,133,33);
-$dr-darkgreen: rgb(47,79,79);
+$dr-orange: rgb(255, 133, 33);
+$dr-darkgreen: rgb(47, 79, 79);
 
 $mobile: new-breakpoint(max-width 460px);
 $small: new-breakpoint(min-width 461px max-width 660px);
@@ -9,74 +9,98 @@ $xlarge: new-breakpoint(min-width 1081px);
 
 $morethan-460: new-breakpoint(min-width 461px);
 
-
 .critieria_slider {
-  width:100%;
+  width: 100%;
 }
+
 .ui-slider {
-    position: relative;
-    text-align: left;
-    display: inline-block;
-}.ui-slider .ui-slider-handle {
-    position: absolute;
-    z-index: 2;
-    width: 1em;
-    height: 1em;
+  display: inline-block;
+  position: relative;
+  text-align: left;
+
+  .ui-slider-handle {
     cursor: default;
+    height: 1em;
+    position: absolute;
+    width: 1em;
+    z-index: 2;
+
     @include media($mobile) {
-      width: 1.25em;
       height: 1.25em;
+      width: 1.25em;
     }
-}.ui-slider .ui-slider-range {
+  }
+
+  .ui-slider-range {
+    background-position: 0 0;
+    border: 0;
+    display: block;
+    font-size: .7em;
     position: absolute;
     z-index: 1;
-    font-size: .7em;
-    display: block;
-    border: 0;
-    background-position: 0 0;
-}.slider-label {
-    font-weight:700;
-    display:inline-block;
-    width:20px;
-    text-align: center;
-    &.start {
-      margin-right:8px;
-    }
-    &.end {
-      margin-left:10px;
-    }
-}.ui-slider-horizontal {
-    height: 6px;
-    background: $white;
-    top: -3px;
-    width: 62%;
-    @include media($xlarge) {
-      width: 65%;
-    }
-    @include media($large) {
-      width: 82%;
-    }
-    @include media($medium) {
-      width: 74%;
-    }
-    @include media($small) {
-      width: 74%;
-    }
-}.ui-slider-horizontal .ui-slider-handle {
-    top: -4px;
-    margin-left: -7px;
+  }
+}
+
+.slider-label {
+  display: inline-block;
+  font-weight: 700;
+  text-align: center;
+  width: 20px;
+
+  &.start {
+    margin-right: 8px;
+  }
+
+  &.end {
+    margin-left: 8px;
+  }
+}
+
+.ui-slider-horizontal {
+  background: $white;
+  height: 6px;
+  top: -3px;
+  width: 62%;
+
+  @include media($xlarge) {
+    width: 65%;
+  }
+
+  @include media($large) {
+    width: 82%;
+  }
+
+  @include media($medium) {
+    width: 74%;
+  }
+
+  @include media($small) {
+    width: 74%;
+  }
+
+  .ui-slider-handle {
     cursor: pointer;
+    margin-left: -7px;
+    top: -4px;
+
     @include media($mobile) {
       top: -6px;
     }
-}.ui-slider-horizontal .ui-slider-range {
-    top: 0;
+  }
+
+  .ui-slider-range {
     height: 100%;
-}.ui-widget-header {
-  border: 1px solid #e78f08;
+    top: 0;
+  }
+}
+
+.ui-widget-header {
   background: $dr-orange;
-  color: #fff;
+  border: 1px solid #e78f08;
+  color: $white;
   font-weight: bold;
-}.ui-state-default {
+}
+
+.ui-state-default {
   background: $dr-darkgreen;
 }

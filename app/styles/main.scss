@@ -303,15 +303,6 @@ section {
     @include span-columns(7.4);
     margin-bottom: 0;
 
-    h4 {
-      float: left;
-
-      @include media($mobile) {
-        float: none;
-        margin-bottom: 0;
-      }
-    }
-
     @include media($medium) {
       @include span-columns(12);
       margin-bottom: 1em;
@@ -319,14 +310,54 @@ section {
 
     @include media($small) {
       @include span-columns(12);
-      margin-bottom: 1em;
+      margin-bottom: 1.5em;
     }
 
     @include media($mobile) {
       @include span-columns(12);
-      margin-bottom: 1em;
+      margin-bottom: 1.5em;
 
       .chosen-container {
+        width: 100%;
+      }
+    }
+
+    h4 {
+      float: left;
+      width: 30%;
+
+      @include media($large) {
+        width: 35%;
+      }
+
+      @include media($small) {
+        float: none;
+        margin-bottom: 0;
+        width: 100%;
+      }
+
+      @include media($mobile) {
+        float: none;
+        margin-bottom: 0;
+        width: 100%;
+      }
+    }
+
+    .counties {
+      float: right;
+      width: 70%;
+
+      @include media($large) {
+        width: 65%;
+      }
+
+      @include media($small) {
+        float: none;
+        width: 100%;
+      }
+
+      @include media($mobile) {
+        float: none;
         width: 100%;
       }
     }

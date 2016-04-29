@@ -1,13 +1,11 @@
 (function() {
   'use strict';
 
-  var $selectWidth = $('#county_criteria').innerWidth() - $('#county_criteria h4').innerWidth() - 1;
-
   //activate chosen
   $('.county-select').chosen({
     enable_split_word_search: false,
     no_results_text: 'No counties match',
-    width: $selectWidth + 'px'
+    width: '100%'
   });
 
   //show sliders after they load

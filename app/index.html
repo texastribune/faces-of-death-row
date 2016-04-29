@@ -71,13 +71,15 @@
       </div>
       <div class="criteria county" id="county_criteria">
         <h4>County of crime</h4>
-        <select data-placeholder="Select counties..." class="county-select" multiple>
-          {% for county in COUNTIES|selectattr("county")|sort(false, false, "county") %}
-            {% if county.county %}
-              <option value="{{ county.county }}">{{ county.county }} ({{county.inmates}})</option>
-            {% endif %}
-          {% endfor %}
-        </select>
+        <div class="counties">
+          <select data-placeholder="Select counties..." class="county-select" multiple>
+            {% for county in COUNTIES|selectattr("county")|sort(false, false, "county") %}
+              {% if county.county %}
+                <option value="{{ county.county }}">{{ county.county }} ({{county.inmates}})</option>
+              {% endif %}
+            {% endfor %}
+          </select>
+        </div>
       </div>
       <div class="criteria execution" id="execution_criteria">
           <h4>

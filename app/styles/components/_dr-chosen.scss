@@ -9,16 +9,66 @@
 
 .chosen-container-multi {
   float: left;
+  font-size: 13.5px;
 
   .chosen-choices {
     background: $background-gray;
     border: 0;
-    padding: 1.5px 10px;
+    border-bottom: 1px solid $dr-darkgreen;
+    padding: 1px 5px;
 
     li.search-field input[type="text"] {
       color: $tribune-black;
       font-size: 14px;
       letter-spacing: .03em;
     }
+
+    li.search-choice {
+      color: $tribune-black;
+      font-size: 14px;
+      letter-spacing: .03em;
+      margin: 2px 5px 2px 0;
+      padding: 4px 20px 4px 5px;
+      border: 1px solid $dr-orange;
+      border-radius: 0;
+      background-color: $background-gray;
+      background-image: none;
+      box-shadow: none;
+
+      .search-choice-close {
+        top: 5px;
+      }
+    }
+  }
+
+  .chosen-drop {
+    background: $background-gray;
+    border: 1px solid $dr-darkgreen;
+    border-top: 0;
+  }
+
+  .chosen-results {
+    color: $tribune-black;
+
+    li.active-result {
+      color: $tribune-black;
+      font-size: 14px;
+      letter-spacing: .03em;
+      padding: 7px 6px;
+
+      &.highlighted {
+        background-image: none;
+        background-color: $dr-orange;
+        color: $white;
+      }
+    }
+  }
+}
+
+.chosen-container-active {
+
+  .chosen-choices {
+    box-shadow: none;
+
   }
 }

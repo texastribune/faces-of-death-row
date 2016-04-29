@@ -13,12 +13,12 @@
   .chosen-choices {
     background: $background-gray;
     border: 0;
+    padding: 1.5px 10px;
 
     li.search-field input[type="text"] {
       color: $tribune-black;
-      font-size: 13.5px;
-      letter-spacing: .02em;
-      line-height: 28px
+      font-size: 14px;
+      letter-spacing: .03em;
     }
   }
 }

@@ -317,8 +317,6 @@ section {
 
   &.county {
     @include span-columns(7.4);
-    border: 2px solid $dr-darkgreen;
-    height: 32px;
 
     h4 {
       float: left;
@@ -328,13 +326,12 @@ section {
   &.execution {
     @include span-columns(4.6);
     @include omega();
-    background: $dr-darkgreen;
-    border: 2px solid $dr-darkgreen;
-    color: $white;
-    font-size: 1.1em;
-    height: 32px;
-    letter-spacing: .02em;
-    padding: 6px;
+
+    .checkbox label {
+      font-size: 1em;
+      letter-spacing: .03em;
+      margin-right: .5em;
+    }
   }
 }
 

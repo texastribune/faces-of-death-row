@@ -4,12 +4,21 @@
   //activate chosen
   $('.county-select').chosen({
     enable_split_word_search: false,
-    no_results_text: 'No counties match',
+    no_results_text: 'No counties with a death row inmate match',
     width: '100%'
   });
 
   //show sliders after they load
   $('.hide-on-load').show();
+
+  $('.county-select').css({
+    'height': 'auto',
+    'width': '100%',
+    'margin-top': '10px',
+    'border-radius': '0',
+    'padding': '7px 5px',
+    'font-size': '16px'
+  });
 
   //getting inputs
   var $inmatesContainer = $('#inmates');
@@ -79,7 +88,15 @@
     var ageRange = [+$ageRangeLabelStart.text(), +$ageRangeLabelEnd.text()];
     var timeRange = [+$timeServedRangeLabelStart.text(), +$timeServedRangeLabelEnd.text()];
     var executionSelection = $executionCritera.filter(':checked').map(function() { return this.value; }).get();
-    var countySelection = $countyCriteria.val();
+    var countySelection;
+
+    if ($countyCriteria.val() === null) {
+      countySelection = [];
+    } else {
+      countySelection = $countyCriteria.val();
+    }
+
+    console.log(countySelection);
 
     return {
       raceSelection: raceSelection,
@@ -117,7 +134,8 @@
         return false;
       }
 
-      if ($.inArray($this.data('county'), state.countySelection) < 0 && state.countySelection !== null) {
+      console.log(state.countySelection.length);
+      if ($.inArray($this.data('county'), state.countySelection) < 0 && state.countySelection.length) {
         $this.addClass('hidden');
         return false;
       }

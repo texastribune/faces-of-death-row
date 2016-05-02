@@ -61,6 +61,10 @@
         color: $white;
       }
     }
+
+    li.disabled-result.mobile-only {
+      display: none;
+    }
   }
 }
 

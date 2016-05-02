@@ -73,9 +73,10 @@
         <h4>County of crime</h4>
         <div class="counties">
           <select data-placeholder="Select counties..." class="county-select" multiple>
+            <option disabled="disabled" class="mobile-only">-Select counties-</option>
             {% for county in COUNTIES|selectattr("county")|sort(false, false, "county") %}
               {% if county.county %}
-                <option value="{{ county.county }}">{{ county.county }} ({{county.inmates}})</option>
+                <option value="{{ county.county }}">{{ county.county }}</option>
               {% endif %}
             {% endfor %}
           </select>
@@ -85,7 +86,7 @@
           <h4>
             <li class="checkbox">
               <input id="yes" type="checkbox" value="yes">
-              <label for="yes">Has execution scheduled</label>
+              <label for="yes">Execution scheduled</label>
             </li>
           </h4>
       </div>

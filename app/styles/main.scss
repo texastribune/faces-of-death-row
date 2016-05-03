@@ -324,6 +324,7 @@ section {
 
     h4 {
       float: left;
+      text-align: center;
       width: 30%;
 
       @include media($large) {
@@ -453,7 +454,7 @@ section {
       width: 15px;
 
       .execution & {
-        margin-right: 5px;
+        margin-right: 7px;
       }
 
       @include media($mobile) {
@@ -804,6 +805,10 @@ section {
       font-size: 1.1em;
       line-height: 1em;
       text-align: center;
+
+      @include media($mobile) {
+        color: $white;
+      }
 
       label {
         display: block;

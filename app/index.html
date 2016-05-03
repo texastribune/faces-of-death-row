@@ -72,7 +72,7 @@
       <div class="criteria county" id="county_criteria">
         <h4>County of crime</h4>
         <div class="counties">
-          <select data-placeholder="Select counties..." class="county-select" multiple>
+          <select data-placeholder="Select counties&#8230;" class="county-select" multiple>
             <option disabled="disabled" class="mobile-only">-Select counties-</option>
             {% for county in COUNTIES|selectattr("county")|sort(false, false, "county") %}
               {% if county.county %}

@@ -1,12 +1,15 @@
 //Death row chosen styles
 
 //hide unstyled select box before chosen takes over
+//also styles for mobile
 .county-select {
+  background-color: $white;
   border: 0;
   height: 0;
   width: 0;
 }
 
+//chosen select
 .chosen-container-multi {
   font-size: 13.5px;
 

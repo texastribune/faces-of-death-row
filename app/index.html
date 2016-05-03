@@ -117,6 +117,12 @@
           <img src="assets/images/{{ inmate.mug }}" />
           <div class="details">
             <h2>{{ inmate.first_name }} {{ inmate.middle_name }} {{inmate.last_name }}</h2>
+            {% if inmate.execution_date %}
+            <div class="execution-date">
+              <p><label>Scheduled execution date</label> {{ inmate.execution_date }}</p>
+            </div>
+            <hr>
+            {% endif %}
             <p><label>Time on Death Row:</label> {{ inmate.time_served }}</p>
             <p><label>Race:</label> {{ inmate.race }}</p>
             <p><label>Age:</label> {{ inmate.age }}</p>
@@ -130,11 +136,6 @@
               <p><label>On death row since:</label> {{ inmate.received_date }}</p>
               <p><label>Crime Committed in:</label> {{ inmate.county }} County</p>
             </div>
-            {% if inmate.execution_date %}
-            <div class="execution-date">
-              <p><label>Scheduled execution date:</label> {{ inmate.execution_date }}</p>
-            </div>
-            {% endif %}
           </div>
         </div>
         <div class="close-lightbox">

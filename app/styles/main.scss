@@ -798,6 +798,17 @@ section {
         margin: .75em 1em;
       }
     }
+
+    .execution-date {
+      color: $dr-orange;
+      font-size: 1.1em;
+      line-height: 1em;
+      text-align: center;
+
+      label {
+        display: block;
+      }
+    }
   }
 
   .crime-details {

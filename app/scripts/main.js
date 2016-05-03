@@ -14,9 +14,8 @@
   $('.county-select').css({
     'height': 'auto',
     'width': '100%',
-    'margin-top': '10px',
     'border-radius': '0',
-    'padding': '7px 5px',
+    'padding': '10px 7px',
     'font-size': '16px'
   });
 
@@ -191,7 +190,7 @@
     var lightboxHeight = $('#light-' + inmate).height();
     var bioHeight = $('#light-' + inmate).children('.bio').height();
     if(lightboxHeight < bioHeight) {
-      $('.white-content').css({'height': '90%', 'top': '5%'});
+      $('.white-content').css({'max-height': '90%', 'top': '5%'});
     }
   });
 

@@ -1,6 +1,9 @@
 # Faces of Death Row
 
-[Faces of Death Row](http://apps.texastribune.org/death-row) was produced by Jolie McCullough for The Texas Tribune. It is a visualization of all inmates currently on death row in Texas filterable by length of stay, race, age and sex. It could easily be modified to show other filterable data.
+[Faces of Death Row](http://apps.texastribune.org/death-row) was produced by Jolie McCullough for The Texas Tribune. It is a visualization of all inmates currently on death row in Texas filterable by length of stay, race, age, sex, county and execution date. It could easily be modified to show other filterable data.
+
+##App Features
+This app runs mainly on JavaScript. It is assisted by the libraries [filter.js](https://github.com/jiren/filter.js/tree/master) and [chosen.js](https://github.com/harvesthq/chosen).
 
 ## Build Tool
 This app was produced using the [Tribune's App Kit](https://github.com/texastribune/newsapps-app-kit). Built on Gulp – a task runner written in Node.js – the kit powers our build system and deploy process.

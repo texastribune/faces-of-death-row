@@ -1,12 +1,16 @@
 (function() {
   'use strict';
 
-  //activate chosen
-  $('.county-select').chosen({
-    enable_split_word_search: false,
-    no_results_text: 'No counties with a death row inmate match',
-    width: '100%'
-  });
+  var chosenExists = false;
+  $('.county-select')
+    .on('chosen:ready', function() {
+      chosenExists = true;
+    })
+    .chosen({
+      enable_split_word_search: false,
+      no_results_text: 'No counties with a death row inmate match',
+      width: '100%'
+    });
 
   //show sliders after they load
   $('.hide-on-load').show();
@@ -18,6 +22,11 @@
     'padding': '10px 7px',
     'font-size': '16px'
   });
+
+  //add prompt for search on mobile devices
+  if(!chosenExists) {
+    $('.mobile-only').show();
+  }
 
   //getting inputs
   var $inmatesContainer = $('#inmates');
@@ -95,8 +104,6 @@
       countySelection = $countyCriteria.val();
     }
 
-    console.log(countySelection);
-
     return {
       raceSelection: raceSelection,
       sexSelection: sexSelection,
@@ -133,7 +140,6 @@
         return false;
       }
 
-      console.log(state.countySelection.length);
       if ($.inArray($this.data('county'), state.countySelection) < 0 && state.countySelection.length) {
         $this.addClass('hidden');
         return false;

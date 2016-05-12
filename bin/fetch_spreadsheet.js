@@ -147,6 +147,8 @@ primeToken(oauth2Client, function() {
     }, function(err, response) {
       if (err) { return console.log(err); }
       buildDataJSON(response.body);
+      // clean dates
+      formatDate();
       console.log('Success!');
     });
   });

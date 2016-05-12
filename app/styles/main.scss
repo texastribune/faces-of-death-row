@@ -2,14 +2,17 @@
 @import 'bower_components/newsapps-styles/initialize';
 @import 'bower_components/newsapps-styles/helpers/grid';
 
-@import 'components/slider';
-@import 'components/masthead';
-
-@import url(https://fonts.googleapis.com/css?family=Stardos+Stencil:400,700);
 $dr-orange: rgb(255, 133, 33);
 $dr-seafoam: rgb(168, 192, 183);
 $dr-darkgreen: rgb(47, 79, 79);
 $dr-dark-gray: $bodytext-black;
+
+@import 'components/slider';
+@import 'components/masthead';
+@import 'components/chosen';
+@import 'components/dr-chosen';
+
+@import url(https://fonts.googleapis.com/css?family=Stardos+Stencil:400,700);
 
 $mobile: new-breakpoint(max-width 460px);
 $small: new-breakpoint(min-width 461px max-width 660px);
@@ -115,10 +118,6 @@ section {
   font-family: $base-sans-serif;
   font-size: .9em;
   margin-bottom: 1em;
-
-  // @include media($mobile) {
-  //   font-size: .8em;
-  // }
 
   a {
     color: $dr-darkgreen;
@@ -250,21 +249,6 @@ section {
       float: left;
       width: 35%;
     }
-
-    li {
-      display: block;
-      margin-bottom: 1.25em;
-
-      @include media($desktop) {
-        display: inline-block;
-        margin-bottom: 1em;
-      }
-
-      @include media($medium) {
-        display: inline-block;
-        margin-bottom: 1em;
-      }
-    }
   }
 
   &.age {
@@ -293,12 +277,15 @@ section {
   &.sex {
     @include span-columns(2);
     @include omega();
+
     @include media($large) {
       @include span-columns(6);
+      @include omega();
     }
 
     @include media($medium) {
       @include span-columns(7);
+      @include omega();
     }
 
     @include media($small) {
@@ -311,11 +298,132 @@ section {
       width: 62%;
     }
   }
+
+  &.county {
+    @include span-columns(7.4);
+    margin-bottom: 0;
+
+    @include media($medium) {
+      @include span-columns(12);
+      margin-bottom: 1em;
+    }
+
+    @include media($small) {
+      @include span-columns(12);
+      margin-bottom: 1.5em;
+    }
+
+    @include media($mobile) {
+      @include span-columns(12);
+      margin-bottom: 1.5em;
+
+      .chosen-container {
+        width: 100%;
+      }
+    }
+
+    h4 {
+      float: left;
+      text-align: center;
+      width: 30%;
+
+      @include media($large) {
+        width: 35%;
+      }
+
+      @include media($small) {
+        float: none;
+        margin-bottom: 0;
+        width: 100%;
+      }
+
+      @include media($mobile) {
+        float: none;
+        margin-bottom: 0;
+        width: 100%;
+      }
+    }
+
+    .counties {
+      float: right;
+      width: 70%;
+
+      @include media($large) {
+        width: 65%;
+      }
+
+      @include media($small) {
+        float: none;
+        width: 100%;
+      }
+
+      @include media($mobile) {
+        float: none;
+        width: 100%;
+      }
+    }
+  }
+
+  &.execution {
+    @include span-columns(4.6);
+    @include omega();
+    margin-bottom: 0;
+    text-align: center;
+
+    .checkbox label {
+      font-size: 1em;
+      letter-spacing: .03em;
+      margin-right: .5em;
+    }
+
+    @include media($medium) {
+      margin: 0 25%;
+      width: 50%;
+    }
+
+    @include media($small) {
+      text-align: center;
+      width: 100%;
+    }
+
+    @include media($mobile) {
+      @include span-columns(12);
+      margin-bottom: 1em;
+
+      h4 {
+        margin: .5em 0;
+        text-align: center;
+      }
+    }
+  }
+
+  .checkboxes li {
+    display: block;
+    margin-bottom: 1.25em;
+
+    @include media($desktop) {
+      display: inline-block;
+      margin-bottom: 1em;
+    }
+
+    @include media($medium) {
+      display: inline-block;
+      margin-bottom: 1em;
+    }
+
+    &:last-child {
+      margin-bottom: .5em;
+    }
+  }
 }
 
 .checkbox {
   display: inline-block;
   margin: 0 .15em 0 0;
+
+  @include media($medium) {
+    margin: 0;
+  }
 
   input {
     display: none;
@@ -344,6 +452,10 @@ section {
       margin-right: 3px;
       vertical-align: -2px;
       width: 15px;
+
+      .execution & {
+        margin-right: 7px;
+      }
 
       @include media($mobile) {
         height: 17px;
@@ -687,6 +799,21 @@ section {
         margin: .75em 1em;
       }
     }
+
+    .execution-date {
+      color: $dr-orange;
+      font-size: 1.1em;
+      line-height: 1em;
+      text-align: center;
+
+      @include media($mobile) {
+        color: $white;
+      }
+
+      label {
+        display: block;
+      }
+    }
   }
 
   .crime-details {
@@ -870,4 +997,12 @@ section {
   border-top: 1px solid $border-gray;
   padding-top: .75em;
   text-align: center;
+}
+
+.hide-on-load {
+  display: none;
+}
+
+.mobile-only {
+  display: none;
 }

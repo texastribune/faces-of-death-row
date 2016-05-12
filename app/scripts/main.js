@@ -1,6 +1,34 @@
 (function() {
   'use strict';
 
+  var chosenExists = false;
+  $('.county-select')
+    .on('chosen:ready', function() {
+      chosenExists = true;
+    })
+    .chosen({
+      enable_split_word_search: false,
+      no_results_text: 'No counties with a death row inmate match',
+      width: '100%'
+    });
+
+  //show sliders after they load
+  $('.hide-on-load').show();
+
+  $('.county-select').css({
+    'height': 'auto',
+    'width': '100%',
+    'border-radius': '0',
+    'padding': '10px 7px',
+    'font-size': '16px'
+  });
+
+  //add prompt for search on mobile devices
+  if(!chosenExists) {
+    $('.mobile-only').show();
+  }
+
+  //getting inputs
   var $inmatesContainer = $('#inmates');
   var $inmates = $inmatesContainer.find('.inmate');
 
@@ -13,6 +41,18 @@
   var $sexCriteria = $('#sex_criteria').find('input[type=checkbox]');
 
   $sexCriteria.change(function() {
+    filter();
+  });
+
+  var $executionCritera = $('#execution_criteria').find('input[type=checkbox]');
+
+  $executionCritera.change(function() {
+    filter();
+  });
+
+  var $countyCriteria = $('#county_criteria .county-select');
+
+  $countyCriteria.on('change', function() {
     filter();
   });
 
@@ -55,12 +95,22 @@
     var sexSelection = $sexCriteria.filter(':checked').map(function() { return this.value; }).get();
     var ageRange = [+$ageRangeLabelStart.text(), +$ageRangeLabelEnd.text()];
     var timeRange = [+$timeServedRangeLabelStart.text(), +$timeServedRangeLabelEnd.text()];
+    var executionSelection = $executionCritera.filter(':checked').map(function() { return this.value; }).get();
+    var countySelection;
+
+    if ($countyCriteria.val() === null) {
+      countySelection = [];
+    } else {
+      countySelection = $countyCriteria.val();
+    }
 
     return {
       raceSelection: raceSelection,
       sexSelection: sexSelection,
       ageRange: ageRange,
-      timeRange: timeRange
+      timeRange: timeRange,
+      executionSelection: executionSelection,
+      countySelection: countySelection
     };
   }
 
@@ -81,6 +131,16 @@
       }
 
       if ($.inArray($this.data('sex'), state.sexSelection) < 0 && state.sexSelection.length) {
+        $this.addClass('hidden');
+        return false;
+      }
+
+      if ($.inArray($this.data('execution'), state.executionSelection) < 0 && state.executionSelection.length) {
+        $this.addClass('hidden');
+        return false;
+      }
+
+      if ($.inArray($this.data('county'), state.countySelection) < 0 && state.countySelection.length) {
         $this.addClass('hidden');
         return false;
       }
@@ -136,7 +196,7 @@
     var lightboxHeight = $('#light-' + inmate).height();
     var bioHeight = $('#light-' + inmate).children('.bio').height();
     if(lightboxHeight < bioHeight) {
-      $('.white-content').css({'height': '90%', 'top': '5%'});
+      $('.white-content').css({'max-height': '90%', 'top': '5%'});
     }
   });
 

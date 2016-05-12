@@ -8,10 +8,10 @@
   <!--   Open Graph -->
   <meta property="og:site_name" content="The Texas Tribune">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="//apps.texastribune.org/death-row/">
+  <meta property="og:url" content="https://apps.texastribune.org/death-row/">
   <meta property="og:title" content="{{ META.project_title }}">
   <meta property="og:description" content="{{ META.description }}">
-  <meta property="og:image" content="//apps.texastribune.org/death-row/assets/images/social/bars.png">
+  <meta property="og:image" content="https://apps.texastribune.org/death-row/assets/images/social/bars.png">
 
   <!-- Twitter settings -->
   <meta name="twitter:card" value="summary_large_image">
@@ -19,9 +19,9 @@
   <meta name="twitter:creator" content="@newsapps">
   <meta name="twitter:title" content="{{ META.project_title }}">
   <meta name="twitter:description" content="{{ META.shareline }}">
-  <meta name="twitter:image" content="//apps.texastribune.org/death-row/assets/images/social/bars.png">
+  <meta name="twitter:image" content="https://apps.texastribune.org/death-row/assets/images/social/bars.png">
   {% endblock %}
-  <link rel="shortcut icon" type="image/x-icon" href="//s3.amazonaws.com/static.texastribune.org/common/images/favicon.ico">
+  <link rel="shortcut icon" type="image/x-icon" href="https://s3.amazonaws.com/static.texastribune.org/common/images/favicon.ico">
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -34,19 +34,6 @@
   <link rel="stylesheet" href="styles/main.css">
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css" rel="stylesheet">
   {% endblock %}
-  <script src="https://graphics.texastribune.org.s3.amazonaws.com/graphics/vendor-scripts/modernizer.min.js"></script>
-  <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "NewsArticle",
-        "headline": "{{ META.project_title }}",
-        "url": "//apps.texastribune.org/death-row",
-        "thumbnailUrl": "//apps.texastribune.org/death-row/assets/images/social/bars.png",
-        "dateCreated": "2015-06-15T06:00:00-06:00",
-        "articleSection": ["front-page", "law-and-order"],
-        "creator": ["Jolie McCullough", "Ben Hasson"]
-      }
-  </script>
 </head>
 <body>
 <div class="full-wrapper">
@@ -127,7 +114,20 @@
   </footer>
 </div>
 {% block script %}
+<script src="https://s3.amazonaws.com/graphics.texastribune.org/graphics/vendor-scripts/modernizer.min.js"></script>
 <script src="scripts/bundle.js"></script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      "headline": "{{ META.project_title }}",
+      "url": "https://apps.texastribune.org/death-row",
+      "thumbnailUrl": "https://apps.texastribune.org/death-row/assets/images/social/bars.png",
+      "dateCreated": "2015-06-15T06:00:00-06:00",
+      "articleSection": ["front-page", "law-and-order"],
+      "creator": ["Jolie McCullough", "Ben Hasson"]
+    }
+</script>
 <script>
   (function(c,o,r,g,i,s){c.GoogleAnalyticsObject=g;c[g]||(c[g]=
   function(){(c[g].q=c[g].q||[]).push(arguments)});c[g].g=+new Date;

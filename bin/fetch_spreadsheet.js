@@ -12,6 +12,8 @@ var request = require('request');
 var untildify = require('untildify');
 var XLSX = require('xlsx');
 
+var formatDate = require('./format_inmate_dates');
+
 var OAuth2Client = google.auth.OAuth2;
 var drive = google.drive('v2');
 
@@ -147,6 +149,8 @@ primeToken(oauth2Client, function() {
     }, function(err, response) {
       if (err) { return console.log(err); }
       buildDataJSON(response.body);
+      // clean dates
+      formatDate();
       console.log('Success!');
     });
   });

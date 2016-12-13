@@ -117,7 +117,7 @@ gulp.task('rev', function(){
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('revreplace', ['rev'], function(){
+gulp.task('revreplace', ['rev'], function() {
   var manifest = gulp.src('./dist/rev-manifest.json');
 
   return gulp.src('dist/index.html')
@@ -131,8 +131,8 @@ gulp.task('assets', function() {
   .pipe($.size({title: 'assets'}));
 });
 
-gulp.task('clean', function() {
-  del(['.tmp', 'dist/*', '!dist/.git'], {dot: true});
+gulp.task('clean', function(done) {
+  del(['.tmp', 'dist/*', '!dist/.git'], {dot: true}, done);
 });
 
 gulp.task('serve', ['styles', 'jshint', 'scripts', 'templates'], function() {

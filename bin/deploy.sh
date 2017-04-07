@@ -17,13 +17,13 @@ export PROJECT_SLUG=$npm_package_config_slug
 # aws s3 sync --acl public-read --profile newsapps --exclude '*.*' --include '*.html' --cache-control 'no-cache' --content-encoding 'gzip' dist s3://$APP_S3_BUCKET/$PROJECT_SLUG/
 
 echo "Syncing *.css files to S3..."
-aws s3 sync --acl public-read --profile newsapps --exclude '*.*' --include '*.css' dist s3://$APP_S3_BUCKET/$PROJECT_SLUG/
+aws s3 sync --acl public-read --profile newsapps --exclude '*.*' --include '*.css' --cache-control 'max-age=31536000' dist s3://$APP_S3_BUCKET/$PROJECT_SLUG/
 
 echo "Syncing *.js files to S3..."
-aws s3 sync --acl public-read --profile newsapps --exclude '*.*' --include '*.js' dist s3://$APP_S3_BUCKET/$PROJECT_SLUG/
+aws s3 sync --acl public-read --profile newsapps --exclude '*.*' --include '*.js' --cache-control 'max-age=31536000' dist s3://$APP_S3_BUCKET/$PROJECT_SLUG/
 
 echo "Syncing *.html files to S3..."
-aws s3 sync --acl public-read --profile newsapps --exclude '*.*' --include '*.html' dist s3://$APP_S3_BUCKET/$PROJECT_SLUG/
+aws s3 sync --acl public-read --profile newsapps --exclude '*.*' --include '*.html' --cache-control 'max-age=60' dist s3://$APP_S3_BUCKET/$PROJECT_SLUG/
 
 echo "Syncing everything else to S3..."
-aws s3 sync --profile newsapps dist s3://$APP_S3_BUCKET/$PROJECT_SLUG/
+aws s3 sync --profile newsapps  --cache-control 'max-age=60' dist s3://$APP_S3_BUCKET/$PROJECT_SLUG/

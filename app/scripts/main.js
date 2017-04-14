@@ -186,13 +186,14 @@
   //open lightbox with hash
   var hash = window.location.hash.slice(1);
   if(hash) {
-    for (var i=0; i < $inmates.length; i++) {
-      var id = $inmates[i].id.slice(2);
+    $inmates.each(function(i) {
+      var id = $inmates[i].id;
       if(hash === id) {
         openLightbox(hash);
-        window.location.href = '#id' + hash;
+        window.location.href = '#' + hash;
+        return false;
       }
-    }
+    });
   }
 
   //open lightbox with click
@@ -202,8 +203,8 @@
     var parent, inmate;
 
     if(typeof hash === 'string') {
-      parent = 'id' + hash;
-      inmate = 'inmate-' + hash;
+      parent = hash;
+      inmate = 'inmate-' + hash.slice(2);
     } else {
       parent = hash.currentTarget.parentElement.id;
       inmate = hash.currentTarget.id;

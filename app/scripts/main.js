@@ -183,14 +183,23 @@
       return num;
   }
 
-  //open lightbox with hash
+  //open lightbox with initial hash
   var hash = window.location.hash.slice(1);
   if(hash) {
+    checkHash(hash);
+  }
+
+  //did hash change?
+  $(window).on('hashchange', function() {
+    var hash = window.location.hash.slice(1);
+    checkHash(hash);
+  });
+
+  function checkHash(hash) {
     $inmates.each(function(i) {
       var id = $inmates[i].id;
       if(hash === id) {
         openLightbox(hash);
-        window.location.href = '#' + hash;
         return false;
       }
     });
@@ -303,6 +312,7 @@
     var inmate = $(this).parent().parent().attr('id');
     if ($('#' + inmate).hasClass('open')) {
       $('#' + inmate).removeClass('open');
+      history.pushState('', document.title, window.location.pathname);
     }
   });
 

@@ -183,12 +183,33 @@
       return num;
   }
 
-  //when lightbox opens
-  $inmatesContainer.find('.open-lightbox').click(function() {
-    var parent = $(this).parent().attr('id');
-    var inmate = $(this).attr('id');
+  //open lightbox with hash
+  var hash = window.location.hash.slice(1);
+  if(hash) {
+    for (var i=0; i < $inmates.length; i++) {
+      var id = $inmates[i].id.slice(2);
+      if(hash === id) {
+        openLightbox(hash);
+      }
+    }
+  }
+
+  //open lightbox with click
+  $inmatesContainer.find('.open-lightbox').click(openLightbox);
+
+  function openLightbox(hash) {
+    var parent, inmate;
+
+    if(typeof hash === 'string') {
+      parent = 'id' + hash;
+      inmate = 'inmate-' + hash;
+    } else {
+      parent = hash.currentTarget.parentElement.id;
+      inmate = hash.currentTarget.id;
+    }
 
     $inmatesContainer.find('.open').removeClass('open');
+
     $('#' + parent).toggleClass('open');
     $('body').addClass('fixed');
 
@@ -198,7 +219,7 @@
     if(lightboxHeight < bioHeight) {
       $('.white-content').css({'max-height': '90%', 'top': '5%'});
     }
-  });
+  }
 
   //when click prev or next
   $inmatesContainer.find('.pagination').click(function() {
@@ -266,12 +287,14 @@
     var inmate = $(this).parent().attr('id');
     $('body').removeClass('fixed');
     $('#' + inmate).toggleClass('open');
+    history.pushState('', document.title, window.location.pathname);
   });
 
   $('.close-lightbox').click(function() {
     var inmate = $(this).parent().parent().attr('id');
     $('body').removeClass('fixed');
     $('#' + inmate).toggleClass('open');
+    history.pushState('', document.title, window.location.pathname);
   });
 
   $('.info-button').click(function() {
@@ -304,5 +327,4 @@
       }
     }
   });
-
 })();

@@ -190,6 +190,7 @@
       var id = $inmates[i].id.slice(2);
       if(hash === id) {
         openLightbox(hash);
+        window.location.href = "#id" + hash;
       }
     }
   }

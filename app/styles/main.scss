@@ -6,13 +6,12 @@ $dr-orange: rgb(255, 133, 33);
 $dr-seafoam: rgb(168, 192, 183);
 $dr-darkgreen: rgb(47, 79, 79);
 $dr-dark-gray: $bodytext-black;
+$pt-serif: 'PT Serif', serif;
 
 @import 'components/slider';
 @import 'components/masthead';
 @import 'components/chosen';
 @import 'components/dr-chosen';
-
-@import url(https://fonts.googleapis.com/css?family=Stardos+Stencil:400,700);
 
 $mobile: new-breakpoint(max-width 460px);
 $small: new-breakpoint(min-width 461px max-width 660px);
@@ -95,6 +94,7 @@ section {
   .description {
     line-height: 1.4em;
     padding: 0;
+    font-family: $pt-serif;
 
     @include media($desktop) {
       @include span-columns(7);
@@ -108,8 +108,31 @@ section {
       letter-spacing: .05em;
       padding: .1em .25em;
       text-transform: uppercase;
+
+      &.new {
+        background-color: initial;
+        font-size: 1em;
+        padding: 0 .5rem 0 0;
+      }
     }
 
+    p a {
+      font-size: 1rem;
+      border-bottom: 1px solid $dr-seafoam;
+      box-shadow: inset 0 -1px 0 0 $dr-seafoam;
+      color: inherit;
+      text-decoration: none;
+
+      &:hover {
+        border-bottom: 1px solid $dr-darkgreen;
+        box-shadow: inset 0 -2px 0 0 $dr-darkgreen;
+        transition: all .8s ease;
+      }
+    }
+
+    .share {
+      padding: 1em 0 0 ;
+    }
   }
 
 }

@@ -32,7 +32,17 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Stardos+Stencil:400" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Stardos+Stencil:700" />
   <![endif]-->
+
   {% block styles %}
+  <!-- Start fonts -->
+  <script>
+  window.WebFontConfig = {
+    google: {families: ['PT Serif:400,700', 'Stardos Stencil:400,700']},
+    timeout: 10000
+  };
+  </script>
+  <script async src="https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
+  <!-- End fonts -->
   <link rel="stylesheet" href="styles/main.css">
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css" rel="stylesheet">
   {% endblock %}
@@ -65,6 +75,7 @@
         </div>
       {% endif %}
       <p>Here is a look at the <strong>{{ META.total_inmates }}</strong> inmates currently on Texas' death row. Texas, which reinstated the death penalty in 1976, has the most active execution chamber in the nation. On average, these inmates have spent <strong>{{ META.average_time_served }}</strong> on death row. Though {{ META.texas_percent_black }} percent of the state's residents are black, <strong>{{ META.percent_black | round }} percent</strong> of death row inmates are.</p>
+      <p><strong class="new">New</strong> <a href="https://apps.texastribune.org/execution-drugs/">We're tracking how many execution drugs Texas has in stock.</a></p>
       <ul class="share">
         <li>
           <a href="https://twitter.com/intent/tweet?text={{ META.project_title | urlencode }}%2C%20{{ META.shareline | urlencode }}%20{{ META.short_url | urlencode }}%20&via=texastribune" title="share on Twitter" class="social-share" target="_blank">

@@ -12,6 +12,11 @@ $color-tribune-light-blue: hsl(193, 49%, 75%);
 $color-facebook: hsl(220, 63%, 47%);
 $color-twitter: hsl(206, 82%, 63%);
 
+//death row specific colors
+$dr-orange: rgb(255, 133, 33);
+$dr-seafoam: rgb(168, 192, 183);
+$dr-darkgreen: rgb(47, 79, 79);
+
 // political party colors
 $color-republican: hsl(1, 64%, 56%);
 $color-democrat: hsl(203, 77%, 39%);
@@ -31,13 +36,15 @@ $font-weight-bold: 700;
 
 $font-sans-serif: 'Open Sans', Helvetica, Arial, sans-serif;
 $font-serif: 'PT Serif', Georgia, 'Times New Roman', Times, serif;
+$font-special: 'Stardos Stencil', Georgia, serif;
 
 $color-text: $color-primary;
 $color-text-inverse: $color-white;
-$color-text-link: $color-tribune-light-blue;
-$color-text-link-active: $color-tribune-blue;
+$color-text-link: lighten($dr-seafoam, 10);
+$color-text-link-active: $dr-seafoam;
 
 // Spacing
+$max-width: 1020px;
 $spacer: 1.25rem;
 
 $spacer-half: $spacer * .5;
@@ -63,10 +70,10 @@ $curve-sharp: cubic-bezier(0.4, 0.0, 0.6, 1);
 $mq-responsive: true;
 
 $mq-breakpoints: (
-  s: 544px,
-  m: 768px,
-  l: 992px,
-  xl: 1200px,
+  s: 460px,
+  m: 660px,
+  l: 860px,
+  xl: 1080px,
 
   header-break: 840px,
   footer-break: 850px

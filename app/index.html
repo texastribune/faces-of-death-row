@@ -9,33 +9,35 @@
 <div class="container">
   <header class="article-header">
     <h1 class="article-title">{{ meta.project_title }}</h1>
-    <p class="article-byline">
-      <span class="article-author">
-        By {% if meta.byline_url %}<a href="{{meta.byline_url}}">{% endif %}{{ meta.byline }}{% if meta.byline_url %}</a>{% endif %}{% if meta.byline_2 %} and {% if meta.byline_2_url %}<a href="{{meta.byline_2_url}}">{% endif %}{{ meta.byline_2 }}{% if meta.byline_2_url %}</a>{% endif %}{% endif %}
-      </span>
-    </p>
-    <p class="article-text">
-      Here is a look at the <strong>{{ meta.total_inmates }}</strong> inmates currently on Texas' death row. Texas, which reinstated the death penalty in 1976, has the most active execution chamber in the nation. On average, these inmates have spent <strong>{{ meta.average_time_served }}</strong> on death row. Though {{ meta.texas_percent_black }} percent of the state's residents are black, <strong>{{ meta.percent_black | round }} percent</strong> of death row inmates are.
-    </p>
-    <p class="article-text">
-      <strong class="new">New</strong> <a href="https://apps.texastribune.org/execution-drugs/">We're tracking how many execution drugs Texas has in stock.</a>
-    </p>
-    <div class="article-shares">
-      <a class="button button--small button--facebook article-shares-button" href="{{ shares.facebook(staticAbsolute('/')) }}" ga-on="click" ga-hit-type="social" ga-social-network="Facebook" ga-social-action="share">
-        <svg class="icon icon-facebook">
-          <use xlink:href="#icon-facebook"></use>
-        </svg>
-      </a>
-      <a class="button button--small button--twitter article-shares-button" href="{{ shares.twitter(staticAbsolute('/'), '', '') }}" ga-on="click" ga-hit-type="social" ga-social-network="Twitter" ga-social-action="tweet">
-        <svg class="icon icon-twitter">
-          <use xlink:href="#icon-twitter"></use>
-        </svg>
-      </a>
-      <a class="button button--small button--yellow article-shares-button" href="{{ shares.email('The Texas Tribune', '\n\n' + staticAbsolute('/'))}}" ga-on="click" ga-hit-type="social" ga-social-network="Email" ga-social-action="email">
-        <svg class="icon icon-envelope">
-          <use xlink:href="#icon-envelope"></use>
-        </svg>
-      </a>
+    <div class="article-text">
+      <p class="article-byline">
+        <span class="article-author">
+          By {% if meta.byline_url %}<a href="{{meta.byline_url}}">{% endif %}{{ meta.byline }}{% if meta.byline_url %}</a>{% endif %}{% if meta.byline_2 %} and {% if meta.byline_2_url %}<a href="{{meta.byline_2_url}}">{% endif %}{{ meta.byline_2 }}{% if meta.byline_2_url %}</a>{% endif %}{% endif %}
+        </span>
+      </p>
+      <p class="article-desc copy">
+        Here is a look at the <strong>{{ meta.total_inmates }}</strong> inmates currently on Texas' death row. Texas, which reinstated the death penalty in 1976, has the most active execution chamber in the nation. On average, these inmates have spent <strong>{{ meta.average_time_served }}</strong> on death row. Though {{ meta.texas_percent_black }} percent of the state's residents are black, <strong>{{ meta.percent_black | round }} percent</strong> of death row inmates are.
+      </p>
+      <p class="article-desc copy">
+        <strong class="new">New</strong> <a href="https://apps.texastribune.org/execution-drugs/">We're tracking how many execution drugs Texas has in stock.</a>
+      </p>
+      <div class="article-shares">
+        <a class="button button--small button--facebook article-shares-button" href="{{ shares.facebook(staticAbsolute('/')) }}" ga-on="click" ga-hit-type="social" ga-social-network="Facebook" ga-social-action="share">
+          <svg class="icon icon-facebook">
+            <use xlink:href="#icon-facebook"></use>
+          </svg>
+        </a>
+        <a class="button button--small button--twitter article-shares-button" href="{{ shares.twitter(staticAbsolute('/'), '', '') }}" ga-on="click" ga-hit-type="social" ga-social-network="Twitter" ga-social-action="tweet">
+          <svg class="icon icon-twitter">
+            <use xlink:href="#icon-twitter"></use>
+          </svg>
+        </a>
+        <a class="button button--small button--yellow article-shares-button" href="{{ shares.email('The Texas Tribune', '\n\n' + staticAbsolute('/'))}}" ga-on="click" ga-hit-type="social" ga-social-network="Email" ga-social-action="email">
+          <svg class="icon icon-envelope">
+            <use xlink:href="#icon-envelope"></use>
+          </svg>
+        </a>
+      </div>
     </div>
   </header>
 

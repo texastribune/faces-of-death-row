@@ -2,34 +2,17 @@
   margin-bottom: $spacer-double;
 }
 
-// The article's title.
-.article-title {
-  font-family: $font-serif;
-  font-size: 1.5rem;
-  font-weight: $font-weight-bold;
-  line-height: $line-height-title;
-  margin-bottom: .625em;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 1em;
-  max-width: 20em;
-
-  @include mq($from: m) {
-    font-size: 2rem;
-  }
-}
-
 .article-byline {
   color: $color-grey;
   font-family: $font-sans-serif;
   font-size: .875rem;
   letter-spacing: 0.04em;
   margin-bottom: 1em;
-  margin-top: 1em;
   text-transform: uppercase;
 
   a {
     @include default-uppercase-link;
+    color: $dr-darkgreen;
   }
 }
 
@@ -87,14 +70,13 @@
 // individual paragraphs.
 .copy {
   font-family: $font-serif;
-  font-size: 1.125rem;
+  font-size: 1rem;
   line-height: $line-height-body;
   margin-bottom: 1em; // Ensures spacing below the <p> syncs up with font-size
   margin-left: auto; // Centers <p> tag within max-width
   margin-right: auto; // Centers <p> tag within max-width
   margin-top: 1em; // Ensures spacing above the <p> syncs up with font-size
-  max-width: 34em; // Controls the measure
-
+  
   > a {
     @include default-link;
   }

@@ -55,6 +55,7 @@
     "webpack-dev-middleware": "^1.9.0"
   },
   "dependencies": {
+    "jquery": "^3.2.1",
     "sass-mq": "^3.3.2"
   }
 }

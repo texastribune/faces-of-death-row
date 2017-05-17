@@ -1,18 +1,20 @@
 {
   "bucket": "moose.texastribune.org",
-  "folder": "corgis",
+  "folder": "death-row",
   "rawAssetsFolder": "raw_assets",
   "dataDir": "./data",
   "assetsDir": "./app/assets",
   "srcDir": "./app",
   "distDir": "./dist",
   "files": [{
-    "fileId": "1ehh3ISrwq5lHNQS-eEs_i30Wi7UAF9txWgYTo56NFBI",
-    "type": "doc",
-    "name": "story"
-  }, {
-    "fileId": "1EACmSpajC1V7nJtwIxfA9aR-HAbTSDugSjStSSKWEaE",
+    "fileId": "1pBt4RC1143DRGwZBiuS9FNNsX4GKW6pAMA-mFzHQig4",
     "type": "sheet",
-    "name": "meta"
+    "name": "inmates",
+    "copytext": {
+      "processor": "table",
+      "overrides": {
+        "META": "keyvalue"
+      }
+    }
   }]
 }

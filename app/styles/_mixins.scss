@@ -1,0 +1,61 @@
+// clearfix
+// source: http://cssmojo.com/latest_new_clearfix_so_far/
+@mixin clearfix {
+  &:after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+}
+
+// font-size
+// An easy way to set both an IE `rem` fallback and think in pixels at the
+// same time.
+@mixin font-size($size) {
+  @if type-of($size) != 'number' {
+    @warn inspect($val) + ' was passed to font-size(), but it is not a number.';
+    @return $size;
+  }
+
+  @if unit($size) == 'px' {
+    font-size: $size;
+  } @else {
+    font-size: $size * 1px;
+  }
+
+  font-size: to-rem($size);
+}
+
+// site-logo-height
+// Calcuates the height of the Tribune logo properly due to the tail
+@mixin site-logo-height($height) {
+  height: $height + px;
+  margin-bottom: -$height * .12 + px;
+  vertical-align: bottom;
+}
+
+@mixin default-link {
+  border-bottom: 1px solid $color-text-link;
+  box-shadow: inset 0 -1px 0 0 $color-text-link;
+  color: currentColor;
+  text-decoration: none;
+
+  &:active,
+  &:hover {
+    border-bottom-color: $color-text-link-active;
+    box-shadow: inset 0 -2px 0 0 $color-text-link-active;
+    transition: all 0.8s $curve-standard;
+  }
+}
+
+@mixin default-uppercase-link {
+  color: $color-text-link-active;
+  font-weight: $font-weight-bold;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &:active,
+  &:hover {
+    text-decoration: underline;
+  }
+}

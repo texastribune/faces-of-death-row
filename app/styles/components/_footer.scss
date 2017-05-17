@@ -1,0 +1,99 @@
+.footer {
+  background-color: $color-primary;
+  color: $color-offwhite;
+  font-family: $font-sans-serif;
+  font-size: .875rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: $spacer-double;
+  max-width: 100%;
+  width: 100%;
+
+  @include mq($from: footer-break) {
+    font-size: .75rem;
+  }
+}
+
+.footer-container {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: to-rem(1300);
+  padding-bottom: $spacer-half;
+  padding-left: $spacer;
+  padding-right: $spacer;
+  padding-top: $spacer;
+
+  @include mq($from: footer-break) {
+    flex-wrap: nowrap;
+    padding-top: $spacer-half;
+  }
+}
+
+.footer-copyright {
+  margin-bottom: $spacer;
+  text-align: center;
+  width: 100%;
+
+  @include mq($from: footer-break) {
+    flex: 1 0 0;
+    margin-bottom: 0;
+    text-align: left;
+    width: auto;
+  }
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+
+  @include mq($from: footer-break) {
+    text-align: left;
+    flex-wrap: nowrap;
+  }
+
+  a {
+    border-bottom: 0;
+    box-shadow: none;
+  }
+}
+
+.footer-nav-item {
+  margin-bottom: $spacer;
+  width: 50%;
+
+  @include mq($from: footer-break) {
+    border-left: 1px solid $color-offwhite;
+    padding-left: $spacer-half;
+    padding-right: $spacer-half;
+    margin-bottom: 0;
+    width: auto;
+
+    &:first-child {
+      border-left: none;
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+}
+
+.footer-link {
+  color: $color-offwhite;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.footer-link-donate {
+  color: $color-text-link;
+  font-weight: $font-weight-bold;
+}

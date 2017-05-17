@@ -1,0 +1,11 @@
+{% macro text(value) %}
+<p>{{ value }}</p>
+{% endmacro %}
+
+{% macro list(value) %}
+<ul>
+  {% for item in value %}
+  <li>{{ item }}</li>
+  {% endfor %}
+</ul>
+{% endmacro %}

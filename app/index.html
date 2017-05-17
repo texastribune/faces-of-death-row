@@ -1,165 +1,43 @@
-{% extends "templates/_base.html" %}
-
-{% block meta %}
-{{ super () }}
-{% endblock %}
-
-{% block styles %}
-{{ super() }}
-{% endblock %}
+{% extends 'base.html' %}
+{% import 'macros/shares.html' as shares %}
 
 {% block content %}
-<section class="filters">
-  <div class="container">
-    <h3>Filter Inmates</h3>
-    <div class="all-criteria">
-      <div class="criteria timeserved" id="timeserved_criteria">
-        <h4>Years on death row</h4>
-        <div class="criteria_slider hide-on-load">
-          <div id="timeserved_range_label_start" class="slider-label start">{{ META.min_years }}</div>
-          <div id="timeserved_slider" class="slider"></div>
-          <div id="timeserved_range_label_end" class="slider-label end">{{ META.max_years }}</div>
-          <input type="hidden" id="timeserved_filter" value="{{ META.min_years }}-{{ META.max_years }}"/>
-        </div>
-      </div>
-      <div class="criteria race" id="race_criteria">
-        <h4>Race</h4>
-        <ul class="checkboxes">
-          <li class="checkbox">
-            <input id="white" type="checkbox" value="White">
-            <label for="white">White</label>
-          </li>
-          <li class="checkbox">
-            <input id="black" type="checkbox" value="Black">
-            <label for="black">Black</label>
-          </li>
-          <li class="checkbox">
-            <input id="hispanic" type="checkbox" value="Hispanic">
-            <label for="hispanic">Hispanic</label>
-          </li>
-          <li class="checkbox">
-            <input id="asian" type="checkbox" value="Asian">
-            <label for="asian">Asian</label>
-          </li>
-          <li class="checkbox">
-            <input id="other"type="checkbox" value="Other">
-            <label for="other">Other</label>
-          </li>
-        </ul>
-      </div>
-      <div class="criteria age" id="age_criteria">
-        <h4>Age</h4>
-        <div class="criteria_slider hide-on-load">
-          <div id="age_range_label_start" class="slider-label start">{{ META.min_age }}</div>
-          <div id="age_slider" class="slider"></div>
-          <div id="age_range_label_end" class="slider-label end">{{ META.max_age }}</div>
-          <input type="hidden" id="age_filter" value="{{ META.min_age }}-{{ META.max_age }}"/>
-        </div>
-      </div>
-      <div class="criteria sex" id="sex_criteria">
-        <h4>Sex</h4>
-          <ul class="checkboxes">
-            <li class="checkbox">
-              <input id="male" type="checkbox" value="Male">
-              <label for="male">Male</label>
-            </li>
-            <li class="checkbox">
-              <input id="female" type="checkbox" value="Female">
-              <label for="female">Female</label>
-            </li>
-          </ul>
-      </div>
-      <div class="criteria county" id="county_criteria">
-        <h4>County of crime</h4>
-        <div class="counties">
-          <select data-placeholder="Select counties&#8230;" class="county-select" multiple>
-            <option disabled="disabled" class="mobile-only">-Select counties-</option>
-            {% for county in COUNTIES|selectattr("county")|sort(false, false, "county") %}
-              {% if county.county %}
-                <option value="{{ county.county }}">{{ county.county }}</option>
-              {% endif %}
-            {% endfor %}
-          </select>
-          <div class="mobile-only search-prompt">Select counties above</div>
-        </div>
-      </div>
-      <div class="criteria execution" id="execution_criteria">
-          <h4>
-            <li class="checkbox">
-              <input id="yes" type="checkbox" value="yes">
-              <label for="yes">Execution scheduled</label>
-            </li>
-          </h4>
-      </div>
-    </div>
-    <div class="num-match">Viewing <span id="total_inmates">{{ META.total_inmates }}</span> inmates</div>
-  </div>
-</section>
-<section class="container interactive">
-  <div class="inmates" id="inmates">
-    {% for inmate in INMATES %}
-    <div class="inmate" id="id{{ inmate.tdcj_id }}" data-race="{{ inmate.race }}" data-sex="{{ inmate.sex }}" data-age="{{ inmate.age }}" data-time="{{ inmate.timeserved }}" data-county="{{ inmate.county }}" data-execution="{% if inmate.execution_date %}yes{% endif %}">
-      <div class="open-lightbox" id="inmate-{{ inmate.tdcj_id }}">
-        <img class="grayscale" src="assets/images/{{ inmate.mug }}" />
-        <div class="hover-state">
-          <h2>{{ inmate.first_name }} {{ inmate.middle_name }} {{ inmate.last_name }}</h2>
-          <div class="details">
-            <p class="label">On death row:</p>
-            <p>{{ inmate.time_served }}</p>
-          </div>
-        </div>
-        <div class="info-button">
-          <i class="fa"></i>
-          <div class="close-text">Close</div>
-        </div>
-      </div>
-      <div id="light-inmate-{{ inmate.tdcj_id }}" class="white-content">
-        <div class="bio">
-          <img src="assets/images/{{ inmate.mug }}" />
-          <div class="details">
-            <h2>{{ inmate.first_name }} {{ inmate.middle_name }} {{inmate.last_name }}</h2>
-            {% if inmate.execution_date %}
-            <div class="execution-date">
-              <p><label>Scheduled execution date</label> {{ inmate.execution_date }}</p>
-            </div>
-            <hr>
-            {% endif %}
-            <p><label>Time on Death Row:</label> {{ inmate.time_served }}</p>
-            <p><label>Race:</label> {{ inmate.race }}</p>
-            <p><label>Age:</label> {{ inmate.age }}</p>
-            <p><label>Sex:</label> {{ inmate.sex }}</p>
-            <hr>
-            <p><label>Summary of Conviction:</label></p>
-            <p>{{ inmate.summary }}</p>
-            <hr>
-            <div class="crime-details">
-              <p><label>Crime Committed on:</label> {{ inmate.offense_date }}</p>
-              <p><label>On death row since:</label> {{ inmate.received_date }}</p>
-              <p><label>Crime Committed in:</label> {{ inmate.county }} County</p>
-            </div>
-          </div>
-        </div>
-        <div class="close-lightbox">
-          <i class="fa fa-circle"></i>&times;
-        </div>
-        <div class="prev pagination{% if loop.first %} inactive {% endif %}">
-          <i class="arrow"></i>
-        </div>
-        <div class="next pagination{% if loop.last %} inactive {% endif %}">
-          <i class="arrow"></i>
-        </div>
-      </div>
-      <div id="fade-inmate-{{ inmate.tdcj_id }}" class="black-overlay"></div>
-    </div>
-    {% endfor %}
-  </div>
-</section>
-<section class="disclaimer container prose">
-  <p>Source: <a href="http://www.tdcj.state.tx.us/">Texas Department of Criminal Justice</a> | Developed and maintained by <a href="http://www.texastribune.org">The Texas Tribune</a> | <a href="http://www.texastribune.org/feedback/">Feedback</a></p>
-  <p>Note: The data in this app was released under the Texas Public Information Act and was last updated on <span id="date">{{ BUILD.BUILD_DATE }}</span>. Conviction summaries are gathered from TDCJ records, court documents and news articles. These inmates are all classified as death row inmates by TDCJ, but some may be located in county jails if their case is being resentenced.</p>
-</section>
-{% endblock %}
 
-{% block script %}
+<div class="container">
+  <header class="article-header text-center">
+    <h1 class="article-title">The only member-supported, digital-first, nonpartisan media organization</h1>
+    <p class="article-byline">
+      <span class="article-author">By <a href="#">Super Cool Corgi</a></span>
+      <span class="article-pub-date"><time datetime="{{ context.pub_date }}">{{ apFormatDate(context.pub_date) }}</time></span>
+    </p>
+    <div class="article-shares">
+      <a class="button button--small button--facebook article-shares-button" href="{{ shares.facebook(staticAbsolute('/')) }}" ga-on="click" ga-hit-type="social" ga-social-network="Facebook" ga-social-action="share">
+        <svg class="icon icon-facebook">
+          <use xlink:href="#icon-facebook"></use>
+        </svg>
+      </a>
+      <a class="button button--small button--twitter article-shares-button" href="{{ shares.twitter(staticAbsolute('/'), '', '') }}" ga-on="click" ga-hit-type="social" ga-social-network="Twitter" ga-social-action="tweet">
+        <svg class="icon icon-twitter">
+          <use xlink:href="#icon-twitter"></use>
+        </svg>
+      </a>
+      <a class="button button--small button--yellow article-shares-button" href="{{ shares.email('The Texas Tribune', '\n\n' + staticAbsolute('/'))}}" ga-on="click" ga-hit-type="social" ga-social-network="Email" ga-social-action="email">
+        <svg class="icon icon-envelope">
+          <use xlink:href="#icon-envelope"></use>
+        </svg>
+      </a>
+    </div>
+  </header>
+
+  <div class="intro-prose">
+    <p class="copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto consequuntur, blanditiis, eligendi hic exercitationem ab culpa! Optio fugiat architecto pariatur cum. <a href="#">Distinctio ab iusto temporibus</a>, deserunt quam placeat incidunt aspernatur!</p>
+    <p class="copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima quasi labore, suscipit saepe. Officia dolor natus asperiores voluptatum, dolores eius unde eligendi. Praesentium placeat, aliquam ipsa, optio assumenda expedita sequi.</p>
+  </div>
+</div>
+
+{% endblock content %}
+
+{% block scripts %}
 {{ super() }}
-{% endblock %}
+<script src="{{ static('scripts/main.js') }}"></script>
+{% endblock scripts %}

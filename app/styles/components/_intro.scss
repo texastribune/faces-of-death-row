@@ -13,31 +13,29 @@
     padding-left: .25em;
     text-transform: uppercase;
 
-    @include mq($from: s, $until: m) {
-      font-size: 2.4rem;
-    }
-
     @include mq($from: m, $until: l) {
-      font-size: 3rem;
+      font-size: 3.25rem;
     }
 
-    @include mq($from: l, $until: xl) {
-      font-size: 3.25rem;
+    @include mq($from: l) {
+      font-size: 3.75rem;
       float: left;
-      width: 40%;
+      width: 45%;
     }
 
     @include mq($from: xl) {
-      font-size: 3.75rem;
-      float: left;
       width: 40%;
     }
   }
 
   .article-text {
     @include mq($from: l) {
-      width: 57%;
+      width: 53%;
       float: right;
+    }
+
+    @include mq($from: xl) {
+      width: 57%;
     }
 
     .article-desc {
@@ -50,13 +48,13 @@
         font-size: .85em;
         font-weight: bold;
         letter-spacing: .05em;
-        padding: 0 .2em;
+        padding: 0 .25em;
         text-transform: uppercase;
 
         &.new {
           background-color: initial;
           font-size: 1em;
-          padding: 0 .5rem 0 0;
+          padding: 0 .25em 0 0;
         }
       }
     }

@@ -1,0 +1,9 @@
+{% macro countyList(data) %}
+
+{% for county in data|selectattr("county")|sort(false, false, "county") %}
+  {% if county.county %}
+    <option value="{{ county.county }}">{{ county.county }}</option>
+  {% endif %}
+{% endfor %}
+
+{% endmacro %}

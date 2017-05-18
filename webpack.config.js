@@ -4,7 +4,7 @@ const webpack = require('webpack');
 module.exports = {
   context: path.join(__dirname, '/app/scripts'),
   entry: {
-    main: './main.js'
+    bundle: './main.js'
   },
   output: {
     path: path.join(__dirname, '/dist/scripts'),
@@ -33,11 +33,11 @@ module.exports = {
   },
   plugins: [
     // only uncomment if you've read `docs/jquery.md` and know you need it
-    // new webpack.ProvidePlugin({
-    //   '$': 'jquery',
-    //   'jQuery': 'jquery',
-    //   'window.jQuery': 'jquery'
-    // }),
+    new webpack.ProvidePlugin({
+      '$': 'jquery',
+      'jQuery': 'jquery',
+      'window.jQuery': 'jquery'
+    }),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'commons',
       minChunks: 2

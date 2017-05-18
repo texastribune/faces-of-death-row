@@ -1,0 +1,325 @@
+.filters {
+  background-color: $dr-seafoam;
+  margin: 1em 0;
+  padding: 1em;
+}
+
+.all-criteria {
+  @include clearfix;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.criteria {
+  margin-bottom: 1em;
+
+  h4 {
+    background-color: $dr-darkgreen;
+    color: $color-white;
+    font-weight: 400;
+    letter-spacing: .02em;
+    margin-bottom: .85em;
+    padding: .5em .25em;
+    text-transform: uppercase;
+
+    @include mq($from: s) {
+      padding: .5em;
+    }
+  }
+
+  ul {
+    margin: 0;
+  }
+
+  &.timeserved {
+    flex-basis: 20%;
+    flex-grow: 1;
+    // @include mq($from: l) {
+    //   // @include span-columns(6);
+    // }
+    //
+    // @include mq($from: m) {
+    //   // @include span-columns(5);
+    // }
+    //
+    // @include mq($from: s) {
+    //   float: right;
+    //   margin-right: 0;
+    //   width: 62%;
+    // }
+    //
+    // @include mq($until: s) {
+    //   float: right;
+    //   margin-right: 0;
+    //   width: 62%;
+    // }
+  }
+
+  &.race {
+    // @include span-columns(4.8);
+    flex-grow: 2;
+    @include mq($from: l) {
+      // @include span-columns(6);
+      // @include omega();
+    }
+
+    @include mq($from: m) {
+      // @include span-columns(7);
+      // @include omega();
+    }
+
+    // @include mq($from: s) {
+    //   float: left;
+    //   width: 35%;
+    // }
+    //
+    // @include mq($until: s) {
+    //   float: left;
+    //   width: 35%;
+    // }
+  }
+
+  &.age {
+    // @include span-columns(2.6);
+    flex-grow: 1;
+    @include mq($from: l) {
+      // @include span-columns(6);
+    }
+
+    @include mq($from: m) {
+      // @include span-columns(5);
+    }
+
+    // @include mq($from: s) {
+    //   float: right;
+    //   margin-right: 0;
+    //   width: 62%;
+    // }
+    //
+    // @include mq($until: s) {
+    //   float: right;
+    //   margin-right: 0;
+    //   width: 62%;
+    // }
+  }
+
+  &.sex {
+    // @include span-columns(2);
+    // @include omega();
+    flex-grow: 1;
+    @include mq($from: l) {
+      // @include span-columns(6);
+      // @include omega();
+    }
+
+    @include mq($from: m) {
+      // @include span-columns(7);
+      // @include omega();
+    }
+
+    // @include mq($from: s) {
+    //   float: right;
+    //   width: 62%;
+    // }
+    //
+    // @include mq($until: s) {
+    //   float: right;
+    //   width: 62%;
+    // }
+  }
+
+  &.county {
+    // @include span-columns(7.4);
+    flex-grow: 3;
+    margin-bottom: 0;
+
+    @include mq($from: m) {
+      // @include span-columns(12);
+      margin-bottom: 1em;
+    }
+
+    @include mq($from: s) {
+      // @include span-columns(12);
+      margin-bottom: 1.5em;
+    }
+
+    @include mq($until: s) {
+      // @include span-columns(12);
+      margin-bottom: 1.5em;
+
+      .chosen-container {
+        width: 100%;
+      }
+    }
+
+    h4 {
+      float: left;
+      text-align: center;
+      width: 30%;
+
+      @include mq($from: l) {
+        width: 35%;
+      }
+
+      @include mq($from: s) {
+        float: none;
+        margin-bottom: 0;
+        width: 100%;
+      }
+
+      @include mq($until: s) {
+        float: none;
+        margin-bottom: 0;
+        width: 100%;
+      }
+    }
+
+    .counties {
+      float: right;
+      width: 70%;
+
+      @include mq($from: l) {
+        width: 65%;
+      }
+
+      @include mq($from: s) {
+        float: none;
+        width: 100%;
+      }
+
+      @include mq($until: s) {
+        float: none;
+        width: 100%;
+      }
+    }
+  }
+
+  &.execution {
+    flex-grow: 1;
+    margin-bottom: 0;
+    text-align: center;
+
+    .checkbox label {
+      font-size: 1em;
+      letter-spacing: .03em;
+      margin-right: .5em;
+    }
+
+    // @include mq($from: m) {
+    //   margin: 0 25%;
+    //   width: 50%;
+    // }
+    //
+    // @include mq($from: s, $until: m) {
+    //   text-align: center;
+    //   width: 100%;
+    // }
+
+    @include mq($until: s) {
+      // @include span-columns(12);
+      margin-bottom: 1em;
+
+      h4 {
+        margin: .5em 0;
+        text-align: center;
+      }
+    }
+  }
+
+  .checkboxes li {
+    display: block;
+    margin-bottom: 1.25em;
+
+    @include mq($from: m) {
+      display: inline-block;
+      margin-bottom: 1em;
+    }
+
+    @include mq($from: m, $until: l) {
+      display: inline-block;
+      margin-bottom: 1em;
+    }
+
+    &:last-child {
+      margin-bottom: .5em;
+    }
+  }
+}
+
+.checkbox {
+  display: inline-block;
+  margin: 0 .15em 0 0;
+
+  @include mq($from: m, $until: l) {
+    margin: 0;
+  }
+
+  input {
+    display: none;
+  }
+
+  label {
+    cursor: pointer;
+    font-size: .9em;
+    letter-spacing: .01em;
+    margin-right: .25em;
+    text-transform: uppercase;
+
+    @include mq($until: s) {
+      font-size: 1em;
+    }
+
+    @include mq($from: m, $until: l) {
+      margin-right: .15em;
+    }
+
+    &:before {
+      border: 2px solid $color-white;
+      content: '';
+      display: inline-block;
+      height: 15px;
+      margin-right: 3px;
+      vertical-align: -2px;
+      width: 15px;
+
+      .execution & {
+        margin-right: 7px;
+      }
+
+      @include mq($until: s) {
+        height: 17px;
+        margin-right: 7px;
+        vertical-align: -3px;
+        width: 17px;
+      }
+    }
+  }
+
+  input:checked + label:before {
+    background-color: $dr-orange;
+  }
+}
+
+.num-match {
+  font-weight: 700;
+  letter-spacing: .1em;
+  margin: .5em 0;
+  text-align: center;
+  text-transform: uppercase;
+
+  @include mq($from: m) {
+    margin: 2em 0 1em;
+  }
+
+  span {
+    background-color: $color-white;
+    font: $font-special;
+    margin: 0 .25em;
+    padding: .1em .2em 0;
+    vertical-align: -.25em;
+
+    @include mq($from: m) {
+      padding: .25em .25em .1em;
+    }
+  }
+}

@@ -1,50 +1,133 @@
 {% extends 'base.html' %}
 {% import 'macros/shares.html' as shares %}
 {% from 'macros/ads.html' import ad %}
+{% from 'macros/countyList.html' import countyList %}
 
 {% set meta = data.inmates.META %}
-{% set context = data.inmates.INMATES %}
+{% set inmates = data.inmates.INMATES %}
+{% set counties = data.inmates.COUNTIES %}
 
 {% block content %}
-<div class="container">
-  <header class="article-header">
-    <h1 class="article-title">{{ meta.project_title }}</h1>
-    <div class="article-text">
-      <p class="article-byline">
-        <span class="article-author">
-          By {% if meta.byline_url %}<a href="{{meta.byline_url}}">{% endif %}{{ meta.byline }}{% if meta.byline_url %}</a>{% endif %}{% if meta.byline_2 %} and {% if meta.byline_2_url %}<a href="{{meta.byline_2_url}}">{% endif %}{{ meta.byline_2 }}{% if meta.byline_2_url %}</a>{% endif %}{% endif %}
-        </span>
-      </p>
-      <p class="article-desc copy">
-        Here is a look at the <strong>{{ meta.total_inmates }}</strong> inmates currently on Texas' death row. Texas, which reinstated the death penalty in 1976, has the most active execution chamber in the nation. On average, these inmates have spent <strong>{{ meta.average_time_served }}</strong> on death row. Though {{ meta.texas_percent_black }} percent of the state's residents are black, <strong>{{ meta.percent_black | round }} percent</strong> of death row inmates are.
-      </p>
-      <p class="article-desc copy">
-        <strong class="new">New</strong> <a href="https://apps.texastribune.org/execution-drugs/">We're tracking how many execution drugs Texas has in stock.</a>
-      </p>
-      <div class="article-shares">
-        <a class="button button--small button--facebook article-shares-button" href="{{ shares.facebook(staticAbsolute('/')) }}" ga-on="click" ga-hit-type="social" ga-social-network="Facebook" ga-social-action="share">
-          <svg class="icon icon-facebook">
-            <use xlink:href="#icon-facebook"></use>
-          </svg>
-        </a>
-        <a class="button button--small button--twitter article-shares-button" href="{{ shares.twitter(staticAbsolute('/'), '', '') }}" ga-on="click" ga-hit-type="social" ga-social-network="Twitter" ga-social-action="tweet">
-          <svg class="icon icon-twitter">
-            <use xlink:href="#icon-twitter"></use>
-          </svg>
-        </a>
-        <a class="button button--small button--yellow article-shares-button" href="{{ shares.email('The Texas Tribune', '\n\n' + staticAbsolute('/'))}}" ga-on="click" ga-hit-type="social" ga-social-network="Email" ga-social-action="email">
-          <svg class="icon icon-envelope">
-            <use xlink:href="#icon-envelope"></use>
-          </svg>
-        </a>
+<header class="article-header container">
+  <h1 class="article-title">{{ meta.project_title }}</h1>
+  <div class="article-text">
+    <p class="article-byline">
+      <span class="article-author">
+        By {% if meta.byline_url %}<a href="{{meta.byline_url}}">{% endif %}{{ meta.byline }}{% if meta.byline_url %}</a>{% endif %}{% if meta.byline_2 %} and {% if meta.byline_2_url %}<a href="{{meta.byline_2_url}}">{% endif %}{{ meta.byline_2 }}{% if meta.byline_2_url %}</a>{% endif %}{% endif %}
+      </span>
+    </p>
+    <p class="article-desc copy">
+      Here is a look at the <strong>{{ meta.total_inmates }}</strong> inmates currently on Texas' death row. Texas, which reinstated the death penalty in 1976, has the most active execution chamber in the nation. On average, these inmates have spent <strong>{{ meta.average_time_served }}</strong> on death row. Though {{ meta.texas_percent_black }} percent of the state's residents are black, <strong>{{ meta.percent_black | round }} percent</strong> of death row inmates are.
+    </p>
+    <p class="article-desc copy">
+      <strong class="new">New</strong> <a href="https://apps.texastribune.org/execution-drugs/">We're tracking how many execution drugs Texas has in stock.</a>
+    </p>
+    <div class="article-shares">
+      <a class="button button--small button--facebook article-shares-button" href="{{ shares.facebook(staticAbsolute('/')) }}" ga-on="click" ga-hit-type="social" ga-social-network="Facebook" ga-social-action="share">
+        <svg class="icon icon-facebook">
+          <use xlink:href="#icon-facebook"></use>
+        </svg>
+      </a>
+      <a class="button button--small button--twitter article-shares-button" href="{{ shares.twitter(staticAbsolute('/'), '', '') }}" ga-on="click" ga-hit-type="social" ga-social-network="Twitter" ga-social-action="tweet">
+        <svg class="icon icon-twitter">
+          <use xlink:href="#icon-twitter"></use>
+        </svg>
+      </a>
+      <a class="button button--small button--yellow article-shares-button" href="{{ shares.email('The Texas Tribune', '\n\n' + staticAbsolute('/'))}}" ga-on="click" ga-hit-type="social" ga-social-network="Email" ga-social-action="email">
+        <svg class="icon icon-envelope">
+          <use xlink:href="#icon-envelope"></use>
+        </svg>
+      </a>
+    </div>
+  </div>
+</header>
+
+{{ ad(top, 0) }}
+
+<section class="filters">
+  <div class="container">
+    <h3>Filter Inmates</h3>
+    <div class="all-criteria">
+      <div class="criteria timeserved" id="timeserved_criteria">
+        <h4>Years on death row</h4>
+        <div class="criteria_slider hide-on-load">
+          <div id="timeserved_range_label_start" class="slider-label start">{{ meta.min_years }}</div>
+          <div id="timeserved_slider" class="slider"></div>
+          <div id="timeserved_range_label_end" class="slider-label end">{{ meta.max_years }}</div>
+          <input type="hidden" id="timeserved_filter" value="{{ meta.min_years }}-{{ meta.max_years }}"/>
+        </div>
+      </div>
+      <div class="criteria race" id="race_criteria">
+        <h4>Race</h4>
+        <ul class="checkboxes">
+          <li class="checkbox">
+            <input id="white" type="checkbox" value="White">
+            <label for="white">White</label>
+          </li>
+          <li class="checkbox">
+            <input id="black" type="checkbox" value="Black">
+            <label for="black">Black</label>
+          </li>
+          <li class="checkbox">
+            <input id="hispanic" type="checkbox" value="Hispanic">
+            <label for="hispanic">Hispanic</label>
+          </li>
+          <li class="checkbox">
+            <input id="asian" type="checkbox" value="Asian">
+            <label for="asian">Asian</label>
+          </li>
+          <li class="checkbox">
+            <input id="other"type="checkbox" value="Other">
+            <label for="other">Other</label>
+          </li>
+        </ul>
+      </div>
+      <div class="criteria age" id="age_criteria">
+        <h4>Age</h4>
+        <div class="criteria_slider hide-on-load">
+          <div id="age_range_label_start" class="slider-label start">{{ meta.min_age }}</div>
+          <div id="age_slider" class="slider"></div>
+          <div id="age_range_label_end" class="slider-label end">{{ meta.max_age }}</div>
+          <input type="hidden" id="age_filter" value="{{ meta.min_age }}-{{ meta.max_age }}"/>
+        </div>
+      </div>
+      <div class="criteria sex" id="sex_criteria">
+        <h4>Sex</h4>
+          <ul class="checkboxes">
+            <li class="checkbox">
+              <input id="male" type="checkbox" value="Male">
+              <label for="male">Male</label>
+            </li>
+            <li class="checkbox">
+              <input id="female" type="checkbox" value="Female">
+              <label for="female">Female</label>
+            </li>
+          </ul>
+      </div>
+      <div class="criteria county" id="county_criteria">
+        <h4>County of crime</h4>
+        <div class="counties">
+          <select data-placeholder="Select counties&#8230;" class="county-select" multiple>
+            <option disabled="disabled" class="mobile-only">-Select counties-</option>
+            {{ countyList(counties) }}
+          </select>
+          <div class="mobile-only search-prompt">Select counties above</div>
+        </div>
+      </div>
+      <div class="criteria execution" id="execution_criteria">
+          <h4>
+            <li class="checkbox">
+              <input id="yes" type="checkbox" value="yes">
+              <label for="yes">Execution scheduled</label>
+            </li>
+          </h4>
       </div>
     </div>
-  </header>
+    <div class="num-match">Viewing <span id="total_inmates">{{ meta.total_inmates }}</span> inmates</div>
+  </div>
+</section>
 
-  {{ ad(top, 0) }}
-
-  <!-- INMATES -->
-
+<div class="container">
   {{ ad(bottom, 1) }}
 </div>
 
@@ -52,5 +135,6 @@
 
 {% block scripts %}
 {{ super() }}
-<script src="{{ static('scripts/main.js') }}"></script>
+<script src="https://s3.amazonaws.com/graphics.texastribune.org/graphics/vendor-scripts/modernizer.min.js"></script>
+<script src="{{ static('scripts/bundle.js') }}"></script>
 {% endblock scripts %}

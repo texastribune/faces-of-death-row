@@ -9,6 +9,16 @@
     letter-spacing: .02rem;
     margin-bottom: $spacer;
   }
+
+  .container {
+    @include mq($from: l, $until: xl) {
+      max-width: 767px;
+    }
+
+    @include mq($from: xl) {
+      max-width: 960px;
+    }
+  }
 }
 
 .all-criteria {
@@ -57,6 +67,10 @@
     @include mq($from: l) {
       flex-basis: 49%;
     }
+
+    @include mq($from: xl) {
+      flex-basis: 20%;
+    }
   }
 
   &.race {
@@ -73,6 +87,10 @@
     @include mq($from: l) {
       flex-basis: 49%;
     }
+
+    @include mq($from: xl) {
+      flex-basis: 40%;
+    }
   }
 
   &.age {
@@ -88,6 +106,10 @@
     @include mq($from: l) {
       flex-basis: 49%;
     }
+
+    @include mq($from: xl) {
+      flex-basis: 18%;
+    }
   }
 
   &.sex {
@@ -102,6 +124,10 @@
 
     @include mq($from: l) {
       flex-basis: 49%;
+    }
+
+    @include mq($from: xl) {
+      flex-basis: 18%;
     }
   }
 

@@ -54,13 +54,13 @@ gulp.task('styles', function () {
   return $.sass('app/styles/', {
     loadPath: ['.'],
     precision: 10,
-    sourcemap: true
+    sourcemap: false
   })
   .on('error', function(err) {
     console.error('Error', err.message);
   })
   .pipe($.autoprefixer({browsers: ['last 2 versions', 'IE 9', 'IE 8']}))
-  .pipe($.sourcemaps.write())
+  // .pipe($.sourcemaps.write())
   .pipe(gulp.dest('.tmp/styles'))
   .pipe($.if('*.css', reload({stream: true})))
   .pipe($.if('*.css', $.csso()))

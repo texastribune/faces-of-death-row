@@ -1,22 +1,35 @@
 .filters {
   background-color: $dr-seafoam;
   margin: 1em 0;
-  padding: 1em;
+  padding: 1em 0;
+
+  h3 {
+    font-size: 1.125rem;
+    font-weight: bold;
+    letter-spacing: .02rem;
+    margin-bottom: $spacer;
+  }
 }
 
 .all-criteria {
   @include clearfix;
-  display: flex;
-  flex-wrap: wrap;
+
+  @include mq($from: m) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+
+  }
 }
 
 .criteria {
-  margin-bottom: 1em;
+  margin-bottom: $spacer;
 
   h4 {
     background-color: $dr-darkgreen;
     color: $color-white;
-    font-weight: 400;
+    font-size: .9375rem;
     letter-spacing: .02em;
     margin-bottom: .85em;
     padding: .5em .25em;
@@ -32,124 +45,83 @@
   }
 
   &.timeserved {
-    flex-basis: 20%;
-    flex-grow: 1;
-    // @include mq($from: l) {
-    //   // @include span-columns(6);
-    // }
-    //
-    // @include mq($from: m) {
-    //   // @include span-columns(5);
-    // }
-    //
-    // @include mq($from: s) {
-    //   float: right;
-    //   margin-right: 0;
-    //   width: 62%;
-    // }
-    //
-    // @include mq($until: s) {
-    //   float: right;
-    //   margin-right: 0;
-    //   width: 62%;
-    // }
+    @include mq($until: m) {
+      width: 62%;
+      float: right;
+    }
+
+    @include mq($from: m) {
+      flex-basis: 40%;
+    }
+
+    @include mq($from: l) {
+      flex-basis: 49%;
+    }
   }
 
   &.race {
-    // @include span-columns(4.8);
-    flex-grow: 2;
-    @include mq($from: l) {
-      // @include span-columns(6);
-      // @include omega();
+    @include mq($until: m) {
+      width: 35%;
+      margin-right: 3%;
+      float: left;
     }
 
     @include mq($from: m) {
-      // @include span-columns(7);
-      // @include omega();
+      flex-basis: 56%;
     }
 
-    // @include mq($from: s) {
-    //   float: left;
-    //   width: 35%;
-    // }
-    //
-    // @include mq($until: s) {
-    //   float: left;
-    //   width: 35%;
-    // }
+    @include mq($from: l) {
+      flex-basis: 49%;
+    }
   }
 
   &.age {
-    // @include span-columns(2.6);
-    flex-grow: 1;
-    @include mq($from: l) {
-      // @include span-columns(6);
+    @include mq($until: m) {
+      width: 62%;
+      float: right;
     }
 
     @include mq($from: m) {
-      // @include span-columns(5);
+      flex-basis: 40%;
     }
 
-    // @include mq($from: s) {
-    //   float: right;
-    //   margin-right: 0;
-    //   width: 62%;
-    // }
-    //
-    // @include mq($until: s) {
-    //   float: right;
-    //   margin-right: 0;
-    //   width: 62%;
-    // }
+    @include mq($from: l) {
+      flex-basis: 49%;
+    }
   }
 
   &.sex {
-    // @include span-columns(2);
-    // @include omega();
-    flex-grow: 1;
-    @include mq($from: l) {
-      // @include span-columns(6);
-      // @include omega();
+    @include mq($until: m) {
+      width: 62%;
+      float: right;
     }
 
     @include mq($from: m) {
-      // @include span-columns(7);
-      // @include omega();
+      flex-basis: 57%;
     }
 
-    // @include mq($from: s) {
-    //   float: right;
-    //   width: 62%;
-    // }
-    //
-    // @include mq($until: s) {
-    //   float: right;
-    //   width: 62%;
-    // }
+    @include mq($from: l) {
+      flex-basis: 49%;
+    }
   }
 
   &.county {
-    // @include span-columns(7.4);
-    flex-grow: 3;
-    margin-bottom: 0;
 
-    @include mq($from: m) {
-      // @include span-columns(12);
-      margin-bottom: 1em;
-    }
-
-    @include mq($from: s) {
-      // @include span-columns(12);
-      margin-bottom: 1.5em;
-    }
-
-    @include mq($until: s) {
-      // @include span-columns(12);
-      margin-bottom: 1.5em;
+    @include mq($until: m) {
+      clear: both;
+      margin-bottom: $spacer;
 
       .chosen-container {
         width: 100%;
       }
+    }
+
+    @include mq($from: m) {
+      flex-basis: 100%;
+    }
+
+    @include mq($from: l) {
+      flex-basis: 61%;
     }
 
     h4 {
@@ -157,17 +129,11 @@
       text-align: center;
       width: 30%;
 
-      @include mq($from: l) {
+      @include mq($from: m) {
         width: 35%;
       }
 
-      @include mq($from: s) {
-        float: none;
-        margin-bottom: 0;
-        width: 100%;
-      }
-
-      @include mq($until: s) {
+      @include mq($until: m) {
         float: none;
         margin-bottom: 0;
         width: 100%;
@@ -195,8 +161,6 @@
   }
 
   &.execution {
-    flex-grow: 1;
-    margin-bottom: 0;
     text-align: center;
 
     .checkbox label {
@@ -205,30 +169,31 @@
       margin-right: .5em;
     }
 
-    // @include mq($from: m) {
-    //   margin: 0 25%;
-    //   width: 50%;
-    // }
-    //
-    // @include mq($from: s, $until: m) {
-    //   text-align: center;
-    //   width: 100%;
-    // }
+    @include mq($from: m) {
+      flex-basis: 50%;
+      margin: 0 auto;
+    }
 
-    @include mq($until: s) {
-      // @include span-columns(12);
-      margin-bottom: 1em;
+    @include mq($from: l) {
+      flex-basis: 37%;
+      margin: 0 0 0 2%;
+    }
+
+    @include mq($until: m) {
+      margin-bottom: $spacer-double;
 
       h4 {
         margin: .5em 0;
-        text-align: center;
       }
     }
   }
+}
 
-  .checkboxes li {
+.checkboxes {
+  li {
     display: block;
-    margin-bottom: 1.25em;
+    margin-bottom: $spacer;
+    font-size: .875rem;
 
     @include mq($from: m) {
       display: inline-block;
@@ -237,11 +202,17 @@
 
     @include mq($from: m, $until: l) {
       display: inline-block;
-      margin-bottom: 1em;
+      margin-bottom: $spacer;
     }
 
     &:last-child {
-      margin-bottom: .5em;
+      margin-bottom: $spacer-half;
+    }
+  }
+
+  .sex & {
+    li {
+      display: inline-block;
     }
   }
 }
@@ -265,7 +236,7 @@
     margin-right: .25em;
     text-transform: uppercase;
 
-    @include mq($until: s) {
+    @include mq($until: m, $from: l) {
       font-size: 1em;
     }
 
@@ -286,7 +257,7 @@
         margin-right: 7px;
       }
 
-      @include mq($until: s) {
+      @include mq($until: m, $from: l) {
         height: 17px;
         margin-right: 7px;
         vertical-align: -3px;
@@ -313,13 +284,11 @@
 
   span {
     background-color: $color-white;
-    font: $font-special;
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-family: $font-special;
     margin: 0 .25em;
     padding: .1em .2em 0;
-    vertical-align: -.25em;
-
-    @include mq($from: m) {
-      padding: .25em .25em .1em;
-    }
+    vertical-align: middle;
   }
 }

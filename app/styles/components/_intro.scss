@@ -44,6 +44,7 @@
 
       strong {
         background-color: lighten($dr-seafoam, 10);
+        display: inline-block;
         font-family: $font-sans-serif;
         font-size: .85em;
         font-weight: bold;

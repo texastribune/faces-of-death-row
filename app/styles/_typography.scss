@@ -8,16 +8,12 @@
   font-size: .8rem;
   letter-spacing: 0.04em;
   line-height: 1.3;
-  margin-bottom: 1em;
+  margin-bottom: $spacer;
   text-transform: uppercase;
 
   a {
     @include default-uppercase-link;
     color: $dr-darkgreen;
-  }
-
-  @include mq($from: l) {
-    font-size: .875rem;
   }
 }
 
@@ -25,7 +21,13 @@
   display: block;
   margin-bottom: $spacer-quarter;
 
-  @include mq($from: s) {
+  @include mq($from: m, $until: l) {
+    display: inline;
+    margin-bottom: 0;
+    margin-right: $spacer;
+  }
+
+  @include mq($from: xl) {
     display: inline;
     margin-bottom: 0;
     margin-right: $spacer;
@@ -34,9 +36,16 @@
 
 .article-pub-date {
   display: block;
+  font-size: .75rem;
 
-  @include mq($from: s) {
+  @include mq($from: m, $until: l) {
     display: inline;
+    font-size: .8rem;
+  }
+
+  @include mq($from: xl) {
+    display: inline;
+    font-size: .8rem;
   }
 }
 
@@ -77,10 +86,10 @@
   font-family: $font-serif;
   font-size: 1rem;
   line-height: $line-height-body;
-  margin-bottom: 1em; // Ensures spacing below the <p> syncs up with font-size
+  margin-bottom: $spacer; // Ensures spacing below the <p> syncs up with font-size
   margin-left: auto; // Centers <p> tag within max-width
   margin-right: auto; // Centers <p> tag within max-width
-  margin-top: 1em; // Ensures spacing above the <p> syncs up with font-size
+  margin-top: $spacer; // Ensures spacing above the <p> syncs up with font-size
 
   > a {
     @include default-link;

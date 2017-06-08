@@ -15,6 +15,9 @@
       <span class="article-author">
         By {% if meta.byline_url %}<a href="{{meta.byline_url}}">{% endif %}{{ meta.byline }}{% if meta.byline_url %}</a>{% endif %}{% if meta.byline_2 %} and {% if meta.byline_2_url %}<a href="{{meta.byline_2_url}}">{% endif %}{{ meta.byline_2 }}{% if meta.byline_2_url %}</a>{% endif %}{% endif %}
       </span>
+      <span class="article-pub-date">
+        Last Updated: {{ apFormatDate(meta.last_date) }}
+      </span>
     </p>
     <p class="article-desc copy">
       Here is a look at the <strong>{{ meta.total_inmates }}</strong> inmates currently on Texas' death row. Texas, which reinstated the death penalty in 1976, has the most active execution chamber in the nation. On average, these inmates have spent <strong>{{ meta.average_time_served }}</strong> on death row. Though {{ meta.texas_percent_black }} percent of the state's residents are black, <strong>{{ meta.percent_black | round }} percent</strong> of death row inmates are.

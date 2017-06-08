@@ -1,0 +1,483 @@
+.interactive {
+  min-height: 500px;
+  width: 100%;
+
+  .hidden {
+    display: none;
+  }
+}
+
+.inmate {
+  border: 5px solid $color-white;
+  cursor: pointer;
+  float: left;
+  line-height: 1em;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  width: 20%;
+
+  @include mq($until: s) {
+    float: none;
+    margin-bottom: 5px;
+    width: 98%;
+  }
+
+  @include mq($from: s, $until: m) {
+    width: 33%;
+  }
+
+  @include mq($from: m, $until: l) {
+    width: 25%;
+  }
+}
+
+.open-lightbox {
+  img {
+    width: 100%;
+
+    @include mq($until: s) {
+      float: left;
+      margin-right: 5%;
+      width: 40%;
+    }
+
+    &.grayscale {
+      filter: grayscale(100%);
+    }
+  }
+
+  .info-button {
+    bottom: 5px;
+    cursor: pointer;
+    display: block;
+    left: 10px;
+    position: absolute;
+
+    @include mq($until: s) {
+      bottom: 0;
+      left: 3px;
+    }
+
+    .fa:before {
+      color: $dr-orange;
+      content: '\f05a';
+      font-size: 1.5em;
+      height: 1em;
+      opacity: .7;
+      width: 1em;
+
+      @include mq($until: s) {
+        content: '\f13a';
+        font-size: 2em;
+      }
+    }
+
+    .close-text {
+      display: none;
+    }
+  }
+
+  &:hover {
+
+    .info {
+      display: block;
+      padding: 1em;
+    }
+
+    .hover-state {
+      opacity: 1;
+    }
+
+    .info-button {
+      transition: opacity .25s ease-in;
+    }
+
+    .fa:before {
+      color: $color-white;
+      opacity: 1;
+
+      @include mq($until: s) {
+        color: $dr-orange;
+      }
+    }
+
+    .detail {
+      opacity: 0;
+    }
+
+    &:after {
+      bottom: 0;
+      content: '';
+      left: 0;
+      opacity: .75;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: -1;
+    }
+  }
+}
+
+.hover-state {
+  background: rgba(255, 133, 33, .7);
+  bottom: 0;
+  color: $color-white;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  padding: .5em .75em;
+  position: absolute;
+  transition: opacity .25s ease-in;
+  width: 100%;
+
+  @include mq($until: s) {
+    background-color: transparent;
+    color: $color-primary;
+    float: left;
+    opacity: 1;
+    padding: 0;
+    position: relative;
+    width: 55%;
+  }
+
+  h2 {
+    letter-spacing: .03em;
+    line-height: 1.1em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    @include mq($from: s, $until: l) {
+      font-size: 1.25em;
+    }
+  }
+
+  .details {
+    bottom: 2.5em;
+    position: absolute;
+
+    @include mq($from: s, $until: m) {
+      font-size: .9em;
+    }
+
+    @include mq($until: s) {
+      bottom: 0;
+      margin-top: .5em;
+      position: relative;
+    }
+
+    .label {
+      font-size: .8em;
+      font-weight: 700;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+    }
+  }
+}
+
+
+.black-overlay {
+  background-color: $dr-darkgreen;
+  cursor: default;
+  display: none;
+  filter: alpha(opacity=90);
+  height: 100%;
+  left: 0%;
+  opacity: .9;
+  overflow-y: hidden;
+  position: fixed;
+  top: 0%;
+  width: 100%;
+  z-index: 1001;
+}
+
+.white-content {
+  background: $color-white;
+  cursor: default;
+  display: none;
+  overflow: visible;
+  padding: 1.5em;
+  position: fixed;
+  z-index: 1002;
+
+  @include mq($until: s) {
+    background: transparent;
+    padding: 0 0 2.25em;
+    position: relative;
+  }
+
+  @include mq($from: s, $until: m) {
+    left: 5%;
+    max-height: 90%;
+    padding: 1.5em 2.5em;
+    top: 5%;
+    width: 90%;
+  }
+
+  @include mq($from: m, $until: l) {
+    left: 13%;
+    max-height: 80%;
+    top: 15%;
+    width: 74%;
+  }
+
+  @include mq($from: l, $until: xl) {
+    left: 13%;
+    max-height: 80%;
+    top: 15%;
+    width: 74%;
+  }
+
+  @include mq($from: xl) {
+    left: 25%;
+    max-height: 75%;
+    top: 20%;
+    width: 50%;
+  }
+
+  .bio {
+    @include clearfix;
+    height: 100%;
+    overflow-y: auto;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    img {
+      flex-basis: 40%;
+      @include mq($until: s) {
+        float: left;
+        margin: 0 1em .5em 0;
+        width: 40%;
+      }
+    }
+
+    .details {
+      flex-basis: 55%;
+      @include mq($until: s) {
+        float: none;
+        margin: 0;
+        width: 100%;
+      }
+    }
+
+    h2 {
+      font-size: 1.75em;
+      letter-spacing: .03em;
+      line-height: 1em;
+      margin: 0 0 .5em;
+
+      @include mq($until: s) {
+        font-size: 1.5em;
+        line-height: 1.1em;
+      }
+    }
+
+    p {
+      line-height: 1.25em;
+      margin-bottom: .5em;
+
+      @include mq($until: s) {
+        padding: 0 1em;
+      }
+    }
+
+    label {
+      font-size: .875em;
+      font-weight: 700;
+      letter-spacing: .03em;
+      text-transform: uppercase;
+    }
+
+    hr {
+      background-color: $dr-seafoam;
+      margin: .75em 0;
+
+      @include mq($until: s) {
+        background-color: $color-white;
+        margin: .75em 1em;
+      }
+    }
+
+    .execution-date {
+      color: $dr-orange;
+      font-size: 1.1em;
+      line-height: 1em;
+      text-align: center;
+
+      @include mq($until: s) {
+        color: $color-white;
+      }
+
+      label {
+        display: block;
+      }
+    }
+  }
+
+  .crime-details {
+    text-align: right;
+
+    label {
+      float: left;
+      margin-right: 5px;
+    }
+  }
+}
+
+.close-lightbox {
+  color: $color-white;
+  cursor: pointer;
+  font-size: 32px;
+  font-weight: 300;
+  position: absolute;
+
+  @include mq($until: s) {
+    bottom: 0;
+    font-size: 0;
+    left: 5px;
+
+    .fa-circle {
+      font-size: 26px;
+
+      &:before {
+        content: '\f139';
+      }
+    }
+
+    &:after {
+      content: 'Close';
+      font-size: 16px;
+      letter-spacing: .03em;
+      margin-left: .25em;
+      vertical-align: .1em;
+    }
+  }
+
+  @include mq($from: s) {
+    right: -10px;
+    top: -10px;
+
+    .fa {
+      color: $dr-seafoam;
+      font-size: 1.2em;
+      margin: -2px;
+      position: absolute;
+      right: -5px;
+      top: -5px;
+      z-index: -1000;
+    }
+  }
+}
+
+.pagination {
+  bottom: 0;
+  color: $dr-darkgreen;
+  cursor: pointer;
+  height: 90%;
+  padding: 15px;
+  position: absolute;
+  width: 75px;
+
+  @include mq($until: s) {
+    display: none;
+  }
+
+  i {
+    position: absolute;
+    top: 40%;
+
+    &:before {
+      border-bottom: 20px solid transparent;
+      border-top: 20px solid transparent;
+      content: '';
+      display: block;
+    }
+  }
+
+  &:hover {
+
+    i:before {
+      border-left-color: $color-white;
+      border-right-color: $color-white;
+
+      @include mq($until: s) {
+        border-left-color: $dr-darkgreen;
+        border-right-color: $dr-darkgreen;
+      }
+    }
+  }
+
+  &.inactive {
+    cursor: default;
+
+    i:before {
+      border-left-color: rgba(168, 192, 183, .2);
+      border-right-color: rgba(168, 192, 183, .2);
+    }
+  }
+}
+
+.next {
+  right: -75px;
+
+  @include mq($from: s, $until: m) {
+    right: -15px;
+  }
+
+  i {
+    right: 25%;
+
+    &:before {
+      border-left: 20px solid $dr-seafoam;
+    }
+  }
+}
+
+.prev {
+  left: -75px;
+
+  @include mq($from: s, $until: m) {
+    left: -15px;
+  }
+
+  i {
+    left: 25%;
+
+    &:before {
+      border-right: 20px solid $dr-seafoam;
+    }
+  }
+}
+
+.open {
+  @include mq($from: s) {
+    .black-overlay {
+      display: block;
+    }
+  }
+
+  @include mq($until: s) {
+    background: rgba(255, 133, 33, .7);
+    border: 5px solid transparent;
+
+    .open-lightbox {
+      img {
+        display: none;
+      }
+
+      .hover-state {
+        display: none;
+      }
+
+      .info-button {
+        display: none;
+      }
+    }
+  }
+
+  .white-content {
+    display: block;
+  }
+}

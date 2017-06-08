@@ -130,6 +130,71 @@
   </div>
 </section>
 
+<section class="container interactive">
+  <div class="inmates" id="inmates">
+    {% for inmate in inmates %}
+    <div class="inmate" id="id{{ inmate.tdcj_id }}" data-race="{{ inmate.race }}" data-sex="{{ inmate.sex }}" data-age="{{ inmate.age }}" data-time="{{ inmate.timeserved }}" data-county="{{ inmate.county }}" data-execution="{% if inmate.execution_date %}yes{% endif %}">
+      <div class="open-lightbox" id="inmate-{{ inmate.tdcj_id }}">
+        <img class="grayscale" src="assets/images/{{ inmate.mug }}" />
+        <div class="hover-state">
+          <h2>{{ inmate.first_name }} {{ inmate.middle_name }} {{ inmate.last_name }}</h2>
+          <div class="details">
+            <p class="label">On death row:</p>
+            <p>{{ inmate.time_served }}</p>
+          </div>
+        </div>
+        <div class="info-button">
+          <i class="fa"></i>
+          <div class="close-text">Close</div>
+        </div>
+      </div>
+      <div id="light-inmate-{{ inmate.tdcj_id }}" class="white-content">
+        <div class="bio">
+          <img src="assets/images/{{ inmate.mug }}" />
+          <div class="details">
+            <h2>{{ inmate.first_name }} {{ inmate.middle_name }} {{inmate.last_name }}</h2>
+            {% if inmate.execution_date %}
+            <div class="execution-date">
+              <p><label>Scheduled execution date</label> {{ inmate.execution_date }}</p>
+            </div>
+            <hr>
+            {% endif %}
+            <p><label>Time on Death Row:</label> {{ inmate.time_served }}</p>
+            <p><label>Race:</label> {{ inmate.race }}</p>
+            <p><label>Age:</label> {{ inmate.age }}</p>
+            <p><label>Sex:</label> {{ inmate.sex }}</p>
+            <hr>
+            <p><label>Summary of Conviction:</label></p>
+            <p>{{ inmate.summary }}</p>
+            <hr>
+            <div class="crime-details">
+              <p><label>Crime Committed on:</label> {{ inmate.offense_date }}</p>
+              <p><label>On death row since:</label> {{ inmate.received_date }}</p>
+              <p><label>Crime Committed in:</label> {{ inmate.county }} County</p>
+            </div>
+          </div>
+        </div>
+        <div class="close-lightbox">
+          <i class="fa fa-circle"></i>&times;
+        </div>
+        <div class="prev pagination{% if loop.first %} inactive {% endif %}">
+          <i class="arrow"></i>
+        </div>
+        <div class="next pagination{% if loop.last %} inactive {% endif %}">
+          <i class="arrow"></i>
+        </div>
+      </div>
+      <div id="fade-inmate-{{ inmate.tdcj_id }}" class="black-overlay"></div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="container disclaimer">
+  <p class="copy">Source: <a href="http://www.tdcj.state.tx.us/">Texas Department of Criminal Justice</a> | Developed and maintained by <a href="http://www.texastribune.org">The Texas Tribune</a> | <a href="http://www.texastribune.org/feedback/">Feedback</a></p>
+  <p class="copy">Note: The images in this app were released under the Texas Public Information Act. Conviction summaries are gathered from TDCJ records, court documents and news articles. These inmates are all classified as death row inmates by TDCJ, but some may be located in county jails if their case is being resentenced.</p>
+</section>
+
 <div class="container">
   {{ ad(bottom, 1) }}
 </div>

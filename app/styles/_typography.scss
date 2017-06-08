@@ -94,4 +94,8 @@
   > a {
     @include default-link;
   }
+
+  .disclaimer & {
+    font-size: .8125rem;
+  }
 }

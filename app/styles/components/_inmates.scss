@@ -143,12 +143,13 @@
   }
 
   h2 {
-    letter-spacing: .03em;
     line-height: 1.1em;
+    font-size: 1.5rem;
+    font-weight: bold;
     overflow: hidden;
     text-overflow: ellipsis;
 
-    @include mq($from: s, $until: l) {
+    @include mq($until: l) {
       font-size: 1.25em;
     }
   }
@@ -156,6 +157,8 @@
   .details {
     bottom: 2.5em;
     position: absolute;
+    line-height: 1.2;
+    font-size: .875rem;
 
     @include mq($from: s, $until: m) {
       font-size: .9em;
@@ -163,12 +166,12 @@
 
     @include mq($until: s) {
       bottom: 0;
-      margin-top: .5em;
+      margin-top: .75em;
       position: relative;
     }
 
     .label {
-      font-size: .8em;
+      font-size: .8125rem;
       font-weight: 700;
       letter-spacing: .05em;
       text-transform: uppercase;

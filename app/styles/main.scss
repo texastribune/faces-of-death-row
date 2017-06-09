@@ -25,3 +25,22 @@
 @import 'components/filter';
 @import 'components/inmates';
 @import 'components/footer';
+
+//defaults
+.banner-ad {
+  border-top: 1px solid $color-grey;
+  padding-top: .75em;
+  text-align: center;
+}
+
+.hide-on-load {
+  display: none;
+}
+
+.mobile-only {
+  display: none;
+}
+
+img {
+  max-width: 100%;
+}

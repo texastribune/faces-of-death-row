@@ -14,10 +14,6 @@
     @include mq($from: l, $until: xl) {
       max-width: 767px;
     }
-
-    @include mq($from: xl) {
-      max-width: 960px;
-    }
   }
 }
 
@@ -144,6 +140,7 @@
 
     @include mq($from: m) {
       flex-basis: 100%;
+      display: flex;
     }
 
     @include mq($from: l) {
@@ -151,37 +148,27 @@
     }
 
     h4 {
-      float: left;
-      text-align: center;
-      width: 30%;
+      margin-bottom: 0;
 
       @include mq($from: m) {
-        width: 35%;
+        float: left;
+        text-align: center;
+        flex-basis: 30%;
       }
 
-      @include mq($until: m) {
-        float: none;
-        margin-bottom: 0;
-        width: 100%;
+      @include mq($from: l) {
+        flex-basis: 35%;
       }
     }
 
     .counties {
-      float: right;
-      width: 70%;
+
+      @include mq($from: m) {
+        flex-basis: 70%;
+      }
 
       @include mq($from: l) {
-        width: 65%;
-      }
-
-      @include mq($from: s) {
-        float: none;
-        width: 100%;
-      }
-
-      @include mq($until: s) {
-        float: none;
-        width: 100%;
+        flex-basis: 65%;
       }
     }
   }
@@ -193,6 +180,10 @@
       font-size: 1em;
       letter-spacing: .03em;
       margin-right: .5em;
+
+      &:before {
+        vertical-align: bottom;
+      }
     }
 
     @include mq($from: m) {
@@ -216,8 +207,16 @@
 }
 
 .checkboxes {
+  display: flex;
+  justify-content: space-around;
+
+  .race & {
+    @include mq($until: m) {
+      display: block;
+    }
+  }
+
   li {
-    display: block;
     margin-bottom: $spacer;
     font-size: .875rem;
 
@@ -244,7 +243,7 @@
 }
 
 .checkbox {
-  display: inline-block;
+  display: block;
   margin: 0 .15em 0 0;
 
   @include mq($from: m, $until: l) {
@@ -274,14 +273,10 @@
       border: 2px solid $color-white;
       content: '';
       display: inline-block;
-      height: 15px;
-      margin-right: 3px;
-      vertical-align: -2px;
-      width: 15px;
-
-      .execution & {
-        margin-right: 7px;
-      }
+      height: 1rem;
+      margin-right: $spacer-quarter;
+      vertical-align: text-top;
+      width: 1rem;
 
       @include mq($until: m, $from: l) {
         height: 17px;

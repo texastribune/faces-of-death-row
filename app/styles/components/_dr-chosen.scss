@@ -20,7 +20,7 @@
   font-size: 13.5px;
 
   .chosen-choices {
-    background: $color-grey;
+    background: $color-offwhite;
     border: 0;
     border-bottom: 1px solid $dr-darkgreen;
     padding: 1px 7px;
@@ -39,7 +39,7 @@
       padding: 4px 20px 4px 5px;
       border: 1px solid $dr-orange;
       border-radius: 0;
-      background-color: $color-grey;
+      background-color: $color-offwhite;
       background-image: none;
       box-shadow: none;
 
@@ -50,7 +50,7 @@
   }
 
   .chosen-drop {
-    background: $color-grey;
+    background: $color-offwhite;
     border: 1px solid $dr-darkgreen;
     border-top: 0;
   }
@@ -78,7 +78,6 @@
 }
 
 .chosen-container-active {
-
   .chosen-choices {
     box-shadow: none;
 

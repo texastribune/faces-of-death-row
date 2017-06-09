@@ -16,7 +16,7 @@ var chosenExists = false;
     });
 
   //show sliders after they load
-  $('.hide-on-load').show();
+  $('.hide-on-load').css('display', 'flex');
 
   $('.county-select').css({
     'height': 'auto',
@@ -25,6 +25,8 @@ var chosenExists = false;
     'padding': '10px 7px',
     'font-size': '16px'
   });
+
+  console.log(chosenExists);
 
   //add prompt for search on mobile devices
   if(!chosenExists) {

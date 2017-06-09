@@ -248,7 +248,9 @@
     position: relative;
 
     img {
-      flex-basis: 40%;
+      width: 40%;
+      align-self: flex-start;
+
       @include mq($until: s) {
         float: left;
         margin: 0 1em .5em 0;
@@ -258,6 +260,7 @@
 
     .details {
       flex-basis: 55%;
+
       @include mq($until: s) {
         float: none;
         margin: 0;
@@ -266,8 +269,8 @@
     }
 
     h2 {
-      font-size: 1.75em;
-      letter-spacing: .03em;
+      font-size: 1.625em;
+      font-weight: bold;
       line-height: 1em;
       margin: 0 0 .5em;
 
@@ -279,6 +282,7 @@
 
     p {
       line-height: 1.25em;
+      font-size: .9375rem;
       margin-bottom: .5em;
 
       @include mq($until: s) {
@@ -286,10 +290,14 @@
       }
     }
 
+    .summary {
+      line-height: 1.4;
+    }
+
     label {
-      font-size: .875em;
+      font-size: .875rem;
       font-weight: 700;
-      letter-spacing: .03em;
+      letter-spacing: .02em;
       text-transform: uppercase;
     }
 
@@ -332,7 +340,8 @@
 .close-lightbox {
   color: $color-white;
   cursor: pointer;
-  font-size: 32px;
+  font-size: 2rem;
+  line-height: 2rem;
   font-weight: 300;
   position: absolute;
 
@@ -351,7 +360,6 @@
 
     &:after {
       content: 'Close';
-      font-size: 16px;
       letter-spacing: .03em;
       margin-left: .25em;
       vertical-align: .1em;
@@ -359,16 +367,15 @@
   }
 
   @include mq($from: s) {
-    right: -10px;
-    top: -10px;
+    right: -.5rem;
+    top: -1rem;
 
     .fa {
       color: $dr-seafoam;
       font-size: 1.2em;
-      margin: -2px;
+      top: 0;
+      right: -.5rem;
       position: absolute;
-      right: -5px;
-      top: -5px;
       z-index: -1000;
     }
   }

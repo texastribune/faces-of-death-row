@@ -3,39 +3,46 @@
   margin-top: 2rem;
   margin-bottom: 2rem;
 
-  .article-title {
-    border-left: 2px solid $dr-orange;
-    font-family: $font-special;
-    font-size: 2.75rem;
-    font-weight: 400;
-    line-height: 1em;
-    margin-bottom: .5em;
-    padding-left: .25em;
-    text-transform: uppercase;
+  @include mq($from: l) {
+    display: flex;
+  }
 
-    @include mq($from: m, $until: l) {
-      font-size: 3.25rem;
-    }
-
+  .article-top {
     @include mq($from: l) {
-      font-size: 3.75rem;
-      float: left;
-      width: 45%;
+      flex-basis: 45%
     }
 
     @include mq($from: xl) {
-      width: 40%;
+      flex-basis: 40%;
+    }
+
+    .article-title {
+      border-left: 2px solid $dr-orange;
+      font-family: $font-special;
+      font-size: 2.75rem;
+      font-weight: 400;
+      line-height: 1em;
+      margin-bottom: .5em;
+      padding-left: .25em;
+      text-transform: uppercase;
+
+      @include mq($from: m, $until: l) {
+        font-size: 3.25rem;
+      }
+
+      @include mq($from: l) {
+        font-size: 3.75rem;
+      }
     }
   }
 
   .article-text {
     @include mq($from: l) {
-      width: 53%;
-      float: right;
+      flex-basis: 53%;
     }
 
     @include mq($from: xl) {
-      width: 57%;
+      flex-basis: 57%;
     }
 
     .article-desc {

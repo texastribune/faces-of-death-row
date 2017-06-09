@@ -1,5 +1,6 @@
-.critieria_slider {
-  width: 100%;
+.criteria_slider {
+  justify-content: space-between;
+  align-items: baseline;
 }
 
 .ui-slider {
@@ -9,14 +10,14 @@
 
   .ui-slider-handle {
     cursor: default;
-    height: 1.25em;
+    height: 1.25rem;
     position: absolute;
-    width: 1.25em;
+    width: 1.25rem;
     z-index: 2;
 
     @include mq($from: s) {
-      height: 1em;
-      width: 1em;
+      height: 1rem;
+      width: 1rem;
     }
   }
 
@@ -24,7 +25,7 @@
     background-position: 0 0;
     border: 0;
     display: block;
-    font-size: .7em;
+    font-size: .7rem;
     position: absolute;
     z-index: 1;
   }
@@ -34,15 +35,7 @@
   display: inline-block;
   font-weight: 700;
   text-align: center;
-  width: 20px;
-
-  &.start {
-    margin-right: 8px;
-  }
-
-  &.end {
-    margin-left: 10px;
-  }
+  width: 1.25rem;
 }
 
 .ui-slider-horizontal {

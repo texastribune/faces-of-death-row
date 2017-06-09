@@ -20,18 +20,6 @@
 .article-author {
   display: block;
   margin-bottom: $spacer-quarter;
-
-  @include mq($from: m, $until: l) {
-    display: inline;
-    margin-bottom: 0;
-    margin-right: $spacer;
-  }
-
-  @include mq($from: xl) {
-    display: inline;
-    margin-bottom: 0;
-    margin-right: $spacer;
-  }
 }
 
 .article-pub-date {
@@ -89,7 +77,7 @@
   margin-bottom: $spacer; // Ensures spacing below the <p> syncs up with font-size
   margin-left: auto; // Centers <p> tag within max-width
   margin-right: auto; // Centers <p> tag within max-width
-  margin-top: $spacer; // Ensures spacing above the <p> syncs up with font-size
+  // margin-top: $spacer; // Ensures spacing above the <p> syncs up with font-size
 
   > a {
     @include default-link;

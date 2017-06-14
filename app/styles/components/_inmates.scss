@@ -9,31 +9,32 @@
 
   .inmates {
     @include clearfix;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
   }
 }
 
 .inmate {
-  border: $spacer-half solid $color-white;
+  border: $spacer-quarter solid $color-white;
   cursor: pointer;
-  float: left;
   line-height: 1em;
-  margin: 0 auto;
   overflow: hidden;
   padding: 0;
   position: relative;
-  width: 20%;
+  flex-basis: 20%;
 
   @include mq($until: s) {
-    float: none;
-    width: 100%;
+    flex-basis: 100%;
+    border: $spacer-half solid $color-white;
   }
 
   @include mq($from: s, $until: m) {
-    width: 33%;
+    flex-basis: 33%;
   }
 
   @include mq($from: m, $until: l) {
-    width: 25%;
+    flex-basis: 25%;
   }
 }
 
@@ -300,6 +301,11 @@
       font-weight: 700;
       letter-spacing: .02em;
       text-transform: uppercase;
+
+      @include mq($until: s) {
+        font-size: .8125rem;
+        letter-spacing: .05em;
+      }
     }
 
     hr {

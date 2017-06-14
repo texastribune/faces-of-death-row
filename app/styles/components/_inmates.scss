@@ -1,14 +1,19 @@
 .interactive {
-  min-height: 500px;
   width: 100%;
+  margin-bottom: $spacer;
+  padding: 0 $spacer-quarter;
 
   .hidden {
     display: none;
   }
+
+  .inmates {
+    @include clearfix;
+  }
 }
 
 .inmate {
-  border: 5px solid $color-white;
+  border: $spacer-half solid $color-white;
   cursor: pointer;
   float: left;
   line-height: 1em;
@@ -20,8 +25,7 @@
 
   @include mq($until: s) {
     float: none;
-    margin-bottom: 5px;
-    width: 98%;
+    width: 100%;
   }
 
   @include mq($from: s, $until: m) {
@@ -39,7 +43,7 @@
 
     @include mq($until: s) {
       float: left;
-      margin-right: 5%;
+      margin-right: $spacer-half;
       width: 40%;
     }
 
@@ -143,7 +147,7 @@
   }
 
   h2 {
-    line-height: 1.1em;
+    line-height: 1.2em;
     font-size: 1.5rem;
     font-weight: bold;
     overflow: hidden;
@@ -243,9 +247,12 @@
     @include clearfix;
     height: 100%;
     overflow-y: auto;
-    display: flex;
-    justify-content: space-between;
     position: relative;
+
+    @include mq($from: s) {
+      display: flex;
+      justify-content: space-between;
+    }
 
     img {
       width: 40%;
@@ -253,19 +260,12 @@
 
       @include mq($until: s) {
         float: left;
-        margin: 0 1em .5em 0;
-        width: 40%;
+        margin: 0 $spacer-half $spacer-half 0;
       }
     }
 
     .details {
       flex-basis: 55%;
-
-      @include mq($until: s) {
-        float: none;
-        margin: 0;
-        width: 100%;
-      }
     }
 
     h2 {
@@ -275,18 +275,19 @@
       margin: 0 0 .5em;
 
       @include mq($until: s) {
-        font-size: 1.5em;
-        line-height: 1.1em;
+        font-size: 1.25em;
+        line-height: 1.2em;
       }
     }
 
     p {
-      line-height: 1.25em;
+      line-height: 1.2em;
       font-size: .9375rem;
-      margin-bottom: .5em;
+      margin-top: .75em;
 
       @include mq($until: s) {
-        padding: 0 1em;
+        padding: 0 $spacer-quarter;
+        font-size: .875rem;
       }
     }
 
@@ -295,7 +296,7 @@
     }
 
     label {
-      font-size: .875rem;
+      font-size: .8725rem;
       font-weight: 700;
       letter-spacing: .02em;
       text-transform: uppercase;
@@ -307,7 +308,9 @@
 
       @include mq($until: s) {
         background-color: $color-white;
-        margin: .75em 1em;
+        margin: .75em $spacer-quarter;
+        letter-spacing: .05em;
+        font-size: .8125rem;
       }
     }
 
@@ -346,12 +349,16 @@
   position: absolute;
 
   @include mq($until: s) {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     bottom: 0;
     font-size: 0;
-    left: 5px;
+    left: $spacer-quarter;
 
     .fa-circle {
-      font-size: 26px;
+      font-size: 1.75rem;
+      vertical-align: middle;
 
       &:before {
         content: '\f139';
@@ -361,6 +368,7 @@
     &:after {
       content: 'Close';
       letter-spacing: .03em;
+      font-size: 1rem;
       margin-left: .25em;
       vertical-align: .1em;
     }
@@ -470,7 +478,7 @@
 
   @include mq($until: s) {
     background: rgba(255, 133, 33, .7);
-    border: 5px solid transparent;
+    border: $spacer-half solid transparent;
 
     .open-lightbox {
       img {

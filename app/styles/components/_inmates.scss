@@ -1,17 +1,23 @@
 .interactive {
   width: 100%;
   margin-bottom: $spacer;
-  padding: 0 $spacer-quarter;
 
+  @include mq($until: s) {
+    padding: 0 $spacer-quarter;
+  }
+  
   .hidden {
     display: none;
   }
 
   .inmates {
     @include clearfix;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+
+    @include mq($from: s) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
   }
 }
 
@@ -22,10 +28,8 @@
   overflow: hidden;
   padding: 0;
   position: relative;
-  flex-basis: 20%;
 
   @include mq($until: s) {
-    flex-basis: 100%;
     border: $spacer-half solid $color-white;
   }
 
@@ -35,6 +39,10 @@
 
   @include mq($from: m, $until: l) {
     flex-basis: 25%;
+  }
+
+  @include mq($from: l) {
+    flex-basis: 20%;
   }
 }
 
@@ -267,6 +275,7 @@
 
     .details {
       flex-basis: 55%;
+      margin-bottom: $spacer-quarter;
     }
 
     h2 {
@@ -299,6 +308,7 @@
     label {
       font-size: .8725rem;
       font-weight: 700;
+      margin-right: $spacer-quarter;
       letter-spacing: .02em;
       text-transform: uppercase;
 

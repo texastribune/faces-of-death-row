@@ -84,7 +84,7 @@
   }
 
   a {
-    color: $color-offwhite;
+    color: $color-white;
     font-size: to-rem(14);
     line-height: 1;
     text-decoration: none;
@@ -94,7 +94,7 @@
     }
 
     &:hover {
-      color: $color-tribune-yellow;
+      color: $color-text-link-active;
     }
   }
 }

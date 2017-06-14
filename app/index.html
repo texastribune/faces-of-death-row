@@ -47,7 +47,7 @@
   </div>
 </header>
 
-{{ ad(top, 0) }}
+{{ ad('leader') }}
 
 <section class="filters">
   <div class="container">
@@ -157,22 +157,22 @@
             <h2>{{ inmate.first_name }} {{ inmate.middle_name }} {{inmate.last_name }}</h2>
             {% if inmate.execution_date %}
             <div class="execution-date">
-              <p><label>Scheduled execution date</label> {{ inmate.execution_date }}</p>
+              <p><label>Scheduled execution date</label>{{ apFormatDate(inmate.execution_date) }}</p>
             </div>
             <hr>
             {% endif %}
-            <p><label>Time on Death Row:</label> {{ inmate.time_served }}</p>
-            <p><label>Race:</label> {{ inmate.race }}</p>
-            <p><label>Age:</label> {{ inmate.age }}</p>
-            <p><label>Sex:</label> {{ inmate.sex }}</p>
+            <p><label>Time on death row:</label>{{ inmate.time_served }}</p>
+            <p><label>Race:</label>{{ inmate.race }}</p>
+            <p><label>Age:</label>{{ inmate.age }}</p>
+            <p><label>Sex:</label>{{ inmate.sex }}</p>
             <hr>
-            <p><label>Summary of Conviction:</label></p>
+            <p><label>Summary of conviction:</label></p>
             <p class="summary">{{ inmate.summary }}</p>
             <hr>
             <div class="crime-details">
-              <p><label>Crime Committed on:</label> {{ inmate.offense_date }}</p>
-              <p><label>On death row since:</label> {{ inmate.received_date }}</p>
-              <p><label>Crime Committed in:</label> {{ inmate.county }} County</p>
+              <p><label>Crime committed on:</label>{{ apFormatDate(inmate.offense_date) }}</p>
+              <p><label>On death row since:</label>{{ apFormatDate(inmate.received_date) }}</p>
+              <p><label>Crime committed in:</label>{{ inmate.county }} County</p>
             </div>
           </div>
         </div>
@@ -197,9 +197,7 @@
   <p class="copy">Note: The images in this app were released under the Texas Public Information Act. Conviction summaries are gathered from TDCJ records, court documents and news articles. These inmates are all classified as death row inmates by TDCJ, but some may be located in county jails if their case is being resentenced.</p>
 </section>
 
-<div class="container">
-  {{ ad(bottom, 1) }}
-</div>
+{{ ad('footer') }}
 
 {% endblock content %}
 

@@ -33,7 +33,7 @@
           <use xlink:href="#icon-facebook"></use>
         </svg>
       </a>
-      <a class="button button--small button--twitter article-shares-button" href="{{ shares.twitter(staticAbsolute('/'), '', '') }}" ga-on="click" ga-hit-type="social" ga-social-network="Twitter" ga-social-action="tweet">
+      <a class="button button--small button--twitter article-shares-button" href="{{ shares.twitter(staticAbsolute('/'), meta.project_title + ': ' + meta.shareline, 'deathpenalty') }}" ga-on="click" ga-hit-type="social" ga-social-network="Twitter" ga-social-action="tweet">
         <svg class="icon icon-twitter">
           <use xlink:href="#icon-twitter"></use>
         </svg>

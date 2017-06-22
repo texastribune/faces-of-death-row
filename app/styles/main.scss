@@ -28,9 +28,11 @@
 
 //defaults
 .banner-ad {
-  border-top: 1px solid $color-grey;
-  padding-top: .75em;
   text-align: center;
+  margin: 0 auto;
+  max-width: 980px;
+  padding-top: $spacer;
+  border-top: 1px solid lighten($color-grey,20);
 }
 
 .hide-on-load {

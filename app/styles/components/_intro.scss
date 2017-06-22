@@ -1,7 +1,7 @@
 .article-header {
   @include clearfix();
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-top: $spacer-double;
+  margin-bottom: $spacer-double;
 
   @include mq($from: l) {
     display: flex;

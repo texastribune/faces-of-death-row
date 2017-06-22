@@ -1,5 +1,5 @@
 {
-  "bucket": "moose.texastribune.org",
+  "bucket": "apps.texastribune.org",
   "folder": "death-row",
   "rawAssetsFolder": "raw_assets",
   "dataDir": "./data",

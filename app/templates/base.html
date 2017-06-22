@@ -21,7 +21,19 @@
   <link rel="stylesheet" href="{{ static('styles/main.css') }}">
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css" rel="stylesheet">
 
-  <!-- REMEMBER TO ADD PARSELY HERE -->
+  <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;ga('create', 'UA-9827490-1', 'auto');ga('send', 'pageview');</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": "{{ meta.project_title }}",
+    "url": "{{ staticAbsolute('/') }}",
+    "thumbnailUrl": "{{ staticAbsolute('assets/images/social/bars.png', true) }}",
+    "dateCreated": "2015-06-15T06:00:00-06:00",
+    "articleSection": ["front-page", "law-and-order"],
+    "creator": ["Jolie McCullough", "Ben Hasson"]
+  }
+  </script>
 </head>
 <body>
   {% include 'includes/svg-defs.html' %}
@@ -41,7 +53,6 @@
 
   {% if IS_PRODUCTION %}
   <!-- Google Analytics -->
-  <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;ga('create', 'UA-9827490-1', 'auto');ga('send', 'pageview');</script>
   <script async src='https://www.google-analytics.com/analytics.js'></script>
   <!-- End Google Analytics -->
 

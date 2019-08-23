@@ -3593,8 +3593,8 @@ localtunnel@1.8.2:
     yargs "3.29.0"
 
 lodash-es@^4.11.1:
-  version "4.16.6"
-  resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.16.6.tgz#c8552faedaa4d1d591de8da9b3980ef1c52efa08"
+  version "4.17.15"
+  resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.15.tgz#21bd96839354412f23d7a10340e5eac6ee455d78"
 
 lodash._basecopy@^3.0.0:
   version "3.0.1"

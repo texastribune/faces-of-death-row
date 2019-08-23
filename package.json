@@ -55,11 +55,7 @@
     "webpack-dev-middleware": "^1.9.0"
   },
   "dependencies": {
-<<<<<<< HEAD
     "jquery": "^3.4.1",
-=======
-    "jquery": "^3.4.0",
->>>>>>> 8a86a3f168436c52a6d56063941ad8520f989333
     "sass-mq": "^3.3.2"
   }
 }

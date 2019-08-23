@@ -23,7 +23,7 @@
     "copytext": "^2.1.0",
     "date-fns": "^1.27.1",
     "del": "^2.2.0",
-    "eslint": "^3.14.0",
+    "eslint": "^4.18.2",
     "eslint-config-data-visuals": "^0.1.0",
     "globby": "^6.0.0",
     "googleapis": "^16.1.0",
@@ -55,7 +55,11 @@
     "webpack-dev-middleware": "^1.9.0"
   },
   "dependencies": {
+<<<<<<< HEAD
     "jquery": "^3.4.1",
+=======
+    "jquery": "^3.4.0",
+>>>>>>> 8a86a3f168436c52a6d56063941ad8520f989333
     "sass-mq": "^3.3.2"
   }
 }

@@ -14,7 +14,7 @@
 @mixin font-size($size) {
   @if type-of($size) != 'number' {
     @warn inspect($val) + ' was passed to font-size(), but it is not a number.';
-    @return $size;
+    // @return $size;
   }
 
   @if unit($size) == 'px' {

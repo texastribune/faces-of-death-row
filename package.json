@@ -1,4 +1,8 @@
 {
+  "name": "faces-of-death-row",
+  "version": "0.0.1",
+  "description": "Tracking Death Row inmates in Texas.",
+  "repository": "texastribune/faces-of-death-row",
   "private": true,
   "scripts": {
     "assets:pull": "node ./utils/deployment/pull-assets.js",

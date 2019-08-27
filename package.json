@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "Tracking Death Row inmates in Texas.",
   "repository": "texastribune/faces-of-death-row",
+  "license": "MIT",
   "private": true,
   "scripts": {
     "assets:pull": "node ./utils/deployment/pull-assets.js",

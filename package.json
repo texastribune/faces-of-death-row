@@ -31,7 +31,7 @@
     "eslint": "^4.18.2",
     "eslint-config-data-visuals": "^0.1.0",
     "globby": "^6.0.0",
-    "googleapis": "^16.1.0",
+    "googleapis": "^39.1.0",
     "gulp": "^3.9.1",
     "gulp-cache": "^0.4.5",
     "gulp-clean-css": "^4.2.0",

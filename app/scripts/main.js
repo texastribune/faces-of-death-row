@@ -64,9 +64,9 @@ var chosenExists = false;
   var $ageRangeLabelEnd = $('#age_range_label_end');
 
   $('#age_slider').slider({
-    min: 20,
-    max: 80,
-    values:[20, 80],
+    min: 25,
+    max: 85,
+    values:[25, 85],
     step: 5,
     range:true,
     slide: function(event, ui) {
@@ -82,8 +82,8 @@ var chosenExists = false;
 
   $('#timeserved_slider').slider({
     min: 0,
-    max: 45,
-    values:[0, 45],
+    max: 50,
+    values:[0, 50],
     step: 5,
     range:true,
     slide: function(event, ui) {

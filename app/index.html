@@ -170,7 +170,12 @@
             <p class="summary">{{ inmate.summary }}</p>
             <hr>
             <div class="crime-details">
-              <p><label>Crime committed on:</label>{{ apFormatDate(inmate.offense_date) }}</p>
+              <p><label>Crime committed on:</label>{%if inmate.offense_date.includes("and") %}
+                {{ inmate.offense_date }}
+              {% else %}
+                {{ apFormatDate(inmate.offense_date) }}
+              {% endif %}
+              </p>
               <p><label>On death row since:</label>{{ apFormatDate(inmate.received_date) }}</p>
               <p><label>Crime committed in:</label>{{ inmate.county }} County</p>
             </div>

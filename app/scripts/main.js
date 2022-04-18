@@ -65,8 +65,8 @@ var chosenExists = false;
 
   $('#age_slider').slider({
     min: 25,
-    max: 85,
-    values:[25, 85],
+    max: 80,
+    values:[25, 80],
     step: 5,
     range:true,
     slide: function(event, ui) {
@@ -82,8 +82,8 @@ var chosenExists = false;
 
   $('#timeserved_slider').slider({
     min: 0,
-    max: 50,
-    values:[0, 50],
+    max: 45,
+    values:[0, 45],
     step: 5,
     range:true,
     slide: function(event, ui) {

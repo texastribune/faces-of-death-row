@@ -18,7 +18,7 @@
   "devDependencies": {
     "archieml": "^0.4.1",
     "autoprefixer": "^6.7.0",
-    "aws-sdk": "^2.7.28",
+    "aws-sdk": "^2.1354.0",
     "babel-core": "^6.22.1",
     "babel-loader": "^6.2.10",
     "babel-preset-es2015": "^6.22.0",

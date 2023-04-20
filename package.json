@@ -51,7 +51,7 @@
     "json-loader": "^0.5.4",
     "mime-types": "^2.1.14",
     "mkdirp": "^0.5.1",
-    "nunjucks": "^3.0.0",
+    "nunjucks": "^3.2.4",
     "quaff": "^2.0.0",
     "run-sequence": "^1.1.5",
     "strip-ansi": "^3.0.1",
